@@ -16,11 +16,10 @@ const Hero = () => {
             processing and fast cash conversion.
           </p>
           <p className="text-base text-primary-foreground/60 mb-10 leading-relaxed max-w-2xl">
-            I'm currently building a secondary aluminum smelting facility in Alabama,
-            starting with one furnace at ~3 million pounds per month, with a clear
-            path to scale to two furnaces within 18–24 months. The model is based on
-            strong local demand, fast inventory turnover, and established supply and
-            buyer relationships.
+            A secondary aluminum smelting facility in Alabama, starting with one
+            MAX-4000 gas-fired sweat furnace at ~2 million pounds per month, with a clear
+            path to scale to two furnaces within 18–24 months. Total capital requirement:
+            $7.5M with projected annual EBITDA of ~$6.37M.
           </p>
           <a
             href="mailto:birchfamilyllcfl@gmail.com"
