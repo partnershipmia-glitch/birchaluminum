@@ -1,19 +1,27 @@
+import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import About from "@/components/About";
-import Portfolio from "@/components/Portfolio";
-import Contact from "@/components/Contact";
+import Production from "@/components/Production";
+import Founder from "@/components/Founder";
+import Partnership from "@/components/Partnership";
+import Investment from "@/components/Investment";
+import Closing from "@/components/Closing";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <TopBar />
       <Navigation />
       <Hero />
-      <Services />
       <About />
-      <Portfolio />
-      <Contact />
+      <Production />
+      <Founder />
+      <Partnership />
+      <Investment />
+      <Closing />
+      <Footer />
     </div>
   );
 };
