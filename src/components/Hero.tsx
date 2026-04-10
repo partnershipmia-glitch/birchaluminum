@@ -1,34 +1,33 @@
-import heroImage from "@/assets/hero-architecture.jpg";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-overlay" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white text-architectural mb-8 reveal">
-          MINIMAL
-          <br />
-          ARCHITECTURE
-        </h1>
-        <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto reveal-delayed">
-          Creating spaces that inspire through thoughtful design and uncompromising quality
-        </p>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reveal-delayed">
-        <div className="w-px h-16 bg-white/40" />
-        <div className="text-minimal text-white/60 mt-4 rotate-90 origin-center">
-          SCROLL
+    <section className="bg-primary text-primary-foreground section-padding">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl">
+          <p className="text-minimal text-primary-foreground/60 mb-6">
+            Decatur, Alabama
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
+            Secondary Aluminum Production
+          </h1>
+          <p className="text-lg md:text-xl text-primary-foreground/80 mb-6 leading-relaxed">
+            Building a scalable aluminum smelting operation focused on scrap wheel
+            processing and fast cash conversion.
+          </p>
+          <p className="text-base text-primary-foreground/60 mb-10 leading-relaxed max-w-2xl">
+            I'm currently building a secondary aluminum smelting facility in Alabama,
+            starting with one furnace at ~3 million pounds per month, with a clear
+            path to scale to two furnaces within 18–24 months. The model is based on
+            strong local demand, fast inventory turnover, and established supply and
+            buyer relationships.
+          </p>
+          <a
+            href="mailto:birchfamilyllcfl@gmail.com"
+            className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 font-medium hover:opacity-90 transition-opacity"
+          >
+            Send Proposal <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </section>
