@@ -2,6 +2,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Gallery from "@/components/Gallery";
 import Production from "@/components/Production";
 import Founder from "@/components/Founder";
 import Partnership from "@/components/Partnership";
@@ -16,6 +17,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
+      <Gallery />
       <Production />
       <Founder />
       <Partnership />
