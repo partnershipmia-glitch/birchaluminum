@@ -53,25 +53,9 @@ const Production = () => {
           <div>
             <p className="text-minimal text-muted-foreground mb-4">Unit Economics</p>
             <div className="space-y-4">
-              <div className="flex justify-between items-center border-b border-border pb-3">
-                <span className="text-muted-foreground">Scrap Cost</span>
-                <span className="font-semibold">$1.31 / lb</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-border pb-3">
-                <span className="text-muted-foreground">Effective Metal Cost</span>
-                <span className="font-semibold">$1.365 / lb</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-border pb-3">
-                <span className="text-muted-foreground">Sale Price</span>
-                <span className="font-semibold">$1.70 / lb</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-border pb-3">
-                <span className="text-muted-foreground">Gross Spread</span>
-                <span className="font-semibold text-foreground">~$0.335 / lb</span>
-              </div>
               <div className="flex justify-between items-center">
                 <span className="text-muted-foreground">EBITDA / lb</span>
-                <span className="font-bold text-lg">~$0.22</span>
+                <span className="font-bold text-lg">$0.08 – $0.15</span>
               </div>
             </div>
           </div>
