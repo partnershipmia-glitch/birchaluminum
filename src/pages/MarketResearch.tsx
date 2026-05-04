@@ -57,10 +57,10 @@ const regionalCompetitors = ["Constellium Aluminum", "Novelis", "Real Alloy"];
 const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value: number }[]; prefix?: string; suffix?: string }) => {
   const max = Math.max(...data.map((d) => d.value));
   return (
-    <div className="flex items-end gap-3 md:gap-6 h-64 border-b border-border pb-2">
+    <div className="flex items-end gap-3 md:gap-6 h-72 border-b border-border pb-2">
       {data.map((d) => (
-        <div key={d.year} className="flex-1 flex flex-col items-center gap-2">
-          <span className="text-xs text-muted-foreground font-mono">
+        <div key={d.year} className="flex-1 flex flex-col items-center gap-3">
+          <span className="text-lg md:text-2xl text-foreground font-bold font-mono">
             {prefix}
             {d.value.toLocaleString()}
             {suffix}
@@ -69,7 +69,7 @@ const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value:
             className="w-full bg-foreground transition-all"
             style={{ height: `${(d.value / max) * 100}%` }}
           />
-          <span className="text-xs text-muted-foreground font-mono">{d.year}</span>
+          <span className="text-base md:text-lg text-foreground font-bold font-mono">{d.year}</span>
         </div>
       ))}
     </div>
