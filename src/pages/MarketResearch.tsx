@@ -5,19 +5,19 @@ import { TrendingUp, Factory, Globe, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const industryRevenue = [
-  { year: "2026", value: 20 },
-  { year: "2027", value: 21.5 },
-  { year: "2028", value: 23 },
-  { year: "2029", value: 24.5 },
+  { year: "2026", value: 22 },
+  { year: "2027", value: 23 },
+  { year: "2028", value: 24 },
+  { year: "2029", value: 25 },
   { year: "2030", value: 26 },
 ];
 
 const aluminumPricing = [
-  { year: "2021", value: 1900 },
+  { year: "2021", value: 2500 },
   { year: "2022", value: 2700 },
   { year: "2023", value: 2300 },
-  { year: "2024", value: 2400 },
-  { year: "2025", value: 2400 },
+  { year: "2024", value: 2500 },
+  { year: "2025", value: 2600 },
   { year: "2026", value: 3600 },
 ];
 
@@ -52,7 +52,7 @@ const drivers = [
 ];
 
 const nationalCompetitors = ["Alcoa Corporation", "Century Aluminum", "Kaiser Aluminum", "Magnitude 7 Metals"];
-const regionalCompetitors = ["Constellium Aluminum", "Novelis", "Real Alloy"];
+const regionalCompetitors = ["Bermco Aluminum", "Constellium Aluminum", "Novelis", "Real Alloy"];
 
 const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value: number }[]; prefix?: string; suffix?: string }) => {
   const max = Math.max(...data.map((d) => d.value));
@@ -113,21 +113,28 @@ const MarketResearch = () => {
       {/* Economic Outlook */}
       <section className="section-padding">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.1 Economic Outlook</p>
+          <p className="text-minimal text-muted-foreground mb-4">Economic Outlook</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
             Demand holds through every cycle
           </h2>
           <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              The global outlook is moderate, with significant market volatility over the last
-              twelve months tied to shifts in trade policy. Interest rates remain steady and
-              central banks continue to support growth.
+              This section details the economic climate, the aluminum processing and distribution
+              industry, the customer profile, and the competition that the business will face as it
+              progresses through its operations.
             </p>
             <p>
-              Demand for aluminum stays strong even in challenging climates. The metal is a core
-              input across the domestic and global economy, and the U.S. defense industry — one
-              of its largest consumers — provides additional stability for Birch Aluminum's
-              divestment pipeline.
+              Currently, the global economic outlook is moderate. There has been significant market
+              volatility over the past twelve months as a result of changes in global trade policy.
+              Interest rates remain steady, and central banks continue to implement appropriate
+              fiscal policy to ensure that the global economy continues to grow.
+            </p>
+            <p>
+              Demand for aluminum remains strong even during challenging economic climates. This
+              metal is an incredibly important part of the domestic and global economic ecosystem.
+              The business will be able to divest substantial inventories domestically. One of the
+              major users of aluminum is the defense industry, which will further contribute to
+              the economic stability of Birch Aluminum.
             </p>
           </div>
         </div>
@@ -136,7 +143,7 @@ const MarketResearch = () => {
       {/* Industry Revenue Chart */}
       <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-3">5.2 Industry Analysis</p>
+          <p className="text-minimal text-muted-foreground mb-3">Industry Analysis</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Industry Revenue Forecast
           </h2>
@@ -158,7 +165,7 @@ const MarketResearch = () => {
           </p>
           <Bar data={aluminumPricing} prefix="$" />
           <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-            Tariffs and inflation have pushed aluminum from $2,400/ton in 2025 to $3,600/ton in
+            Tariffs and inflation have pushed aluminum from $2,600/ton in 2025 to $3,600/ton in
             April 2026. Continued global demand — particularly in Asian markets — supports
             sustained pricing strength.
           </p>
@@ -189,7 +196,7 @@ const MarketResearch = () => {
       {/* Customer Profile */}
       <section className="section-padding">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.3 Customer Profile</p>
+          <p className="text-minimal text-muted-foreground mb-4">Customer Profile</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">
             120,000 U.S. buyers of aluminum sows
           </h2>
@@ -216,14 +223,17 @@ const MarketResearch = () => {
       {/* Competition */}
       <section className="section-padding bg-muted/30 border-y border-border">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.4 Competition</p>
+          <p className="text-minimal text-muted-foreground mb-4">Competition</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
             A free-market commodity business
           </h2>
           <p className="text-muted-foreground mb-12 leading-relaxed">
-            Smelting, processing, and sale of aluminum is a commodity-driven enterprise. The
-            edge belongs to operators with controllable cost structures who can stay profitable
-            through price swings. Birch Aluminum competes on operating discipline.
+            The smelting, processing, and sale of aluminum is very much a free-market enterprise
+            — this is a commodity-driven business. The most important aspect of competing in this
+            industry is to maintain highly controllable operating and overhead costs so that the
+            enterprise can provide aluminum at market rates despite inevitable fluctuations.
+            Birch Aluminum, through its highly controllable cost base, will operate competitively
+            at all times.
           </p>
           <div className="grid md:grid-cols-2 gap-12">
             <div>

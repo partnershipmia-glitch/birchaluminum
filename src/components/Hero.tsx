@@ -19,7 +19,7 @@ const Hero = () => {
             A secondary aluminum smelting facility in Alabama, starting with one
             MAX-4000 gas-fired sweat furnace at ~2 million pounds per month, with a clear
             path to scale to two furnaces within 18–24 months. Total capital requirement:
-            $7.5M with projected annual EBITDA of ~$6.37M.
+            $7.5M with projected annual EBITDA of ~$6.57M.
           </p>
           <a
             href="mailto:birchfamilyllcfl@gmail.com"
