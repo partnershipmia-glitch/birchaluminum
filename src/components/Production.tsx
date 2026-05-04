@@ -5,13 +5,6 @@ const stats = [
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
 
-const schedule = [
-  { label: "Shifts", value: "2 shifts per day" },
-  { label: "Hours", value: "20 hours / day" },
-  { label: "Days", value: "6 days / week" },
-  { label: "Melt Cycle", value: "1,500 lbs every 20–25 min" },
-];
-
 const Production = () => {
   return (
     <section id="production" className="section-padding bg-secondary">
