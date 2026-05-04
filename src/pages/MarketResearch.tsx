@@ -143,7 +143,7 @@ const MarketResearch = () => {
       {/* Industry Revenue Chart */}
       <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-3">5.2 Industry Analysis</p>
+          <p className="text-minimal text-muted-foreground mb-3">Industry Analysis</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Industry Revenue Forecast
           </h2>
