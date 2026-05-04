@@ -37,27 +37,11 @@ const Production = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          <div>
-            <p className="text-minimal text-muted-foreground mb-4">Operating Schedule</p>
-            <div className="space-y-4">
-              {schedule.map((item) => (
-                <div key={item.label} className="flex justify-between items-center border-b border-border pb-3">
-                  <span className="text-muted-foreground">{item.label}</span>
-                  <span className="font-semibold">{item.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <p className="text-minimal text-muted-foreground mb-4">Unit Economics</p>
-            <div className="space-y-4">
-              <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">EBITDA / lb</span>
-                <span className="font-bold text-lg">$0.08 – $0.15</span>
-              </div>
-            </div>
+        <div>
+          <p className="text-minimal text-muted-foreground mb-4">Unit Economics</p>
+          <div className="flex justify-between items-center max-w-md">
+            <span className="text-muted-foreground">EBITDA / lb</span>
+            <span className="font-bold text-lg">$0.08 – $0.15</span>
           </div>
         </div>
       </div>
