@@ -165,7 +165,7 @@ const MarketResearch = () => {
           </p>
           <Bar data={aluminumPricing} prefix="$" />
           <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-            Tariffs and inflation have pushed aluminum from $2,400/ton in 2025 to $3,600/ton in
+            Tariffs and inflation have pushed aluminum from $2,600/ton in 2025 to $3,600/ton in
             April 2026. Continued global demand — particularly in Asian markets — supports
             sustained pricing strength.
           </p>
