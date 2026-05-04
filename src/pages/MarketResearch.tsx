@@ -223,14 +223,17 @@ const MarketResearch = () => {
       {/* Competition */}
       <section className="section-padding bg-muted/30 border-y border-border">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.4 Competition</p>
+          <p className="text-minimal text-muted-foreground mb-4">Competition</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
             A free-market commodity business
           </h2>
           <p className="text-muted-foreground mb-12 leading-relaxed">
-            Smelting, processing, and sale of aluminum is a commodity-driven enterprise. The
-            edge belongs to operators with controllable cost structures who can stay profitable
-            through price swings. Birch Aluminum competes on operating discipline.
+            The smelting, processing, and sale of aluminum is very much a free-market enterprise
+            — this is a commodity-driven business. The most important aspect of competing in this
+            industry is to maintain highly controllable operating and overhead costs so that the
+            enterprise can provide aluminum at market rates despite inevitable fluctuations.
+            Birch Aluminum, through its highly controllable cost base, will operate competitively
+            at all times.
           </p>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
