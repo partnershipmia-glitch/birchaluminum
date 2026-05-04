@@ -52,7 +52,7 @@ const drivers = [
 ];
 
 const nationalCompetitors = ["Alcoa Corporation", "Century Aluminum", "Kaiser Aluminum", "Magnitude 7 Metals"];
-const regionalCompetitors = ["Bermco Aluminum", "Constellium Aluminum", "Novelis", "Real Alloy"];
+const regionalCompetitors = ["Constellium Aluminum", "Novelis", "Real Alloy"];
 
 const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value: number }[]; prefix?: string; suffix?: string }) => {
   const max = Math.max(...data.map((d) => d.value));
