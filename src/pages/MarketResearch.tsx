@@ -113,21 +113,28 @@ const MarketResearch = () => {
       {/* Economic Outlook */}
       <section className="section-padding">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.1 Economic Outlook</p>
+          <p className="text-minimal text-muted-foreground mb-4">Economic Outlook</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
             Demand holds through every cycle
           </h2>
           <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
             <p>
-              The global outlook is moderate, with significant market volatility over the last
-              twelve months tied to shifts in trade policy. Interest rates remain steady and
-              central banks continue to support growth.
+              This section details the economic climate, the aluminum processing and distribution
+              industry, the customer profile, and the competition that the business will face as it
+              progresses through its operations.
             </p>
             <p>
-              Demand for aluminum stays strong even in challenging climates. The metal is a core
-              input across the domestic and global economy, and the U.S. defense industry — one
-              of its largest consumers — provides additional stability for Birch Aluminum's
-              divestment pipeline.
+              Currently, the global economic outlook is moderate. There has been significant market
+              volatility over the past twelve months as a result of changes in global trade policy.
+              Interest rates remain steady, and central banks continue to implement appropriate
+              fiscal policy to ensure that the global economy continues to grow.
+            </p>
+            <p>
+              Demand for aluminum remains strong even during challenging economic climates. This
+              metal is an incredibly important part of the domestic and global economic ecosystem.
+              The business will be able to divest substantial inventories domestically. One of the
+              major users of aluminum is the defense industry, which will further contribute to
+              the economic stability of Birch Aluminum.
             </p>
           </div>
         </div>
