@@ -134,13 +134,13 @@ const MarketResearch = () => {
       </section>
 
       {/* Industry Revenue Chart */}
-      <section className="section-padding bg-muted/30 border-y border-border">
+      <section className="py-12 bg-muted/30 border-y border-border">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.2 Industry Analysis</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <p className="text-minimal text-muted-foreground mb-3">5.2 Industry Analysis</p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Industry Revenue Forecast
           </h2>
-          <p className="text-muted-foreground mb-10">
+          <p className="text-muted-foreground mb-6">
             Domestic aluminum industry revenue (USD billions), 2026–2030.
           </p>
           <Bar data={industryRevenue} prefix="$" suffix="B" />
@@ -148,12 +148,12 @@ const MarketResearch = () => {
       </section>
 
       {/* Pricing Chart */}
-      <section className="section-padding">
+      <section className="py-12">
         <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
             Aluminum Pricing — 50% YoY Spike
           </h2>
-          <p className="text-muted-foreground mb-10">
+          <p className="text-muted-foreground mb-6">
             Price per metric ton, 2021–2026. April 2026 spot: <span className="text-foreground font-medium">$3,600/ton</span>.
           </p>
           <Bar data={aluminumPricing} prefix="$" />
