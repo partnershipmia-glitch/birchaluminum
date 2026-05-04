@@ -5,19 +5,19 @@ import { TrendingUp, Factory, Globe, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const industryRevenue = [
-  { year: "2026", value: 20 },
-  { year: "2027", value: 21.5 },
-  { year: "2028", value: 23 },
-  { year: "2029", value: 24.5 },
+  { year: "2026", value: 22 },
+  { year: "2027", value: 23 },
+  { year: "2028", value: 24 },
+  { year: "2029", value: 25 },
   { year: "2030", value: 26 },
 ];
 
 const aluminumPricing = [
-  { year: "2021", value: 1900 },
+  { year: "2021", value: 2500 },
   { year: "2022", value: 2700 },
   { year: "2023", value: 2300 },
-  { year: "2024", value: 2400 },
-  { year: "2025", value: 2400 },
+  { year: "2024", value: 2500 },
+  { year: "2025", value: 2600 },
   { year: "2026", value: 3600 },
 ];
 
