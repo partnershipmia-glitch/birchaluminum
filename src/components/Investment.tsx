@@ -1,21 +1,33 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
 
-const capex = [
-  { item: "Industrial Building", amount: "$1,000,000" },
-  { item: "MAX-4000 Sweat Furnace", amount: "$535,000" },
-  { item: "Furnace Additions & Equipment", amount: "$157,000" },
-  { item: "Spectrometers & Lab", amount: "$70,000" },
-  { item: "Utilities, Legal, Environmental", amount: "$120,000" },
-  { item: "Installation & Contingency", amount: "$450,000" },
+const capitalBreakdown = [
+  { item: "CapEx (building, furnace, equipment, install)", amount: "$2.8M" },
+  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1.6M" },
+  { item: "Inventory — Monthly Scrap Cost", amount: "$2.8M" },
+  { item: "Pre-Revenue Monthly Burn", amount: "~$61,100" },
+  { item: "Startup Payroll (initial months)", amount: "$57,000" },
 ];
 
-const financials = [
-  { label: "Total CapEx", value: "~$2.25M" },
-  { label: "Working Capital", value: "~$3.8M" },
-  { label: "Total Capital Required", value: "$7.5M" },
-  { label: "Monthly Revenue", value: "$3.4M" },
-  { label: "Monthly EBITDA", value: "~$531K" },
-  { label: "Annual EBITDA", value: "~$6.37M" },
+const timeline = [
+  { phase: "Month 1", label: "Building Acquisition", detail: "Pre-screened sites ready for closing" },
+  { phase: "Month 1–2", label: "Furnace Delivery", detail: "Producer lined up, 2-month lead time" },
+  { phase: "Month 3", label: "Installation", detail: "1 month install & commissioning" },
+  { phase: "Month 4", label: "Production Start", detail: "Inventory ready, first sows shipped" },
+];
+
+const collateral = [
+  {
+    title: "Inventory & Material",
+    items: ["Aluminum scrap", "Work-in-process material", "Finished aluminum sows"],
+  },
+  {
+    title: "Receivables & Cash Flow",
+    items: ["All accounts receivable", "Proceeds from aluminum sales", "Contractual buyer payments"],
+  },
+  {
+    title: "Equipment & Infrastructure",
+    items: ["MAX-4000 furnace system", "Handling equipment", "Production infrastructure"],
+  },
 ];
 
 const Investment = () => {
@@ -26,46 +38,104 @@ const Investment = () => {
           Investment Opportunity
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Capital Structure & Returns
+          $7.5M Total Capital Required
         </h2>
-        <p className="text-lg text-primary-foreground/70 mb-12 max-w-2xl">
-          SBA-backed structure with approval in place. Seeking equity partner for a
-          cash-flow positive U.S. industrial asset.
+        <p className="text-lg text-primary-foreground/70 mb-12 max-w-3xl">
+          We are seeking one of two partnership structures to launch a cash-flow positive
+          U.S. aluminum recycling operation.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-16 mb-16">
-          {/* CapEx Breakdown */}
-          <div className="md:col-span-2">
-            <p className="text-minimal text-primary-foreground/60 mb-6">Capital Expenditures</p>
+        {/* Two Paths */}
+        <div className="grid md:grid-cols-2 gap-px bg-primary-foreground/10 mb-16">
+          <div className="bg-primary p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="w-5 h-5 text-primary-foreground/70" />
+              <p className="text-minimal text-primary-foreground/60">Option A</p>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Full Equity Partner</h3>
+            <p className="text-3xl font-bold mb-4">$7.5M</p>
+            <p className="text-primary-foreground/70">
+              Single investor funds the entire project. Direct equity stake in a
+              fully-collateralized U.S. industrial asset with rapid cash conversion.
+            </p>
+          </div>
+          <div className="bg-primary p-8 md:p-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Landmark className="w-5 h-5 text-primary-foreground/70" />
+              <p className="text-minimal text-primary-foreground/60">Option B</p>
+            </div>
+            <h3 className="text-2xl font-bold mb-3">SBA Co-Investor</h3>
+            <p className="text-3xl font-bold mb-4">10% Equity Injection</p>
+            <p className="text-primary-foreground/70">
+              Partner contributes the 10% equity required for our SBA-backed loan. Full data
+              package and step-by-step support provided to walk your SBA officer through
+              every requirement.
+            </p>
+          </div>
+        </div>
+
+        {/* Capital Breakdown */}
+        <div className="grid md:grid-cols-2 gap-16 mb-16">
+          <div>
+            <p className="text-minimal text-primary-foreground/60 mb-6">Capital Allocation</p>
             <div className="space-y-3">
-              {capex.map((item) => (
-                <div key={item.item} className="flex justify-between items-center border-b border-primary-foreground/10 pb-3">
+              {capitalBreakdown.map((item) => (
+                <div key={item.item} className="flex justify-between items-start gap-6 border-b border-primary-foreground/10 pb-3">
                   <span className="text-primary-foreground/80">{item.item}</span>
-                  <span className="font-semibold">{item.amount}</span>
+                  <span className="font-semibold whitespace-nowrap">{item.amount}</span>
                 </div>
               ))}
               <div className="flex justify-between items-center pt-2">
-                <span className="font-bold">Total Project CapEx</span>
-                <span className="font-bold text-lg">~$2.25M</span>
+                <span className="font-bold">Total Capital Required</span>
+                <span className="font-bold text-lg">$7.5M</span>
               </div>
             </div>
           </div>
 
-          {/* Financial Highlights */}
           <div>
-            <p className="text-minimal text-primary-foreground/60 mb-6">Projected Financials</p>
-            <div className="space-y-4">
-              {financials.map((item) => (
-                <div key={item.label}>
-                  <p className="text-sm text-primary-foreground/50">{item.label}</p>
-                  <p className="text-xl font-bold">{item.value}</p>
+            <p className="text-minimal text-primary-foreground/60 mb-6">Project Timeline</p>
+            <div className="space-y-5">
+              {timeline.map((t) => (
+                <div key={t.phase} className="border-l-2 border-primary-foreground/30 pl-4">
+                  <p className="text-minimal text-primary-foreground/50">{t.phase}</p>
+                  <p className="font-semibold">{t.label}</p>
+                  <p className="text-sm text-primary-foreground/60">{t.detail}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
+        {/* Collateral Package */}
+        <div className="border border-primary-foreground/15 p-8 md:p-10 mb-16">
+          <div className="flex items-center gap-3 mb-2">
+            <ShieldCheck className="w-5 h-5 text-primary-foreground/70" />
+            <p className="text-minimal text-primary-foreground/60">Collateral Package</p>
+          </div>
+          <h3 className="text-2xl font-bold mb-2">First-Position UCC Security Interest</h3>
+          <p className="text-primary-foreground/70 mb-8 max-w-3xl">
+            The lender receives a first-position UCC lien on all business assets — fully
+            securing the financing.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {collateral.map((c) => (
+              <div key={c.title}>
+                <p className="font-semibold mb-3">{c.title}</p>
+                <ul className="space-y-2">
+                  {c.items.map((i) => (
+                    <li key={i} className="flex items-center gap-3 text-primary-foreground/80 text-sm">
+                      <span className="w-1.5 h-1.5 bg-primary-foreground/40 rounded-full shrink-0" />
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Scenario Range */}
+        <p className="text-minimal text-primary-foreground/60 mb-6">Projected Monthly EBITDA</p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-primary-foreground/10 mb-16">
           <div className="bg-primary p-8 text-center">
             <p className="text-minimal text-primary-foreground/50 mb-2">Conservative</p>
