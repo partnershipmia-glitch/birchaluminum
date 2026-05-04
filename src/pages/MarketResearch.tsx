@@ -196,7 +196,7 @@ const MarketResearch = () => {
       {/* Customer Profile */}
       <section className="section-padding">
         <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">5.3 Customer Profile</p>
+          <p className="text-minimal text-muted-foreground mb-4">Customer Profile</p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">
             120,000 U.S. buyers of aluminum sows
           </h2>
