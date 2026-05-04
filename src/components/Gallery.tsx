@@ -5,35 +5,41 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import furnaceMax4000 from "@/assets/gallery-furnace-max4000.jpg";
+import furnaceOperation from "@/assets/gallery-furnace-operation.jpg";
+import scrapWheels from "@/assets/gallery-scrap-wheels.jpg";
+import charging from "@/assets/gallery-charging.jpg";
+import pouring from "@/assets/gallery-pouring.jpg";
+import sowOutput from "@/assets/gallery-sow-output.jpg";
 
 const images = [
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2019/04/Aluminium-Recycling-Max-4000.jpg",
+    src: furnaceMax4000,
     alt: "US Furnaces MAX-4000 Aluminum Sweat Furnace",
     caption: "MAX-4000 Sweat Furnace — Our primary production unit",
   },
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2024/09/IMG_20230120_094002362_HDR1-scaled.jpg",
+    src: furnaceOperation,
     alt: "Aluminum recycling furnace in operation",
     caption: "Furnace operation — 1,500 lb loads melted in 20–25 minutes",
   },
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2019/04/automotive-scrap.jpg",
+    src: scrapWheels,
     alt: "Aluminum scrap wheels — input material",
     caption: "Input — Aluminum scrap wheels sourced from U.S. suppliers",
   },
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2019/04/furnace-operation.jpg",
+    src: charging,
     alt: "Furnace charging and melting process",
     caption: "Charging — Material loaded and pushed into the primary chamber",
   },
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2019/04/pouring-molds.jpg",
+    src: pouring,
     alt: "Pouring molten aluminum into sow molds",
     caption: "Pouring — Molten aluminum tapped into 2,000 lb sow molds",
   },
   {
-    src: "https://recyclingfurnaces.com/wp-content/uploads/2024/09/IMG_20240405_051509238-scaled.jpg",
+    src: sowOutput,
     alt: "Finished aluminum sow product",
     caption: "Output — Finished aluminum sows ready for sale",
   },
