@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stats = [
   { label: "Furnace", value: "MAX-4000", detail: "Gas-fired sweat furnace with afterburner" },
@@ -8,23 +9,20 @@ const stats = [
 ];
 
 const MAX_CAPACITY_LBS = 4_000_000; // 2 furnaces
-const SCRAP_COST_PER_LB = 0.85; // assumed avg scrap cost
-const SOW_PRICE_PER_LB = 1.05; // assumed avg sow sale price
-const EBITDA_LOW = 0.08;
-const EBITDA_HIGH = 0.15;
+const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
+const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
 
 const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
   const [amount, setAmount] = useState<number>(1_000_000);
+  const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
-  // lbs of scrap an investor's $ can buy this cycle
-  const lbs = Math.min(amount / SCRAP_COST_PER_LB, MAX_CAPACITY_LBS);
-  const revenue = lbs * SOW_PRICE_PER_LB;
-  const ebitdaLow = lbs * EBITDA_LOW;
-  const ebitdaHigh = lbs * EBITDA_HIGH;
-  const capped = amount / SCRAP_COST_PER_LB > MAX_CAPACITY_LBS;
+  const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
+  const lbs = Math.min(amount / safePrice, MAX_CAPACITY_LBS);
+  const ebitda = lbs * AVG_MARGIN_PER_LB;
+  const capped = amount / safePrice > MAX_CAPACITY_LBS;
 
   return (
     <section id="production" className="section-padding bg-secondary">
@@ -64,81 +62,156 @@ const Production = () => {
           </p>
         </div>
 
-        {/* Investor Calculator */}
-        <div className="bg-primary text-primary-foreground p-8 md:p-12">
-          <p className="text-minimal text-primary-foreground/60 mb-4">Investor Calculator</p>
-          <h3 className="text-2xl md:text-3xl font-bold mb-2">
-            See your monthly return on a full melt cycle
-          </h3>
-          <p className="text-primary-foreground/70 mb-8 max-w-3xl">
-            One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
-            roughly a month. Two-furnace capacity caps at <strong>4,000,000 lbs / month</strong>.
-          </p>
+        {/* Tabs: Calculator + Scrap Price */}
+        <Tabs defaultValue="calc" className="w-full">
+          <TabsList className="mb-6">
+            <TabsTrigger value="calc">Investor Calculator</TabsTrigger>
+            <TabsTrigger value="scrap">Scrap Price</TabsTrigger>
+          </TabsList>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            <div>
-              <label className="text-minimal text-primary-foreground/60 mb-3 block">
-                Investment Amount (USD)
-              </label>
-              <div className="flex items-center bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-3 mb-6">
-                <span className="text-2xl font-bold mr-2">$</span>
-                <input
-                  type="number"
-                  min={0}
-                  step={50000}
-                  value={amount}
-                  onChange={(e) => setAmount(Math.max(0, Number(e.target.value) || 0))}
-                  className="bg-transparent w-full text-2xl md:text-3xl font-bold outline-none"
-                />
-              </div>
-              <input
-                type="range"
-                min={100000}
-                max={3500000}
-                step={50000}
-                value={Math.min(amount, 3500000)}
-                onChange={(e) => setAmount(Number(e.target.value))}
-                className="w-full accent-primary-foreground"
-              />
-              <div className="flex justify-between text-xs text-primary-foreground/50 mt-2">
-                <span>$100K</span>
-                <span>$3.5M</span>
-              </div>
+          <TabsContent value="calc">
+            <div className="bg-primary text-primary-foreground p-8 md:p-12">
+              <p className="text-minimal text-primary-foreground/60 mb-4">Investor Calculator</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                See your monthly return on a full melt cycle
+              </h3>
+              <p className="text-primary-foreground/70 mb-8 max-w-3xl">
+                One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
+                roughly a month. Two-furnace capacity caps at <strong>4,000,000 lbs / month</strong>.
+              </p>
 
-              <div className="mt-6 text-sm text-primary-foreground/60 space-y-1">
-                <p>Assumed scrap cost: ${SCRAP_COST_PER_LB.toFixed(2)} / lb</p>
-                <p>Assumed sow sale price: ${SOW_PRICE_PER_LB.toFixed(2)} / lb</p>
-                {capped && (
-                  <p className="text-yellow-300 font-medium">
-                    Capped at 4M lbs/month (max 2-furnace capacity).
+              <div className="grid md:grid-cols-2 gap-10">
+                <div>
+                  <label className="text-minimal text-primary-foreground/60 mb-3 block">
+                    Investment Amount (USD)
+                  </label>
+                  <div className="flex items-center bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-3 mb-6">
+                    <span className="text-2xl font-bold mr-2">$</span>
+                    <input
+                      type="number"
+                      min={0}
+                      step={50000}
+                      value={amount}
+                      onChange={(e) => setAmount(Math.max(0, Number(e.target.value) || 0))}
+                      className="bg-transparent w-full text-2xl md:text-3xl font-bold outline-none"
+                    />
+                  </div>
+                  <input
+                    type="range"
+                    min={100000}
+                    max={3500000}
+                    step={50000}
+                    value={Math.min(amount, 3500000)}
+                    onChange={(e) => setAmount(Number(e.target.value))}
+                    className="w-full accent-primary-foreground"
+                  />
+                  <div className="flex justify-between text-xs text-primary-foreground/50 mt-2">
+                    <span>$100K</span>
+                    <span>$3.5M</span>
+                  </div>
+
+                  <div className="mt-6 text-sm text-primary-foreground/60 space-y-1">
+                    <p>Average margin: <strong>${AVG_MARGIN_PER_LB.toFixed(2)} / lb</strong></p>
+                    <p>
+                      Scrap price: <strong>${safePrice.toFixed(2)} / lb</strong>{" "}
+                      <span className="text-primary-foreground/50">(set in Scrap Price tab)</span>
+                    </p>
+                    {capped && (
+                      <p className="text-yellow-300 font-medium">
+                        Capped at 4M lbs/month (max 2-furnace capacity).
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="border border-primary-foreground/15 p-5">
+                    <p className="text-minimal text-primary-foreground/60 mb-1">Scrap Processed</p>
+                    <p className="text-3xl font-bold">
+                      {Math.round(lbs).toLocaleString()}{" "}
+                      <span className="text-base font-normal text-primary-foreground/60">lbs / month</span>
+                    </p>
+                  </div>
+                  <div className="border-2 border-yellow-400 bg-yellow-400/10 p-5">
+                    <p className="text-minimal text-yellow-300 mb-1">Monthly EBITDA (avg $0.10/lb)</p>
+                    <p className="text-3xl md:text-4xl font-extrabold text-yellow-300">
+                      {formatUSD(ebitda)}
+                    </p>
+                    <p className="text-sm text-primary-foreground/70 mt-2">
+                      Based on average $0.10 margin per lb after a complete melt-and-sell cycle.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          <TabsContent value="scrap">
+            <div className="bg-background border-2 border-primary p-8 md:p-12">
+              <p className="text-minimal text-muted-foreground mb-4">Scrap Price</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                Current average scrap wheel price
+              </h3>
+              <p className="text-muted-foreground mb-8 max-w-3xl">
+                Aluminum scrap wheel pricing fluctuates with the commodity market. Adjust below to
+                model the calculator against current or projected market conditions. Today's
+                average is approximately <strong>$1.70 / lb</strong>.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                  <label className="text-minimal text-muted-foreground mb-3 block">
+                    Scrap Price (USD / lb)
+                  </label>
+                  <div className="flex items-center bg-secondary border border-border px-4 py-3 mb-6">
+                    <span className="text-2xl font-bold mr-2">$</span>
+                    <input
+                      type="number"
+                      min={0}
+                      step={0.05}
+                      value={scrapPrice}
+                      onChange={(e) => setScrapPrice(Math.max(0, Number(e.target.value) || 0))}
+                      className="bg-transparent w-full text-2xl md:text-3xl font-bold outline-none"
+                    />
+                    <span className="text-base text-muted-foreground ml-2">/ lb</span>
+                  </div>
+                  <input
+                    type="range"
+                    min={0.5}
+                    max={3}
+                    step={0.05}
+                    value={Math.min(Math.max(scrapPrice, 0.5), 3)}
+                    onChange={(e) => setScrapPrice(Number(e.target.value))}
+                    className="w-full accent-primary"
+                  />
+                  <div className="flex justify-between text-xs text-muted-foreground mt-2">
+                    <span>$0.50</span>
+                    <span>$3.00</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setScrapPrice(DEFAULT_SCRAP_PRICE)}
+                    className="mt-6 text-sm underline text-muted-foreground hover:text-foreground"
+                  >
+                    Reset to current average ($1.70/lb)
+                  </button>
+                </div>
+
+                <div className="bg-secondary border border-border p-6">
+                  <p className="text-minimal text-muted-foreground mb-2">Today's Average</p>
+                  <p className="text-5xl md:text-6xl font-extrabold tracking-tight text-primary mb-4">
+                    ${safePrice.toFixed(2)}
+                    <span className="text-xl font-normal text-muted-foreground"> / lb</span>
                   </p>
-                )}
+                  <p className="text-sm text-muted-foreground">
+                    Used by the Investor Calculator to convert your investment into lbs of scrap
+                    processed per month.
+                  </p>
+                </div>
               </div>
             </div>
-
-            <div className="space-y-4">
-              <div className="border border-primary-foreground/15 p-5">
-                <p className="text-minimal text-primary-foreground/60 mb-1">Scrap Processed</p>
-                <p className="text-3xl font-bold">
-                  {Math.round(lbs).toLocaleString()} <span className="text-base font-normal text-primary-foreground/60">lbs / month</span>
-                </p>
-              </div>
-              <div className="border border-primary-foreground/15 p-5">
-                <p className="text-minimal text-primary-foreground/60 mb-1">Projected Revenue</p>
-                <p className="text-3xl font-bold">{formatUSD(revenue)}</p>
-              </div>
-              <div className="border-2 border-yellow-400 bg-yellow-400/10 p-5">
-                <p className="text-minimal text-yellow-300 mb-1">Monthly EBITDA Range</p>
-                <p className="text-3xl md:text-4xl font-extrabold text-yellow-300">
-                  {formatUSD(ebitdaLow)} – {formatUSD(ebitdaHigh)}
-                </p>
-                <p className="text-sm text-primary-foreground/70 mt-2">
-                  Based on $0.08 – $0.15 EBITDA / lb after a complete melt-and-sell cycle.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
