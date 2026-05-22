@@ -21,8 +21,13 @@ const Production = () => {
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
   const cappedLbs = Math.min(Math.max(lbs, 0), MAX_CAPACITY_LBS);
-  const ebitda = cappedLbs * AVG_MARGIN_PER_LB;
+  const SECOND_FURNACE_THRESHOLD = 2_000_000;
+  const baseLbs = Math.min(cappedLbs, SECOND_FURNACE_THRESHOLD);
+  const extraLbs = Math.max(0, cappedLbs - SECOND_FURNACE_THRESHOLD);
+  // After 2M lb (2nd furnace online), per-lb margin is 65% larger
+  const ebitda = baseLbs * AVG_MARGIN_PER_LB + extraLbs * AVG_MARGIN_PER_LB * 1.65;
   const investment = cappedLbs * safePrice;
+
 
   return (
     <section id="production" className="section-padding bg-secondary">
