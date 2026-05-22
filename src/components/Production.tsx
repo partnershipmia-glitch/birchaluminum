@@ -16,13 +16,13 @@ const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
-  const [amount, setAmount] = useState<number>(1_000_000);
+  const [lbs, setLbs] = useState<number>(2_000_000);
   const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
-  const lbs = Math.min(amount / safePrice, MAX_CAPACITY_LBS);
-  const ebitda = lbs * AVG_MARGIN_PER_LB;
-  const capped = amount / safePrice > MAX_CAPACITY_LBS;
+  const cappedLbs = Math.min(Math.max(lbs, 0), MAX_CAPACITY_LBS);
+  const ebitda = cappedLbs * AVG_MARGIN_PER_LB;
+  const investment = cappedLbs * safePrice;
 
   return (
     <section id="production" className="section-padding bg-secondary">
@@ -73,7 +73,7 @@ const Production = () => {
             <div className="bg-primary text-primary-foreground p-8 md:p-12">
               <p className="text-minimal text-primary-foreground/60 mb-4">Investor Calculator</p>
               <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                See your monthly return on a full melt cycle
+                See your monthly margin on a full melt cycle
               </h3>
               <p className="text-primary-foreground/70 mb-8 max-w-3xl">
                 One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
@@ -83,31 +83,34 @@ const Production = () => {
               <div className="grid md:grid-cols-2 gap-10">
                 <div>
                   <label className="text-minimal text-primary-foreground/60 mb-3 block">
-                    Investment Amount (USD)
+                    Pounds Processed (lb / month)
                   </label>
                   <div className="flex items-center bg-primary-foreground/10 border border-primary-foreground/20 px-4 py-3 mb-6">
-                    <span className="text-2xl font-bold mr-2">$</span>
                     <input
                       type="number"
                       min={0}
+                      max={MAX_CAPACITY_LBS}
                       step={50000}
-                      value={amount}
-                      onChange={(e) => setAmount(Math.max(0, Number(e.target.value) || 0))}
+                      value={lbs}
+                      onChange={(e) =>
+                        setLbs(Math.min(MAX_CAPACITY_LBS, Math.max(0, Number(e.target.value) || 0)))
+                      }
                       className="bg-transparent w-full text-2xl md:text-3xl font-bold outline-none"
                     />
+                    <span className="text-base text-primary-foreground/60 ml-2">lb</span>
                   </div>
                   <input
                     type="range"
-                    min={100000}
-                    max={3500000}
+                    min={0}
+                    max={MAX_CAPACITY_LBS}
                     step={50000}
-                    value={Math.min(amount, 3500000)}
-                    onChange={(e) => setAmount(Number(e.target.value))}
+                    value={cappedLbs}
+                    onChange={(e) => setLbs(Number(e.target.value))}
                     className="w-full accent-primary-foreground"
                   />
                   <div className="flex justify-between text-xs text-primary-foreground/50 mt-2">
-                    <span>$100K</span>
-                    <span>$3.5M</span>
+                    <span>0 lb</span>
+                    <span>4,000,000 lb (max)</span>
                   </div>
 
                   <div className="mt-6 text-sm text-primary-foreground/60 space-y-1">
@@ -116,11 +119,9 @@ const Production = () => {
                       Scrap price: <strong>${safePrice.toFixed(2)} / lb</strong>{" "}
                       <span className="text-primary-foreground/50">(set in Scrap Price tab)</span>
                     </p>
-                    {capped && (
-                      <p className="text-yellow-300 font-medium">
-                        Capped at 4M lbs/month (max 2-furnace capacity).
-                      </p>
-                    )}
+                    <p>
+                      Approx. capital required: <strong>{formatUSD(investment)}</strong>
+                    </p>
                   </div>
                 </div>
 
@@ -128,13 +129,13 @@ const Production = () => {
                   <div className="border border-primary-foreground/15 p-5">
                     <p className="text-minimal text-primary-foreground/60 mb-1">Scrap Processed</p>
                     <p className="text-3xl font-bold">
-                      {Math.round(lbs).toLocaleString()}{" "}
+                      {Math.round(cappedLbs).toLocaleString()}{" "}
                       <span className="text-base font-normal text-primary-foreground/60">lbs / month</span>
                     </p>
                   </div>
                   <div className="border-2 border-yellow-400 bg-yellow-400/10 p-5">
-                    <p className="text-minimal text-yellow-300 mb-1">Monthly EBITDA (avg $0.10/lb)</p>
-                    <p className="text-3xl md:text-4xl font-extrabold text-yellow-300">
+                    <p className="text-minimal text-yellow-300 mb-1">Monthly Margin Earned (avg $0.10/lb)</p>
+                    <p className="text-4xl md:text-5xl font-extrabold text-yellow-300">
                       {formatUSD(ebitda)}
                     </p>
                     <p className="text-sm text-primary-foreground/70 mt-2">
@@ -145,6 +146,7 @@ const Production = () => {
               </div>
             </div>
           </TabsContent>
+
 
           <TabsContent value="scrap">
             <div className="bg-background border-2 border-primary p-8 md:p-12">
