@@ -45,33 +45,18 @@ const Investment = () => {
           U.S. aluminum recycling operation.
         </p>
 
-        {/* Two Paths */}
-        <div className="grid md:grid-cols-2 gap-px bg-primary-foreground/10 mb-16">
-          <div className="bg-primary p-8 md:p-10">
-            <div className="flex items-center gap-3 mb-4">
-              <Users className="w-5 h-5 text-primary-foreground/70" />
-              <p className="text-minimal text-primary-foreground/60">Option A</p>
-            </div>
-            <h3 className="text-2xl font-bold mb-3">Full Equity Partner</h3>
-            <p className="text-3xl font-bold mb-4">$7.5M</p>
-            <p className="text-primary-foreground/70">
-              Single investor funds the entire project. Direct equity stake in a
-              fully-collateralized U.S. industrial asset with rapid cash conversion.
-            </p>
+        {/* Full Equity Partner */}
+        <div className="bg-primary border border-primary-foreground/15 p-8 md:p-10 mb-16">
+          <div className="flex items-center gap-3 mb-4">
+            <Users className="w-5 h-5 text-primary-foreground/70" />
+            <p className="text-minimal text-primary-foreground/60">Partnership Structure</p>
           </div>
-          <div className="bg-primary p-8 md:p-10">
-            <div className="flex items-center gap-3 mb-4">
-              <Landmark className="w-5 h-5 text-primary-foreground/70" />
-              <p className="text-minimal text-primary-foreground/60">Option B</p>
-            </div>
-            <h3 className="text-2xl font-bold mb-3">SBA Co-Investor</h3>
-            <p className="text-3xl font-bold mb-4">10% Equity Injection</p>
-            <p className="text-primary-foreground/70">
-              Partner contributes the 10% equity required for our SBA-backed loan. Full data
-              package and step-by-step support provided to walk your SBA officer through
-              every requirement.
-            </p>
-          </div>
+          <h3 className="text-2xl font-bold mb-3">Full Equity Partner</h3>
+          <p className="text-3xl font-bold mb-4">$7.5M</p>
+          <p className="text-primary-foreground/70 max-w-3xl">
+            Single investor funds the entire project. Direct equity stake in a
+            fully-collateralized U.S. industrial asset with rapid cash conversion.
+          </p>
         </div>
 
         {/* Capital Breakdown */}
