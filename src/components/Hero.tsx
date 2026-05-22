@@ -15,15 +15,15 @@ const Hero = () => {
           </span>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
-            Invest <span className="text-yellow-400">$2.8M</span>.<br />
-            Own a piece of a U.S.<br />
+            Own an <span className="text-yellow-400">equity</span> of a U.S.<br />
             aluminum smelter.
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl">
-            We're building a secondary aluminum smelting facility in Alabama,
-            processing scrap wheels into sows. One furnace producing ~2 million lbs/month,
-            scaling to two furnaces in 18–24 months. Buyers and supply already lined up.
+            We're building a secondary aluminum smelting facility in Decatur, Alabama.
+            We will process scrap wheels into sows. One furnace producing ~2 million lbs/month,
+            scaling to two furnaces in 18–24 months — production doubles, expenses increase only 35%.
+            LOIs in hand from sow buyers and scrap suppliers.
           </p>
 
           {/* Bright Investor Snapshot */}
