@@ -50,7 +50,9 @@ const Hero = () => {
 
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="mailto:birchfamilyllcfl@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com&su=Partnership%20Inquiry%20-%20Birch%20Aluminum&body=Hello%20Birch%20Aluminum%20Team%2C%0A%0AI%20am%20interested%20in%20becoming%20a%20partner%20in%20your%20Decatur%2C%20Alabama%20aluminum%20smelting%20facility.%20Please%20share%20more%20details%20about%20the%20equity%20opportunity.%0A%0AMy%20contact%20info%3A%0AName%3A%20%0APhone%3A%20%0A%0AThank%20you.%0A%0A--%0AReply%20to%3A%20BirchFamilyLLCFL%40gmail.com%20%7C%20%2B1%20754-610-1052"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
             >
               Become a Partner <ArrowRight className="w-4 h-4" />
