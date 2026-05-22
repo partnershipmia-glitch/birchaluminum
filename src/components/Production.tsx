@@ -152,8 +152,10 @@ const Production = () => {
                     </p>
 
                     <p className="text-sm text-primary-foreground/70 mt-2">
-                      Based on average $0.10 margin per lb after a complete melt-and-sell cycle.
+                      $0.10 / lb up to 2M lb. Above 2M lb (2nd furnace online), margin per lb is
+                      <strong> 65% larger</strong> — expenses scale only ~35% while output doubles.
                     </p>
+
                   </div>
                 </div>
               </div>
