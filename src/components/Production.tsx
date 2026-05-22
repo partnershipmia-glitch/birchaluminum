@@ -82,7 +82,7 @@ const Production = () => {
               </h3>
               <p className="text-primary-foreground/70 mb-8 max-w-3xl">
                 One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
-                roughly a month. Two-furnace capacity caps at <strong>4,000,000 lbs / month</strong>.
+                roughly a month. Two-furnace capacity at <strong>4,000,000 lbs / month</strong>.
               </p>
 
               <div className="grid md:grid-cols-2 gap-10">
@@ -129,10 +129,10 @@ const Production = () => {
                     <p>Average margin: <strong>${AVG_MARGIN_PER_LB.toFixed(2)} / lb</strong></p>
                     <p>
                       Scrap price: <strong>${safePrice.toFixed(2)} / lb</strong>{" "}
-                      <span className="text-primary-foreground/50">(set in Scrap Price tab)</span>
+                      <span className="text-primary-foreground/50">(commodity driven price)</span>
                     </p>
                     <p>
-                      Approx. capital required: <strong>{formatUSD(investment)}</strong>
+                      Approx. inventory capital required: <strong>{formatUSD(investment)}</strong>
                     </p>
                   </div>
                 </div>
