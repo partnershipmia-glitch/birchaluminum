@@ -108,10 +108,17 @@ const Production = () => {
                     onChange={(e) => setLbs(Number(e.target.value))}
                     className="w-full accent-primary-foreground"
                   />
-                  <div className="flex justify-between text-xs text-primary-foreground/50 mt-2">
-                    <span>0 lb</span>
-                    <span>4,000,000 lb (max)</span>
+                  <div className="relative mt-2 h-8 text-xs text-primary-foreground/50">
+                    <span className="absolute left-0">0 lb</span>
+                    <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+                      <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
+                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">
+                        2M lb · +2nd furnace
+                      </span>
+                    </div>
+                    <span className="absolute right-0">4M lb (max)</span>
                   </div>
+
 
                   <div className="mt-6 text-sm text-primary-foreground/60 space-y-1">
                     <p>Average margin: <strong>${AVG_MARGIN_PER_LB.toFixed(2)} / lb</strong></p>
