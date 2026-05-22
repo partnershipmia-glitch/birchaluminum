@@ -19,6 +19,10 @@ const advantages = [
     title: "Tariff-Driven Supply Chain",
     detail: "Reliable domestic aluminum supply chain reinforced by import tariffs.",
   },
+  {
+    title: "Local Network In Place",
+    detail: "Established relationships with contractors, workforce suppliers, and engineering firms. Already worked with ADEM, the main permitting authority in Alabama.",
+  },
 ];
 
 const About = () => {
