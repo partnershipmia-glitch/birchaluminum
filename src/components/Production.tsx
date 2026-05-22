@@ -142,9 +142,10 @@ const Production = () => {
                   </div>
                   <div className="border-2 border-yellow-400 bg-yellow-400/10 p-5">
                     <p className="text-minimal text-yellow-300 mb-1">Monthly Margin Earned (avg $0.10/lb)</p>
-                    <p className="text-4xl md:text-5xl font-extrabold text-yellow-300">
+                    <p className="text-6xl md:text-8xl font-extrabold text-yellow-300 leading-none">
                       {formatUSD(ebitda)}
                     </p>
+
                     <p className="text-sm text-primary-foreground/70 mt-2">
                       Based on average $0.10 margin per lb after a complete melt-and-sell cycle.
                     </p>
