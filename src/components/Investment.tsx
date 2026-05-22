@@ -38,11 +38,10 @@ const Investment = () => {
           Investment Opportunity
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          $7.5M Total Capital Required
+          Raising $2,800,000 to build a secondary aluminum smelting facility
         </h2>
         <p className="text-lg text-primary-foreground/70 mb-12 max-w-3xl">
-          We are seeking one of two partnership structures to launch a cash-flow positive
-          U.S. aluminum recycling operation.
+          When production is in place we will need a credit line on inventory.
         </p>
 
         {/* Full Equity Partner */}
@@ -51,11 +50,10 @@ const Investment = () => {
             <Users className="w-5 h-5 text-primary-foreground/70" />
             <p className="text-minimal text-primary-foreground/60">Partnership Structure</p>
           </div>
-          <h3 className="text-2xl font-bold mb-3">Full Equity Partner</h3>
-          <p className="text-3xl font-bold mb-4">$7.5M</p>
+          <h3 className="text-2xl font-bold mb-3">Credit Line on Inventory</h3>
           <p className="text-primary-foreground/70 max-w-3xl">
-            Single investor funds the entire project. Direct equity stake in a
-            fully-collateralized U.S. industrial asset with rapid cash conversion.
+            Once production is in place, we will need a credit line secured against inventory
+            to support working capital and scale throughput.
           </p>
         </div>
 
