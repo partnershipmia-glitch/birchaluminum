@@ -15,8 +15,8 @@ const Hero = () => {
           </span>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
-            Own an <span className="text-yellow-400">equity</span> of a U.S.<br />
-            aluminum smelter.
+            Want to <span className="text-yellow-400">invest</span> in the U.S.<br />
+            aluminum smelter and own an equity of cashflow business?
           </h1>
 
           <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
