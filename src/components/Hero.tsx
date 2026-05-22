@@ -19,12 +19,13 @@ const Hero = () => {
             aluminum smelter.
           </h1>
 
-          <p className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl">
-            We're building a secondary aluminum smelting facility in Decatur, Alabama.
-            We will process scrap wheels into sows. One furnace producing ~2 million lbs/month,
-            scaling to two furnaces in 18–24 months — production doubles, expenses increase only 35%.
-            LOIs in hand from sow buyers and scrap suppliers.
-          </p>
+          <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>We will process scrap wheels into sows.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>One furnace producing ~2 million lbs/month.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>Scaling to two furnaces in 18–24 months — production doubles, expenses increase only 35%.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>LOIs in hand from sow buyers and scrap suppliers.</span></li>
+          </ul>
 
           {/* Bright Investor Snapshot */}
           <div className="grid sm:grid-cols-3 gap-px bg-primary-foreground/10 mb-10 border border-yellow-400/30">
