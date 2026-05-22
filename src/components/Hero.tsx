@@ -14,10 +14,12 @@ const Hero = () => {
             Now Raising · Decatur, Alabama
           </span>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
-            Own an <span className="text-yellow-400">equity</span> of a U.S.<br />
-            aluminum smelter.
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-4">
+            Invest in the <span className="text-yellow-400">aluminum smelter</span>
           </h1>
+          <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium mb-6">
+            and own an equity of cashflow business.
+          </p>
 
           <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
