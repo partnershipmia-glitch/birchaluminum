@@ -73,7 +73,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="text-sm text-primary-foreground/50 mt-6 max-w-2xl">
+          <p className="text-sm text-primary-foreground/50 mt-6 max-w-2xl lg:mx-auto">
             Fast cash conversion · First-position UCC collateral · Buyers & supply lined up
           </p>
         </div>
