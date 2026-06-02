@@ -8,7 +8,7 @@ const stats = [
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
 
-const MAX_CAPACITY_LBS = 3_000_000; // 2 furnaces
+const MAX_CAPACITY_LBS = 6_000_000; // 4 furnaces
 const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
 const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
 
@@ -16,7 +16,7 @@ const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
-  const [lbs, setLbs] = useState<number>(1_500_000);
+  const [lbs, setLbs] = useState<number>(3_000_000);
   const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
