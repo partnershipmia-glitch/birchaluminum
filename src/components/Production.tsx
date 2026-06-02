@@ -24,7 +24,7 @@ const Production = () => {
   const SECOND_FURNACE_THRESHOLD = 1_500_000;
   const baseLbs = Math.min(cappedLbs, SECOND_FURNACE_THRESHOLD);
   const extraLbs = Math.max(0, cappedLbs - SECOND_FURNACE_THRESHOLD);
-  // After 2M lb (2nd furnace online), per-lb margin is 65% larger
+  // After 1.5M lb (2nd furnace online), per-lb margin is 65% larger
   const ebitda = baseLbs * AVG_MARGIN_PER_LB + extraLbs * AVG_MARGIN_PER_LB * 1.65;
   const investment = cappedLbs * safePrice;
 
