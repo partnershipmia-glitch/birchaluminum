@@ -24,8 +24,7 @@ const Hero = () => {
           <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>We will process scrap wheels into sows.</span></li>
-            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>One furnace producing ~2 million lbs/month.</span></li>
-            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>Scaling to two furnaces in 18–24 months — production doubles, expenses increase only 35%.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>2 furnaces producing ~3 million lbs/month, scaling to 4 furnaces.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>LOIs in hand from sow buyers and scrap suppliers.</span></li>
           </ul>
 
