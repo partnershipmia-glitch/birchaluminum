@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-orange-500/20 blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl lg:max-w-6xl xl:max-w-7xl lg:mx-auto lg:text-center">
           <span className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider mb-6">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             Now Raising · Decatur, Alabama
