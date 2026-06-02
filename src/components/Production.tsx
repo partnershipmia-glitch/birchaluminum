@@ -37,8 +37,8 @@ const Production = () => {
           Capacity & Output
         </h2>
         <p className="text-muted-foreground mb-12 max-w-2xl">
-          One US Furnaces MAX-4000 aluminum sweat furnace with integrated afterburner system.
-          Scalable to two furnaces within 18–24 months.
+          Two US Furnaces MAX-4000 aluminum sweat furnaces with integrated afterburner systems.
+          Scalable to four furnaces within 18–24 months.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border mb-16">
