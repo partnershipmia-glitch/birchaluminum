@@ -159,7 +159,7 @@ const Production = () => {
 
                     <p className="text-sm text-primary-foreground/70 mt-2">
                       $0.10 / lb up to 1.5M lb. Above 1.5M lb (2nd furnace online), margin per lb is
-                      <strong> 65% larger</strong> — expenses scale only ~35% while output doubles.
+                      <strong> 65% larger</strong> — expenses scale sub-linearly as capacity expands to 4 furnaces at 6M lb/month.
                     </p>
 
                   </div>
