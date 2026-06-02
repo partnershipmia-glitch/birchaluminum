@@ -29,7 +29,7 @@ const Hero = () => {
           </ul>
 
           {/* Bright Investor Snapshot */}
-          <div className="grid sm:grid-cols-3 gap-px bg-primary-foreground/10 mb-10 border border-yellow-400/30">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-10 border border-yellow-400/30">
             <div className="bg-primary p-6">
               <DollarSign className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">Capital Raise</p>
@@ -47,6 +47,12 @@ const Hero = () => {
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">2-Year Outcome</p>
               <p className="text-3xl font-black text-yellow-400">$74M+</p>
               <p className="text-sm text-primary-foreground/70 mt-1">36M lbs/yr, 2-furnace operation</p>
+            </div>
+            <div className="bg-primary p-6">
+              <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />
+              <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">Targeted EBITDA</p>
+              <p className="text-3xl font-black text-yellow-400">$5M/yr</p>
+              <p className="text-sm text-primary-foreground/70 mt-1">$20M+ enterprise value within 24 months</p>
             </div>
           </div>
 
