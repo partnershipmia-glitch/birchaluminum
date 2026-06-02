@@ -115,13 +115,19 @@ const Production = () => {
                   />
                   <div className="relative mt-2 h-8 text-xs text-primary-foreground/50">
                     <span className="absolute left-0">0 lb</span>
-                    <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+                    <div className="absolute flex flex-col items-center" style={{ left: '25%', transform: 'translateX(-50%)' }}>
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
-                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">
-                        1.5M lb · +2nd furnace
-                      </span>
+                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">1.5M · +2nd</span>
                     </div>
-                    <span className="absolute right-0">3M lb (max)</span>
+                    <div className="absolute flex flex-col items-center" style={{ left: '50%', transform: 'translateX(-50%)' }}>
+                      <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
+                      <span className="mt-1 whitespace-nowrap text-primary-foreground/60">3M · +3rd</span>
+                    </div>
+                    <div className="absolute flex flex-col items-center" style={{ left: '75%', transform: 'translateX(-50%)' }}>
+                      <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
+                      <span className="mt-1 whitespace-nowrap text-primary-foreground/60">4.5M · +4th</span>
+                    </div>
+                    <span className="absolute right-0">6M lb (max)</span>
                   </div>
 
 
