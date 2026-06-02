@@ -3,7 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stats = [
   { label: "Furnace", value: "MAX-4000", detail: "Gas-fired sweat furnace with afterburner" },
-  { label: "Monthly Output", value: "~1,500,000", detail: "lbs of finished aluminum" },
+  { label: "Monthly Output", value: "~3,000,000", detail: "lbs of finished aluminum" },
   { label: "Recovery Rate", value: "95%", detail: "From scrap to finished metal" },
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
