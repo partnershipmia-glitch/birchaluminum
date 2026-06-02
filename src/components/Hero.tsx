@@ -46,7 +46,7 @@ const Hero = () => {
               <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">2-Year Outcome</p>
               <p className="text-3xl font-black text-yellow-400">$74M+</p>
-              <p className="text-sm text-primary-foreground/70 mt-1">36M lbs/yr, 2-furnace operation</p>
+              <p className="text-sm text-primary-foreground/70 mt-1">36M lbs of ALUMINUM per year, 2-furnace operation</p>
             </div>
             <div className="bg-primary p-6">
               <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />
