@@ -118,10 +118,10 @@ const Production = () => {
                     <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
                       <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">
-                        2M lb · +2nd furnace
+                        1.5M lb · +2nd furnace
                       </span>
                     </div>
-                    <span className="absolute right-0">4M lb (max)</span>
+                    <span className="absolute right-0">3M lb (max)</span>
                   </div>
 
 
