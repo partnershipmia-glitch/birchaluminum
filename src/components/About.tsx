@@ -40,6 +40,12 @@ const About = () => {
               <span className="text-foreground font-medium">Decatur, Alabama</span>.
             </p>
             <p>
+              We melt scrap wheels and tap the aluminum into sow forms, then sell directly to
+              autoparts makers — including{" "}
+              <span className="text-foreground font-medium">Toyota, Hyundai, BMW, and Mercedes</span>{" "}
+              — located right here in Alabama.
+            </p>
+            <p>
               We source aluminum scrap{" "}
               <span className="text-foreground font-medium">356 alloys</span> aligned with{" "}
               <span className="text-foreground font-medium">U.S. autopart makers standards</span>{" "}
