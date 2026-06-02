@@ -40,7 +40,7 @@ const Hero = () => {
               <Factory className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">What It Builds</p>
               <p className="text-3xl font-black">Smelter</p>
-              <p className="text-sm text-primary-foreground/70 mt-1">~1,500,000 lbs of finished aluminum</p>
+              <p className="text-sm text-primary-foreground/70 mt-1">~3,000,000 lbs of finished aluminum</p>
             </div>
             <div className="bg-primary p-6">
               <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />
