@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 lg:justify-center">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com&su=Partnership%20Inquiry%20-%20Birch%20Aluminum&body=Hello%20Birch%20Aluminum%20Team%2C%0A%0AI%20am%20interested%20in%20becoming%20a%20partner%20in%20your%20Decatur%2C%20Alabama%20aluminum%20smelting%20facility.%20Please%20share%20more%20details%20about%20the%20equity%20opportunity.%0A%0AMy%20contact%20info%3A%0AName%3A%20%0APhone%3A%20%0A%0AThank%20you.%0A%0A--%0AReply%20to%3A%20BirchFamilyLLCFL%40gmail.com%20%7C%20%2B1%20754-610-1052"
               target="_blank"
