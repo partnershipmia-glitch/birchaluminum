@@ -3,12 +3,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stats = [
   { label: "Furnace", value: "MAX-4000", detail: "Gas-fired sweat furnace with afterburner" },
-  { label: "Monthly Output", value: "~2,000,000", detail: "lbs of finished aluminum" },
+  { label: "Monthly Output", value: "~1,500,000", detail: "lbs of finished aluminum" },
   { label: "Recovery Rate", value: "95%", detail: "From scrap to finished metal" },
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
 
-const MAX_CAPACITY_LBS = 4_000_000; // 2 furnaces
+const MAX_CAPACITY_LBS = 3_000_000; // 2 furnaces
 const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
 const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
 
@@ -16,12 +16,12 @@ const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
-  const [lbs, setLbs] = useState<number>(2_000_000);
+  const [lbs, setLbs] = useState<number>(1_500_000);
   const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
   const cappedLbs = Math.min(Math.max(lbs, 0), MAX_CAPACITY_LBS);
-  const SECOND_FURNACE_THRESHOLD = 2_000_000;
+  const SECOND_FURNACE_THRESHOLD = 1_500_000;
   const baseLbs = Math.min(cappedLbs, SECOND_FURNACE_THRESHOLD);
   const extraLbs = Math.max(0, cappedLbs - SECOND_FURNACE_THRESHOLD);
   // After 2M lb (2nd furnace online), per-lb margin is 65% larger
@@ -82,7 +82,7 @@ const Production = () => {
               </h3>
               <p className="text-primary-foreground/70 mb-8 max-w-3xl">
                 One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
-                roughly a month. Two-furnace capacity at <strong>4,000,000 lbs / month</strong>.
+                roughly a month. Two-furnace capacity at <strong>3,000,000 lbs / month</strong>.
               </p>
 
               <div className="grid md:grid-cols-2 gap-10">
@@ -118,10 +118,10 @@ const Production = () => {
                     <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
                       <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">
-                        2M lb · +2nd furnace
+                        1.5M lb · +2nd furnace
                       </span>
                     </div>
-                    <span className="absolute right-0">4M lb (max)</span>
+                    <span className="absolute right-0">3M lb (max)</span>
                   </div>
 
 
@@ -152,7 +152,7 @@ const Production = () => {
                     </p>
 
                     <p className="text-sm text-primary-foreground/70 mt-2">
-                      $0.10 / lb up to 2M lb. Above 2M lb (2nd furnace online), margin per lb is
+                      $0.10 / lb up to 1.5M lb. Above 1.5M lb (2nd furnace online), margin per lb is
                       <strong> 65% larger</strong> — expenses scale only ~35% while output doubles.
                     </p>
 
