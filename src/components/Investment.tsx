@@ -119,7 +119,7 @@ const Investment = () => {
 
         {/* Scenario Range */}
         <p className="text-minimal text-primary-foreground/60 mb-6">Projected Monthly EBITDA</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-primary-foreground/10 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-16">
           <div className="bg-primary p-8 text-center">
             <p className="text-minimal text-primary-foreground/50 mb-2">Conservative</p>
             <p className="text-2xl md:text-3xl font-bold">~$440K</p>
@@ -134,6 +134,11 @@ const Investment = () => {
             <p className="text-minimal text-primary-foreground/50 mb-2">Optimistic</p>
             <p className="text-2xl md:text-3xl font-bold">$600K+</p>
             <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+          </div>
+          <div className="bg-primary p-8 text-center">
+            <p className="text-minimal text-primary-foreground/50 mb-2">2-Year Target</p>
+            <p className="text-2xl md:text-3xl font-bold">$5M/yr</p>
+            <p className="text-sm text-primary-foreground/50">$20M+ enterprise value within 24 months</p>
           </div>
         </div>
 
