@@ -3,12 +3,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stats = [
   { label: "Furnace", value: "MAX-4000", detail: "Gas-fired sweat furnace with afterburner" },
-  { label: "Monthly Output", value: "~2,000,000", detail: "lbs of finished aluminum" },
+  { label: "Monthly Output", value: "~1,500,000", detail: "lbs of finished aluminum" },
   { label: "Recovery Rate", value: "95%", detail: "From scrap to finished metal" },
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
 
-const MAX_CAPACITY_LBS = 4_000_000; // 2 furnaces
+const MAX_CAPACITY_LBS = 3_000_000; // 2 furnaces
 const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
 const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
 
@@ -16,12 +16,12 @@ const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
-  const [lbs, setLbs] = useState<number>(2_000_000);
+  const [lbs, setLbs] = useState<number>(1_500_000);
   const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
   const cappedLbs = Math.min(Math.max(lbs, 0), MAX_CAPACITY_LBS);
-  const SECOND_FURNACE_THRESHOLD = 2_000_000;
+  const SECOND_FURNACE_THRESHOLD = 1_500_000;
   const baseLbs = Math.min(cappedLbs, SECOND_FURNACE_THRESHOLD);
   const extraLbs = Math.max(0, cappedLbs - SECOND_FURNACE_THRESHOLD);
   // After 2M lb (2nd furnace online), per-lb margin is 65% larger
