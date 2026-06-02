@@ -34,7 +34,7 @@ const Hero = () => {
             <div className="bg-primary p-6">
               <DollarSign className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">Capital Raise</p>
-              <p className="text-3xl font-black text-yellow-400">$2.8M</p>
+              <p className="text-3xl font-black text-yellow-400">$1.5M</p>
               <p className="text-sm text-primary-foreground/70 mt-1">Equity partnership</p>
             </div>
             <div className="bg-primary p-6">
