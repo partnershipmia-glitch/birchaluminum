@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-orange-500/20 blur-3xl" />
 
       <div className="container mx-auto px-6 relative">
-        <div className="max-w-4xl">
+        <div className="max-w-4xl lg:max-w-6xl xl:max-w-7xl lg:mx-auto lg:text-center">
           <span className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider mb-6">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             Now Raising · Decatur, Alabama
@@ -21,7 +21,7 @@ const Hero = () => {
             and own an equity of cashflow business.
           </p>
 
-          <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
+          <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl lg:max-w-4xl lg:mx-auto space-y-3 list-none lg:text-left">
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>We will process scrap wheels into sows.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>2 furnaces producing ~3 million lbs/month, scaling to 4 furnaces and 6M lbs/month.</span></li>
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 lg:justify-center">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com&su=Partnership%20Inquiry%20-%20Birch%20Aluminum&body=Hello%20Birch%20Aluminum%20Team%2C%0A%0AI%20am%20interested%20in%20becoming%20a%20partner%20in%20your%20Decatur%2C%20Alabama%20aluminum%20smelting%20facility.%20Please%20share%20more%20details%20about%20the%20equity%20opportunity.%0A%0AMy%20contact%20info%3A%0AName%3A%20%0APhone%3A%20%0A%0AThank%20you.%0A%0A--%0AReply%20to%3A%20BirchFamilyLLCFL%40gmail.com%20%7C%20%2B1%20754-610-1052"
               target="_blank"
@@ -73,7 +73,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="text-sm text-primary-foreground/50 mt-6 max-w-2xl">
+          <p className="text-sm text-primary-foreground/50 mt-6 max-w-2xl lg:mx-auto">
             Fast cash conversion · First-position UCC collateral · Buyers & supply lined up
           </p>
         </div>
