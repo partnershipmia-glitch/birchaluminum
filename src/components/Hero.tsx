@@ -24,7 +24,7 @@ const Hero = () => {
           <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl space-y-3 list-none">
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>We will process scrap wheels into sows.</span></li>
-            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>2 furnaces producing ~3 million lbs/month, scaling to 4 furnaces.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>2 furnaces producing ~3 million lbs/month, scaling to 4 furnaces and 6M lbs/month.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>LOIs in hand from sow buyers and scrap suppliers.</span></li>
           </ul>
 
@@ -40,7 +40,7 @@ const Hero = () => {
               <Factory className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">What It Builds</p>
               <p className="text-3xl font-black">Smelter</p>
-              <p className="text-sm text-primary-foreground/70 mt-1">~1,500,000 lbs of finished aluminum</p>
+              <p className="text-sm text-primary-foreground/70 mt-1">~3,000,000 lbs of finished aluminum</p>
             </div>
             <div className="bg-primary p-6">
               <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />

@@ -3,12 +3,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const stats = [
   { label: "Furnace", value: "MAX-4000", detail: "Gas-fired sweat furnace with afterburner" },
-  { label: "Monthly Output", value: "~1,500,000", detail: "lbs of finished aluminum" },
+  { label: "Monthly Output", value: "~3,000,000", detail: "lbs of finished aluminum" },
   { label: "Recovery Rate", value: "95%", detail: "From scrap to finished metal" },
   { label: "Target Launch", value: "Fall 2026", detail: "Inventory ready" },
 ];
 
-const MAX_CAPACITY_LBS = 3_000_000; // 2 furnaces
+const MAX_CAPACITY_LBS = 6_000_000; // 4 furnaces
 const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
 const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
 
@@ -16,7 +16,7 @@ const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
 const Production = () => {
-  const [lbs, setLbs] = useState<number>(1_500_000);
+  const [lbs, setLbs] = useState<number>(3_000_000);
   const [scrapPrice, setScrapPrice] = useState<number>(DEFAULT_SCRAP_PRICE);
 
   const safePrice = scrapPrice > 0 ? scrapPrice : DEFAULT_SCRAP_PRICE;
@@ -24,7 +24,7 @@ const Production = () => {
   const SECOND_FURNACE_THRESHOLD = 1_500_000;
   const baseLbs = Math.min(cappedLbs, SECOND_FURNACE_THRESHOLD);
   const extraLbs = Math.max(0, cappedLbs - SECOND_FURNACE_THRESHOLD);
-  // After 2M lb (2nd furnace online), per-lb margin is 65% larger
+  // After 1.5M lb (2nd furnace online), per-lb margin is 65% larger
   const ebitda = baseLbs * AVG_MARGIN_PER_LB + extraLbs * AVG_MARGIN_PER_LB * 1.65;
   const investment = cappedLbs * safePrice;
 
@@ -37,8 +37,8 @@ const Production = () => {
           Capacity & Output
         </h2>
         <p className="text-muted-foreground mb-12 max-w-2xl">
-          One US Furnaces MAX-4000 aluminum sweat furnace with integrated afterburner system.
-          Scalable to two furnaces within 18–24 months.
+          Two US Furnaces MAX-4000 aluminum sweat furnaces with integrated afterburner systems.
+          Scalable to four furnaces within 18–24 months.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border mb-16">
@@ -82,7 +82,7 @@ const Production = () => {
               </h3>
               <p className="text-primary-foreground/70 mb-8 max-w-3xl">
                 One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
-                roughly a month. Two-furnace capacity at <strong>3,000,000 lbs / month</strong>.
+                roughly a month. Four-furnace capacity at <strong>6,000,000 lbs / month</strong>.
               </p>
 
               <div className="grid md:grid-cols-2 gap-10">
@@ -115,13 +115,19 @@ const Production = () => {
                   />
                   <div className="relative mt-2 h-8 text-xs text-primary-foreground/50">
                     <span className="absolute left-0">0 lb</span>
-                    <div className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
+                    <div className="absolute flex flex-col items-center" style={{ left: '25%', transform: 'translateX(-50%)' }}>
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
-                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">
-                        1.5M lb · +2nd furnace
-                      </span>
+                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">1.5M · +2nd</span>
                     </div>
-                    <span className="absolute right-0">3M lb (max)</span>
+                    <div className="absolute flex flex-col items-center" style={{ left: '50%', transform: 'translateX(-50%)' }}>
+                      <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
+                      <span className="mt-1 whitespace-nowrap text-primary-foreground/60">3M · +3rd</span>
+                    </div>
+                    <div className="absolute flex flex-col items-center" style={{ left: '75%', transform: 'translateX(-50%)' }}>
+                      <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
+                      <span className="mt-1 whitespace-nowrap text-primary-foreground/60">4.5M · +4th</span>
+                    </div>
+                    <span className="absolute right-0">6M lb (max)</span>
                   </div>
 
 
@@ -153,7 +159,7 @@ const Production = () => {
 
                     <p className="text-sm text-primary-foreground/70 mt-2">
                       $0.10 / lb up to 1.5M lb. Above 1.5M lb (2nd furnace online), margin per lb is
-                      <strong> 65% larger</strong> — expenses scale only ~35% while output doubles.
+                      <strong> 65% larger</strong> — expenses scale sub-linearly as capacity expands to 4 furnaces at 6M lb/month.
                     </p>
 
                   </div>
