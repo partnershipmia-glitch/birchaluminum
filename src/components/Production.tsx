@@ -82,7 +82,7 @@ const Production = () => {
               </h3>
               <p className="text-primary-foreground/70 mb-8 max-w-3xl">
                 One full cycle (buy scrap → deliver → clean → melt → tap into sow → sell) takes
-                roughly a month. Two-furnace capacity at <strong>4,000,000 lbs / month</strong>.
+                roughly a month. Two-furnace capacity at <strong>3,000,000 lbs / month</strong>.
               </p>
 
               <div className="grid md:grid-cols-2 gap-10">
