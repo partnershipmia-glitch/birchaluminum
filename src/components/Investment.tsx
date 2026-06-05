@@ -71,7 +71,7 @@ const Investment = () => {
               ))}
               <div className="flex justify-between items-center pt-2">
                 <span className="font-bold">Total Capital Required</span>
-                <span className="font-bold text-lg">$7.5M</span>
+                <span className="font-bold text-lg">$6.7M</span>
               </div>
             </div>
           </div>
