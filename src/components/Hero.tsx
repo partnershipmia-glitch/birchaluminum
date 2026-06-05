@@ -76,6 +76,20 @@ const Hero = () => {
           <p className="text-sm text-primary-foreground/50 mt-6 max-w-2xl lg:mx-auto">
             Fast cash conversion · First-position UCC collateral · Buyers & supply lined up
           </p>
+          <ul className="mt-4 space-y-2 max-w-2xl lg:mx-auto">
+            <li className="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+              <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
+              We start to produce metal on Month 3
+            </li>
+            <li className="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+              <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
+              We get to max capacity in 6–8 months
+            </li>
+            <li className="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+              <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
+              Revenue of $6.6M per month at full capacity
+            </li>
+          </ul>
         </div>
       </div>
     </section>
