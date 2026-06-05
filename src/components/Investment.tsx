@@ -1,8 +1,8 @@
 import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
 
 const capitalBreakdown = [
-  { item: "CapEx (building, furnace, equipment, install)", amount: "$2.8M" },
-  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1.6M" },
+  { item: "CapEx (building, furnace, equipment, install)", amount: "$1.5M" },
+  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1M" },
   { item: "Inventory — Monthly Scrap Cost", amount: "$2.8M" },
   { item: "Pre-Revenue Monthly Burn", amount: "~$61,100" },
   { item: "Startup Payroll (initial months)", amount: "$57,000" },
