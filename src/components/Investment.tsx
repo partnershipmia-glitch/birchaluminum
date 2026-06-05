@@ -1,8 +1,9 @@
 import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
 
 const capitalBreakdown = [
-  { item: "CapEx (building, furnace, equipment, install)", amount: "$2.8M" },
-  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1.6M" },
+  { item: "CapEx (building, furnace, equipment, install)", amount: "$1.5M" },
+  { item: "Property (acquire or lease $12k/m)", amount: "$1.3M" },
+  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1M" },
   { item: "Inventory — Monthly Scrap Cost", amount: "$2.8M" },
   { item: "Pre-Revenue Monthly Burn", amount: "~$61,100" },
   { item: "Startup Payroll (initial months)", amount: "$57,000" },
@@ -70,7 +71,7 @@ const Investment = () => {
               ))}
               <div className="flex justify-between items-center pt-2">
                 <span className="font-bold">Total Capital Required</span>
-                <span className="font-bold text-lg">$7.5M</span>
+                <span className="font-bold text-lg">$6.7M</span>
               </div>
             </div>
           </div>
