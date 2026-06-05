@@ -38,7 +38,7 @@ const Investment = () => {
           Investment Opportunity
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Raising $2,800,000 to build a secondary aluminum smelting facility
+          Raising $1,500,000 to build a secondary aluminum smelting facility
         </h2>
         <p className="text-lg text-primary-foreground/70 mb-12 max-w-3xl">
           When production is in place we will need a credit line on inventory.
