@@ -1,13 +1,11 @@
 import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
 
 const capitalBreakdown = [
-  { item: "CapEx (building, furnace, equipment, install)", amount: "$1.5M" },
-  { item: "Property (acquire or lease $12k/m)", amount: "$1.3M" },
-  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1M" },
-  { item: "Inventory — Monthly Scrap Cost", amount: "$2.8M" },
-  { item: "Pre-Revenue Monthly Burn", amount: "~$61,100" },
-  { item: "Startup Payroll (initial months)", amount: "$57,000" },
+  { item: "Industrial Property Acquisition", amount: "$1.34M" },
+  { item: "Equipment & Infrastructure", amount: "$1.49M" },
+  { item: "Working Capital Facility", amount: "$2.00M" },
 ];
+
 
 const timeline = [
   { phase: "Month 1", label: "Building Acquisition", detail: "Pre-screened sites ready for closing" },
@@ -39,7 +37,7 @@ const Investment = () => {
           Investment Opportunity
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Raising $1,500,000 to build a secondary aluminum smelting facility
+          Raising $4,840,000 to build a secondary aluminum smelting facility
         </h2>
         <p className="text-lg text-primary-foreground/70 mb-12 max-w-3xl">
           When production is in place we will need a credit line on inventory.
@@ -71,7 +69,7 @@ const Investment = () => {
               ))}
               <div className="flex justify-between items-center pt-2">
                 <span className="font-bold">Total Capital Required</span>
-                <span className="font-bold text-lg">$6.7M</span>
+                <span className="font-bold text-lg">$4.84M</span>
               </div>
             </div>
           </div>
