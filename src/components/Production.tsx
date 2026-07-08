@@ -140,6 +140,10 @@ const Production = () => {
                     <p>
                       Approx. inventory capital required: <strong>{formatUSD(investment)}</strong>
                     </p>
+                    <p>
+                      Break-even: <strong>~82% utilization</strong>{" "}
+                      <span className="text-primary-foreground/50">at $0.10/lb EBITDA</span>
+                    </p>
                   </div>
                 </div>
 
