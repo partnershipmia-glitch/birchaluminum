@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
 
           <ul className="text-lg md:text-xl text-primary-foreground/85 mb-10 leading-relaxed max-w-2xl lg:max-w-4xl lg:mx-auto space-y-3 list-none lg:text-left">
-            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising funds on a secondary aluminum smelting facility.</span></li>
+            <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>I'm raising $4.84M for a secondary aluminum smelting facility.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>We will process scrap wheels into sows.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>2 furnaces producing ~3 million lbs/month, scaling to 4 furnaces and 6M lbs/month.</span></li>
             <li className="flex gap-3"><span className="text-yellow-400 font-bold mt-1">›</span><span>LOIs in hand from sow buyers and scrap suppliers.</span></li>
@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="bg-primary p-6">
               <DollarSign className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">Capital Raise</p>
-              <p className="text-3xl font-black text-yellow-400">$1.5M</p>
+              <p className="text-3xl font-black text-yellow-400">$4.84M</p>
               <p className="text-sm text-primary-foreground/70 mt-1">Equity partnership</p>
             </div>
             <div className="bg-primary p-6">
@@ -51,8 +51,8 @@ const Hero = () => {
             <div className="bg-primary p-6">
               <TrendingUp className="w-6 h-6 text-yellow-400 mb-3" />
               <p className="text-xs uppercase tracking-wider text-primary-foreground/60 mb-1">Targeted EBITDA</p>
-              <p className="text-3xl font-black text-yellow-400">$5M/yr</p>
-              <p className="text-sm text-primary-foreground/70 mt-1">$20M+ enterprise value within 24 months</p>
+              <p className="text-3xl font-black text-yellow-400">$3.6–4.3M</p>
+              <p className="text-sm text-primary-foreground/70 mt-1">$16M enterprise value at 4× EBITDA</p>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const Hero = () => {
             </li>
             <li className="flex items-center justify-center gap-2 text-yellow-400 font-bold text-sm">
               <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
-              Revenue of $6.6M per month at full capacity
+              Revenue of ~$6.2M per month at full capacity
             </li>
           </ul>
         </div>

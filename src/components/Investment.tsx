@@ -1,13 +1,11 @@
 import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
 
 const capitalBreakdown = [
-  { item: "CapEx (building, furnace, equipment, install)", amount: "$1.5M" },
-  { item: "Property (acquire or lease $12k/m)", amount: "$1.3M" },
-  { item: "Working Capital Buffer (fluctuations, buyer delays)", amount: "$1M" },
-  { item: "Inventory — Monthly Scrap Cost", amount: "$2.8M" },
-  { item: "Pre-Revenue Monthly Burn", amount: "~$61,100" },
-  { item: "Startup Payroll (initial months)", amount: "$57,000" },
+  { item: "Industrial Property Acquisition", amount: "$1.34M" },
+  { item: "Equipment & Infrastructure", amount: "$1.49M" },
+  { item: "Working Capital Facility", amount: "$2.00M" },
 ];
+
 
 const timeline = [
   { phase: "Month 1", label: "Building Acquisition", detail: "Pre-screened sites ready for closing" },
@@ -39,7 +37,7 @@ const Investment = () => {
           Investment Opportunity
         </p>
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Raising $1,500,000 to build a secondary aluminum smelting facility
+          Raising $4,840,000 to build a secondary aluminum smelting facility
         </h2>
         <p className="text-lg text-primary-foreground/70 mb-12 max-w-3xl">
           When production is in place we will need a credit line on inventory.
@@ -71,7 +69,7 @@ const Investment = () => {
               ))}
               <div className="flex justify-between items-center pt-2">
                 <span className="font-bold">Total Capital Required</span>
-                <span className="font-bold text-lg">$6.7M</span>
+                <span className="font-bold text-lg">$4.84M</span>
               </div>
             </div>
           </div>
@@ -119,27 +117,39 @@ const Investment = () => {
         </div>
 
         {/* Scenario Range */}
-        <p className="text-minimal text-primary-foreground/60 mb-6">Projected Monthly EBITDA</p>
+        <p className="text-minimal text-primary-foreground/60 mb-6">Financial Snapshot</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-16">
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Conservative</p>
-            <p className="text-2xl md:text-3xl font-bold">~$440K</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Annual Revenue</p>
+            <p className="text-2xl md:text-3xl font-bold">~$74M</p>
+            <p className="text-sm text-primary-foreground/50">at full capacity</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Base Case</p>
-            <p className="text-2xl md:text-3xl font-bold">~$550K</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Base Case EBITDA</p>
+            <p className="text-2xl md:text-3xl font-bold">$3.6M–$4.3M</p>
+            <p className="text-sm text-primary-foreground/50">/ year</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Optimistic</p>
-            <p className="text-2xl md:text-3xl font-bold">$600K+</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Strong Market</p>
+            <p className="text-2xl md:text-3xl font-bold">Up to $5.4M</p>
+            <p className="text-sm text-primary-foreground/50">/ year EBITDA</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">2-Year Target</p>
-            <p className="text-2xl md:text-3xl font-bold">$5M/yr</p>
-            <p className="text-sm text-primary-foreground/50">$20M+ enterprise value within 24 months</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">2-Year Enterprise Value</p>
+            <p className="text-2xl md:text-3xl font-bold">~$16M</p>
+            <p className="text-sm text-primary-foreground/50">4× EBITDA multiple</p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-px bg-primary-foreground/10 mb-16">
+          <div className="bg-primary p-8 text-center">
+            <p className="text-minimal text-primary-foreground/50 mb-2">Monthly Break-even</p>
+            <p className="text-2xl md:text-3xl font-bold">~82%</p>
+            <p className="text-sm text-primary-foreground/50">utilization at $0.10/lb EBITDA</p>
+          </div>
+          <div className="bg-primary p-8 text-center">
+            <p className="text-minimal text-primary-foreground/50 mb-2">DSCR</p>
+            <p className="text-2xl md:text-3xl font-bold">4.3x–8.1x</p>
+            <p className="text-sm text-primary-foreground/50">Debt Service Coverage Ratio</p>
           </div>
         </div>
 
