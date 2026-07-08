@@ -1,4 +1,4 @@
-import { ArrowRight, ShieldCheck, Landmark, Users } from "lucide-react";
+import { ShieldCheck, Users } from "lucide-react";
 
 const capitalBreakdown = [
   { item: "Industrial Property Acquisition", amount: "$1.34M" },
@@ -153,47 +153,6 @@ const Investment = () => {
           </div>
         </div>
 
-        {/* Ideal Investor & CTA */}
-        <div className="grid md:grid-cols-2 gap-16">
-          <div>
-            <p className="text-minimal text-primary-foreground/60 mb-4">Ideal Investor</p>
-            <ul className="space-y-3 mb-8">
-              {[
-                "Interested in U.S. manufacturing & reshoring",
-                "Scrap / commodities sector experience",
-                "Cash-flow industrial assets",
-                "Target 4x return in 4 years",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-primary-foreground/90">
-                  <span className="w-1.5 h-1.5 bg-primary-foreground/40 rounded-full shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-minimal text-primary-foreground/60 mb-4">Cash Conversion</p>
-            <ul className="space-y-3 mb-8">
-              {[
-                "Scrap purchases: Net 2–5 days",
-                "Product sales: Net 0–3 days (wire transfer)",
-                "Near-neutral cash conversion cycle",
-                "Rapid daily inventory turnover",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-primary-foreground/90">
-                  <span className="w-1.5 h-1.5 bg-primary-foreground/40 rounded-full shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <a
-              href="mailto:birchfamilyllcfl@gmail.com"
-              className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 font-medium hover:opacity-90 transition-opacity"
-            >
-              Send Proposal <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
