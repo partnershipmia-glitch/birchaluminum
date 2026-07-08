@@ -117,27 +117,39 @@ const Investment = () => {
         </div>
 
         {/* Scenario Range */}
-        <p className="text-minimal text-primary-foreground/60 mb-6">Projected Monthly EBITDA</p>
+        <p className="text-minimal text-primary-foreground/60 mb-6">Financial Snapshot</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-16">
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Conservative</p>
-            <p className="text-2xl md:text-3xl font-bold">~$440K</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Annual Revenue</p>
+            <p className="text-2xl md:text-3xl font-bold">~$74M</p>
+            <p className="text-sm text-primary-foreground/50">at full capacity</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Base Case</p>
-            <p className="text-2xl md:text-3xl font-bold">~$550K</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Base Case EBITDA</p>
+            <p className="text-2xl md:text-3xl font-bold">$3.6M–$4.3M</p>
+            <p className="text-sm text-primary-foreground/50">/ year</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">Optimistic</p>
-            <p className="text-2xl md:text-3xl font-bold">$600K+</p>
-            <p className="text-sm text-primary-foreground/50">/ month EBITDA</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">Strong Market</p>
+            <p className="text-2xl md:text-3xl font-bold">Up to $5.4M</p>
+            <p className="text-sm text-primary-foreground/50">/ year EBITDA</p>
           </div>
           <div className="bg-primary p-8 text-center">
-            <p className="text-minimal text-primary-foreground/50 mb-2">2-Year Target</p>
-            <p className="text-2xl md:text-3xl font-bold">$5M/yr</p>
-            <p className="text-sm text-primary-foreground/50">$20M+ enterprise value within 24 months</p>
+            <p className="text-minimal text-primary-foreground/50 mb-2">2-Year Enterprise Value</p>
+            <p className="text-2xl md:text-3xl font-bold">~$16M</p>
+            <p className="text-sm text-primary-foreground/50">4× EBITDA multiple</p>
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 gap-px bg-primary-foreground/10 mb-16">
+          <div className="bg-primary p-8 text-center">
+            <p className="text-minimal text-primary-foreground/50 mb-2">Monthly Break-even</p>
+            <p className="text-2xl md:text-3xl font-bold">~82%</p>
+            <p className="text-sm text-primary-foreground/50">utilization at $0.10/lb EBITDA</p>
+          </div>
+          <div className="bg-primary p-8 text-center">
+            <p className="text-minimal text-primary-foreground/50 mb-2">DSCR</p>
+            <p className="text-2xl md:text-3xl font-bold">4.3x–8.1x</p>
+            <p className="text-sm text-primary-foreground/50">Debt Service Coverage Ratio</p>
           </div>
         </div>
 
