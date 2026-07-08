@@ -10,7 +10,7 @@ const stats = [
 
 const MAX_CAPACITY_LBS = 6_000_000; // 4 furnaces
 const AVG_MARGIN_PER_LB = 0.10; // average EBITDA / lb
-const DEFAULT_SCRAP_PRICE = 1.70; // current avg $/lb
+const DEFAULT_SCRAP_PRICE = 1.60; // current avg $/lb
 
 const formatUSD = (n: number) =>
   n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
@@ -138,7 +138,7 @@ const Production = () => {
                       <span className="text-primary-foreground/50">(commodity driven price)</span>
                     </p>
                     <p>
-                      Approx. inventory capital required: <strong>{formatUSD(investment)}</strong>
+                      Approx. inventory capital required: <strong>$2,100,000</strong>
                     </p>
                     <p>
                       Break-even: <strong>~82% utilization</strong>{" "}
@@ -182,7 +182,7 @@ const Production = () => {
               <p className="text-muted-foreground mb-8 max-w-3xl">
                 Aluminum scrap wheel pricing fluctuates with the commodity market. Adjust below to
                 model the calculator against current or projected market conditions. Today's
-                average is approximately <strong>$1.70 / lb</strong>.
+                average is approximately <strong>$1.60 / lb</strong>.
               </p>
 
               <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -220,7 +220,7 @@ const Production = () => {
                     onClick={() => setScrapPrice(DEFAULT_SCRAP_PRICE)}
                     className="mt-6 text-sm underline text-muted-foreground hover:text-foreground"
                   >
-                    Reset to current average ($1.70/lb)
+                    Reset to current average ($1.60/lb)
                   </button>
                 </div>
 
