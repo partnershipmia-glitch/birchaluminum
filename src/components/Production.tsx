@@ -59,7 +59,7 @@ const Production = () => {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-4">
             <span className="text-2xl md:text-3xl font-bold">EBITDA / lb</span>
             <span className="font-extrabold text-5xl md:text-7xl tracking-tight text-primary">
-              $0.08 – $0.15
+              $0.10 – $0.15
             </span>
           </div>
           <p className="text-base md:text-lg text-muted-foreground font-medium">
