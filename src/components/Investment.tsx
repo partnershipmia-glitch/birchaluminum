@@ -126,7 +126,7 @@ const Investment = () => {
           </div>
           <div className="bg-primary p-8 text-center">
             <p className="text-minimal text-primary-foreground/50 mb-2">Base Case EBITDA</p>
-            <p className="text-2xl md:text-3xl font-bold">$3.6M–$4.3M</p>
+            <p className="text-2xl md:text-3xl font-bold">$3.6M</p>
             <p className="text-sm text-primary-foreground/50">/ year</p>
           </div>
           <div className="bg-primary p-8 text-center">
@@ -148,7 +148,7 @@ const Investment = () => {
           </div>
           <div className="bg-primary p-8 text-center">
             <p className="text-minimal text-primary-foreground/50 mb-2">DSCR</p>
-            <p className="text-2xl md:text-3xl font-bold">4.3x–8.1x</p>
+            <p className="text-2xl md:text-3xl font-bold">4.3x</p>
             <p className="text-sm text-primary-foreground/50">Debt Service Coverage Ratio</p>
           </div>
         </div>
