@@ -79,15 +79,15 @@ const Hero = () => {
           <ul className="mt-4 space-y-2 max-w-2xl mx-auto">
             <li className="flex items-center justify-center gap-2 text-yellow-400 font-bold text-sm">
               <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
-              We start to produce metal on Month 3
+              We start to produce metal on Month 4
             </li>
             <li className="flex items-center justify-center gap-2 text-yellow-400 font-bold text-sm">
               <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
-              We get to max capacity in 6–8 months
+              We get to max capacity in 8–9 months
             </li>
             <li className="flex items-center justify-center gap-2 text-yellow-400 font-bold text-sm">
               <span className="w-2 h-2 bg-yellow-400 rounded-full shrink-0" />
-              Revenue of ~$6.2M per month at full capacity
+              Revenue of ~$6.0M per month at full capacity
             </li>
           </ul>
         </div>
