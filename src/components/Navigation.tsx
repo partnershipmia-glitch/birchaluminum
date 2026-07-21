@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoImg from "@/assets/logo.png";
 
 const sectionLinks = [
   { label: "Market", href: "#market" },
@@ -26,8 +27,8 @@ const Navigation = () => {
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold tracking-tight">
-          BIRCH ALUMINUM
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logoImg} alt="Birch Aluminum" className="h-9 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
