@@ -11,7 +11,7 @@ const readiness = [
   },
   {
     title: "ADEM permitting active",
-    body: "Birch Aluminum is already registered in the Alabama Department of Environmental Management permitting system.",
+    body: "Birch Aluminum held an ADEM permit last year and remains in the Alabama Department of Environmental Management system. Environmental consultants have been paid and have already started the process to secure the new air permit — expected within approximately three months.",
   },
   {
     title: "Supplier and buyer relationships",

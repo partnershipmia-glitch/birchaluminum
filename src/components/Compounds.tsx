@@ -52,11 +52,11 @@ const Compounds = () => {
   return (
     <section id="compounds" className="section-padding bg-background">
       <div className="container mx-auto px-6">
-        <p className="text-minimal text-muted-foreground mb-4">Section 05 · What Compounds Over Time</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-4xl mb-6">
+        <p className="text-minimal text-muted-foreground mb-3">Section 05 · What Compounds Over Time</p>
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight max-w-4xl mb-4">
           Each Operating Step Creates the Next Expansion Option
         </h2>
-        <p className="text-lg text-muted-foreground max-w-3xl mb-14 leading-relaxed">
+        <p className="text-sm md:text-base text-muted-foreground max-w-3xl mb-10 leading-relaxed">
           Value is built through operating history rather than projections alone. Each stage relies
           on the assets, relationships, and margins established by the prior stage.
         </p>

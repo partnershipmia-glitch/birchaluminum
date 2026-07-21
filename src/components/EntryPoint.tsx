@@ -5,7 +5,7 @@ const steps = [
   { n: "01", title: "Scrap supply", body: "Purchase wheel scrap from confirmed suppliers." },
   { n: "02", title: "Melt & process", body: "Process material in low-maintenance furnaces." },
   { n: "03", title: "Cast alloy", body: "Cast specification-grade aluminum sows." },
-  { n: "04", title: "Sell to buyers", body: "Sell through existing buyers, brokers, and direct industrial relationships." },
+  { n: "04", title: "Sell to brokers", body: "Sell through existing brokers, buyers, and direct industrial relationships." },
 ];
 
 const practical = [
@@ -59,7 +59,7 @@ const EntryPoint = () => {
         </div>
 
         <div className="border-t border-primary-foreground/15 pt-10 mt-12">
-          <p className="text-minimal text-primary-foreground/60 mb-6">Facility Layout · Decatur, Alabama · 173 ft × 75 ft</p>
+          <p className="text-[10px] md:text-xs tracking-[0.2em] uppercase text-primary-foreground/60 mb-4">Facility Layout · Decatur, Alabama · 173 ft × 75 ft</p>
           <div className="bg-primary-foreground p-4 md:p-6">
             <img src={facilityLayout} alt="Birch Aluminum facility floor plan with two MAX 4000 furnaces, ingot casting line, degasser, filter box and ingot inventory" className="w-full h-auto" />
           </div>
