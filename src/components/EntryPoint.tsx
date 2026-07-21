@@ -5,7 +5,7 @@ const steps = [
   { n: "01", title: "Scrap supply", body: "Purchase wheel scrap from confirmed suppliers." },
   { n: "02", title: "Melt & process", body: "Process material in low-maintenance furnaces." },
   { n: "03", title: "Cast alloy", body: "Cast specification-grade aluminum sows." },
-  { n: "04", title: "Sell to buyers", body: "Sell through existing buyers, brokers, and direct industrial relationships." },
+  { n: "04", title: "Sell to brokers", body: "Sell through existing brokers, buyers, and direct industrial relationships." },
 ];
 
 const practical = [
