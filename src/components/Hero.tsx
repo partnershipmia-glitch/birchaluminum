@@ -61,10 +61,12 @@ const Hero = () => {
               Review the Investment Opportunity <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#cta"
-              className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 font-medium hover:bg-primary-foreground/10 transition-colors"
+              href="https://docsend.com/view/74m7bpgj3pqjkmqd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-yellow-400 text-yellow-400 px-8 py-4 font-bold hover:bg-yellow-400 hover:text-primary transition-colors"
             >
-              View Business Plan
+              View Pitch Deck <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
