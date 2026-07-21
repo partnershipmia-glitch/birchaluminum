@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const sectionLinks = [
-  { label: "About", href: "#about" },
-  { label: "Production", href: "#production" },
-  { label: "Investment", href: "#investment" },
-  { label: "Contact", href: "#contact" },
+  { label: "Market", href: "#market" },
+  { label: "Team", href: "#team" },
+  { label: "Investment", href: "#investor-economics" },
+  { label: "Contact", href: "#cta" },
 ];
 
 const Navigation = () => {
