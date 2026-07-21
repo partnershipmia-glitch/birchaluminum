@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -79,8 +80,20 @@ const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value:
 const MarketResearch = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Aluminum Market Research 2026 | Birch Aluminum</title>
+        <meta name="description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
+        <link rel="canonical" href="https://birchaluminum.lovable.app/market-research" />
+        <meta property="og:title" content="Aluminum Market Research 2026 | Birch Aluminum" />
+        <meta property="og:description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
+        <meta property="og:url" content="https://birchaluminum.lovable.app/market-research" />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:title" content="Aluminum Market Research 2026 | Birch Aluminum" />
+        <meta name="twitter:description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
+      </Helmet>
       <TopBar />
       <Navigation />
+      <main>
 
       {/* Hero */}
       <section className="bg-primary text-primary-foreground section-padding">
@@ -277,6 +290,7 @@ const MarketResearch = () => {
           </Link>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
