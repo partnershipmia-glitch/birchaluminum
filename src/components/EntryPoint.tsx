@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import facilityLayout from "@/assets/facility-layout.png";
 
 const steps = [
   { n: "01", title: "Scrap supply", body: "Purchase wheel scrap from confirmed suppliers." },
