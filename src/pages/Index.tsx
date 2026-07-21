@@ -5,6 +5,7 @@ import WhyMarket from "@/components/WhyMarket";
 import WhyNow from "@/components/WhyNow";
 import Team from "@/components/Team";
 import EntryPoint from "@/components/EntryPoint";
+import PhotoBand from "@/components/PhotoBand";
 import Compounds from "@/components/Compounds";
 import InvestorEconomics from "@/components/InvestorEconomics";
 import Year1Ramp from "@/components/Year1Ramp";
@@ -21,6 +22,7 @@ const Index = () => {
       <WhyNow />
       <Team />
       <EntryPoint />
+      <PhotoBand />
       <Compounds />
       <InvestorEconomics />
       <Year1Ramp />
