@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
 const facts = [
   { value: "3.0M", unit: "lbs / month", label: "Planned production" },
@@ -10,8 +11,15 @@ const facts = [
 const Hero = () => {
   return (
     <section className="relative bg-primary text-primary-foreground section-padding overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${sowsBg.url})` }}
+        aria-hidden
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/50" aria-hidden />
       <div className="pointer-events-none absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-yellow-400/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-orange-500/15 blur-3xl" />
+
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-5xl">

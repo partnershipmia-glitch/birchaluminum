@@ -1,4 +1,4 @@
-import founderImg from "@/assets/founder.jpg";
+import founderAsset from "@/assets/founder-portrait.png.asset.json";
 
 const Team = () => {
   return (
@@ -9,9 +9,9 @@ const Team = () => {
           Operating Experience, Financial Control, and Plant Leadership
         </h2>
 
-        <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-5xl">
+        <div className="grid md:grid-cols-[320px_1fr] gap-10 items-start max-w-5xl">
           <div className="aspect-[4/5] bg-secondary border border-border overflow-hidden">
-            <img src={founderImg} alt="Alexander Bereza, Founder & CEO of Birch Aluminum" className="w-full h-full object-cover" />
+            <img src={founderAsset.url} alt="Alexander Bereza, Founder & CEO of Birch Aluminum" className="w-full h-full object-cover" />
           </div>
           <div>
             <p className="text-minimal text-muted-foreground mb-2">Founder & CEO</p>
