@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import facilityLayout from "@/assets/facility-layout.png";
 
 const steps = [
   { n: "01", title: "Scrap supply", body: "Purchase wheel scrap from confirmed suppliers." },
@@ -55,6 +56,13 @@ const EntryPoint = () => {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="border-t border-primary-foreground/15 pt-10 mt-12">
+          <p className="text-minimal text-primary-foreground/60 mb-6">Facility Layout · Decatur, Alabama · 173 ft × 75 ft</p>
+          <div className="bg-primary-foreground p-4 md:p-6">
+            <img src={facilityLayout} alt="Birch Aluminum facility floor plan with two MAX 4000 furnaces, ingot casting line, degasser, filter box and ingot inventory" className="w-full h-auto" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,5 @@
+import founderImg from "@/assets/founder.jpg";
+
 const Team = () => {
   return (
     <section id="team" className="section-padding bg-background">
@@ -8,8 +10,8 @@ const Team = () => {
         </h2>
 
         <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-5xl">
-          <div className="aspect-[4/5] bg-secondary border border-border flex items-center justify-center overflow-hidden">
-            <span className="text-minimal text-muted-foreground">Photo</span>
+          <div className="aspect-[4/5] bg-secondary border border-border overflow-hidden">
+            <img src={founderImg} alt="Alexander Bereza, Founder & CEO of Birch Aluminum" className="w-full h-full object-cover" />
           </div>
           <div>
             <p className="text-minimal text-muted-foreground mb-2">Founder & CEO</p>
