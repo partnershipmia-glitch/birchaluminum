@@ -6,6 +6,7 @@ import WhyMarket from "@/components/WhyMarket";
 import WhyNow from "@/components/WhyNow";
 import Team from "@/components/Team";
 import EntryPoint from "@/components/EntryPoint";
+import WhyAlabama from "@/components/WhyAlabama";
 import PhotoBand from "@/components/PhotoBand";
 import Compounds from "@/components/Compounds";
 import InvestorEconomics from "@/components/InvestorEconomics";
