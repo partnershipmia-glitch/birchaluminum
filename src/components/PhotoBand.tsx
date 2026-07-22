@@ -4,7 +4,7 @@ import casting from "@/assets/casting-line.png.asset.json";
 import workers from "@/assets/plant-workers.png.asset.json";
 
 const shots = [
-  { src: sows.url, label: "Finished Sows" },
+  { src: sows.url, label: "Half Stack Ingots, Strapped" },
   { src: casting.url, label: "Casting Line" },
   { src: workers.url, label: "Plant Operations" },
   { src: warehouse.url, label: "Ingot Inventory" },
