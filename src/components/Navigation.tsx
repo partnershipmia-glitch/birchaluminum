@@ -1,7 +1,16 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
+
+const pitchCallUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com" +
+  "&su=" +
+  encodeURIComponent("Schedule a Pitch Call - Birch Aluminum") +
+  "&body=" +
+  encodeURIComponent(
+    "Hello Birch Aluminum Team,\n\nI would like to schedule a pitch call to discuss the investment opportunity.\n\nName:\nCompany:\nPhone:\nPreferred date/time:\n\nThank you.\n\n--\nReply to: BirchFamilyLLCFL@gmail.com | +1 754-610-1052"
+  );
 
 const sectionLinks = [
   { label: "Market", href: "#market" },
@@ -52,10 +61,12 @@ const Navigation = () => {
             )
           )}
           <a
-            href="mailto:birchfamilyllcfl@gmail.com"
-            className="bg-primary text-primary-foreground px-5 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+            href={pitchCallUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-5 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
           >
-            Contact Us
+            <Calendar className="w-4 h-4" /> Schedule a Pitch Call
           </a>
         </div>
 
@@ -93,10 +104,12 @@ const Navigation = () => {
               )
             )}
             <a
-              href="mailto:birchfamilyllcfl@gmail.com"
-              className="block bg-primary text-primary-foreground px-5 py-3 text-sm font-medium text-center mt-4"
+              href={pitchCallUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-yellow-400 text-primary px-5 py-3 text-sm font-bold text-center mt-4 hover:bg-yellow-300 transition-colors"
             >
-              Contact Us
+              <Calendar className="w-4 h-4" /> Schedule a Pitch Call
             </a>
           </div>
         </div>
