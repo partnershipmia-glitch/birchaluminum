@@ -61,10 +61,12 @@ const Navigation = () => {
             )
           )}
           <a
-            href="mailto:birchfamilyllcfl@gmail.com"
-            className="bg-primary text-primary-foreground px-5 py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+            href={pitchCallUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-5 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
           >
-            Contact Us
+            <Calendar className="w-4 h-4" /> Schedule a Pitch Call
           </a>
         </div>
 
