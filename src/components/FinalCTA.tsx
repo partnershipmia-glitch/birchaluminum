@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import ctaBg from "@/assets/furnace-charging.png.asset.json";
 
 const materials = [
