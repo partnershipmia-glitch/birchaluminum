@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
@@ -336,8 +337,8 @@ const MarketResearch = () => {
                       ["$1.85 / lb", "($0.10) / lb", "($300,000)", "($3,600,000)"],
                     ]},
                   ].map((section) => (
-                    <>
-                      <tr key={section.group} className="bg-muted/20 border-t border-border">
+                    <Fragment key={section.group}>
+                      <tr className="bg-muted/20 border-t border-border">
                         <td colSpan={4} className="p-3 font-bold text-xs uppercase tracking-wider">{section.group}</td>
                       </tr>
                       {section.rows.map((r) => {
@@ -351,7 +352,7 @@ const MarketResearch = () => {
                           </tr>
                         );
                       })}
-                    </>
+                    </Fragment>
                   ))}
                 </tbody>
               </table>
