@@ -9,13 +9,13 @@ const steps = [
 ];
 
 const practical = [
-  "Wheel scrap is widely available.",
+  "Wheel scrap is secured.",
   "Material composition is relatively consistent.",
   "The production process is established.",
   "Finished alloys have an existing market.",
+  "Ingot 356 alloy have market size more than 50 mln ton.",
   "The plant does not require an expensive or complex equipment configuration.",
-  "Furnaces and burners are designed for lower acquisition and maintenance costs.",
-  "The operating model does not depend on expensive pumps or a complex liquid-metal holding system.",
+  "Furnaces and burners are designed for easy replacement and cheap maintenance costs.",
 ];
 
 const EntryPoint = () => {
