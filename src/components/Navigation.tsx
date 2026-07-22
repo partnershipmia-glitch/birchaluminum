@@ -1,7 +1,16 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
+
+const pitchCallUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com" +
+  "&su=" +
+  encodeURIComponent("Schedule a Pitch Call - Birch Aluminum") +
+  "&body=" +
+  encodeURIComponent(
+    "Hello Birch Aluminum Team,\n\nI would like to schedule a pitch call to discuss the investment opportunity.\n\nName:\nCompany:\nPhone:\nPreferred date/time:\n\nThank you.\n\n--\nReply to: BirchFamilyLLCFL@gmail.com | +1 754-610-1052"
+  );
 
 const sectionLinks = [
   { label: "Market", href: "#market" },
