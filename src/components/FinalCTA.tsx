@@ -43,9 +43,9 @@ const FinalCTA = () => {
               href={callUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground px-8 py-4 font-bold hover:bg-primary-foreground/10 transition-colors"
+              className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
             >
-              <Calendar className="w-4 h-4" /> Schedule a Management Call
+              <Calendar className="w-4 h-4" /> Schedule a Pitch Call
             </a>
           </div>
 
