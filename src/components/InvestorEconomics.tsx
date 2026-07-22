@@ -9,7 +9,7 @@ const InvestorEconomics = () => {
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
           <div className="bg-yellow-400 text-primary p-10 md:p-14">
-            <p className="text-minimal mb-4 font-bold">Equity Available</p>
+            <p className="text-2xl md:text-3xl font-black mb-4">Equity Available</p>
             <p className="text-7xl md:text-8xl font-black leading-none mb-4">15%</p>
             <p className="text-lg font-medium">
               Offered to the investor funding this deal.
