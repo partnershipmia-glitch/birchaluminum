@@ -4,8 +4,8 @@ const raw = [
   { month: "M1", prod: 0, burn: 0.10, note: "Lease, permitting, legal" },
   { month: "M2", prod: 0, burn: 0.25, note: "Engineering, payroll" },
   { month: "M3", prod: 0, burn: 0.80, note: "Furnace deposits" },
-  { month: "M4", prod: 0.5, burn: 2.55, note: "Property close + equipment · production start · scrap purchasing begins" },
-  { month: "M5", prod: 1.0, burn: 3.10, note: "Install & commissioning · ramp" },
+  { month: "M4", prod: 0.5, burn: 2.55, note: "Property close + equipment · production start · scrap purchasing begins · inventory credit line approval (3M lb)" },
+  { month: "M5", prod: 1.0, burn: 3.10, note: "Install & commissioning · ramp · inventory credit line active" },
   { month: "M6", prod: 1.5, burn: 4.50, note: "WC scrap inventory · ramp" },
   { month: "M7", prod: 2.0, burn: 4.65, note: "Ramp" },
   { month: "M8", prod: 2.5, burn: 4.75, note: "Ramp" },
@@ -106,6 +106,28 @@ const Year1Ramp = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        {/* Callouts */}
+        <div className="mt-6 grid md:grid-cols-2 gap-4">
+          <div className="border-l-2 border-yellow-500 bg-background p-4">
+            <p className="text-[10px] uppercase tracking-wider text-yellow-600 font-semibold mb-1">
+              Months 4–5 · Inventory Credit Line
+            </p>
+            <p className="text-sm text-foreground">
+              Approval targeted for a <span className="font-semibold">3M lb</span> revolving
+              inventory credit line to finance scrap purchasing at full ramp.
+            </p>
+          </div>
+          <div className="border-l-2 border-primary bg-background p-4">
+            <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+              Logistics Backup
+            </p>
+            <p className="text-sm text-foreground">
+              Contracted capacity of up to <span className="font-semibold">20 trucks per client</span>{" "}
+              secured as backup, ensuring uninterrupted delivery to buyers.
+            </p>
           </div>
         </div>
       </div>
