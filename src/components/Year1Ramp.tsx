@@ -1,14 +1,22 @@
-const data = [
+const SCRAP_PRICE = 1.65; // $/lb
+
+const raw = [
   { month: "M1", prod: 0, burn: 0.10, note: "Lease, permitting, legal" },
   { month: "M2", prod: 0, burn: 0.25, note: "Engineering, payroll" },
   { month: "M3", prod: 0, burn: 0.80, note: "Furnace deposits" },
-  { month: "M4", prod: 0, burn: 2.55, note: "Property close + equipment" },
-  { month: "M5", prod: 0, burn: 3.10, note: "Install & commissioning" },
-  { month: "M6", prod: 1.5, burn: 4.50, note: "WC scrap inventory · production start" },
-  { month: "M7", prod: 2.1, burn: 4.65, note: "Ramp" },
-  { month: "M8", prod: 2.55, burn: 4.75, note: "Ramp" },
+  { month: "M4", prod: 0.5, burn: 2.55, note: "Property close + equipment · production start · scrap purchasing begins" },
+  { month: "M5", prod: 1.0, burn: 3.10, note: "Install & commissioning · ramp" },
+  { month: "M6", prod: 1.5, burn: 4.50, note: "WC scrap inventory · ramp" },
+  { month: "M7", prod: 2.0, burn: 4.65, note: "Ramp" },
+  { month: "M8", prod: 2.5, burn: 4.75, note: "Ramp" },
   { month: "M9", prod: 3.0, burn: 4.84, note: "Full stabilization" },
 ];
+
+// Inventory spend = pounds purchased × $1.65/lb (assumes scrap purchased to match monthly production)
+const data = raw.map((d) => ({
+  ...d,
+  inv: +(d.prod * SCRAP_PRICE).toFixed(2),
+}));
 
 const MAX_PROD = 3.0;
 const MAX_BURN = 4.84;
@@ -23,7 +31,7 @@ const Year1Ramp = () => {
         </h2>
         <p className="text-sm md:text-base text-muted-foreground mb-8 max-w-3xl">
           Capital deployed through Month 9 reaches ~$4.84M — the full project funding requirement.
-          Production begins Month 6 and stabilizes at ~3M lbs/month by Month 9.
+          Production and scrap purchasing begin in Month 4 and stabilize at ~3M lbs/month by Month 9.
         </p>
 
         <div className="bg-background border border-border p-5 md:p-8">
@@ -77,6 +85,7 @@ const Year1Ramp = () => {
                 <tr className="border-b border-border text-muted-foreground uppercase tracking-wider">
                   <th className="text-left py-2 pr-2">Month</th>
                   <th className="text-right py-2 px-2">Production</th>
+                  <th className="text-right py-2 px-2">Inventory Spend<br /><span className="normal-case tracking-normal text-[10px]">@ $1.65/lb</span></th>
                   <th className="text-right py-2 px-2">Cum. Burn</th>
                   <th className="text-left py-2 pl-2 hidden md:table-cell">Milestone</th>
                 </tr>
@@ -87,6 +96,9 @@ const Year1Ramp = () => {
                     <td className="py-2 pr-2 font-medium">{d.month}</td>
                     <td className="py-2 px-2 text-right">
                       {d.prod > 0 ? `${d.prod.toFixed(2)}M lbs` : "—"}
+                    </td>
+                    <td className="py-2 px-2 text-right">
+                      {d.inv > 0 ? `$${d.inv.toFixed(2)}M` : "—"}
                     </td>
                     <td className="py-2 px-2 text-right font-medium">${d.burn.toFixed(2)}M</td>
                     <td className="py-2 pl-2 text-muted-foreground hidden md:table-cell">{d.note}</td>
