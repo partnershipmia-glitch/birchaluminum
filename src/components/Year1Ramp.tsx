@@ -108,6 +108,28 @@ const Year1Ramp = () => {
             </table>
           </div>
         </div>
+
+        {/* Callouts */}
+        <div className="mt-6 grid md:grid-cols-2 gap-4">
+          <div className="border-l-2 border-yellow-500 bg-background p-4">
+            <p className="text-[10px] uppercase tracking-wider text-yellow-600 font-semibold mb-1">
+              Months 4–5 · Inventory Credit Line
+            </p>
+            <p className="text-sm text-foreground">
+              Approval targeted for a <span className="font-semibold">3M lb</span> revolving
+              inventory credit line to finance scrap purchasing at full ramp.
+            </p>
+          </div>
+          <div className="border-l-2 border-primary bg-background p-4">
+            <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+              Logistics Backup
+            </p>
+            <p className="text-sm text-foreground">
+              Contracted capacity of up to <span className="font-semibold">20 trucks per client</span>{" "}
+              secured as backup, ensuring uninterrupted delivery to buyers.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
