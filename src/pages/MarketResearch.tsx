@@ -273,6 +273,105 @@ const MarketResearch = () => {
         </div>
       </section>
 
+      {/* Sensitivity Analysis */}
+      <section className="section-padding">
+        <div className="container mx-auto px-6">
+          <p className="text-minimal text-muted-foreground mb-4">Sensitivity Analysis</p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Key financial drivers based on business plan assumptions
+          </h2>
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground mb-10">
+            <span><span className="text-yellow-600 font-bold">3,000,000</span> lbs / month</span>
+            <span><span className="text-yellow-600 font-bold">$2.05</span> / lb selling price</span>
+            <span><span className="text-yellow-600 font-bold">~$0.10</span> / lb operating cost</span>
+            <span><span className="text-yellow-600 font-bold">~95%</span> recovery</span>
+          </div>
+
+          <div className="grid lg:grid-cols-[1fr_2fr] gap-6 mb-10">
+            <div className="border border-border">
+              <p className="bg-primary text-primary-foreground p-4 font-semibold text-sm uppercase tracking-wider">Key Assumptions</p>
+              <div className="p-4 space-y-3 text-sm">
+                {[
+                  ["Scrap Purchase Price", "$1.60 – $1.70 / lb"],
+                  ["Recovery Rate", "~95%"],
+                  ["Operating Cost", "~$0.10 / lb"],
+                  ["Selling Price", "$2.05 / lb"],
+                  ["Production Capacity", "3,000,000 lbs / month"],
+                ].map(([k, v]) => (
+                  <div key={k} className="flex justify-between border-b border-border pb-2">
+                    <span className="text-muted-foreground">{k}</span>
+                    <span className="font-semibold">{v}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="border border-border overflow-x-auto">
+              <p className="bg-primary text-primary-foreground p-4 font-semibold text-sm uppercase tracking-wider">EBITDA Sensitivity by Variable</p>
+              <table className="w-full text-sm">
+                <thead className="bg-muted/40">
+                  <tr>
+                    <th className="text-left p-3">Variable</th>
+                    <th className="text-right p-3">EBITDA / lb</th>
+                    <th className="text-right p-3">Monthly EBITDA</th>
+                    <th className="text-right p-3">Annual EBITDA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { group: "Recovery Rate", rows: [
+                      ["95% (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
+                      ["92%", "$0.07 / lb", "$210,000", "$2,520,000"],
+                      ["90%", "$0.05 / lb", "$150,000", "$1,800,000"],
+                    ]},
+                    { group: "Scrap Purchase Price", rows: [
+                      ["$1.50 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
+                      ["$1.60 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
+                      ["$1.70 / lb", "$0.00 / lb", "$0", "$0"],
+                    ]},
+                    { group: "Selling Price", rows: [
+                      ["$2.15 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
+                      ["$2.05 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
+                      ["$1.95 / lb", "$0.00 / lb", "$0", "$0"],
+                      ["$1.85 / lb", "($0.10) / lb", "($300,000)", "($3,600,000)"],
+                    ]},
+                  ].map((section) => (
+                    <>
+                      <tr key={section.group} className="bg-muted/20 border-t border-border">
+                        <td colSpan={4} className="p-3 font-bold text-xs uppercase tracking-wider">{section.group}</td>
+                      </tr>
+                      {section.rows.map((r) => {
+                        const negative = r[1].startsWith("(");
+                        return (
+                          <tr key={section.group + r[0]} className="border-t border-border">
+                            <td className="p-3">{r[0]}</td>
+                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[1]}</td>
+                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[2]}</td>
+                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[3]}</td>
+                          </tr>
+                        );
+                      })}
+                    </>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-4 text-sm">
+            {[
+              "Financial performance is most sensitive to recovery rate.",
+              "Scrap purchase price directly impacts margins.",
+              "Selling price variations have a proportional impact on EBITDA.",
+              "Assumes 3M lbs / month production and ~95% recovery.",
+            ].map((t) => (
+              <div key={t} className="border-l-2 border-yellow-500 pl-4 text-muted-foreground">{t}</div>
+            ))}
+          </div>
+          <p className="text-xs text-muted-foreground mt-6">Note: Analysis based on business plan assumptions.</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 max-w-3xl text-center">

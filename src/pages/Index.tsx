@@ -36,6 +36,7 @@ const Index = () => {
         <WhyNow />
         <Team />
         <EntryPoint />
+        <WhyAlabama />
         <PhotoBand />
         <Compounds />
         <InvestorEconomics />
