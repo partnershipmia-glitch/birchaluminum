@@ -40,14 +40,6 @@ const FinalCTA = () => {
 
           <div className="flex flex-wrap gap-4 mb-12">
             <a
-              href={requestUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors"
-            >
-              Request Investor Materials <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
               href={callUrl}
               target="_blank"
               rel="noopener noreferrer"
