@@ -46,7 +46,7 @@ const WhyMarket = () => {
               <p className="text-minimal text-muted-foreground mb-2">U.S. Aluminum Market</p>
               <h3 className="text-2xl md:text-3xl font-bold">Supply vs. Demand (Annual)</h3>
             </div>
-            <p className="text-sm text-muted-foreground">Source: Birch Aluminum Pitch Deck</p>
+            
           </div>
           <div className="w-full h-[340px]">
             <ResponsiveContainer width="100%" height="100%">
