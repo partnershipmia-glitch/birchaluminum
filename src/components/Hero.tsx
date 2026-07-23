@@ -4,7 +4,7 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 const pitchCallUrl =
   "https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com" +
   "&su=" +
-  encodeURIComponent("Schedule a Pitch Call - Birch Aluminum") +
+  encodeURIComponent("Let's Clear It Up With Me - Birch Aluminum") +
   "&body=" +
   encodeURIComponent(
     "Hello Birch Aluminum Team,\n\nI would like to schedule a pitch call to discuss the investment opportunity.\n\nName:\nCompany:\nPhone:\nPreferred date/time:\n\nThank you.\n\n--\nReply to: BirchFamilyLLCFL@gmail.com | +1 754-610-1052"
@@ -75,7 +75,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
             >
-              <Calendar className="w-4 h-4" /> Schedule a Pitch Call
+              <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
             </a>
             <a
               href="#investor-economics"
