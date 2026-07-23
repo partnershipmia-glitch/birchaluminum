@@ -40,7 +40,7 @@ const Index = () => {
         <PhotoBand />
         <Compounds />
         <InvestorEconomics />
-        <Year1Ramp />
+        <UseOfFunds />
         <FinalCTA />
       </main>
       <Footer />

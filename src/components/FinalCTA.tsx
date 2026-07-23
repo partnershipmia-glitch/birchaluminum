@@ -45,7 +45,7 @@ const FinalCTA = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
             >
-              <Calendar className="w-4 h-4" /> Schedule a Pitch Call
+              <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
             </a>
           </div>
 
