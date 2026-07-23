@@ -12,12 +12,6 @@ const UseOfFunds = () => {
         <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4">
           Where the <span className="text-yellow-400">$4.84M</span> Goes
         </h2>
-        <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mb-14">
-          Every dollar is invested into hard industrial assets — fully{" "}
-          <span className="text-yellow-400 font-bold">collateralized</span> and, because this is an
-          industrial operation, <span className="text-yellow-400 font-bold">tax-deductible</span>.
-        </p>
-
         <div className="grid md:grid-cols-3 gap-px bg-primary-foreground/10 border border-yellow-400/30 mb-10">
           {allocation.map((a) => (
             <div key={a.label} className="bg-primary p-8 md:p-10">
