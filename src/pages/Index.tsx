@@ -10,7 +10,7 @@ import WhyAlabama from "@/components/WhyAlabama";
 import PhotoBand from "@/components/PhotoBand";
 import Compounds from "@/components/Compounds";
 import InvestorEconomics from "@/components/InvestorEconomics";
-import Year1Ramp from "@/components/Year1Ramp";
+import UseOfFunds from "@/components/UseOfFunds";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
