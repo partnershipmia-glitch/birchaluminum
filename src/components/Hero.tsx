@@ -38,9 +38,6 @@ const Hero = () => {
           </span>
 
           <h1 className="tracking-tight leading-[1.05] mb-6">
-            <span className="block text-2xl md:text-4xl lg:text-5xl font-medium text-primary-foreground/90 mb-1">
-              Domestic Secondary
-            </span>
             <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground">
               Aluminum Production
             </span>
