@@ -29,10 +29,9 @@ const WhyMarket = () => {
       <div className="container mx-auto px-6">
         <p className="text-minimal text-muted-foreground mb-4">Section 01 · Why This Market</p>
         <p className="text-lg md:text-xl text-muted-foreground mb-2">U.S. Buyers Seeking</p>
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl mb-2">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl mb-8">
           Reliable Domestic Aluminum Supply
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground mb-8">Built Around Proven Demand</p>
         <p className="text-lg text-muted-foreground max-w-3xl mb-14 leading-relaxed">
           The United States continues to depend on imported aluminum — now under tariffs of up to 50% —
           while manufacturers require dependable domestic supply, consistent specifications, and shorter

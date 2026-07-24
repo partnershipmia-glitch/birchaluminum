@@ -41,9 +41,6 @@ const Hero = () => {
             <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground">
               Aluminum Production
             </span>
-            <span className="block text-xl md:text-3xl lg:text-4xl font-medium text-yellow-400 mt-2">
-              Built Around Proven Demand
-            </span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl leading-relaxed mb-12">
