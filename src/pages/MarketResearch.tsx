@@ -282,10 +282,10 @@ const MarketResearch = () => {
             Key financial drivers based on business plan assumptions
           </h2>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground mb-10">
-            <span><span className="text-yellow-600 font-bold">3,000,000</span> lbs / month</span>
-            <span><span className="text-yellow-600 font-bold">$2.05</span> / lb selling price</span>
-            <span><span className="text-yellow-600 font-bold">~$0.10</span> / lb operating cost</span>
-            <span><span className="text-yellow-600 font-bold">~95%</span> recovery</span>
+            <span><span className="text-brand font-bold">3,000,000</span> lbs / month</span>
+            <span><span className="text-brand font-bold">$2.05</span> / lb selling price</span>
+            <span><span className="text-brand font-bold">~$0.10</span> / lb operating cost</span>
+            <span><span className="text-brand font-bold">~95%</span> recovery</span>
           </div>
 
           <div className="grid lg:grid-cols-[1fr_2fr] gap-6 mb-10">
@@ -366,7 +366,7 @@ const MarketResearch = () => {
               "Selling price variations have a proportional impact on EBITDA.",
               "Assumes 3M lbs / month production and ~95% recovery.",
             ].map((t) => (
-              <div key={t} className="border-l-2 border-yellow-500 pl-4 text-muted-foreground">{t}</div>
+              <div key={t} className="border-l-2 border-brand pl-4 text-muted-foreground">{t}</div>
             ))}
           </div>
           <p className="text-xs text-muted-foreground mt-6">Note: Analysis based on business plan assumptions.</p>

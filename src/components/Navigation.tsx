@@ -1,22 +1,23 @@
 import { useState } from "react";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 
 const pitchCallUrl =
   "https://mail.google.com/mail/?view=cm&fs=1&to=BirchFamilyLLCFL@gmail.com" +
   "&su=" +
-  encodeURIComponent("Let's Clear It Up With Me - Birch Aluminum") +
+  encodeURIComponent("Investor Enquiry - Birch Aluminum") +
   "&body=" +
   encodeURIComponent(
     "Hello Birch Aluminum Team,\n\nI would like to schedule a pitch call to discuss the investment opportunity.\n\nName:\nCompany:\nPhone:\nPreferred date/time:\n\nThank you.\n\n--\nReply to: BirchFamilyLLCFL@gmail.com | +1 754-610-1052"
   );
 
 const sectionLinks = [
+  { label: "Overview", href: "#why-birch" },
   { label: "Market", href: "#market" },
-  { label: "Team", href: "#team" },
-  { label: "Investment", href: "#investor-economics" },
-  { label: "Contact", href: "#cta" },
+  { label: "Financials", href: "#financials" },
+  { label: "Leadership", href: "#team" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
@@ -64,9 +65,9 @@ const Navigation = () => {
             href={pitchCallUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-5 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
+            className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-5 py-2 text-sm font-bold hover:opacity-90 transition-colors"
           >
-            <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
+            <ArrowRight className="w-4 h-4" /> Investors
           </a>
         </div>
 
@@ -107,9 +108,9 @@ const Navigation = () => {
               href={pitchCallUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-yellow-400 text-primary px-5 py-3 text-sm font-bold text-center mt-4 hover:bg-yellow-300 transition-colors"
+              className="flex items-center justify-center gap-2 bg-brand text-brand-foreground px-5 py-3 text-sm font-bold text-center mt-4 hover:opacity-90 transition-colors"
             >
-              <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
+              <ArrowRight className="w-4 h-4" /> Investors
             </a>
           </div>
         </div>
