@@ -1,67 +1,26 @@
-const advantages = [
-  {
-    title: "Strategic Location",
-    detail: "Central access to Southeast automotive manufacturers. 10 targeted customers within 2 hours of the facility.",
-  },
-  {
-    title: "Lower Operating Costs",
-    detail: "Reduced labor and overhead. No worker unions.",
-  },
-  {
-    title: "Industrial Infrastructure",
-    detail: "Existing heavy industrial base and a manufacturing-friendly environment.",
-  },
-  {
-    title: "Growing Domestic Demand",
-    detail: "U.S. aluminum demand is rising as manufacturers reshore production.",
-  },
-  {
-    title: "Tariff-Driven Supply Chain",
-    detail: "Reliable domestic aluminum supply chain reinforced by import tariffs.",
-  },
-  {
-    title: "Local Network In Place",
-    detail: "Established relationships with contractors, workforce suppliers, and engineering firms. Already worked with ADEM, the main permitting authority in Alabama.",
-  },
-];
-
 const About = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding bg-background">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-16">
-          <p className="text-minimal text-muted-foreground mb-4">About the Project</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
-            Birch Aluminum
-          </h2>
-          <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-start">
+          <div>
+            <p className="text-minimal text-brand mb-5">About Birch Aluminum</p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-[1.1]">
+              Building the Next Generation Domestic Aluminum Producer
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Birch Aluminum is a developing secondary aluminum facility based in{" "}
-              <span className="text-foreground font-medium">Decatur, Alabama</span>.
+              Birch Aluminum is developing a purpose-built secondary aluminum production facility
+              designed around automation, efficient metal flow, disciplined capital allocation, and
+              scalable long-term growth.
             </p>
             <p>
-              We melt scrap wheels and tap the aluminum into sow forms, then sell directly to
-              autoparts makers — including{" "}
-              <span className="text-foreground font-medium">Toyota, Hyundai, BMW, and Mercedes</span>{" "}
-              — located right here in Alabama.
-            </p>
-            <p>
-              We source aluminum scrap{" "}
-              <span className="text-foreground font-medium">356 alloys</span> aligned with{" "}
-              <span className="text-foreground font-medium">U.S. autopart makers standards</span>{" "}
-              and focus on efficient, scalable production systems.
+              The project combines experienced leadership, regional supply advantages, and a
+              debt-free capital structure to deliver reliable production with predictable operating
+              cash flow.
             </p>
           </div>
-        </div>
-
-        <p className="text-minimal text-muted-foreground mb-6">Why Alabama</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-          {advantages.map((a) => (
-            <div key={a.title} className="bg-background p-8">
-              <h3 className="text-xl font-bold tracking-tight mb-3">{a.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{a.detail}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
