@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 
@@ -17,7 +17,7 @@ const sectionLinks = [
   { label: "Market", href: "#market" },
   { label: "Financials", href: "#financials" },
   { label: "Leadership", href: "#team" },
-  { label: "Contact", href: "#cta" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
@@ -67,7 +67,7 @@ const Navigation = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-5 py-2 text-sm font-bold hover:opacity-90 transition-colors"
           >
-            <Calendar className="w-4 h-4" /> Investors
+            <ArrowRight className="w-4 h-4" /> Investors
           </a>
         </div>
 
@@ -110,7 +110,7 @@ const Navigation = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-brand text-brand-foreground px-5 py-3 text-sm font-bold text-center mt-4 hover:opacity-90 transition-colors"
             >
-              <Calendar className="w-4 h-4" /> Investors
+              <ArrowRight className="w-4 h-4" /> Investors
             </a>
           </div>
         </div>
