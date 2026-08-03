@@ -8,7 +8,7 @@ const InvestorEconomics = () => {
         </h2>
 
         <div className="grid lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
-          <div className="bg-yellow-400 text-primary p-10 md:p-14">
+          <div className="bg-brand text-primary p-10 md:p-14">
             <p className="text-2xl md:text-3xl font-black mb-4">Equity Available</p>
             <p className="text-7xl md:text-8xl font-black leading-none mb-4">15%</p>
             <p className="text-lg font-medium">
@@ -24,7 +24,7 @@ const InvestorEconomics = () => {
             ].map((r) => (
               <div key={r.label} className="border border-primary-foreground/20 p-6 flex justify-between items-center">
                 <span className="text-primary-foreground/80">{r.label}</span>
-                <span className="text-2xl font-black text-yellow-400">{r.value}</span>
+                <span className="text-2xl font-black text-brand">{r.value}</span>
               </div>
             ))}
             <p className="text-primary-foreground/70 leading-relaxed pt-2">

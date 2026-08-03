@@ -117,7 +117,7 @@ const Production = () => {
                     <span className="absolute left-0">0 lb</span>
                     <div className="absolute flex flex-col items-center" style={{ left: '25%', transform: 'translateX(-50%)' }}>
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
-                      <span className="mt-1 whitespace-nowrap text-yellow-300 font-semibold">1.5M · +2nd</span>
+                      <span className="mt-1 whitespace-nowrap text-brand font-semibold">1.5M · +2nd</span>
                     </div>
                     <div className="absolute flex flex-col items-center" style={{ left: '50%', transform: 'translateX(-50%)' }}>
                       <span className="h-2 w-px bg-primary-foreground/40 -mt-1" />
@@ -155,9 +155,9 @@ const Production = () => {
                       <span className="text-base font-normal text-primary-foreground/60">lbs / month</span>
                     </p>
                   </div>
-                  <div className="border-2 border-yellow-400 bg-yellow-400/10 p-5">
-                    <p className="text-minimal text-yellow-300 mb-1">Monthly Margin Earned (avg $0.10/lb)</p>
-                    <p className="text-6xl md:text-8xl font-extrabold text-yellow-300 leading-none">
+                  <div className="border-2 border-brand bg-brand/10 p-5">
+                    <p className="text-minimal text-brand mb-1">Monthly Margin Earned (avg $0.10/lb)</p>
+                    <p className="text-6xl md:text-8xl font-extrabold text-brand leading-none">
                       {formatUSD(ebitda)}
                     </p>
 

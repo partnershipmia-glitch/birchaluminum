@@ -64,7 +64,7 @@ const Navigation = () => {
             href={pitchCallUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-5 py-2 text-sm font-bold hover:bg-yellow-300 transition-colors"
+            className="inline-flex items-center gap-2 bg-brand text-primary px-5 py-2 text-sm font-bold hover:bg-brand transition-colors"
           >
             <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
           </a>
@@ -107,7 +107,7 @@ const Navigation = () => {
               href={pitchCallUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-yellow-400 text-primary px-5 py-3 text-sm font-bold text-center mt-4 hover:bg-yellow-300 transition-colors"
+              className="flex items-center justify-center gap-2 bg-brand text-primary px-5 py-3 text-sm font-bold text-center mt-4 hover:bg-brand transition-colors"
             >
               <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
             </a>

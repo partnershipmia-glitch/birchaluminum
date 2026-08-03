@@ -26,13 +26,13 @@ const Hero = () => {
         aria-hidden
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/50" aria-hidden />
-      <div className="pointer-events-none absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-yellow-400/15 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-brand/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 -left-20 w-[500px] h-[500px] rounded-full bg-orange-500/15 blur-3xl" />
 
 
       <div className="container mx-auto px-6 relative">
         <div className="max-w-5xl">
-          <span className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider mb-8">
+          <span className="inline-flex items-center gap-2 bg-brand text-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider mb-8">
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             Now Raising · Decatur, Alabama
           </span>
@@ -48,10 +48,10 @@ const Hero = () => {
             scrap into aluminum alloys for U.S. industrial buyers.
           </p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-10 border border-yellow-400/30">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/10 mb-10 border border-brand/40">
             {facts.map((f) => (
               <div key={f.label} className="bg-primary p-6">
-                <p className="text-3xl md:text-4xl font-black text-yellow-400 leading-none mb-2">
+                <p className="text-3xl md:text-4xl font-black text-brand leading-none mb-2">
                   {f.value}
                 </p>
                 <p className="text-sm text-primary-foreground/90 font-medium">{f.unit}</p>
@@ -67,7 +67,7 @@ const Hero = () => {
               href={pitchCallUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
+              className="inline-flex items-center gap-2 bg-brand text-primary px-8 py-4 font-bold hover:bg-brand transition-colors shadow-lg shadow-brand/25"
             >
               <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
             </a>
@@ -81,7 +81,7 @@ const Hero = () => {
               href="https://docsend.com/view/74m7bpgj3pqjkmqd"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border border-yellow-400 text-yellow-400 px-8 py-4 font-bold hover:bg-yellow-400 hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 border border-brand text-brand px-8 py-4 font-bold hover:bg-brand hover:text-primary transition-colors"
             >
               View Pitch Deck <ArrowRight className="w-4 h-4" />
             </a>

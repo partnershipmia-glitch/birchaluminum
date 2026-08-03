@@ -72,10 +72,10 @@ const Compounds = () => {
                 }`}
               >
                 <div className="pl-12 md:pl-0 md:pr-8 md:text-right relative">
-                  <span className="absolute left-2 md:left-auto md:right-[-33px] top-1 w-4 h-4 rounded-full bg-yellow-400 border-4 border-background md:right-auto md:left-1/2 md:-translate-x-1/2" />
+                  <span className="absolute left-2 md:left-auto md:right-[-33px] top-1 w-4 h-4 rounded-full bg-brand border-4 border-background md:right-auto md:left-1/2 md:-translate-x-1/2" />
                 </div>
                 <div className="pl-12 md:pl-8 border border-border bg-secondary/40 p-6">
-                  <p className="text-minimal text-yellow-600 mb-2">{s.n}</p>
+                  <p className="text-minimal text-brand mb-2">{s.n}</p>
                   <h3 className="text-xl font-bold mb-4">{s.title}</h3>
                   <ul className="space-y-2">
                     {s.points.map((p) => (

@@ -44,7 +44,7 @@ const WhyAlabama = () => {
               </div>
               <div>
                 <p className="text-minimal text-muted-foreground mb-1">{a.label}</p>
-                <p className="text-xl font-bold text-yellow-600">{a.value}</p>
+                <p className="text-xl font-bold text-brand">{a.value}</p>
                 <p className="text-sm text-muted-foreground">{a.detail}</p>
               </div>
             </div>
@@ -67,14 +67,14 @@ const WhyAlabama = () => {
                   <td className="p-4 font-medium">{r.component}</td>
                   <td className="p-4 text-right font-mono">{r.birch}</td>
                   <td className="p-4 text-right font-mono text-muted-foreground">{r.rust}</td>
-                  <td className="p-4 text-right font-mono text-yellow-600 font-semibold">{r.adv}</td>
+                  <td className="p-4 text-right font-mono text-brand font-semibold">{r.adv}</td>
                 </tr>
               ))}
               <tr className="border-t-2 border-foreground bg-muted/40">
                 <td className="p-4 font-bold">Total Conversion Cost</td>
                 <td className="p-4 text-right font-mono font-bold">~$0.10 / lb</td>
                 <td className="p-4 text-right font-mono">~$0.13 – $0.16 / lb</td>
-                <td className="p-4 text-right font-mono text-yellow-600 font-bold">$0.03 – $0.06 / lb</td>
+                <td className="p-4 text-right font-mono text-brand font-bold">$0.03 – $0.06 / lb</td>
               </tr>
             </tbody>
           </table>
@@ -84,11 +84,11 @@ const WhyAlabama = () => {
           <p className="text-minimal text-primary-foreground/60 mb-3">Result at 3M lbs / month</p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-yellow-400">$90,000 – $180,000</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand">$90,000 – $180,000</p>
               <p className="text-primary-foreground/70 text-sm mt-1">lower cost per month</p>
             </div>
             <div>
-              <p className="text-3xl md:text-4xl font-bold text-yellow-400">$1.08M – $2.16M</p>
+              <p className="text-3xl md:text-4xl font-bold text-brand">$1.08M – $2.16M</p>
               <p className="text-primary-foreground/70 text-sm mt-1">lower cost per year</p>
             </div>
           </div>
@@ -115,7 +115,7 @@ const WhyAlabama = () => {
               {buyers.map((b) => (
                 <div key={b.region} className="flex items-baseline justify-between border-b border-border pb-2">
                   <span className="text-sm text-muted-foreground">{b.region}</span>
-                  <span className="font-bold text-yellow-600">{b.count}</span>
+                  <span className="font-bold text-brand">{b.count}</span>
                 </div>
               ))}
             </div>

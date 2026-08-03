@@ -35,12 +35,12 @@ const EntryPoint = () => {
           {steps.map((s, i) => (
             <div key={s.n} className="relative">
               <div className="bg-primary border border-primary-foreground/20 p-6 h-full">
-                <p className="text-yellow-400 font-black text-2xl mb-3">{s.n}</p>
+                <p className="text-brand font-black text-2xl mb-3">{s.n}</p>
                 <h3 className="text-lg font-bold mb-2">{s.title}</h3>
                 <p className="text-sm text-primary-foreground/70 leading-relaxed">{s.body}</p>
               </div>
               {i < steps.length - 1 && (
-                <ArrowRight className="hidden md:block absolute top-1/2 -right-3 -translate-y-1/2 w-5 h-5 text-yellow-400" />
+                <ArrowRight className="hidden md:block absolute top-1/2 -right-3 -translate-y-1/2 w-5 h-5 text-brand" />
               )}
             </div>
           ))}
@@ -51,7 +51,7 @@ const EntryPoint = () => {
           <ul className="grid md:grid-cols-2 gap-x-10 gap-y-3 max-w-4xl">
             {practical.map((p) => (
               <li key={p} className="flex gap-3 text-primary-foreground/85">
-                <span className="text-yellow-400 shrink-0">›</span>
+                <span className="text-brand shrink-0">›</span>
                 <span>{p}</span>
               </li>
             ))}

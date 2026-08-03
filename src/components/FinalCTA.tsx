@@ -43,7 +43,7 @@ const FinalCTA = () => {
               href={callUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-yellow-400 text-primary px-8 py-4 font-bold hover:bg-yellow-300 transition-colors shadow-lg shadow-yellow-400/20"
+              className="inline-flex items-center gap-2 bg-brand text-primary px-8 py-4 font-bold hover:bg-brand transition-colors shadow-lg shadow-brand/25"
             >
               <Calendar className="w-4 h-4" /> Let's Clear It Up With Me
             </a>
@@ -54,7 +54,7 @@ const FinalCTA = () => {
             <ul className="grid sm:grid-cols-2 gap-2">
               {materials.map((m) => (
                 <li key={m} className="flex gap-3 text-primary-foreground/80">
-                  <span className="text-yellow-400">·</span>
+                  <span className="text-brand">·</span>
                   {m}
                 </li>
               ))}

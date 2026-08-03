@@ -42,7 +42,7 @@ const Year1Ramp = () => {
               <span className="text-muted-foreground">Production (M lbs / month)</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-block w-3 h-3 bg-yellow-500" />
+              <span className="inline-block w-3 h-3 bg-brand" />
               <span className="text-muted-foreground">Cumulative Funds Burn ($M)</span>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Year1Ramp = () => {
                     {/* Burn bar */}
                     <div className="flex-1 h-full bg-secondary relative">
                       <div
-                        className="absolute bottom-0 left-0 right-0 bg-yellow-500 transition-all"
+                        className="absolute bottom-0 left-0 right-0 bg-brand transition-all"
                         style={{ height: `${hBurn}%` }}
                       />
                     </div>
@@ -111,8 +111,8 @@ const Year1Ramp = () => {
 
         {/* Callouts */}
         <div className="mt-6 grid md:grid-cols-2 gap-4">
-          <div className="border-l-2 border-yellow-500 bg-background p-4">
-            <p className="text-[10px] uppercase tracking-wider text-yellow-600 font-semibold mb-1">
+          <div className="border-l-2 border-brand bg-background p-4">
+            <p className="text-[10px] uppercase tracking-wider text-brand font-semibold mb-1">
               Months 4–5 · Inventory Credit Line
             </p>
             <p className="text-sm text-foreground">
