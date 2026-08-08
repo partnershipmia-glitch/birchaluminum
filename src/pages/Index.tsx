@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 
 const title = "Birch Aluminum – Vertically Integrated U.S. Aluminum Platform";
 const description =
-  "Birch Aluminum is building a 36M lb/yr secondary aluminum smelter in Alabama, then scaling scrap yards and plants nationwide. $8.5M raise, 30% investor equity.";
+  "Birch Aluminum is building a 96M+ lb/yr secondary aluminum smelter in Alabama, then scaling scrap yards and plants nationwide. $8.5M raise, 30% investor equity.";
 
 const Index = () => {
   return (

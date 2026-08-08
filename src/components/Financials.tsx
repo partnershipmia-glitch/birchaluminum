@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { deckUrl } from "@/lib/links";
 
 const stats = [
-  { value: "36M lbs", label: "Full annual capacity" },
+  { value: "96M+ lbs", label: "Full annual capacity" },
   {
     value: (
       <>
