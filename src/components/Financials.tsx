@@ -3,8 +3,26 @@ import { deckUrl } from "@/lib/links";
 
 const stats = [
   { value: "36M lbs", label: "Full annual capacity" },
-  { value: "$2.05 / lb", label: "Base selling price" },
-  { value: "Months 18–20", label: "Target full capacity" },
+  {
+    value: (
+      <>
+        Months
+        <br />
+        10–12
+      </>
+    ),
+    label: "First production",
+  },
+  {
+    value: (
+      <>
+        Months
+        <br />
+        18–20
+      </>
+    ),
+    label: "Target full capacity",
+  },
   { value: "5-Year", label: "Growth plan" },
 ];
 
