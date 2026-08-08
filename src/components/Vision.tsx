@@ -10,7 +10,7 @@ const phases = [
   {
     phase: "Phase 1",
     title: "Alabama Smelter",
-    body: "Build and stabilize the first 96M+ lb facility.",
+    body: "Build and stabilize the first 36M+ lb facility.",
   },
   {
     phase: "Phase 2",

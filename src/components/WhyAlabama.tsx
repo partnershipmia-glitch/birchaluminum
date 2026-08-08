@@ -3,7 +3,7 @@ import facilityLayout from "@/assets/facility-layout.png";
 const flow = ["Scrap", "Melting", "Alloy Production", "Casting", "Customer"];
 
 const specs = [
-  { value: "8M+ lbs", label: "Monthly capacity" },
+  { value: "3M+ lbs", label: "Monthly capacity" },
   { value: "2 × MAX-4000", label: "Sweat furnaces" },
   { value: "Purpose-Built", label: "Production facility" },
   { value: "Alabama", label: "Strategic southeast location" },
