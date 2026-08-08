@@ -1,7 +1,7 @@
 const stats = [
   { value: "+2.5%", label: "U.S. primary aluminum demand CAGR" },
   { value: "78%", label: "of U.S. aluminum is imported" },
-  { value: "8–16 wks", label: "Typical import lead times" },
+  { value: "$2.20", label: "Local 356 alloy / lb (imported: $3.30)" },
 ];
 
 const WhyMarket = () => {
