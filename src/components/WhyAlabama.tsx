@@ -42,14 +42,30 @@ const WhyAlabama = () => {
           ))}
         </div>
 
-        <div className="border border-border bg-secondary p-4 sm:p-8 mb-6">
+        <div className="border border-border bg-secondary p-4 sm:p-8 mb-4">
           <img
-            src={facilityLayout}
-            alt="Birch Aluminum facility layout in Decatur, Alabama with two MAX-4000 furnaces and automated casting line"
-            className="w-full h-auto max-w-3xl mx-auto"
+            src={facilityLayout.url}
+            alt="Birch Aluminum interior floor plan in Decatur, Alabama with two MAX-4000 sweat furnaces, holding furnace and ingot casting line"
+            className="w-full h-auto max-w-4xl mx-auto"
             loading="lazy"
           />
+          <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground text-center mt-3">
+            Interior floor plan — 200' × 60'
+          </p>
         </div>
+
+        <div className="border border-border bg-secondary p-4 sm:p-8 mb-6">
+          <img
+            src={facilitySiteView.url}
+            alt="Full site view of the Birch Aluminum industrial metal building with truck circulation, three loading docks and employee parking"
+            className="w-full h-auto max-w-4xl mx-auto"
+            loading="lazy"
+          />
+          <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground text-center mt-3">
+            Full site view — 200' × 60' × 45', 3 truck docks, full drive-around
+          </p>
+        </div>
+
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
           Built around the production process — not the production process around an existing
