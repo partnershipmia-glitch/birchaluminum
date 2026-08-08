@@ -1,55 +1,61 @@
-const allocation = [
-  { label: "Land & Site Development", value: "$554K", amount: 554 },
-  { label: "Building & Infrastructure", value: "$812K", amount: 812 },
-  { label: "Production Equipment", value: "$2.055M", amount: 2055 },
-  { label: "Lab, Startup & Compliance", value: "$244K", amount: 244 },
-  { label: "Contingency", value: "$366.5K", amount: 366.5 },
-  { label: "Working Capital & Inventory", value: "$2.0M", amount: 2000 },
+import { ArrowRight } from "lucide-react";
+import { deckUrl } from "@/lib/links";
+
+const headline = [
+  { value: "$8.5M", label: "Total capital raise" },
+  { value: "30%", label: "Investor equity" },
+  { value: "100%", label: "Equity funded / no debt" },
 ];
 
-const max = Math.max(...allocation.map((a) => a.amount));
+const timeline = [
+  { when: "Months 1–3", what: "Land + Permits + Engineering" },
+  { when: "Months 3–6", what: "Construction" },
+  { when: "Months 7–9", what: "Equipment Installation" },
+  { when: "Months 10–12", what: "Commissioning + Production Start" },
+  { when: "Months 13–14", what: "Commercial Sales" },
+  { when: "~6 months after start", what: "Full Production Capacity" },
+];
 
 const UseOfFunds = () => {
   return (
-    <section id="project-capital" className="section-padding bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6">
-        <p className="text-minimal text-brand mb-5">Project Capital</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-14">Use of Funds</h2>
+    <section id="investment" className="section-padding bg-primary text-primary-foreground">
+      <div className="container mx-auto px-5 sm:px-6">
+        <p className="text-minimal text-brand mb-4">Capital + Timeline</p>
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
+          $8.5M to Build and Launch.
+        </h2>
 
-        <div className="space-y-6 mb-14">
-          {allocation.map((a) => (
-            <div key={a.label}>
-              <div className="flex items-baseline justify-between mb-2 gap-4">
-                <span className="text-base md:text-lg font-medium text-primary-foreground/90">
-                  {a.label}
-                </span>
-                <span className="text-xl md:text-2xl font-bold text-brand">{a.value}</span>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+          <div className="space-y-px bg-primary-foreground/15 border border-primary-foreground/15">
+            {headline.map((h) => (
+              <div key={h.label} className="bg-primary p-6 sm:p-8">
+                <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-2">
+                  {h.value}
+                </p>
+                <p className="text-minimal text-primary-foreground/60">{h.label}</p>
               </div>
-              <div className="h-4 bg-primary-foreground/10">
-                <div
-                  className="h-full bg-brand"
-                  style={{ width: `${(a.amount / max) * 100}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 items-stretch">
-          <div className="bg-brand text-brand-foreground p-10">
-            <p className="text-minimal mb-4">Total Capital Requirement</p>
-            <p className="text-6xl md:text-7xl font-bold leading-none">$6.03M</p>
+            ))}
           </div>
-          <div className="border border-primary-foreground/20 p-10">
-            <p className="text-minimal text-primary-foreground/60 mb-4">Working Capital</p>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              $2.0M of the raise is reserved for working capital and scrap inventory. Metal is
-              purchased against confirmed demand, inventory turns quickly, and cash reserves are
-              rebuilt before any distributions — protecting the operation from commodity price
-              swings without relying on external credit.
-            </p>
+
+          <div className="relative border-l-2 border-primary-foreground/20 ml-2">
+            {timeline.map((t) => (
+              <div key={t.when} className="relative pl-8 pb-8 last:pb-0">
+                <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand border-4 border-primary" />
+                <p className="text-minimal text-brand mb-1">{t.when}</p>
+                <p className="text-lg sm:text-xl font-bold">{t.what}</p>
+              </div>
+            ))}
           </div>
         </div>
+
+        <a
+          href={deckUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
+        >
+          View Full Use of Funds <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
     </section>
   );

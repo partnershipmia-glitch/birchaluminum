@@ -1,71 +1,45 @@
-import { Factory, Cog, Workflow, Gauge, ShieldCheck } from "lucide-react";
-import facilityLayout from "@/assets/facility-layout.png";
+import { Factory, Recycle, MapPin } from "lucide-react";
 
 const cards = [
   {
     icon: Factory,
-    title: "Purpose-Built Facility",
-    body: "Facility designed specifically for aluminum melting, safe material flow, automated casting, and future expansion.",
+    title: "Domestic Demand",
+    body: "U.S. manufacturers need reliable regional aluminum supply.",
   },
   {
-    icon: Cog,
-    title: "Automated Ingot Production",
-    body: "Fully automated $1M ingot line improves consistency, reduces manual handling, and supports scalable production.",
+    icon: Recycle,
+    title: "Scrap → Alloy",
+    body: "Convert available secondary aluminum scrap into specification-grade alloys.",
   },
   {
-    icon: Workflow,
-    title: "Integrated Process System",
-    body: "Holding furnace, molten metal pump, degasser, filter box and launders create controlled metal flow and improved quality.",
-  },
-  {
-    icon: Gauge,
-    title: "High-Throughput Platform",
-    body: "Two MAX-4000 furnaces supporting approximately 3 million pounds per month.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Debt-Free Capital Structure",
-    body: "100% equity funded with no mandatory bank debt.",
+    icon: MapPin,
+    title: "Local Advantage",
+    body: "Regional production cuts freight, lead times and import dependence.",
   },
 ];
 
 const WhyBirch = () => {
   return (
     <section id="why-birch" className="section-padding bg-secondary">
-      <div className="container mx-auto px-6">
-        <p className="text-minimal text-brand mb-5">Why Birch</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl mb-14">
-          An Operating Platform Engineered for Throughput and Control
+      <div className="container mx-auto px-5 sm:px-6">
+        <p className="text-minimal text-brand mb-4">Why This Business</p>
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
+          Why Aluminum. Why Birch.
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        <div className="grid sm:grid-cols-3 gap-px bg-border border border-border">
           {cards.map((c) => (
-            <div key={c.title} className="bg-background p-8 flex flex-col">
-              <c.icon className="w-7 h-7 text-brand mb-6" />
-              <h3 className="text-xl font-bold mb-3">{c.title}</h3>
+            <div key={c.title} className="bg-background p-6 sm:p-8">
+              <c.icon className="w-7 h-7 text-brand mb-5" />
+              <h3 className="text-lg sm:text-xl font-bold mb-3">{c.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{c.body}</p>
             </div>
           ))}
-          <div className="bg-primary text-primary-foreground p-8 flex flex-col justify-center">
-            <p className="text-4xl font-bold text-brand mb-2">3M lbs</p>
-            <p className="text-primary-foreground/80">
-              Monthly production capacity at stabilized operations.
-            </p>
-          </div>
         </div>
 
-        <div className="mt-14">
-          <p className="text-minimal text-muted-foreground mb-4">
-            Facility Layout · Decatur, Alabama · 173 ft × 75 ft
-          </p>
-          <div className="border border-border bg-background p-4 md:p-8">
-            <img
-              src={facilityLayout}
-              alt="Birch Aluminum facility floor plan with two MAX-4000 furnaces, holding furnace, automated ingot casting line, degasser and filter box"
-              className="w-full h-auto max-w-4xl mx-auto"
-              loading="lazy"
-            />
-          </div>
+        <div className="mt-8 bg-primary text-primary-foreground p-8 sm:p-10 text-center">
+          <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-3">8M+ lbs / mo</p>
+          <p className="text-minimal text-primary-foreground/60">Identified customer demand</p>
         </div>
       </div>
     </section>

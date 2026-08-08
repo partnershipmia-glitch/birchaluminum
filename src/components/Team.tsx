@@ -1,39 +1,79 @@
+import { ArrowRight } from "lucide-react";
 import founderAsset from "@/assets/founder-portrait.png.asset.json";
+import { callUrl } from "@/lib/links";
+
+const columns = [
+  {
+    title: "Experience",
+    items: [
+      "Hands-on knowledge gained inside an operating smelter, alongside an engineer with 40 years building plants across North America.",
+    ],
+  },
+  {
+    title: "I Understand",
+    items: ["Operations", "Suppliers", "Buyers", "Permits", "Equipment", "Plant finance"],
+  },
+  {
+    title: "Execution",
+    items: [
+      "Built supplier relationships",
+      "Identified customer demand",
+      "Understand permitting",
+      "Built the operating model from the ground up",
+    ],
+  },
+];
 
 const Team = () => {
   return (
-    <section id="team" className="section-padding bg-background">
-      <div className="container mx-auto px-6">
-        <p className="text-minimal text-brand mb-5">Leadership</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl mb-14">
-          Operating Experience, Financial Control, and Plant Leadership
-        </h2>
+    <section id="team" className="section-padding bg-secondary">
+      <div className="container mx-auto px-5 sm:px-6">
+        <p className="text-minimal text-brand mb-4">Why Me</p>
 
-        <div className="grid md:grid-cols-[420px_1fr] gap-12 items-start">
-          <div className="aspect-[4/5] bg-secondary border border-border overflow-hidden">
+        <div className="grid lg:grid-cols-[380px_1fr] gap-8 lg:gap-14 items-start">
+          <div className="aspect-[4/5] bg-background border border-border overflow-hidden">
             <img
               src={founderAsset.url}
-              alt="Alexander Bereza, Founder and Chief Executive Officer of Birch Aluminum"
+              alt="Alexander Bereza, Founder and CEO of Birch Aluminum"
               className="w-full h-full object-cover"
               loading="lazy"
             />
           </div>
+
           <div>
-            <p className="text-minimal text-muted-foreground mb-3">Founder & Chief Executive Officer</p>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6">Alexander Bereza</h3>
-            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              <p>
-                Alexander Bereza leads Birch Aluminum's strategy, capital allocation, commercial
-                relationships, and plant execution. He has ten years of business ownership and
-                management experience and has founded three operating companies.
-              </p>
-              <p>
-                He previously held a senior operating role at a comparable Alabama secondary
-                aluminum producer, where he worked directly on melting operations, supplier
-                procurement, and customer delivery programs — the same disciplines the Birch
-                facility is built around.
-              </p>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
+              I do not want to build one aluminum plant.
+              <br />
+              <span className="text-brand">I want to build a vertically integrated metals company.</span>
+            </h2>
+            <p className="text-minimal text-muted-foreground mb-8">
+              Alexander Bereza · Founder & CEO
+            </p>
+
+            <div className="grid sm:grid-cols-3 gap-px bg-border border border-border mb-8">
+              {columns.map((c) => (
+                <div key={c.title} className="bg-background p-6">
+                  <p className="text-minimal text-brand mb-4">{c.title}</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    {c.items.map((i) => (
+                      <li key={i} className="flex gap-2 leading-relaxed">
+                        <span className="text-brand">·</span>
+                        {i}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
+
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Meet the Team <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
