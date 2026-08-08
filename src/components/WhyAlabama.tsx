@@ -1,4 +1,5 @@
-import facilityLayout from "@/assets/facility-layout.png";
+import facilityLayout from "@/assets/facility-layout-2026.png.asset.json";
+import facilitySiteView from "@/assets/facility-site-view.png.asset.json";
 
 const flow = ["Scrap", "Melting", "Alloy Production", "Casting", "Customer"];
 
