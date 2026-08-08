@@ -5,7 +5,16 @@ import { deckUrl, inquiryUrl } from "@/lib/links";
 const facts = [
   { value: "$8.5M", label: "Capital raise" },
   { value: "30%", label: "Investor equity" },
-  { value: "Months 10–12", label: "Production start" },
+  {
+    value: (
+      <>
+        Months
+        <br />
+        10–12
+      </>
+    ),
+    label: "Production start",
+  },
   { value: "3M+ lbs", label: "Monthly capacity" },
 ];
 
