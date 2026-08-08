@@ -282,7 +282,7 @@ const MarketResearch = () => {
             Key financial drivers based on business plan assumptions
           </h2>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground mb-10">
-            <span><span className="text-brand font-bold">8,000,000+</span> lbs / month</span>
+            <span><span className="text-brand font-bold">3,000,000</span> lbs / month</span>
             <span><span className="text-brand font-bold">$2.05</span> / lb selling price</span>
             <span><span className="text-brand font-bold">~$0.10</span> / lb operating cost</span>
             <span><span className="text-brand font-bold">~95%</span> recovery</span>
@@ -297,7 +297,7 @@ const MarketResearch = () => {
                   ["Recovery Rate", "~95%"],
                   ["Operating Cost", "~$0.10 / lb"],
                   ["Selling Price", "$2.05 / lb"],
-                  ["Production Capacity", "8,000,000+ lbs / month"],
+                  ["Production Capacity", "3,000,000 lbs / month"],
                 ].map(([k, v]) => (
                   <div key={k} className="flex justify-between border-b border-border pb-2">
                     <span className="text-muted-foreground">{k}</span>
@@ -321,20 +321,20 @@ const MarketResearch = () => {
                 <tbody>
                   {[
                     { group: "Recovery Rate", rows: [
-                      ["95% (Base)", "$0.10 / lb", "$800,000", "$9,600,000"],
-                      ["92%", "$0.07 / lb", "$560,000", "$6,720,000"],
-                      ["90%", "$0.05 / lb", "$400,000", "$4,800,000"],
+                      ["95% (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
+                      ["92%", "$0.07 / lb", "$210,000", "$2,520,000"],
+                      ["90%", "$0.05 / lb", "$150,000", "$1,800,000"],
                     ]},
                     { group: "Scrap Purchase Price", rows: [
-                      ["$1.50 / lb", "$0.20 / lb", "$1,600,000", "$19,200,000"],
-                      ["$1.60 / lb (Base)", "$0.10 / lb", "$800,000", "$9,600,000"],
+                      ["$1.50 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
+                      ["$1.60 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
                       ["$1.70 / lb", "$0.00 / lb", "$0", "$0"],
                     ]},
                     { group: "Selling Price", rows: [
-                      ["$2.15 / lb", "$0.20 / lb", "$1,600,000", "$19,200,000"],
-                      ["$2.05 / lb (Base)", "$0.10 / lb", "$800,000", "$9,600,000"],
+                      ["$2.15 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
+                      ["$2.05 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
                       ["$1.95 / lb", "$0.00 / lb", "$0", "$0"],
-                      ["$1.85 / lb", "($0.10) / lb", "($800,000)", "($9,600,000)"],
+                      ["$1.85 / lb", "($0.10) / lb", "($300,000)", "($3,600,000)"],
                     ]},
                   ].map((section) => (
                     <Fragment key={section.group}>
@@ -364,7 +364,7 @@ const MarketResearch = () => {
               "Financial performance is most sensitive to recovery rate.",
               "Scrap purchase price directly impacts margins.",
               "Selling price variations have a proportional impact on EBITDA.",
-              "Assumes 8M+ lbs / month production and ~95% recovery.",
+              "Assumes 3M lbs / month production and ~95% recovery.",
             ].map((t) => (
               <div key={t} className="border-l-2 border-brand pl-4 text-muted-foreground">{t}</div>
             ))}

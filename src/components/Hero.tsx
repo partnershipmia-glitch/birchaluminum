@@ -6,7 +6,7 @@ const facts = [
   { value: "$8.5M", label: "Capital raise" },
   { value: "30%", label: "Investor equity" },
   { value: "Months 10–12", label: "Production start" },
-  { value: "8M+ lbs", label: "Monthly capacity" },
+  { value: "3M+ lbs", label: "Monthly capacity" },
 ];
 
 const Hero = () => {

@@ -2,6 +2,7 @@ const stats = [
   { value: "+2.5%", label: "U.S. primary aluminum demand CAGR" },
   { value: "78%", label: "of U.S. aluminum is imported" },
   { value: "$2.20", label: "Local 356 alloy / lb (imported: $3.30)" },
+  { value: "8M+ lbs", label: "Identified customer demand / month" },
 ];
 
 const WhyMarket = () => {
@@ -13,7 +14,7 @@ const WhyMarket = () => {
           The Market Gap Is Already Here.
         </h2>
 
-        <div className="grid sm:grid-cols-3 gap-px bg-border border border-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {stats.map((s) => (
             <div key={s.label} className="bg-background p-6 sm:p-10">
               <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3">
