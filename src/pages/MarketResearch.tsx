@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FacilityReel from "@/components/FacilityReel";
 import { TrendingUp, Factory, Globe, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -373,7 +374,10 @@ const MarketResearch = () => {
         </div>
       </section>
 
+      <FacilityReel />
+
       {/* CTA */}
+
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
