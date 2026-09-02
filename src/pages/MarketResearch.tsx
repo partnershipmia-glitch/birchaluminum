@@ -124,6 +124,37 @@ const MarketResearch = () => {
         </div>
       </section>
 
+      {/* Mobile Instagram proof */}
+      <section className="py-10 md:hidden bg-muted/30 border-y border-border">
+        <div className="container mx-auto px-6 max-w-sm">
+          <p className="text-minimal text-muted-foreground mb-3">On The Ground</p>
+          <h2 className="text-xl font-bold tracking-tight mb-3">
+            See the operation, not just the numbers.
+          </h2>
+          <p className="text-sm text-muted-foreground mb-5">
+            A short walkthrough from the field — scrap handling, furnace operation and ingot output.
+          </p>
+          <div className="border border-border bg-background overflow-hidden">
+            <iframe
+              src="https://www.instagram.com/reel/Dcef-OFJIRD/embed"
+              title="Birch Aluminum facility walkthrough video"
+              className="w-full h-[560px] block"
+              loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <a
+            href="https://www.instagram.com/reel/Dcef-OFJIRD/?igsi=MTB0eHA2dG9tNjMyeg=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 border border-border bg-background px-5 py-3 text-sm font-semibold hover:bg-background/70 transition-colors w-full justify-center"
+          >
+            Watch on Instagram
+          </a>
+        </div>
+      </section>
+
       {/* Economic Outlook */}
       <section className="section-padding">
         <div className="container mx-auto px-6 max-w-4xl">
