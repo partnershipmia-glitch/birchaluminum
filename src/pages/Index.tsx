@@ -7,7 +7,6 @@ import WhyMarket from "@/components/WhyMarket";
 import Team from "@/components/Team";
 import WhyAlabama from "@/components/WhyAlabama";
 import PhotoBand from "@/components/PhotoBand";
-import SiteVideo from "@/components/SiteVideo";
 import UseOfFunds from "@/components/UseOfFunds";
 import Vision from "@/components/Vision";
 import InvestorEconomics from "@/components/InvestorEconomics";
@@ -43,7 +42,6 @@ const Index = () => {
         <Team />
         <WhyAlabama />
         <PhotoBand />
-        <SiteVideo />
         <UseOfFunds />
         <Vision />
         <InvestorEconomics />
