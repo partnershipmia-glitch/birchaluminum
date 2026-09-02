@@ -43,6 +43,7 @@ const Index = () => {
         <Team />
         <WhyAlabama />
         <PhotoBand />
+        <SiteVideo />
         <UseOfFunds />
         <Vision />
         <InvestorEconomics />
