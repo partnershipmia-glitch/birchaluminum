@@ -8,7 +8,7 @@ const sectionLinks = [
   { label: "Why Birch", href: "#why-birch" },
   { label: "Facility", href: "#facility" },
   { label: "Vision", href: "#vision" },
-  { label: "Team", href: "#team" },
+  { label: "See It", href: "#team" },
   { label: "Investors", href: "#investment" },
 ];
 
