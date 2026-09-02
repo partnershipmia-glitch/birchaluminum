@@ -7,7 +7,7 @@ const FacilityReel = () => {
       <div className="container mx-auto px-5 sm:px-6 py-10 sm:py-14">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <p className="text-minimal text-muted-foreground mb-3">On the ground</p>
+            <p className="text-minimal text-brand mb-3">Founder story</p>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               See the operation, not just the numbers
             </h2>
