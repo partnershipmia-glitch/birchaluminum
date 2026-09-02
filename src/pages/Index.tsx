@@ -42,7 +42,6 @@ const Index = () => {
         <Team />
         <WhyAlabama />
         <PhotoBand />
-        <FacilityReel />
         <UseOfFunds />
         <Vision />
         <InvestorEconomics />
