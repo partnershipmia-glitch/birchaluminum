@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import MarketResearch from "./pages/MarketResearch";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import ResetPassword from "./pages/ResetPassword";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +20,8 @@ const App = () => (
         <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/market-research" element={<MarketResearch />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
