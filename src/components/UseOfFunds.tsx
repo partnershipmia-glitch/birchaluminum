@@ -52,16 +52,23 @@ const UseOfFunds = () => {
                 </div>
               ))}
             </div>
-            <div className="grid sm:grid-cols-2 gap-px bg-primary-foreground/15 mt-6">
+            <div className="grid sm:grid-cols-3 gap-px bg-primary-foreground/15 mt-6">
               <div className="bg-primary p-5">
                 <p className="text-2xl font-bold text-brand">12 months</p>
-                <p className="text-minimal text-primary-foreground/60 mt-2">Target startup</p>
+                <p className="text-minimal text-primary-foreground/60 mt-2">Site build</p>
               </div>
               <div className="bg-primary p-5">
-                <p className="text-2xl font-bold text-brand">End of 2028</p>
-                <p className="text-minimal text-primary-foreground/60 mt-2">Stage 2 target launch</p>
+                <p className="text-2xl font-bold text-brand">4 months</p>
+                <p className="text-minimal text-primary-foreground/60 mt-2">Production line installation</p>
+              </div>
+              <div className="bg-primary p-5">
+                <p className="text-2xl font-bold text-brand">Main building</p>
+                <p className="text-minimal text-primary-foreground/60 mt-2">Production can start once installed</p>
               </div>
             </div>
+            <p className="mt-5 text-sm text-primary-foreground/70">
+              The production line can be commissioned as soon as the main building is in place.
+            </p>
           </div>
         </div>
 
