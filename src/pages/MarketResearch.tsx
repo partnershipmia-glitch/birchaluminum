@@ -1,404 +1,186 @@
-import { Fragment } from "react";
 import { Helmet } from "react-helmet-async";
+import { ArrowRight, Factory, MapPin, Recycle, Truck } from "lucide-react";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
-import { TrendingUp, Factory, Globe, Shield, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { deckUrl } from "@/lib/links";
 
-const industryRevenue = [
-  { year: "2026", value: 22 },
-  { year: "2027", value: 23 },
-  { year: "2028", value: 24 },
-  { year: "2029", value: 25 },
-  { year: "2030", value: 26 },
+const marketStats = [
+  { value: "$12.9B", label: "U.S. secondary aluminum alloy market" },
+  { value: "1.3M", label: "Vehicles of annual production capacity in Alabama" },
+  { value: "356", label: "Alloy for foundries" },
+  { value: "A380", label: "Alloy for die-casting manufacturers" },
 ];
 
-const aluminumPricing = [
-  { year: "2021", value: 2500 },
-  { year: "2022", value: 2700 },
-  { year: "2023", value: 2300 },
-  { year: "2024", value: 2500 },
-  { year: "2025", value: 2600 },
-  { year: "2026", value: 3600 },
+const customers = [
+  "Mercedes-Benz",
+  "Hyundai",
+  "Honda",
+  "Mazda Toyota",
+  "Toyota Motor Manufacturing",
+  "Regional Tier 1 suppliers",
+  "Foundries and die casters",
+  "New GE reshoring facility in Tennessee",
 ];
 
-const stats = [
-  { value: "$20B", label: "U.S. annual aluminum demand (2026)" },
-  { value: "645,000", label: "Metric tons consumed annually" },
-  { value: "4.6%", label: "Industry CAGR through 2030" },
-  { value: "120,000", label: "U.S. enterprises using aluminum" },
+const operatingCase = [
+  { value: "72M lbs", label: "Annual production" },
+  { value: "$135.0M", label: "Annual revenue" },
+  { value: "$12.2M", label: "Annual EBITDA" },
+  { value: "9.0%", label: "EBITDA margin" },
+  { value: "69.7%", label: "EBITDA return on capital" },
+  { value: "1.4 years", label: "Projected payback" },
 ];
 
-const drivers = [
-  {
-    icon: TrendingUp,
-    title: "Tariff-Driven Price Spike",
-    text: "Aluminum jumped from $2,400/ton (2025) to $3,600/ton (April 2026) — a 50% increase in twelve months driven by trade policy and inflation.",
-  },
-  {
-    icon: Factory,
-    title: "Defense & Aerospace Demand",
-    text: "Defense, aerospace, automotive, construction, electronics, and packaging sectors continue to require aluminum regardless of broader economic conditions.",
-  },
-  {
-    icon: Globe,
-    title: "Asian Export Pull",
-    text: "Strong global demand — particularly in Asian markets — supports sustained price strength and creates additional sales channels via international brokers.",
-  },
-  {
-    icon: Shield,
-    title: "Government Support",
-    text: "Substantial federal backing for the expansion of domestic aluminum production strengthens the long-term outlook for U.S. secondary smelters.",
-  },
+const expansion = [
+  { value: "$18.8B", label: "North American market" },
+  { value: "$36M", label: "Die-casting revenue" },
+  { value: "$6M", label: "Die-casting EBITDA" },
+  { value: "31.6%", label: "EBITDA return on capital" },
 ];
 
-const nationalCompetitors = ["Alcoa Corporation", "Century Aluminum", "Kaiser Aluminum", "Magnitude 7 Metals"];
-const regionalCompetitors = ["Bermco Aluminum", "Constellium Aluminum", "Novelis", "Real Alloy"];
+const fiveYear = [
+  { year: "2027", revenue: "$0", ebitda: "$0", stage: "Development" },
+  { year: "2028", revenue: "$94.5M", ebitda: "$8.5M", stage: "Production ramp" },
+  { year: "2029", revenue: "$153.0M", ebitda: "$15.2M", stage: "Die-casting ramp" },
+  { year: "2030", revenue: "$171.0M", ebitda: "$18.2M", stage: "Combined platform" },
+  { year: "2031", revenue: "$171.0M", ebitda: "$18.2M", stage: "Stabilized operations" },
+];
 
-const Bar = ({ data, prefix = "$", suffix = "" }: { data: { year: string; value: number }[]; prefix?: string; suffix?: string }) => {
-  const max = Math.max(...data.map((d) => d.value));
-  return (
-    <div className="flex items-end gap-3 md:gap-6 h-72 border-b border-border pb-2">
-      {data.map((d) => (
-        <div key={d.year} className="flex-1 flex flex-col items-center gap-3">
-          <span className="text-lg md:text-2xl text-foreground font-bold font-mono">
-            {prefix}
-            {d.value.toLocaleString()}
-            {suffix}
-          </span>
-          <div
-            className="w-full bg-foreground transition-all"
-            style={{ height: `${(d.value / max) * 100}%` }}
-          />
-          <span className="text-base md:text-lg text-foreground font-bold font-mono">{d.year}</span>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const MarketResearch = () => {
-  return (
-    <div className="min-h-screen">
-      <Helmet>
-        <title>Aluminum Market Research 2026 | Birch Aluminum</title>
-        <meta name="description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
-        <link rel="canonical" href="https://birchaluminum.lovable.app/market-research" />
-        <meta property="og:title" content="Aluminum Market Research 2026 | Birch Aluminum" />
-        <meta property="og:description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
-        <meta property="og:url" content="https://birchaluminum.lovable.app/market-research" />
-        <meta property="og:type" content="article" />
-        <meta name="twitter:title" content="Aluminum Market Research 2026 | Birch Aluminum" />
-        <meta name="twitter:description" content="U.S. secondary aluminum market data: $20B industry, 4.6% CAGR, tariff-driven price spike, and competitive landscape analysis." />
-      </Helmet>
-      <TopBar />
-      <Navigation />
-      <main>
-
-      {/* Hero */}
+const MarketResearch = () => (
+  <div className="min-h-screen">
+    <Helmet>
+      <title>Secondary Aluminum Market | Birch Aluminum</title>
+      <meta name="description" content="Birch Aluminum market opportunity, 72M lb alloy production case, die-casting expansion and five-year management projections." />
+      <link rel="canonical" href="https://birchaluminum.com/market-research" />
+      <meta property="og:title" content="Secondary Aluminum Market | Birch Aluminum" />
+      <meta property="og:description" content="A $12.9B U.S. secondary aluminum alloy market and Birch Aluminum's two-stage growth plan." />
+      <meta property="og:url" content="https://birchaluminum.com/market-research" />
+      <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary_large_image" />
+    </Helmet>
+    <TopBar />
+    <Navigation />
+    <main>
       <section className="bg-primary text-primary-foreground section-padding">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-primary-foreground/60 mb-6">Market Research</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-            U.S. Secondary Aluminum Market
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed">
-            A $20 billion domestic industry growing at 4.6% annually, with prices up 50%
-            year-over-year on the back of trade policy, defense demand, and global supply pressure.
+        <div className="container mx-auto px-5 sm:px-6 max-w-5xl">
+          <p className="text-minimal text-brand mb-5">Market Opportunity</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6">The Market Is Already Here.</h1>
+          <p className="text-lg sm:text-xl text-primary-foreground/75 max-w-3xl">
+            Large regional demand, shorter delivery and domestic supply for the Southeast's automotive and industrial manufacturing base.
           </p>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="section-padding border-b border-border">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((s) => (
-              <div key={s.label} className="border-l-2 border-foreground pl-6">
-                <div className="text-4xl md:text-5xl font-bold tracking-tight mb-3">{s.value}</div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{s.label}</p>
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-5 sm:px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+            {marketStats.map((item) => (
+              <div key={item.label} className="bg-background p-5 sm:p-8">
+                <p className="text-3xl sm:text-5xl font-bold text-brand leading-none mb-3">{item.value}</p>
+                <p className="text-xs sm:text-sm uppercase text-muted-foreground">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Economic Outlook */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">Economic Outlook</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-8">
-            Demand holds through every cycle
-          </h2>
-          <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-            <p>
-              This section details the economic climate, the aluminum processing and distribution
-              industry, the customer profile, and the competition that the business will face as it
-              progresses through its operations.
-            </p>
-            <p>
-              Currently, the global economic outlook is moderate. There has been significant market
-              volatility over the past twelve months as a result of changes in global trade policy.
-              Interest rates remain steady, and central banks continue to implement appropriate
-              fiscal policy to ensure that the global economy continues to grow.
-            </p>
-            <p>
-              Demand for aluminum remains strong even during challenging economic climates. This
-              metal is an incredibly important part of the domestic and global economic ecosystem.
-              The business will be able to divest substantial inventories domestically. One of the
-              major users of aluminum is the defense industry, which will further contribute to
-              the economic stability of Birch Aluminum.
-            </p>
+      <section className="section-padding bg-secondary border-y border-border">
+        <div className="container mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16">
+          <div>
+            <p className="text-minimal text-brand mb-4">Nearby Customer Ecosystem</p>
+            <h2 className="text-3xl sm:text-5xl font-bold mb-8">Built near demand.</h2>
+            <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
+              {customers.map((customer) => <p key={customer} className="bg-background p-4 font-semibold">{customer}</p>)}
+            </div>
+          </div>
+          <div>
+            <p className="text-minimal text-brand mb-4">Regional Advantage</p>
+            <div className="space-y-px bg-border border border-border">
+              {[
+                { icon: MapPin, title: "Alabama location", text: "Close to major automotive plants and regional Tier 1 suppliers." },
+                { icon: Truck, title: "Shorter delivery", text: "Regional production supports faster, more reliable customer service." },
+                { icon: Recycle, title: "Domestic recycled metal", text: "Qualified scrap is converted into specification-grade secondary alloy." },
+                { icon: Factory, title: "Industrial customer base", text: "Foundries, die casters and manufacturers use 356 and A380 alloys." },
+              ].map((item) => (
+                <div key={item.title} className="bg-background p-6 flex gap-4">
+                  <item.icon className="w-6 h-6 text-brand shrink-0" />
+                  <div><h3 className="font-bold mb-1">{item.title}</h3><p className="text-muted-foreground">{item.text}</p></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Industry Revenue Chart */}
-      <section className="py-12 bg-muted/30 border-y border-border">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-3">Industry Analysis</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
-            Industry Revenue Forecast
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Domestic aluminum industry revenue (USD billions), 2026–2030.
-          </p>
-          <Bar data={industryRevenue} prefix="$" suffix="B" />
-        </div>
-      </section>
-
-      {/* Pricing Chart */}
-      <section className="py-12">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
-            Aluminum Pricing — 50% YoY Spike
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Price per metric ton, 2021–2026. April 2026 spot: <span className="text-foreground font-medium">$3,600/ton</span>.
-          </p>
-          <Bar data={aluminumPricing} prefix="$" />
-          <p className="text-sm text-muted-foreground mt-6 leading-relaxed">
-            Tariffs and inflation have pushed aluminum from $2,600/ton in 2025 to $3,600/ton in
-            April 2026. Continued global demand — particularly in Asian markets — supports
-            sustained pricing strength.
-          </p>
-        </div>
-      </section>
-
-      {/* Drivers */}
-      <section className="section-padding bg-muted/30 border-y border-border">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mb-12">
-            <p className="text-minimal text-muted-foreground mb-4">Growth Drivers</p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Why this market, why now
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {drivers.map((d) => (
-              <div key={d.title} className="bg-background border border-border p-8">
-                <d.icon className="w-6 h-6 mb-6" />
-                <h3 className="text-xl font-bold mb-3">{d.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{d.text}</p>
+      <section className="section-padding bg-background">
+        <div className="container mx-auto px-5 sm:px-6">
+          <p className="text-minimal text-brand mb-4">Stage 1 · Aluminum Production Case</p>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-10">High Volume. Disciplined Margin.</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+            {operatingCase.map((item) => (
+              <div key={item.label} className="bg-background p-5 sm:p-8">
+                <p className="text-3xl sm:text-5xl font-bold text-brand mb-2">{item.value}</p>
+                <p className="text-xs sm:text-sm uppercase text-muted-foreground">{item.label}</p>
               </div>
             ))}
           </div>
+          <p className="mt-6 font-bold text-xl sm:text-2xl">Qualified scrap → Secondary alloy → U.S. customers</p>
         </div>
       </section>
 
-      {/* Customer Profile */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">Customer Profile</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">
-            120,000 U.S. buyers of aluminum sows
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-t-2 border-foreground pt-6">
-              <p className="text-minimal text-muted-foreground mb-2">Annual Revenue</p>
-              <p className="text-2xl font-bold">$20M+</p>
-              <p className="text-sm text-muted-foreground mt-2">per buying entity</p>
-            </div>
-            <div className="border-t-2 border-foreground pt-6">
-              <p className="text-minimal text-muted-foreground mb-2">Order Size</p>
-              <p className="text-2xl font-bold">$50K – $400K+</p>
-              <p className="text-sm text-muted-foreground mt-2">per purchase order</p>
-            </div>
-            <div className="border-t-2 border-foreground pt-6">
-              <p className="text-minimal text-muted-foreground mb-2">Buyer Type</p>
-              <p className="text-2xl font-bold">Foundries</p>
-              <p className="text-sm text-muted-foreground mt-2">manufacturers, die-casters, metal distributors</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Competition */}
-      <section className="section-padding bg-muted/30 border-y border-border">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <p className="text-minimal text-muted-foreground mb-4">Competition</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            A free-market commodity business
-          </h2>
-          <p className="text-muted-foreground mb-12 leading-relaxed">
-            The smelting, processing, and sale of aluminum is very much a free-market enterprise
-            — this is a commodity-driven business. The most important aspect of competing in this
-            industry is to maintain highly controllable operating and overhead costs so that the
-            enterprise can provide aluminum at market rates despite inevitable fluctuations.
-            Birch Aluminum, through its highly controllable cost base, will operate competitively
-            at all times.
-          </p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6">National Competitors</h3>
-              <ul className="space-y-3">
-                {nationalCompetitors.map((c) => (
-                  <li key={c} className="border-b border-border pb-3 text-muted-foreground">
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-bold uppercase tracking-wider mb-6">Regional Competitors</h3>
-              <ul className="space-y-3">
-                {regionalCompetitors.map((c) => (
-                  <li key={c} className="border-b border-border pb-3 text-muted-foreground">
-                    {c}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sensitivity Analysis */}
-      <section className="section-padding">
-        <div className="container mx-auto px-6">
-          <p className="text-minimal text-muted-foreground mb-4">Sensitivity Analysis</p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Key financial drivers based on business plan assumptions
-          </h2>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground mb-10">
-            <span><span className="text-brand font-bold">3,000,000</span> lbs / month</span>
-            <span><span className="text-brand font-bold">$2.05</span> / lb selling price</span>
-            <span><span className="text-brand font-bold">~$0.10</span> / lb operating cost</span>
-            <span><span className="text-brand font-bold">~95%</span> recovery</span>
-          </div>
-
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-6 mb-10">
-            <div className="border border-border">
-              <p className="bg-primary text-primary-foreground p-4 font-semibold text-sm uppercase tracking-wider">Key Assumptions</p>
-              <div className="p-4 space-y-3 text-sm">
-                {[
-                  ["Scrap Purchase Price", "$1.60 – $1.70 / lb"],
-                  ["Recovery Rate", "~95%"],
-                  ["Operating Cost", "~$0.10 / lb"],
-                  ["Selling Price", "$2.05 / lb"],
-                  ["Production Capacity", "3,000,000 lbs / month"],
-                ].map(([k, v]) => (
-                  <div key={k} className="flex justify-between border-b border-border pb-2">
-                    <span className="text-muted-foreground">{k}</span>
-                    <span className="font-semibold">{v}</span>
-                  </div>
-                ))}
+      <section className="section-padding bg-primary text-primary-foreground">
+        <div className="container mx-auto px-5 sm:px-6">
+          <p className="text-minimal text-brand mb-4">Stage 2 · Die-Casting Growth</p>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-3">Higher Value. Higher Margin.</h2>
+          <p className="text-primary-foreground/70 mb-10 max-w-3xl">Planned Q4 2028 expansion with two automated casting cells turns Birch-produced alloy into finished automotive and industrial components.</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
+            {expansion.map((item) => (
+              <div key={item.label} className="bg-primary p-5 sm:p-8">
+                <p className="text-3xl sm:text-5xl font-bold text-brand mb-2">{item.value}</p>
+                <p className="text-xs sm:text-sm uppercase text-primary-foreground/60">{item.label}</p>
               </div>
-            </div>
-
-            <div className="border border-border overflow-x-auto">
-              <p className="bg-primary text-primary-foreground p-4 font-semibold text-sm uppercase tracking-wider">EBITDA Sensitivity by Variable</p>
-              <table className="w-full text-sm">
-                <thead className="bg-muted/40">
-                  <tr>
-                    <th className="text-left p-3">Variable</th>
-                    <th className="text-right p-3">EBITDA / lb</th>
-                    <th className="text-right p-3">Monthly EBITDA</th>
-                    <th className="text-right p-3">Annual EBITDA</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { group: "Recovery Rate", rows: [
-                      ["95% (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
-                      ["92%", "$0.07 / lb", "$210,000", "$2,520,000"],
-                      ["90%", "$0.05 / lb", "$150,000", "$1,800,000"],
-                    ]},
-                    { group: "Scrap Purchase Price", rows: [
-                      ["$1.50 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
-                      ["$1.60 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
-                      ["$1.70 / lb", "$0.00 / lb", "$0", "$0"],
-                    ]},
-                    { group: "Selling Price", rows: [
-                      ["$2.15 / lb", "$0.20 / lb", "$600,000", "$7,200,000"],
-                      ["$2.05 / lb (Base)", "$0.10 / lb", "$300,000", "$3,600,000"],
-                      ["$1.95 / lb", "$0.00 / lb", "$0", "$0"],
-                      ["$1.85 / lb", "($0.10) / lb", "($300,000)", "($3,600,000)"],
-                    ]},
-                  ].map((section) => (
-                    <Fragment key={section.group}>
-                      <tr className="bg-muted/20 border-t border-border">
-                        <td colSpan={4} className="p-3 font-bold text-xs uppercase tracking-wider">{section.group}</td>
-                      </tr>
-                      {section.rows.map((r) => {
-                        const negative = r[1].startsWith("(");
-                        return (
-                          <tr key={section.group + r[0]} className="border-t border-border">
-                            <td className="p-3">{r[0]}</td>
-                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[1]}</td>
-                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[2]}</td>
-                            <td className={`p-3 text-right font-mono ${negative ? "text-red-600" : "text-green-700"}`}>{r[3]}</td>
-                          </tr>
-                        );
-                      })}
-                    </Fragment>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-4 text-sm">
-            {[
-              "Financial performance is most sensitive to recovery rate.",
-              "Scrap purchase price directly impacts margins.",
-              "Selling price variations have a proportional impact on EBITDA.",
-              "Assumes 3M lbs / month production and ~95% recovery.",
-            ].map((t) => (
-              <div key={t} className="border-l-2 border-brand pl-4 text-muted-foreground">{t}</div>
             ))}
           </div>
-          <p className="text-xs text-muted-foreground mt-6">Note: Analysis based on business plan assumptions.</p>
+          <p className="mt-8 text-xl sm:text-2xl font-bold">Alloy → Finished component → Higher value</p>
+        </div>
+      </section>
+
+      <section className="section-padding bg-secondary">
+        <div className="container mx-auto px-5 sm:px-6">
+          <p className="text-minimal text-brand mb-4">Five-Year Financial Projection</p>
+          <h2 className="text-3xl sm:text-5xl font-bold mb-10">Stage 1 alloy production → Stage 2 die-casting growth</h2>
+          <div className="grid sm:grid-cols-5 gap-px bg-border border border-border mb-8">
+            {fiveYear.map((item) => (
+              <div key={item.year} className="bg-background p-5">
+                <p className="text-3xl font-bold mb-4">{item.year}</p>
+                <p className="font-bold">{item.revenue}</p><p className="text-xs text-muted-foreground mb-3">Revenue</p>
+                <p className="font-bold text-brand">{item.ebitda}</p><p className="text-xs text-muted-foreground mb-3">EBITDA</p>
+                <p className="text-xs font-semibold uppercase">{item.stage}</p>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+            {[["$589.5M", "Five-year revenue"], ["$60.1M", "Five-year EBITDA"], ["$171.0M", "Stabilized annual revenue"], ["$18.2M", "Stabilized annual EBITDA"]].map(([value, label]) => (
+              <div key={label} className="bg-background p-5 sm:p-7"><p className="text-2xl sm:text-4xl font-bold text-brand">{value}</p><p className="text-xs uppercase text-muted-foreground mt-2">{label}</p></div>
+            ))}
+          </div>
+          <p className="mt-6 text-xs text-muted-foreground">Management planning case subject to production ramp, feedstock pricing, customer contracts and awards, recovery rates, tooling, site requirements, financing terms and final equipment quotations.</p>
         </div>
       </section>
 
       <FacilityReel />
 
-      {/* CTA */}
-
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-            Ready to review the full opportunity?
-          </h2>
-          <p className="text-primary-foreground/80 mb-10 leading-relaxed">
-            See the production plan, capital structure, and investor terms.
-          </p>
-          <Link
-            to="/#investment"
-            className="inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 font-medium hover:opacity-90 transition-opacity"
-          >
-            View Investment Details <ArrowRight className="w-4 h-4" />
-          </Link>
+      <section className="section-padding bg-primary text-primary-foreground text-center">
+        <div className="container mx-auto px-5 sm:px-6 max-w-3xl">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-6">Review the full two-stage plan.</h2>
+          <a href={deckUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity">View Investor Deck <ArrowRight className="w-4 h-4" /></a>
         </div>
       </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </div>
+);
 
 export default MarketResearch;
