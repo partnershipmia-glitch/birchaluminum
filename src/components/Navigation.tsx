@@ -8,8 +8,7 @@ const sectionLinks = [
   { label: "Why Birch", href: "#why-birch" },
   { label: "Facility", href: "#facility" },
   { label: "Vision", href: "#vision" },
-  
-  { label: "Investors", href: "#investment" },
+  { label: "Investors", href: "/investor-opportunity" },
 ];
 
 const Navigation = () => {
@@ -19,7 +18,7 @@ const Navigation = () => {
 
   const navLinks = sectionLinks.map((l) => ({
     ...l,
-    to: onHome ? l.href : `/${l.href}`,
+    to: l.href.startsWith("/") ? l.href : onHome ? l.href : `/${l.href}`,
   }));
 
   return (

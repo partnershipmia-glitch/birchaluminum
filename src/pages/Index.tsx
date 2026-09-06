@@ -17,7 +17,7 @@ import Footer from "@/components/Footer";
 
 const title = "Birch Aluminum | U.S. Secondary Alloy Platform";
 const description =
-  "Birch Aluminum plans a 72M lb/year automated secondary aluminum alloy facility in Alabama, followed by a higher-value die-casting expansion.";
+  "Birch Aluminum is developing a U.S. secondary aluminum recycling and alloy manufacturing project in the Decatur, Alabama region for investors and strategic partners.";
 
 const Index = () => {
   return (
