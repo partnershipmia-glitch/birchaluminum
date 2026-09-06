@@ -17,7 +17,7 @@ export const deckUrl = compose(
 
 export const inquiryUrl = compose(
   "Investor Inquiry - Birch Aluminum",
-  "Hello Birch Aluminum Team,\n\nI would like to learn more about the $8.5M raise.\n\nName:\nCompany:\nPhone:"
+  "Hello Birch Aluminum Team,\n\nI would like to learn more about the two-stage Birch Aluminum investment plan.\n\nName:\nCompany:\nPhone:"
 );
 
 export const callUrl = compose(
