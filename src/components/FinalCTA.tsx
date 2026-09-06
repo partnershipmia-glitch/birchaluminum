@@ -26,8 +26,9 @@ const FinalCTA = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-primary-foreground/80 mb-10">
-            $17.5M permanent capital plus a $10M working-capital facility for Stage 1. A planned
-            $19M expansion moves Birch into higher-value die-cast components.
+            $17.5M permanent capital plus a $10M inventory credit line, available after trial melts
+            and signed customer contracts, for Stage 1. A planned $19M expansion moves Birch into
+            higher-value die-cast components.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
