@@ -5,7 +5,7 @@ import { deckUrl, inquiryUrl } from "@/lib/links";
 const facts = [
   { value: "$17.5M", label: "Stage 1 permanent capital" },
   { value: "$10M", label: "Working-capital facility" },
-  { value: "12 months", label: "Target installation" },
+  { value: "12 months", label: "Site build" },
   { value: "6M lbs", label: "Monthly alloy capacity" },
 ];
 
