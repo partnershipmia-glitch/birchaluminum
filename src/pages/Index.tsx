@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhyBirch from "@/components/WhyBirch";
 import WhyMarket from "@/components/WhyMarket";
-import Team from "@/components/Team";
+
 import WhyAlabama from "@/components/WhyAlabama";
 import PhotoBand from "@/components/PhotoBand";
 import FacilityReel from "@/components/FacilityReel";
@@ -40,7 +40,7 @@ const Index = () => {
         <Hero />
         <WhyBirch />
         <WhyMarket />
-        <Team />
+        
         <WhyAlabama />
         <PhotoBand />
         <FacilityReel />
