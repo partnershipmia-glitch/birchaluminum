@@ -1,10 +1,10 @@
-const flow = ["Scrap", "Melting", "Alloy Production", "Casting", "Customer"];
+const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Alloy", "U.S. Customers"];
 
 const specs = [
-  { value: "3M+ lbs", label: "Monthly capacity" },
-  { value: "2 × MAX-4000", label: "Sweat furnaces" },
-  { value: "Purpose-Built", label: "Production facility" },
-  { value: "Alabama", label: "Strategic southeast location" },
+  { value: "6M lbs", label: "Monthly capacity" },
+  { value: "72M lbs", label: "Annual capacity" },
+  { value: "97%", label: "Target metal recovery" },
+  { value: "Ecomelt", label: "High-productivity furnace system" },
 ];
 
 const WhyAlabama = () => {
@@ -43,8 +43,8 @@ const WhyAlabama = () => {
 
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
-          Built around the production process — not the production process around an existing
-          building.
+          Automated ingot production focused on 356 and A380 alloys, with ingot and sow formats
+          for U.S. foundries and die-casting manufacturers.
         </p>
       </div>
     </section>

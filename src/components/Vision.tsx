@@ -1,31 +1,31 @@
 const chain = [
-  "Scrap Yards",
-  "Regional Feedstock",
-  "Birch Smelters",
-  "Alloy Production",
-  "U.S. Industrial Buyers",
+  "Qualified Scrap",
+  "Birch Secondary Alloy",
+  "Automated Casting Cells",
+  "Finished Components",
+  "U.S. Customers",
 ];
 
 const phases = [
   {
-    phase: "Phase 1",
-    title: "Alabama Smelter",
-    body: "Build and stabilize the first 36M+ lb facility.",
+    phase: "Stage 1",
+    title: "Alloy Production",
+    body: "Build and stabilize a 72M lb annual secondary alloy platform.",
   },
   {
-    phase: "Phase 2",
-    title: "Scrap Yards",
-    body: "Secure feedstock. Lower input costs. Increase margins.",
+    phase: "Stage 2 · Q4 2028",
+    title: "Die-Casting Expansion",
+    body: "Launch two automated casting cells using Birch-produced alloy.",
   },
   {
-    phase: "Phase 3",
-    title: "Additional Production",
-    body: "Replicate the operating model in strategic U.S. markets.",
+    phase: "$36M",
+    title: "Die-Casting Revenue",
+    body: "Management planning target from higher-value finished components.",
   },
   {
-    phase: "Phase 4",
-    title: "Vertically Integrated Network",
-    body: "Scrap collection, processing, alloy production, trading and recycling.",
+    phase: "$6M",
+    title: "Die-Casting EBITDA",
+    body: "Management planning target at the growth stage.",
   },
 ];
 

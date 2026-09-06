@@ -38,8 +38,8 @@ const WhyBirch = () => {
         </div>
 
         <div className="mt-8 bg-primary text-primary-foreground p-8 sm:p-10 text-center">
-          <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-3">8M+ lbs / mo</p>
-          <p className="text-minimal text-primary-foreground/60">Identified customer demand</p>
+          <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-3">97%</p>
+          <p className="text-minimal text-primary-foreground/60">Target metal recovery</p>
         </div>
       </div>
     </section>
