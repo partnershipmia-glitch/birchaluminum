@@ -1,3 +1,6 @@
+import sitePlanAsset from "@/assets/site-plan.png.asset.json";
+import warehouseAsset from "@/assets/warehouse-layout.png.asset.json";
+
 const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Alloy", "U.S. Customers"];
 
 const specs = [
