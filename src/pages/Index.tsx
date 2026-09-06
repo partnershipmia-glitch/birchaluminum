@@ -15,9 +15,9 @@ import Financials from "@/components/Financials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
-const title = "Birch Aluminum – Vertically Integrated U.S. Aluminum Platform";
+const title = "Birch Aluminum | U.S. Secondary Alloy Platform";
 const description =
-  "Birch Aluminum is building a 36M+ lb/yr secondary aluminum smelter in Alabama, then scaling scrap yards and plants nationwide. $8.5M raise, 30% investor equity.";
+  "Birch Aluminum plans a 72M lb/year automated secondary aluminum alloy facility in Alabama, followed by a higher-value die-casting expansion.";
 
 const Index = () => {
   return (

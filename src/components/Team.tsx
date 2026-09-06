@@ -2,25 +2,29 @@ import { ArrowRight } from "lucide-react";
 import founderAsset from "@/assets/founder-portrait.png.asset.json";
 import { callUrl } from "@/lib/links";
 
-const columns = [
+const leaders = [
   {
-    title: "Experience",
+    years: "10+ years",
+    name: "Alexander Bereza",
+    role: "CEO & Founder",
     items: [
-      "Hands-on knowledge gained inside an operating smelter, alongside an engineer with 40 years building plants across North America.",
+      "Environmental requirements and compliance",
+      "Customer relationships and sales exposure",
+      "Hands-on production and process-control exposure",
+      "Supplier relationships and project development",
     ],
   },
   {
-    title: "I Understand",
-    items: ["Operations", "Suppliers", "Buyers", "Permits", "Equipment", "Plant finance"],
+    years: "18 years",
+    name: "Iryna Baranova",
+    role: "Chief Financial Officer",
+    items: ["Financial planning and analysis", "Cash-flow management and forecasting", "Investor reporting", "Accounting, compliance and controls"],
   },
   {
-    title: "Execution",
-    items: [
-      "Built supplier relationships",
-      "Identified customer demand",
-      "Understand permitting",
-      "Built the operating model from the ground up",
-    ],
+    years: "25+ years",
+    name: "Francis Conklin",
+    role: "Plant Manager",
+    items: ["Secondary aluminum melting and casting", "Plant construction, commissioning and startup", "Process optimization and scaling", "OSHA, environmental and safety compliance"],
   },
 ];
 
@@ -42,20 +46,22 @@ const Team = () => {
 
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
-              I do not want to build one aluminum plant.
+              The experience to build, finance
               <br />
-              <span className="text-brand">I want to build a vertically integrated metals company.</span>
+              <span className="text-brand">and operate the platform.</span>
             </h2>
             <p className="text-minimal text-muted-foreground mb-8">
               Alexander Bereza · Founder & CEO
             </p>
 
             <div className="grid sm:grid-cols-3 gap-px bg-border border border-border mb-8">
-              {columns.map((c) => (
-                <div key={c.title} className="bg-background p-6">
-                  <p className="text-minimal text-brand mb-4">{c.title}</p>
+              {leaders.map((leader) => (
+                <div key={leader.name} className="bg-background p-6">
+                  <p className="text-3xl font-bold text-brand mb-2">{leader.years}</p>
+                  <h3 className="font-bold">{leader.name}</h3>
+                  <p className="text-minimal text-muted-foreground mt-1 mb-4">{leader.role}</p>
                   <ul className="space-y-2 text-muted-foreground">
-                    {c.items.map((i) => (
+                    {leader.items.map((i) => (
                       <li key={i} className="flex gap-2 leading-relaxed">
                         <span className="text-brand">·</span>
                         {i}
