@@ -1,8 +1,8 @@
 const stats = [
-  { value: "+2.5%", label: "U.S. primary aluminum demand CAGR" },
-  { value: "78%", label: "of U.S. aluminum is imported" },
-  { value: "$2.20 / $3.30", label: "Local vs imported 356 alloy / lb" },
-  { value: "8M+ lbs", label: "Identified customer demand / Months" },
+  { value: "$12.9B", label: "U.S. secondary aluminum alloy market" },
+  { value: "1.3M", label: "Vehicles of annual production capacity in Alabama" },
+  { value: "356 + A380", label: "Core secondary alloy products" },
+  { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
 ];
 
 const WhyMarket = () => {

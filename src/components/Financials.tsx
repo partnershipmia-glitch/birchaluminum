@@ -2,28 +2,18 @@ import { ArrowRight } from "lucide-react";
 import { deckUrl } from "@/lib/links";
 
 const stats = [
-  { value: "36M+ lbs", label: "Full annual capacity" },
-  {
-    value: (
-      <>
-        Months
-        <br />
-        10–12
-      </>
-    ),
-    label: "First production",
-  },
-  {
-    value: (
-      <>
-        Months
-        <br />
-        18–20
-      </>
-    ),
-    label: "Target full capacity",
-  },
-  { value: "5-Year", label: "Growth plan" },
+  { value: "$589.5M", label: "Five-year revenue" },
+  { value: "$60.1M", label: "Five-year EBITDA" },
+  { value: "$171.0M", label: "Stabilized annual revenue" },
+  { value: "$18.2M", label: "Stabilized annual EBITDA" },
+];
+
+const outlook = [
+  { year: "2027", revenue: "$0", ebitda: "$0", stage: "Development" },
+  { year: "2028", revenue: "$94.5M", ebitda: "$8.5M", stage: "Production ramp" },
+  { year: "2029", revenue: "$153.0M", ebitda: "$15.2M", stage: "Die-casting ramp" },
+  { year: "2030", revenue: "$171.0M", ebitda: "$18.2M", stage: "Combined platform" },
+  { year: "2031", revenue: "$171.0M", ebitda: "$18.2M", stage: "Stabilized operations" },
 ];
 
 const Financials = () => {
@@ -50,8 +40,19 @@ const Financials = () => {
           ))}
         </div>
 
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-px bg-border border border-border mb-8">
+          {outlook.map((item) => (
+            <div key={item.year} className="bg-background p-5">
+              <p className="text-minimal text-brand mb-3">{item.year}</p>
+              <p className="font-bold">{item.revenue} revenue</p>
+              <p className="font-bold text-brand">{item.ebitda} EBITDA</p>
+              <p className="text-xs text-muted-foreground mt-2">{item.stage}</p>
+            </div>
+          ))}
+        </div>
+
         <p className="text-muted-foreground max-w-2xl mb-8">
-          See revenue, EBITDA, capacity ramp and expansion assumptions in the investor presentation.
+          Stage 1 alloy production begins the ramp in 2028. Stage 2 die-casting growth begins in 2029.
         </p>
 
         <a
@@ -62,6 +63,9 @@ const Financials = () => {
         >
           View 5-Year Financial Outlook <ArrowRight className="w-4 h-4" />
         </a>
+        <p className="mt-5 text-xs text-muted-foreground">
+          Management planning case subject to production ramp, feedstock pricing, customer awards, recovery rates and final equipment quotations.
+        </p>
       </div>
     </section>
   );

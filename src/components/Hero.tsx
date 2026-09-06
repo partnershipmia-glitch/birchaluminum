@@ -3,19 +3,10 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const facts = [
-  { value: "$8.5M", label: "Capital raise" },
-  { value: "30%", label: "Investor equity" },
-  {
-    value: (
-      <>
-        Months
-        <br />
-        10–12
-      </>
-    ),
-    label: "Production start",
-  },
-  { value: "3M+ lbs", label: "Monthly capacity" },
+  { value: "$17.5M", label: "Stage 1 permanent capital" },
+  { value: "$10M", label: "Working-capital facility" },
+  { value: "12 months", label: "Target installation" },
+  { value: "6M lbs", label: "Monthly alloy capacity" },
 ];
 
 const Hero = () => {
@@ -39,8 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
-            Start with one Alabama smelter. Scale through connected scrap yards and production
-            facilities across the U.S.
+            Build a modern, automated Alabama facility producing 356 and A380 secondary aluminum
+            alloys, then expand downstream into higher-value die-cast components.
           </p>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-10">

@@ -2,27 +2,32 @@ import { ArrowRight } from "lucide-react";
 import { deckUrl } from "@/lib/links";
 
 const headline = [
-  { value: "$8.5M", label: "Total capital raise" },
-  { value: "30%", label: "Investor equity" },
-  { value: "100%", label: "Equity funded / no debt" },
+  { value: "$17.5M", label: "Stage 1 permanent capital" },
+  { value: "$10.0M", label: "Inventory + receivables facility" },
+  { value: "$19.0M", label: "Stage 2 expansion capital" },
 ];
 
-const timeline = [
-  { when: "Months 1–3", what: "Land + Permits + Engineering" },
-  { when: "Months 3–6", what: "Construction" },
-  { when: "Months 7–9", what: "Equipment Installation" },
-  { when: "Months 10–12", what: "Commissioning + Production Start" },
-  { when: "Months 13–14", what: "Commercial Sales" },
-  { when: "~6 months after start", what: "Full Production Capacity" },
+const allocations = [
+  ["Facility & site development", "$3.0M"],
+  ["Land", "$0.4M"],
+  ["High-productivity Ecomelt system", "$4.0M"],
+  ["Emissions-control system", "$1.2M"],
+  ["Metal treatment & holding", "$0.8M"],
+  ["Automated ingot line", "$1.2M"],
+  ["Electrical, gas & utilities", "$0.7M"],
+  ["Installation & engineering", "$0.9M"],
+  ["Material handling & lab", "$0.4M"],
+  ["Contingency", "$0.9M"],
+  ["Startup liquidity", "$4.0M"],
 ];
 
 const UseOfFunds = () => {
   return (
     <section id="investment" className="section-padding bg-primary text-primary-foreground">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand mb-4">Capital + Timeline</p>
+        <p className="text-minimal text-brand mb-4">Investment + Use of Funds</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
-          $8.5M to Build and Launch.
+          A Two-Stage Capital Plan.
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -37,14 +42,26 @@ const UseOfFunds = () => {
             ))}
           </div>
 
-          <div className="relative border-l-2 border-primary-foreground/20 ml-2">
-            {timeline.map((t) => (
-              <div key={t.when} className="relative pl-8 pb-8 last:pb-0">
-                <span className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand border-4 border-primary" />
-                <p className="text-minimal text-brand mb-1">{t.when}</p>
-                <p className="text-lg sm:text-xl font-bold">{t.what}</p>
+          <div>
+            <p className="text-minimal text-brand mb-4">Stage 1 Use of Funds</p>
+            <div className="border border-primary-foreground/15">
+              {allocations.map(([label, value]) => (
+                <div key={label} className="flex items-center justify-between gap-4 p-3 sm:p-4 border-b last:border-b-0 border-primary-foreground/15">
+                  <p className="text-sm sm:text-base text-primary-foreground/75">{label}</p>
+                  <p className="font-bold text-brand whitespace-nowrap">{value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="grid sm:grid-cols-2 gap-px bg-primary-foreground/15 mt-6">
+              <div className="bg-primary p-5">
+                <p className="text-2xl font-bold text-brand">12 months</p>
+                <p className="text-minimal text-primary-foreground/60 mt-2">Target startup</p>
               </div>
-            ))}
+              <div className="bg-primary p-5">
+                <p className="text-2xl font-bold text-brand">End of 2028</p>
+                <p className="text-minimal text-primary-foreground/60 mt-2">Stage 2 target launch</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -56,6 +73,9 @@ const UseOfFunds = () => {
         >
           View Full Use of Funds <ArrowRight className="w-4 h-4" />
         </a>
+        <p className="mt-5 text-xs text-primary-foreground/55 max-w-4xl">
+          Management planning estimates subject to final equipment quotations, site requirements and financing terms.
+        </p>
       </div>
     </section>
   );

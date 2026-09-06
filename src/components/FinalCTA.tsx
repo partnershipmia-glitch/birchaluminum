@@ -18,15 +18,16 @@ const FinalCTA = () => {
         <div className="max-w-4xl">
           <p className="text-minimal text-brand mb-5">Investor Contact</p>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-6">
-            We are not raising capital to build one furnace.
+            Stage 1 builds the alloy supply platform.
             <br />
             <span className="text-brand">
-              We are building the first node of a U.S. aluminum network.
+              Stage 2 captures downstream margin.
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-primary-foreground/80 mb-10">
-            $8.5M raise. 30% investor equity. Alabama first. Multi-state expansion next.
+            $17.5M permanent capital plus a $10M working-capital facility for Stage 1. A planned
+            $19M expansion moves Birch into higher-value die-cast components.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">

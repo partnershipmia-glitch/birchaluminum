@@ -1,8 +1,8 @@
 # Birch Aluminum
 
-> Birch Aluminum is developing a secondary aluminum smelting facility in Decatur, Alabama, converting aluminum wheel scrap into specification-grade alloys for U.S. industrial buyers.
+> Birch Aluminum is developing an automated secondary aluminum alloy facility in Decatur, Alabama, converting qualified domestic scrap into 356 and A380 alloys for U.S. industrial buyers.
 
-Birch Aluminum is raising capital to build a scalable domestic secondary aluminum production facility. The company targets ~3.0M lbs/month of finished aluminum, ~$73.8M annual revenue at full production, and offers 15% equity to the investor funding the deal.
+Stage 1 targets 6M lbs/month and 72M lbs/year of alloy capacity with a 97% target metal recovery rate. The capital plan calls for $17.5M of permanent capital and a $10M working-capital facility, followed by a planned $19M die-casting expansion.
 
 ## Pages
 - [Home](/): Company overview, investment opportunity, team, facility plan, and financial highlights.
