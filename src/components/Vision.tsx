@@ -1,9 +1,9 @@
 const chain = [
-  "Qualified Scrap",
+  "Procurement Qualified Scrap",
   "Birch Secondary Alloy",
-  "Automated Casting Cells",
-  "Finished Components",
-  "U.S. Customers",
+  "Automated Casting Line",
+  "Finished ingots 356, 380 alloys",
+  "Sell to Auto parts makers, die casters, TIER1 buyers",
 ];
 
 const phases = [
