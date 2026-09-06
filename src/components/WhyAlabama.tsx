@@ -6,7 +6,7 @@ const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Allo
 const specs = [
   { value: "6M lbs", label: "Monthly capacity" },
   { value: "72M lbs", label: "Annual capacity" },
-  { value: "97%", label: "Target metal recovery" },
+  { value: "97%", label: "Supplier Confirmed metal recovery" },
   { value: "Ecomelt", label: "High-productivity furnace system" },
 ];
 
