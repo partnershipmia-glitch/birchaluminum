@@ -1,3 +1,6 @@
+import sitePlanAsset from "@/assets/site-plan.png.asset.json";
+import warehouseAsset from "@/assets/warehouse-layout.png.asset.json";
+
 const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Alloy", "U.S. Customers"];
 
 const specs = [
@@ -40,7 +43,30 @@ const WhyAlabama = () => {
           ))}
         </div>
 
-
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
+          <div className="border border-border bg-secondary overflow-hidden">
+            <img
+              src={sitePlanAsset.url}
+              alt="10-acre Birch Aluminum facility site plan in Decatur, Alabama"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <p className="px-4 py-3 text-xs uppercase tracking-wider text-muted-foreground">
+              10 Acre Site Plan — Decatur, AL
+            </p>
+          </div>
+          <div className="border border-border bg-secondary overflow-hidden">
+            <img
+              src={warehouseAsset.url}
+              alt="Warehouse and flex space floor plan with office and loading details"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+            <p className="px-4 py-3 text-xs uppercase tracking-wider text-muted-foreground">
+              Warehouse / Flex Space Layout
+            </p>
+          </div>
+        </div>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
           Automated ingot production focused on 356 and A380 alloys, with ingot and sow formats
