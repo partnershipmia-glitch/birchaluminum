@@ -3,7 +3,7 @@ import { deckUrl } from "@/lib/links";
 
 const headline = [
   { value: "$17.5M", label: "Stage 1 permanent capital" },
-  { value: "$10.0M", label: "Inventory + receivables facility" },
+  { value: "$10.0M", label: "Inventory credit line — after trial melts & contracts" },
   { value: "$19.0M", label: "Stage 2 expansion capital" },
 ];
 
