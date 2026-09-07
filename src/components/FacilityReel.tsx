@@ -26,10 +26,10 @@ const FacilityReel = () => {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <div
           className="relative w-full overflow-hidden bg-black"
-          style={{ paddingTop: "min(177.78%, 90vh)" }}
+          style={{ paddingTop: "177.78%" }}
         >
           <iframe
             src={EMBED_URL}
