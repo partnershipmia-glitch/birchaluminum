@@ -9,8 +9,8 @@ import { deckUrl } from "@/lib/links";
 const marketStats = [
   { value: "Southeast U.S.", label: "Target regional industrial market" },
   { value: "Domestic", label: "Recycled aluminum supply focus" },
-  { value: "356/A356", label: "Target foundry alloy family" },
-  { value: "A380", label: "Target die-casting alloy" },
+  { value: "356, 380 alloys", label: "Target secondary alloy products" },
+  { value: "Qualified scrap", label: "Automotive wheels and cast aluminum feedstock focus" },
 ];
 
 const customers = [
