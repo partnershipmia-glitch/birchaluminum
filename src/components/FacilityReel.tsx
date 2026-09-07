@@ -34,8 +34,8 @@ const FacilityReel = () => {
           <iframe
             src={EMBED_URL}
             title="Birch Aluminum facility reel on Instagram"
-            className="absolute left-0 w-full -translate-y-1/2"
-            style={{ top: "50%", height: "316%" }}
+            className="absolute left-0 w-full"
+            style={{ top: "50%", height: "316%", transform: "translateY(-54%)" }}
             loading="lazy"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             allowFullScreen
