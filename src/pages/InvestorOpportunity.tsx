@@ -131,7 +131,7 @@ const InvestorOpportunity = () => (
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
             >
-              Schedule Investor Discussion
+              Let's schedule a quick 15 min call and I'll cover all your questions
             </a>
           </div>
         </div>
@@ -257,7 +257,7 @@ const InvestorOpportunity = () => (
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
             >
-              Request Investor Call
+              Let's schedule a quick 15 min call and I'll cover all your questions
             </a>
           </div>
         </div>
