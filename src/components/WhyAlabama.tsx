@@ -1,5 +1,6 @@
 import sitePlanAsset from "@/assets/site-plan.png.asset.json";
 import warehouseAsset from "@/assets/warehouse-layout.png.asset.json";
+import meltingShopAsset from "@/assets/melting-shop-layout.png.asset.json";
 
 const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Alloy", "U.S. Customers"];
 
@@ -66,6 +67,18 @@ const WhyAlabama = () => {
               Warehouse / Flex Space Planning Layout
             </p>
           </div>
+        </div>
+
+        <div className="border border-border bg-secondary overflow-hidden mb-10">
+          <img
+            src={meltingShopAsset.url}
+            alt="Main production building and melting shop layout with furnace, casting line, and warehouse"
+            className="w-full h-auto object-cover"
+            loading="lazy"
+          />
+          <p className="px-4 py-3 text-xs uppercase tracking-wider text-muted-foreground">
+            Main Production Building / Melting Shop Layout
+          </p>
         </div>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
