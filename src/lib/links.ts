@@ -9,11 +9,8 @@ const compose = (subject: string, body: string) =>
     body + signature
   )}`;
 
-// Investor deck request (update to a hosted deck URL when available)
-export const deckUrl = compose(
-  "Investor Deck Request - Birch Aluminum",
-  "Hello Birch Aluminum Team,\n\nPlease send me the investor deck.\n\nName:\nCompany:\nPhone:"
-);
+// Investor deck hosted on DocSend
+export const deckUrl = "https://docsend.com/view/74m7bpgj3pqjkmqd";
 
 export const inquiryUrl = compose(
   "Investor Inquiry - Birch Aluminum",
