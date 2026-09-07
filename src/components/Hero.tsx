@@ -5,8 +5,8 @@ import { deckUrl, inquiryUrl } from "@/lib/links";
 const facts = [
   { value: "Decatur, AL", label: "Target U.S. industrial region" },
   { value: "Secondary alloy", label: "Planned production focus" },
-  { value: "356 / A356", label: "Target foundry alloy family" },
-  { value: "A380", label: "Target die-casting alloy" },
+  { value: "356, 380 alloys", label: "Target secondary alloy products" },
+  { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
 ];
 
 const Hero = () => {
@@ -31,8 +31,8 @@ const Hero = () => {
 
           <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
             Birch Aluminum is developing a modern Alabama secondary aluminum recycling,
-            melting and casting project designed to produce specification-grade 356/A356 and
-            A380 alloys for U.S. industrial buyers.
+            melting and casting project designed to produce specification-grade 356, 380 alloys
+            for U.S. industrial buyers.
           </p>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-10">

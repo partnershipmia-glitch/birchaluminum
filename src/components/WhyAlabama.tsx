@@ -5,8 +5,8 @@ const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Allo
 
 const specs = [
   { value: "Decatur", label: "Alabama target region" },
-  { value: "356/A356", label: "Target foundry alloy family" },
-  { value: "A380", label: "Target die-casting alloy" },
+  { value: "356, 380 alloys", label: "Target secondary alloy products" },
+  { value: "Ingot / sow", label: "Planned product formats" },
   { value: "Diligence", label: "Capacity and equipment details under review" },
 ];
 
@@ -69,7 +69,7 @@ const WhyAlabama = () => {
         </div>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
-          Planned ingot production is focused on 356/A356 and A380 alloys, with ingot and sow formats
+          Planned ingot production is focused on 356, 380 alloys, with ingot and sow formats
           intended for U.S. foundries and die-casting manufacturers. Final site, capacity, equipment
           and permitting details remain subject to diligence.
         </p>

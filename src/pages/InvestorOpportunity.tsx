@@ -48,7 +48,7 @@ const investorQuestions = [
   },
   {
     q: "What products are targeted?",
-    a: "Target products include 356/A356 and A380 secondary aluminum alloys, secondary aluminum ingots, and potential specialty or custom alloys as the project develops. The company should not be interpreted as currently producing these alloys until operations begin.",
+    a: "Target products include 356, 380 alloys, secondary aluminum ingots, and potential specialty or custom alloys as the project develops. The company should not be interpreted as currently producing these alloys until operations begin.",
   },
   {
     q: "Who are the target customers?",
@@ -93,8 +93,7 @@ const InvestorOpportunity = () => (
             "secondary aluminum",
             "aluminum recycling",
             "aluminum investment opportunity",
-            "A356 aluminum alloy",
-            "A380 aluminum alloy",
+            "356, 380 alloys",
             "Alabama manufacturing investment",
           ],
         })}
@@ -200,7 +199,7 @@ const InvestorOpportunity = () => (
           <div className="border border-border p-6 sm:p-8 bg-background">
             <Factory className="w-7 h-7 text-brand mb-5" />
             <p className="text-minimal text-brand mb-4">Products</p>
-            <h3 className="text-2xl font-bold mb-4">356/A356 and A380 target alloys.</h3>
+            <h3 className="text-2xl font-bold mb-4">356, 380 target alloys.</h3>
             <p className="text-muted-foreground leading-relaxed">
               Target products include casting alloys used by foundries and die-casting customers.
               Product mix may evolve based on customer specifications and final equipment configuration.

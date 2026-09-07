@@ -20,7 +20,7 @@ const phases = [
   {
     phase: "Alloys",
     title: "Target Product Families",
-    body: "Planned products include 356/A356 and A380 secondary aluminum alloys, plus potential custom alloys as the project develops.",
+    body: "Planned products include 356, 380 alloys, plus potential custom alloys as the project develops.",
   },
   {
     phase: "Investors",

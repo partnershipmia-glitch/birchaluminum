@@ -1,6 +1,6 @@
 const cards = [
   { title: "Feedstock", body: "Qualified scrap streams, including automotive wheels and cast aluminum, are central to the planning case." },
-  { title: "Products", body: "Target products include 356/A356 and A380 secondary aluminum alloys and ingot formats." },
+  { title: "Products", body: "Target products include 356, 380 alloys and ingot formats." },
   { title: "Markets", body: "Target buyers include foundries, die casters, automotive suppliers and industrial manufacturers." },
   { title: "Diligence", body: "Capacity, economics, customer materials and financing assumptions are shared only through the qualified investor process." },
 ];
