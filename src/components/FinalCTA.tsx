@@ -21,14 +21,14 @@ const FinalCTA = () => {
             Stage 1 builds the alloy supply platform.
             <br />
             <span className="text-brand">
-              Stage 2 captures downstream margin.
+              Future stages are reviewed through diligence.
             </span>
           </h2>
 
           <p className="text-base sm:text-lg text-primary-foreground/80 mb-10">
-            $17.5M permanent capital plus a $10M inventory credit line, available after trial melts
-            and signed customer contracts, for Stage 1. A planned $19M expansion moves Birch into
-            higher-value die-cast components.
+            Birch Aluminum shares the current development plan, capital requirements, operating assumptions
+            and investor materials only with qualified investors and strategic partners. This public website
+            is not an offer to sell securities and does not guarantee future performance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">

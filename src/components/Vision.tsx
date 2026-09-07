@@ -1,31 +1,31 @@
 const chain = [
-  "Procurement Qualified Scrap",
-  "Birch Secondary Alloy",
-  "Automated Casting Line",
-  "Finished ingots 356, 380 alloys",
-  "Sell to Auto parts makers, die casters, TIER1 buyers",
+  "Procure Qualified Scrap",
+  "Process Secondary Aluminum",
+  "Cast Target Alloy Formats",
+  "Supply U.S. Industrial Buyers",
+  "Evaluate Downstream Opportunities",
 ];
 
 const phases = [
   {
     phase: "Stage 1",
-    title: "Alloy Production",
-    body: "Build and stabilize a 72M lb annual secondary alloy platform.",
+    title: "Secondary Alloy Production",
+    body: "Develop and validate a U.S. secondary aluminum alloy platform with disciplined scrap qualification, chemistry control and customer diligence.",
   },
   {
-    phase: "Stage 2 · Q4 2028",
-    title: "Die-Casting Expansion",
-    body: "Launch two automated casting cells using Birch-produced alloy.",
+    phase: "Stage 2",
+    title: "Potential Downstream Expansion",
+    body: "Evaluate higher-value downstream opportunities only after the alloy platform, customer demand and capital plan are validated.",
   },
   {
-    phase: "$36M",
-    title: "Die-Casting Revenue",
-    body: "Management planning target from higher-value finished components.",
+    phase: "Alloys",
+    title: "Target Product Families",
+    body: "Planned products include 356/A356 and A380 secondary aluminum alloys, plus potential custom alloys as the project develops.",
   },
   {
-    phase: "$6M",
-    title: "Die-Casting EBITDA",
-    body: "Management planning target at the growth stage.",
+    phase: "Investors",
+    title: "Qualified Diligence Process",
+    body: "Financial models, timing, equipment assumptions and investment terms are not public claims and should be reviewed in approved investor materials.",
   },
 ];
 

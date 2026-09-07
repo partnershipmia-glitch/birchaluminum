@@ -4,10 +4,10 @@ import warehouseAsset from "@/assets/warehouse-layout.png.asset.json";
 const flow = ["Qualified Scrap", "Controlled Process", "Specification-Grade Alloy", "U.S. Customers"];
 
 const specs = [
-  { value: "6M lbs", label: "Monthly capacity" },
-  { value: "72M lbs", label: "Annual capacity" },
-  { value: "97%", label: "Supplier Confirmed metal recovery" },
-  { value: "Ecomelt", label: "High-productivity furnace system" },
+  { value: "Decatur", label: "Alabama target region" },
+  { value: "356/A356", label: "Target foundry alloy family" },
+  { value: "A380", label: "Target die-casting alloy" },
+  { value: "Diligence", label: "Capacity and equipment details under review" },
 ];
 
 const WhyAlabama = () => {
@@ -47,30 +47,31 @@ const WhyAlabama = () => {
           <div className="border border-border bg-secondary overflow-hidden">
             <img
               src={sitePlanAsset.url}
-              alt="10-acre Birch Aluminum facility site plan in Decatur, Alabama"
+              alt="Birch Aluminum facility site planning image for Decatur, Alabama"
               className="w-full h-auto object-cover"
               loading="lazy"
             />
             <p className="px-4 py-3 text-xs uppercase tracking-wider text-muted-foreground">
-              10 Acre Site Plan — Decatur, AL
+              Site Planning Image — Decatur, AL
             </p>
           </div>
           <div className="border border-border bg-secondary overflow-hidden">
             <img
               src={warehouseAsset.url}
-              alt="Warehouse and flex space floor plan with office and loading details"
+              alt="Warehouse and flex space planning layout with office and loading details"
               className="w-full h-auto object-cover"
               loading="lazy"
             />
             <p className="px-4 py-3 text-xs uppercase tracking-wider text-muted-foreground">
-              Warehouse / Flex Space Layout
+              Warehouse / Flex Space Planning Layout
             </p>
           </div>
         </div>
 
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
-          Automated ingot production focused on 356 and A380 alloys, with ingot and sow formats
-          for U.S. foundries and die-casting manufacturers.
+          Planned ingot production is focused on 356/A356 and A380 alloys, with ingot and sow formats
+          intended for U.S. foundries and die-casting manufacturers. Final site, capacity, equipment
+          and permitting details remain subject to diligence.
         </p>
       </div>
     </section>

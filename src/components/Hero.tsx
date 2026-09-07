@@ -3,10 +3,10 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const facts = [
-  { value: "$17.5M", label: "Stage 1 permanent capital" },
-  { value: "$10M", label: "Inventory credit line after trial melts & contracts" },
-  { value: "12 months", label: "Site build" },
-  { value: "6M lbs", label: "Monthly alloy capacity" },
+  { value: "Decatur, AL", label: "Target U.S. industrial region" },
+  { value: "Secondary alloy", label: "Planned production focus" },
+  { value: "356 / A356", label: "Target foundry alloy family" },
+  { value: "A380", label: "Target die-casting alloy" },
 ];
 
 const Hero = () => {
@@ -30,8 +30,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
-            Build a modern, automated Alabama facility producing 356 and A380 secondary aluminum
-            alloys, then expand downstream into higher-value die-cast components.
+            Birch Aluminum is developing a modern Alabama secondary aluminum recycling,
+            melting and casting project designed to produce specification-grade 356/A356 and
+            A380 alloys for U.S. industrial buyers.
           </p>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-10">

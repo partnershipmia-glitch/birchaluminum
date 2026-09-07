@@ -1,8 +1,8 @@
 const stats = [
-  { value: "$12.9B", label: "U.S. secondary aluminum alloy market" },
-  { value: "1.3M", label: "Vehicles of annual production capacity in Alabama" },
-  { value: "356 + A380", label: "Core secondary alloy products" },
+  { value: "Domestic", label: "U.S. recycled aluminum supply focus" },
   { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
+  { value: "356 + A380", label: "Target secondary alloy products" },
+  { value: "Qualified scrap", label: "Automotive wheels and cast aluminum feedstock focus" },
 ];
 
 const WhyMarket = () => {
@@ -11,7 +11,7 @@ const WhyMarket = () => {
       <div className="container mx-auto px-5 sm:px-6">
         <p className="text-minimal text-brand mb-4">Why Now</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
-          The Market Gap Is Already Here.
+          The Regional Supply Gap Is Already Here.
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
