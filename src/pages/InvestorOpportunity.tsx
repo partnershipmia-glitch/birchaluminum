@@ -170,7 +170,7 @@ const InvestorOpportunity = () => (
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-7 py-4 font-semibold hover:opacity-90 transition-opacity"
             >
-              Discuss the Opportunity <ArrowRight className="w-4 h-4" />
+              Let's schedule a quick 15 min call and I'll cover all your questions <ArrowRight className="w-4 h-4 shrink-0" />
             </a>
           </div>
 
