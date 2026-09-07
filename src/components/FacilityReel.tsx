@@ -29,12 +29,13 @@ const FacilityReel = () => {
       <div className="w-full overflow-hidden bg-black">
         <div
           className="relative w-full overflow-hidden"
-          style={{ height: "80vh", minHeight: "480px" }}
+          style={{ paddingTop: "56.25%" }}
         >
           <iframe
             src={EMBED_URL}
             title="Birch Aluminum facility reel on Instagram"
-            className="absolute top-1/2 left-1/2 w-[120%] h-[145%] -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-0 w-full -translate-y-1/2"
+            style={{ top: "50%", height: "316%" }}
             loading="lazy"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
             allowFullScreen
