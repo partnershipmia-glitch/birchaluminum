@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://birchaluminum.lovable.app/sitemap.xml
+Sitemap: https://birchaluminum.com/sitemap.xml

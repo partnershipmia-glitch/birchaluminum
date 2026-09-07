@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://birchaluminum.lovable.app/</loc>
+    <loc>https://birchaluminum.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://birchaluminum.lovable.app/market-research</loc>
+    <loc>https://birchaluminum.com/investor-opportunity</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://birchaluminum.com/market-research</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
