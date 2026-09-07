@@ -54,7 +54,7 @@ const MarketResearch = () => (
       <meta name="description" content="Birch Aluminum market thesis for a development-stage U.S. secondary aluminum recycling and alloy manufacturing project serving Southeast industrial customers." />
       <link rel="canonical" href="https://birchaluminum.com/market-research" />
       <meta property="og:title" content="Secondary Aluminum Market | Birch Aluminum" />
-      <meta property="og:description" content="Market thesis for a development-stage U.S. secondary aluminum alloy project focused on domestic recycled supply, 356/A356 and A380 target alloys, and Southeast industrial demand." />
+      <meta property="og:description" content="Market thesis for a development-stage U.S. secondary aluminum alloy project focused on domestic recycled supply, 356, 380 alloys, and Southeast industrial demand." />
       <meta property="og:url" content="https://birchaluminum.com/market-research" />
       <meta property="og:type" content="article" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -101,7 +101,7 @@ const MarketResearch = () => (
                 { icon: MapPin, title: "Alabama location", text: "Close to a broad Southeast automotive and industrial manufacturing corridor." },
                 { icon: Truck, title: "Shorter delivery", text: "Regional production can support faster, more reliable service for qualified customers." },
                 { icon: Recycle, title: "Domestic recycled metal", text: "Qualified scrap can be converted into specification-grade secondary alloy." },
-                { icon: Factory, title: "Industrial customer base", text: "Foundries, die casters and manufacturers use 356/A356 and A380 alloy families." },
+                { icon: Factory, title: "Industrial customer base", text: "Foundries, die casters and manufacturers use 356, 380 alloy families." },
               ].map((item) => (
                 <div key={item.title} className="bg-background p-6 flex gap-4">
                   <item.icon className="w-6 h-6 text-brand shrink-0" />
