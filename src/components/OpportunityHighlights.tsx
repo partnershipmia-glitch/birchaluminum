@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const highlights = [
   { value: "$58 Millions", label: "Project valuation" },
@@ -35,24 +33,6 @@ const OpportunityHighlights = () => {
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a
-            href={deckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-          >
-            View Investor Deck <ArrowRight className="w-4 h-4" />
-          </a>
-          <a
-            href={inquiryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border border-border px-8 py-4 font-semibold hover:bg-background transition-colors"
-          >
-            Let's schedule a quick 15 min call and I'll cover all your questions
-          </a>
-        </div>
       </div>
     </section>
   );
