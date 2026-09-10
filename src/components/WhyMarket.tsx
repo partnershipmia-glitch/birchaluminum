@@ -3,7 +3,7 @@ const stats = [
   {
     value: "Alabama",
     label: "Growing industrial state",
-    description: "Regional production cuts freight, lead times and import dependence for customers.",
+    description: "Regional production cuts freight, lead times and import dependence for customers.\n40% cheaper utilities.\nLower pay rate.\nNO UNIONS.",
   },
   { value: "Signed LOI", label: "from BUYERS, brokers" },
   { value: "Signed LOI", label: "from scrap suppliers" },
@@ -26,7 +26,7 @@ const WhyMarket = () => {
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
               {s.description && (
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.description}</p>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{s.description}</p>
               )}
             </div>
           ))}
