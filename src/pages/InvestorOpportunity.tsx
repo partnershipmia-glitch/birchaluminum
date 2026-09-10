@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
 import Team from "@/components/Team";
+import OpportunityHighlights from "@/components/OpportunityHighlights";
 import { callUrl, deckUrl, inquiryUrl } from "@/lib/links";
 
 const thesis = [
