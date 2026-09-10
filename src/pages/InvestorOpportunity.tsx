@@ -3,6 +3,8 @@ import { ArrowRight, Factory, FileText, MapPin, Recycle, ShieldCheck, Truck } fr
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FacilityReel from "@/components/FacilityReel";
+import Team from "@/components/Team";
 import { callUrl, deckUrl, inquiryUrl } from "@/lib/links";
 
 const thesis = [
@@ -184,6 +186,10 @@ const InvestorOpportunity = () => (
           </div>
         </div>
       </section>
+
+      <FacilityReel />
+
+      <Team />
 
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6 grid lg:grid-cols-3 gap-6">

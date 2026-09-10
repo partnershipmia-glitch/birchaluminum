@@ -8,7 +8,7 @@ const specs = [
   { value: "Decatur", label: "Alabama target region" },
   { value: "356, 380 alloys", label: "Target secondary alloy products" },
   { value: "Ingot / sow", label: "Planned product formats" },
-  { value: "Diligence", label: "Capacity and equipment details under review" },
+  { value: "6M lb/month", label: "We will produce and can supply" },
 ];
 
 const WhyAlabama = () => {
@@ -81,10 +81,13 @@ const WhyAlabama = () => {
           </p>
         </div>
 
-        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
+        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-4">
           Planned ingot production is focused on 356, 380 alloys, with ingot and sow formats
-          intended for U.S. foundries and die-casting manufacturers. Final site, capacity, equipment
-          and permitting details remain subject to diligence.
+          intended for U.S. foundries and die-casting manufacturers.
+        </p>
+        <p className="text-base sm:text-lg font-semibold text-foreground max-w-2xl">
+          Diligence equipment — highly productive, economical proven, high recovery production line
+          from a top world supplier.
         </p>
       </div>
     </section>

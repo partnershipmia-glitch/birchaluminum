@@ -4,7 +4,7 @@ const cards = [
   {
     icon: Factory,
     title: "Domestic Demand",
-    body: "U.S. manufacturers need reliable regional aluminum supply.",
+    body: "13 billion lb/year — U.S. manufacturers need reliable regional aluminum supply.",
   },
   {
     icon: Recycle,
@@ -14,7 +14,7 @@ const cards = [
   {
     icon: MapPin,
     title: "Local Advantage",
-    body: "Regional production can reduce freight exposure, lead times and import dependence for qualified buyers.",
+    body: "Regional production cuts freight, lead times and import dependence for customers.",
   },
 ];
 
