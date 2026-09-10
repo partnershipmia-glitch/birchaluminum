@@ -1,6 +1,6 @@
 const stats = [
-  { value: "Domestic", label: "U.S. recycled aluminum supply focus" },
-  { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
+  { value: "13 billion lb/year", label: "U.S. market size" },
+  { value: "Alabama", label: "Growing industrial state" },
   { value: "356, 380 alloys", label: "Target secondary alloy products" },
   { value: "Qualified scrap", label: "Automotive wheels and cast aluminum feedstock focus" },
 ];
