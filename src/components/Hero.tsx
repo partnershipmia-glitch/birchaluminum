@@ -30,9 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
-            Birch Aluminum is developing a modern Alabama secondary aluminum recycling,
-            melting and casting project designed to produce specification-grade 356, 380 alloys
-            for U.S. industrial buyers.
+            I'm building a highly productive secondary aluminum recycling supply chain.
+            Designed to supply U.S. automotive customers.
           </p>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 mb-10">
