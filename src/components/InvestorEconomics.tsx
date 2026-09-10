@@ -2,7 +2,6 @@ const cards = [
   { title: "Feedstock", body: "Qualified scrap streams, including automotive wheels and cast aluminum, are central to the planning case." },
   { title: "Products", body: "Target products include 356, 380 alloys and ingot formats." },
   { title: "Markets", body: "Target buyers include foundries, die casters, automotive suppliers and industrial manufacturers." },
-  { title: "Diligence", body: "Capacity, economics, customer materials and financing assumptions are shared only through the qualified investor process." },
 ];
 
 const InvestorEconomics = () => {
@@ -14,7 +13,7 @@ const InvestorEconomics = () => {
           Industrial logic first. Detailed economics through diligence.
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
           {cards.map((c) => (
             <div key={c.title} className="bg-background p-6 sm:p-8">
               <h3 className="text-lg sm:text-xl font-bold text-brand mb-3">{c.title}</h3>
