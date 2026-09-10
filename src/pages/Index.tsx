@@ -38,7 +38,6 @@ const Index = () => {
         <Hero />
         <OpportunityHighlights />
         <UseOfFunds />
-        <WhyAlabama />
         <PhotoBand />
         <FacilityReel />
         <WhyMarket />
