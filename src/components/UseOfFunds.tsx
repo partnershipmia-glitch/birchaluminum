@@ -1,4 +1,3 @@
-const placeholder = true;
 
 
 const headline = [
