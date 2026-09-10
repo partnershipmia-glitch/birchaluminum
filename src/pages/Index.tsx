@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import WhyMarket from "@/components/WhyMarket";
 
 import WhyAlabama from "@/components/WhyAlabama";
+import OpportunityHighlights from "@/components/OpportunityHighlights";
 import PhotoBand from "@/components/PhotoBand";
 import FacilityReel from "@/components/FacilityReel";
 import UseOfFunds from "@/components/UseOfFunds";
@@ -40,6 +41,7 @@ const Index = () => {
         <WhyMarket />
         
         <WhyAlabama />
+        <OpportunityHighlights />
         <PhotoBand />
         <FacilityReel />
         <UseOfFunds />
