@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import founderAsset from "@/assets/founder-portrait.png.asset.json";
-import { callUrl } from "@/lib/links";
 
 const leaders = [
   {
@@ -72,14 +70,6 @@ const Team = () => {
               ))}
             </div>
 
-            <a
-              href={callUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-            >
-              Meet the Team <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </div>

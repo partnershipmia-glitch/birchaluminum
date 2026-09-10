@@ -18,6 +18,6 @@ export const inquiryUrl = compose(
 );
 
 export const callUrl = compose(
-  "Investor Call Request - Birch Aluminum",
-  "Hello Birch Aluminum Team,\n\nI would like to schedule an investor call.\n\nName:\nCompany:\nPhone:\nPreferred date/time:"
+  "50-Minute Investor Call Request - Birch Aluminum",
+  "Hello Birch Aluminum Team,\n\nI would like to schedule a 50-minute investor call.\n\nName:\nCompany:\nPhone:\nPreferred date/time:"
 );
