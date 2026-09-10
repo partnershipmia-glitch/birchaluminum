@@ -18,9 +18,9 @@ const diligenceItems = [
 
 const UseOfFunds = () => {
   return (
-    <section id="investment" className="section-padding bg-primary text-primary-foreground">
+    <section id="vision" className="section-padding bg-primary text-primary-foreground">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand mb-4">Investment + Use of Funds</p>
+        <p className="text-minimal text-brand mb-4">Vision</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
           A Diligence-First Capital Plan.
         </h2>
