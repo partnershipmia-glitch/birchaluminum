@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import sowsBg from "@/assets/sows-warehouse.png.asset.json";
-import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const facts = [
   { value: "Decatur, AL", label: "Target U.S. industrial region" },
