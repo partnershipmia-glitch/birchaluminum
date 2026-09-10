@@ -84,9 +84,9 @@ const WhyAlabama = () => {
         <h3 className="text-minimal text-brand mb-4">Opportunity highlights</h3>
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border mb-6">
           {[
-            { value: "$58M", label: "project valuation" },
+            { value: "$58 Millions", label: "project valuation" },
             { value: "3 year", label: "payback period" },
-            { value: "$1M", label: "projected EBITDA / month" },
+            { value: "$1 Million", label: "monthly EBITDA after ramp up" },
             { value: "Dec 2026", label: "site construction start" },
             { value: "15 month", label: "to build & install line" },
           ].map((h) => (
