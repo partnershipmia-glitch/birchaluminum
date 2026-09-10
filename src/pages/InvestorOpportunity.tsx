@@ -142,19 +142,11 @@ const InvestorOpportunity = () => (
           <div>
             <p className="text-minimal text-brand mb-4">Business Model</p>
             <h2 className="text-3xl sm:text-5xl font-bold mb-6">Scrap to specification-grade alloy.</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               The planned model is straightforward: source qualified aluminum scrap, process and
               melt the material, refine chemistry, cast saleable alloy formats, and supply industrial
               customers that need reliable domestic secondary aluminum.
             </p>
-            <a
-              href={inquiryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-7 py-4 font-semibold hover:opacity-90 transition-opacity"
-            >
-              Let's schedule a quick 15 min call and I'll cover all your questions <ArrowRight className="w-4 h-4 shrink-0" />
-            </a>
           </div>
 
           <div className="space-y-px bg-border border border-border">
