@@ -33,7 +33,7 @@ const WhyMarket = () => {
         </div>
 
         <p className="mt-10 text-2xl sm:text-4xl font-bold tracking-tight leading-tight">
-          Buyers need regional.
+          Customers bagging for local.
           <br />
           Reliable.
           <br />
