@@ -36,11 +36,11 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <OpportunityHighlights />
+        <WhyMarket />
         <UseOfFunds />
+        <OpportunityHighlights />
         <PhotoBand />
         <FacilityReel />
-        <WhyMarket />
         <Vision />
         <InvestorEconomics />
         <Financials />
