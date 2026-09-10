@@ -81,6 +81,16 @@ const WhyAlabama = () => {
           </p>
         </div>
 
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+          Opportunity highlights:
+        </h3>
+        <ul className="space-y-2 text-base sm:text-lg text-muted-foreground max-w-2xl mb-6">
+          <li><span className="font-semibold text-foreground">$58M</span> project valuation</li>
+          <li><span className="font-semibold text-foreground">3 year</span> payback period</li>
+          <li>Projected EBITDA: <span className="font-semibold text-foreground">$1 million/month</span></li>
+          <li>Site construction <span className="font-semibold text-foreground">December 2026</span></li>
+          <li><span className="font-semibold text-foreground">15 month</span> to build site and install production line</li>
+        </ul>
         <p className="text-base sm:text-lg font-semibold text-foreground max-w-2xl">
           Diligence equipment — highly productive, economical proven, high recovery production line
           from a top world supplier.

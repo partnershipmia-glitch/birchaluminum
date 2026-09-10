@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
 import Team from "@/components/Team";
-import OpportunityHighlights from "@/components/OpportunityHighlights";
 import { callUrl, deckUrl, inquiryUrl } from "@/lib/links";
 
 const thesis = [
@@ -138,8 +137,6 @@ const InvestorOpportunity = () => (
           </div>
         </div>
       </section>
-
-      <OpportunityHighlights />
 
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6">
