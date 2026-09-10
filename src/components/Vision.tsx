@@ -14,18 +14,8 @@ const phases = [
   },
   {
     phase: "Stage 2",
-    title: "Potential Downstream Expansion",
-    body: "Evaluate higher-value downstream opportunities only after the alloy platform, customer demand and capital plan are validated.",
-  },
-  {
-    phase: "Alloys",
-    title: "Target Product Families",
-    body: "Planned products include 356, 380 alloys, plus potential custom alloys as the project develops.",
-  },
-  {
-    phase: "Investors",
-    title: "Qualified Diligence Process",
-    body: "Financial models, timing, equipment assumptions and investment terms are not public claims and should be reviewed in approved investor materials.",
+    title: "Die Casting Line",
+    body: "Start die casting line to keep more margin from our product. End of 2029.",
   },
 ];
 
@@ -53,7 +43,7 @@ const Vision = () => {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+        <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
           {phases.map((p) => (
             <div key={p.phase} className="bg-background p-6 sm:p-8">
               <p className="text-minimal text-brand mb-3">{p.phase}</p>
