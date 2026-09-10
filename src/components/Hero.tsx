@@ -27,12 +27,10 @@ const Hero = () => {
             <span className="text-brand">U.S. Aluminum Platform.</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-10">
             I'm building a highly productive secondary aluminum recycling supply chain.
             Designed to supply U.S. automotive customers.
           </p>
-
-          <div className="mb-10" />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
             {facts.map((f) => (

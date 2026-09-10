@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 import { deckUrl, callUrl } from "@/lib/links";
@@ -48,22 +48,24 @@ const Navigation = () => {
               </Link>
             )
           )}
-          <a
-            href={deckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
-          >
-            View Deck
-          </a>
-          <a
-            href={callUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border border-border px-4 py-2 text-sm font-bold hover:bg-secondary transition-colors"
-          >
-            Schedule a quick 50-minute call
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={deckUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
+            >
+              <ArrowRight className="w-4 h-4" /> View Deck
+            </a>
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-bold text-foreground hover:bg-secondary transition-colors"
+            >
+              Request a quick 15 min call
+            </a>
+          </div>
         </div>
 
         <button
@@ -106,22 +108,24 @@ const Navigation = () => {
             >
               Market Research
             </Link>
-            <a
-              href={deckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-brand text-brand-foreground px-5 py-3 text-sm font-bold mt-4 hover:opacity-90 transition-opacity"
-            >
-              View Deck
-            </a>
-            <a
-              href={callUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 border border-border px-5 py-3 text-sm font-bold hover:bg-secondary transition-colors"
-            >
-              Schedule a quick 50-minute call
-            </a>
+            <div className="flex flex-col gap-2 mt-4">
+              <a
+                href={deckUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-brand text-brand-foreground px-5 py-3 text-sm font-bold hover:opacity-90 transition-opacity"
+              >
+                <ArrowRight className="w-4 h-4" /> View Deck
+              </a>
+              <a
+                href={callUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 border border-border px-5 py-3 text-sm font-bold text-foreground hover:bg-secondary transition-colors"
+              >
+                Request a quick 15 min call
+              </a>
+            </div>
           </div>
         </div>
       )}
