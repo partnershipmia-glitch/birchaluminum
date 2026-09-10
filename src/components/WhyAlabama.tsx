@@ -8,7 +8,7 @@ const specs = [
   { value: "Decatur", label: "Alabama target region" },
   { value: "356, 380 alloys", label: "Target secondary alloy products" },
   { value: "Ingot / sow", label: "Planned product formats" },
-  { value: "6M lb/month", label: "We will produce and can supply" },
+  { value: "6 million pounds/month", label: "We will produce and supply" },
 ];
 
 const WhyAlabama = () => {
