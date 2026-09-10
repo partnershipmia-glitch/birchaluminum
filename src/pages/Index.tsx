@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import OpportunityHighlights from "@/components/OpportunityHighlights";
+
 import WhyMarket from "@/components/WhyMarket";
 
 import PhotoBand from "@/components/PhotoBand";
@@ -39,7 +39,6 @@ const Index = () => {
         <WhyMarket />
         <Vision />
         <UseOfFunds />
-        <OpportunityHighlights />
         <PhotoBand />
         <FacilityReel />
         <InvestorEconomics />
