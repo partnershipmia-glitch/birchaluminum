@@ -81,30 +81,16 @@ const WhyAlabama = () => {
           </p>
         </div>
 
-        <div className="border border-border bg-secondary p-6 sm:p-10 mb-10">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-8">
-            Opportunity highlights
-          </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border">
-            {[
-              { value: "$58M", label: "Project valuation" },
-              { value: "3 year", label: "Payback period" },
-              { value: "$1M/mo", label: "Projected EBITDA" },
-              { value: "Dec 2026", label: "Site construction" },
-              { value: "15 month", label: "Build & install timeline" },
-            ].map((item) => (
-              <div key={item.label} className="bg-background p-5 sm:p-6">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-3">
-                  {item.value}
-                </p>
-                <p className="text-xs sm:text-sm uppercase tracking-wider text-muted-foreground">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+          Opportunity highlights:
+        </h3>
+        <ul className="space-y-2 text-base sm:text-lg text-muted-foreground max-w-2xl mb-6">
+          <li><span className="font-semibold text-foreground">$58M</span> project valuation</li>
+          <li><span className="font-semibold text-foreground">3 year</span> payback period</li>
+          <li>Projected EBITDA: <span className="font-semibold text-foreground">$1 million/month</span></li>
+          <li>Site construction <span className="font-semibold text-foreground">December 2026</span></li>
+          <li><span className="font-semibold text-foreground">15 month</span> to build site and install production line</li>
+        </ul>
         <p className="text-base sm:text-lg font-semibold text-foreground max-w-2xl">
           Diligence equipment — highly productive, economical proven, high recovery production line
           from a top world supplier.
