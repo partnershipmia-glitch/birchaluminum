@@ -26,7 +26,7 @@ const WhyMarket = () => {
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
               {s.description && (
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.description}</p>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{s.description}</p>
               )}
             </div>
           ))}
