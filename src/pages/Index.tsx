@@ -41,6 +41,7 @@ const Index = () => {
         <WhyMarket />
         
         <WhyAlabama />
+        <OpportunityHighlights />
         <PhotoBand />
         <FacilityReel />
         <UseOfFunds />

@@ -139,6 +139,8 @@ const InvestorOpportunity = () => (
         </div>
       </section>
 
+      <OpportunityHighlights />
+
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6">
           <p className="text-minimal text-brand mb-4">Investment Thesis</p>
