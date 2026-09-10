@@ -37,12 +37,6 @@ const WhyBirch = () => {
           ))}
         </div>
 
-        <div className="mt-8 bg-primary text-primary-foreground p-8 sm:p-10 text-center">
-          <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-3">Diligence</p>
-          <p className="text-minimal text-primary-foreground/60">
-            Feedstock recovery assumptions, supplier discussions and operating details are available only to qualified investors.
-          </p>
-        </div>
       </div>
     </section>
   );
