@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import WhyBirch from "@/components/WhyBirch";
 import WhyMarket from "@/components/WhyMarket";
 
 import WhyAlabama from "@/components/WhyAlabama";
@@ -38,7 +37,6 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <WhyBirch />
         <WhyMarket />
         
         <WhyAlabama />
