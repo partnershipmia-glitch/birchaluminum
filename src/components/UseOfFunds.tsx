@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";
-import { deckUrl } from "@/lib/links";
+const placeholder = true;
 
 const headline = [
   { value: "Stage 1", label: "Secondary alloy production platform" },
