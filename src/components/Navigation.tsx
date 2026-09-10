@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
-import { deckUrl } from "@/lib/links";
+import { deckUrl, callUrl } from "@/lib/links";
 
 const sectionLinks = [
   { label: "Why Birch", href: "#why-birch" },
