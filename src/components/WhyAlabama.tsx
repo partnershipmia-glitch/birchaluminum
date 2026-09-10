@@ -81,26 +81,16 @@ const WhyAlabama = () => {
           </p>
         </div>
 
-        <h3 className="text-minimal text-brand mb-4">Opportunity highlights</h3>
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border mb-6">
-          {[
-            { value: "$58 Millions", label: "project valuation" },
-            { value: "3 year", label: "payback period" },
-            { value: "$1 Million", label: "monthly EBITDA after ramp up" },
-            { value: "Dec 2026", label: "site construction start" },
-            { value: "15 month", label: "to build & install line" },
-          ].map((h) => (
-            <div
-              key={h.label}
-              className="bg-secondary p-5 sm:p-6 flex flex-col justify-between min-h-[120px] sm:min-h-[140px]"
-            >
-              <p className="text-2xl sm:text-4xl font-bold text-brand leading-none mb-3">{h.value}</p>
-              <p className="text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground leading-tight">
-                {h.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+          Opportunity highlights:
+        </h3>
+        <ul className="space-y-2 text-base sm:text-lg text-muted-foreground max-w-2xl mb-6">
+          <li><span className="font-semibold text-foreground">$58M</span> project valuation</li>
+          <li><span className="font-semibold text-foreground">3 year</span> payback period</li>
+          <li>Projected EBITDA: <span className="font-semibold text-foreground">$1 million/month</span></li>
+          <li>Site construction <span className="font-semibold text-foreground">December 2026</span></li>
+          <li><span className="font-semibold text-foreground">15 month</span> to build site and install production line</li>
+        </ul>
         <p className="text-base sm:text-lg font-semibold text-foreground max-w-2xl">
           Diligence equipment — highly productive, economical proven, high recovery production line
           from a top world supplier.

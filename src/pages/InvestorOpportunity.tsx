@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import { Factory, FileText, MapPin, Recycle, ShieldCheck, Truck } from "lucide-react";
+import { ArrowRight, Factory, FileText, MapPin, Recycle, ShieldCheck, Truck } from "lucide-react";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
 import Team from "@/components/Team";
+import { callUrl, deckUrl, inquiryUrl } from "@/lib/links";
 
 const thesis = [
   {
@@ -116,6 +117,24 @@ const InvestorOpportunity = () => (
             project in the Decatur, Alabama region, designed to produce specification-grade recycled
             aluminum alloys for U.S. industrial markets.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={deckUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Request Investor Deck <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
+            >
+              Let's schedule a quick 15 min call and I'll cover all your questions
+            </a>
+          </div>
         </div>
       </section>
 
@@ -147,6 +166,14 @@ const InvestorOpportunity = () => (
               melt the material, refine chemistry, cast saleable alloy formats, and supply industrial
               customers that need reliable domestic secondary aluminum.
             </p>
+            <a
+              href={inquiryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-7 py-4 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Let's schedule a quick 15 min call and I'll cover all your questions <ArrowRight className="w-4 h-4 shrink-0" />
+            </a>
           </div>
 
           <div className="space-y-px bg-border border border-border">
@@ -220,6 +247,24 @@ const InvestorOpportunity = () => (
             strategic partners. The website provides general project information only and does not
             constitute an offer to sell securities.
           </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={deckUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
+            >
+              Request Investor Deck <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
+            >
+              Let's schedule a quick 15 min call and I'll cover all your questions
+            </a>
+          </div>
         </div>
       </section>
     </main>
