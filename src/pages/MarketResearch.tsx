@@ -9,7 +9,7 @@ import { deckUrl } from "@/lib/links";
 const marketStats = [
   { value: "Southeast U.S.", label: "Target regional industrial market" },
   { value: "Domestic", label: "Recycled aluminum supply focus" },
-  { value: "356, 380 alloys", label: "Target secondary alloy products" },
+  { value: "6 million pounds", label: "throughput\n356, 380 alloys\nTarget products" },
   { value: "Qualified scrap", label: "Automotive wheels and cast aluminum feedstock focus" },
 ];
 
@@ -78,7 +78,7 @@ const MarketResearch = () => (
             {marketStats.map((item) => (
               <div key={item.label} className="bg-background p-5 sm:p-8">
                 <p className="text-3xl sm:text-5xl font-bold text-brand leading-none mb-3">{item.value}</p>
-                <p className="text-xs sm:text-sm uppercase text-muted-foreground">{item.label}</p>
+                <p className="text-xs sm:text-sm uppercase text-muted-foreground whitespace-pre-line">{item.label}</p>
               </div>
             ))}
           </div>
