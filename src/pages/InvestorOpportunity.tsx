@@ -147,14 +147,6 @@ const InvestorOpportunity = () => (
               melt the material, refine chemistry, cast saleable alloy formats, and supply industrial
               customers that need reliable domestic secondary aluminum.
             </p>
-            <a
-              href={inquiryUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-7 py-4 font-semibold hover:opacity-90 transition-opacity"
-            >
-              Let's schedule a quick 15 min call and I'll cover all your questions <ArrowRight className="w-4 h-4 shrink-0" />
-            </a>
           </div>
 
           <div className="space-y-px bg-border border border-border">
