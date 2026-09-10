@@ -1,6 +1,10 @@
 const stats = [
   { value: "13 billion lb/year", label: "U.S. market size" },
-  { value: "Alabama", label: "Growing industrial state" },
+  {
+    value: "Alabama",
+    label: "Growing industrial state",
+    description: "Regional production cuts freight, lead times and import dependence for customers.",
+  },
   { value: "Signed LOI", label: "from BUYERS, brokers" },
   { value: "Confirmed LOI", label: "from scrap suppliers" },
 ];
@@ -21,6 +25,9 @@ const WhyMarket = () => {
                 {s.value}
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
+              {s.description && (
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.description}</p>
+              )}
             </div>
           ))}
         </div>
