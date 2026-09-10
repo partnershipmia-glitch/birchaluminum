@@ -52,15 +52,7 @@ const UseOfFunds = () => {
           </div>
         </div>
 
-        <a
-          href={deckUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-        >
-          Request Full Use of Funds <ArrowRight className="w-4 h-4" />
-        </a>
-        <p className="mt-5 text-xs text-primary-foreground/55 max-w-4xl">
+        <p className="mt-10 text-xs text-primary-foreground/55 max-w-4xl">
           Management planning estimates remain subject to diligence, final quotations, site requirements, contracts and financing terms.
         </p>
       </div>
