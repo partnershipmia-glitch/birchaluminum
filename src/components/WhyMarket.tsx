@@ -1,8 +1,8 @@
 const stats = [
   { value: "13 billion lb/year", label: "U.S. market size" },
   { value: "Alabama", label: "Growing industrial state" },
-  { value: "356, 380 alloys", label: "Target secondary alloy products" },
-  { value: "Qualified scrap", label: "Automotive wheels and cast aluminum feedstock focus" },
+  { value: "Signed LOI", label: "from BUYERS, brokers" },
+  { value: "Confirmed LOI", label: "from scrap suppliers" },
 ];
 
 const WhyMarket = () => {
