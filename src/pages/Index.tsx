@@ -12,7 +12,6 @@ import UseOfFunds from "@/components/UseOfFunds";
 import Vision from "@/components/Vision";
 import InvestorEconomics from "@/components/InvestorEconomics";
 import Financials from "@/components/Financials";
-import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const title = "Birch Aluminum | U.S. Secondary Alloy Platform";
