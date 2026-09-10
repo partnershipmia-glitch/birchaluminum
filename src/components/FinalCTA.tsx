@@ -1,6 +1,4 @@
-import { ArrowRight } from "lucide-react";
 import ctaBg from "@/assets/furnace-charging.png.asset.json";
-import { deckUrl, callUrl } from "@/lib/links";
 
 const FinalCTA = () => {
   return (
