@@ -37,11 +37,11 @@ const Index = () => {
       <main>
         <Hero />
         <WhyMarket />
+        <Vision />
         <UseOfFunds />
         <OpportunityHighlights />
         <PhotoBand />
         <FacilityReel />
-        <Vision />
         <InvestorEconomics />
         <Financials />
       </main>
