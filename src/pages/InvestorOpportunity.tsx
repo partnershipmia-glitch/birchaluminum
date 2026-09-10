@@ -211,35 +211,6 @@ const InvestorOpportunity = () => (
         </div>
       </section>
 
-      <section className="section-padding bg-primary text-primary-foreground">
-        <div className="container mx-auto px-5 sm:px-6 max-w-4xl">
-          <p className="text-minimal text-brand mb-5">Qualified Investor Next Step</p>
-          <h2 className="text-3xl sm:text-5xl font-bold mb-6">Request the current investor package.</h2>
-          <p className="text-primary-foreground/75 text-lg leading-relaxed mb-8">
-            Birch Aluminum shares more detailed project information with qualified investors and
-            strategic partners. The website provides general project information only and does not
-            constitute an offer to sell securities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href={deckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-            >
-              Request Investor Deck <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href={callUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
-            >
-              Let's schedule a quick 15 min call and I'll cover all your questions
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
 
     <Footer />
