@@ -6,7 +6,7 @@ const facts = [
   { value: "Decatur, AL", label: "Target U.S. industrial region" },
   { value: "97% recovery", label: "Highly productive, Tight utility use production line from top world supplier!" },
   { value: "356, 380 alloys", label: "Target secondary alloy products" },
-  { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
+  { value: "50% import tariffs", label: "support local producers" },
 ];
 
 const Hero = () => {
