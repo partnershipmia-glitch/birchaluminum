@@ -148,25 +148,6 @@ const MarketResearch = () => (
         </div>
       </section>
 
-      <section className="section-padding bg-secondary">
-        <div className="container mx-auto px-5 sm:px-6">
-          <p className="text-minimal text-brand mb-4">Investor Diligence</p>
-          <h2 className="text-3xl sm:text-5xl font-bold mb-10">What qualified investors should review.</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border mb-8">
-            {diligence.map((item) => (
-              <div key={item.title} className="bg-background p-5">
-                <p className="font-bold text-brand mb-3">{item.title}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-xs text-muted-foreground">
-            This page is general market and project information only. It does not publish production capacity,
-            projected revenue, returns, investment terms, supplier commitments or customer commitments.
-          </p>
-        </div>
-      </section>
-
       <FacilityReel />
 
       <section className="section-padding bg-primary text-primary-foreground text-center">
