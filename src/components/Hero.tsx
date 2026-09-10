@@ -4,7 +4,7 @@ import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const facts = [
   { value: "Decatur, AL", label: "Target U.S. industrial region" },
-  { value: "Secondary alloy", label: "Planned production focus" },
+  { value: "97% recovery", label: "Highly productive, Tight utility use production line from top world supplier!" },
   { value: "356, 380 alloys", label: "Target secondary alloy products" },
   { value: "Southeast U.S.", label: "Dense automotive customer ecosystem" },
 ];
