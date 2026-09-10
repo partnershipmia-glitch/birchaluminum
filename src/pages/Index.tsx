@@ -45,7 +45,6 @@ const Index = () => {
         <Vision />
         <InvestorEconomics />
         <Financials />
-        <FinalCTA />
       </main>
       <Footer />
     </div>
