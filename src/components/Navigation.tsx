@@ -48,14 +48,24 @@ const Navigation = () => {
               </Link>
             )
           )}
-          <a
-            href={deckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-5 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
-          >
-            <ArrowRight className="w-4 h-4" /> View Deck
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={deckUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
+            >
+              <ArrowRight className="w-4 h-4" /> View Deck
+            </a>
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-bold text-foreground hover:bg-secondary transition-colors"
+            >
+              Request a quick 15 min call
+            </a>
+          </div>
         </div>
 
         <button
