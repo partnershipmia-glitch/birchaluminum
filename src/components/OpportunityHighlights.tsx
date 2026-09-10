@@ -2,9 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { deckUrl, inquiryUrl } from "@/lib/links";
 
 const highlights = [
-  { value: "$58M", label: "Project valuation" },
+  { value: "$58 Millions", label: "Project valuation" },
   { value: "3 year", label: "Payback period" },
-  { value: "$1M/month", label: "Projected EBITDA" },
+  { value: "$1 Million/month", label: "Projected EBITDA" },
+  { value: "near 1 year", label: "Ramp up period to hit max throughput" },
   { value: "Dec 2026", label: "Site construction start" },
   { value: "15 month", label: "To build site & install production line" },
 ];
@@ -21,7 +22,7 @@ const OpportunityHighlights = () => {
           Key metrics for the first automated alloy facility in Decatur, Alabama.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-border border border-border mb-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border mb-10">
           {highlights.map((h) => (
             <div key={h.label} className="bg-background p-6 sm:p-8">
               <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
