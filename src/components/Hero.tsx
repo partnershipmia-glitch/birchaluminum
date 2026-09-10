@@ -3,7 +3,7 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 const facts = [
   { value: "50% import tariffs", label: "support local producers" },
   { value: "97% recovery", label: "Highly productive, Tight utility use production line from top world supplier!" },
-  { value: "356, 380 alloys", label: "Target secondary alloy products" },
+  { value: "6 million pounds", label: "throughput\n356, 380 alloys\nTarget products" },
 ];
 
 const Hero = () => {
@@ -38,7 +38,7 @@ const Hero = () => {
                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
                   {f.value}
                 </p>
-                <p className="text-[11px] sm:text-xs uppercase tracking-wider text-primary-foreground/60">
+                <p className="text-[11px] sm:text-xs uppercase tracking-wider text-primary-foreground/60 whitespace-pre-line">
                   {f.label}
                 </p>
               </div>
