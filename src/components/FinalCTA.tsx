@@ -20,25 +20,6 @@ const FinalCTA = () => {
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-10">
             Ready to discuss the opportunity?
           </h2>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href={deckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
-            >
-              View Investor Deck <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href={callUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-semibold hover:bg-primary-foreground/10 transition-colors"
-            >
-              Let's schedule a quick 15 min call and I'll cover all your questions
-            </a>
-          </div>
         </div>
       </div>
     </section>
