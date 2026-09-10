@@ -187,6 +187,10 @@ const InvestorOpportunity = () => (
         </div>
       </section>
 
+      <FacilityReel />
+
+      <Team />
+
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6 grid lg:grid-cols-3 gap-6">
           <div className="border border-border p-6 sm:p-8 bg-background">
