@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import OpportunityHighlights from "@/components/OpportunityHighlights";
 import WhyMarket from "@/components/WhyMarket";
 
-import WhyAlabama from "@/components/WhyAlabama";
 import PhotoBand from "@/components/PhotoBand";
 import FacilityReel from "@/components/FacilityReel";
 import UseOfFunds from "@/components/UseOfFunds";
