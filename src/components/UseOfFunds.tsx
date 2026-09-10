@@ -1,5 +1,6 @@
 const placeholder = true;
 
+
 const headline = [
   { value: "Stage 1", label: "Secondary alloy production platform" },
   { value: "Stage 2", label: "Start die casting line to keep more margin from our product. End of 2029" },
