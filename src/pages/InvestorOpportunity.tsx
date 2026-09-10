@@ -1,11 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Factory, FileText, MapPin, Recycle, ShieldCheck, Truck } from "lucide-react";
+import { Factory, FileText, MapPin, Recycle, ShieldCheck, Truck } from "lucide-react";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
 import Team from "@/components/Team";
-import { callUrl, deckUrl, inquiryUrl } from "@/lib/links";
 
 const thesis = [
   {
