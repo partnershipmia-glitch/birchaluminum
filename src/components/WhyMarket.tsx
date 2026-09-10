@@ -1,5 +1,5 @@
 const stats = [
-  { value: "13 billion lb/year", label: "U.S. market size" },
+  { value: "13 billion pound/year", label: "U.S. market size" },
   {
     value: "Alabama",
     label: "Growing industrial state",
