@@ -1,3 +1,6 @@
+import { ArrowRight } from "lucide-react";
+import { deckUrl } from "@/lib/links";
+
 const headline = [
   { value: "Stage 1", label: "Secondary alloy production platform" },
   { value: "Stage 2", label: "Start die casting line to keep more margin from our product. End of 2029" },
@@ -50,7 +53,15 @@ const UseOfFunds = () => {
           </div>
         </div>
 
-        <p className="mt-10 text-xs text-primary-foreground/55 max-w-4xl">
+        <a
+          href={deckUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity"
+        >
+          Request Full Use of Funds <ArrowRight className="w-4 h-4" />
+        </a>
+        <p className="mt-5 text-xs text-primary-foreground/55 max-w-4xl">
           Management planning estimates remain subject to diligence, final quotations, site requirements, contracts and financing terms.
         </p>
       </div>

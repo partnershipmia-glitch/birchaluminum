@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import { Factory, MapPin, Recycle, Truck } from "lucide-react";
+import { ArrowRight, Factory, MapPin, Recycle, Truck } from "lucide-react";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
+import { deckUrl } from "@/lib/links";
 
 const marketStats = [
   { value: "Southeast U.S.", label: "Target regional industrial market" },
@@ -149,6 +150,12 @@ const MarketResearch = () => (
 
       <FacilityReel />
 
+      <section className="section-padding bg-primary text-primary-foreground text-center">
+        <div className="container mx-auto px-5 sm:px-6 max-w-3xl">
+          <h2 className="text-3xl sm:text-5xl font-bold mb-6">Review the current qualified-investor materials.</h2>
+          <a href={deckUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-semibold hover:opacity-90 transition-opacity">Request Investor Deck <ArrowRight className="w-4 h-4" /></a>
+        </div>
+      </section>
     </main>
     <Footer />
   </div>
