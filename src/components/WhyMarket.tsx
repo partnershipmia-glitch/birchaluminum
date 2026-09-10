@@ -6,7 +6,7 @@ const stats = [
     description: "Regional production cuts freight, lead times and import dependence for customers.",
   },
   { value: "Signed LOI", label: "from BUYERS, brokers" },
-  { value: "Confirmed LOI", label: "from scrap suppliers" },
+  { value: "Signed LOI", label: "from scrap suppliers" },
 ];
 
 const WhyMarket = () => {
