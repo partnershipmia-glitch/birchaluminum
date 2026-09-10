@@ -6,7 +6,7 @@ import workers from "@/assets/plant-workers.png.asset.json";
 const shots = [
   { src: sows.url, label: "Stacked & Strapped Ingots" },
   { src: casting.url, label: "Casting Line" },
-  { src: workers.url, label: "Plant Operations" },
+  { src: workers.url, label: "Inventory Weighing, Count" },
   { src: warehouse.url, label: "Ingot Inventory" },
 ];
 
