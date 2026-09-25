@@ -74,16 +74,58 @@ const AluminumOpportunity = () => (
     <main>
       <section className="bg-primary text-primary-foreground section-padding">
         <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-          <p className="text-minimal text-brand mb-5">Investor Market Brief</p>
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8">THE ALUMINUM<br />OPPORTUNITY</h1>
-          <div className="flex flex-wrap gap-3 text-sm font-bold uppercase tracking-wider">
-            {["Demand", "Scrap", "Exports", "Benchmarks", "Gap", "Birch", "Value"].map((s, i) => (
-              <span key={s} className="flex items-center gap-3">
-                <span className={i === 5 ? "text-brand" : "text-primary-foreground/70"}>{s}</span>
-                {i < 6 && <span className="text-brand">→</span>}
-              </span>
+          <p className="text-minimal text-brand mb-5">The Aluminum Opportunity</p>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-4">AMERICA HAS THE ALUMINUM.</h1>
+          <p className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-brand mb-8">IT NEEDS THE CAPACITY TO PROCESS IT.</p>
+          <p className="text-lg sm:text-xl text-primary-foreground/75 max-w-3xl mb-12">
+            Birch Aluminum is building domestic capacity to convert recycled aluminum scrap into specification-grade alloys for U.S. manufacturing.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-9 items-center gap-2 md:gap-0">
+            {["U.S. Aluminum Scrap", "Sort + Process", "Melt + Control Chemistry", "356 / 380 Aluminum", "U.S. Manufacturing"].map((s, i, arr) => (
+              <div key={s} className="contents">
+                <div
+                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-4 text-center text-sm font-bold uppercase tracking-wider ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
+                  style={{ animationDelay: `${i * 350}ms` }}
+                >
+                  {s}
+                </div>
+                {i < arr.length - 1 && (
+                  <div
+                    className="animate-fade-in-up opacity-0 [animation-fill-mode:forwards] text-brand text-2xl font-bold text-center md:rotate-0 rotate-90"
+                    style={{ animationDelay: `${i * 350 + 175}ms` }}
+                  >
+                    →
+                  </div>
+                )}
+              </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-background border-b border-border">
+        <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+          <p className="text-minimal text-brand mb-3">The Market Problem</p>
+          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">A Large Domestic Resource Is Leaving the U.S.</h2>
+          <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+            {[
+              { v: "~3.6M MT", l: "Aluminum recovered from purchased scrap in the U.S.", src: "USGS Mineral Commodity Summaries 2025 — secondary production from new + old scrap, 2024e (recovered-scrap statistic)" },
+              { v: "~2.05M MT", l: "Aluminum waste and scrap exported from the U.S. in 2024", src: "U.S. Census Bureau / USITC DataWeb, HS 7602 exports, 2024 (international trade statistic)" },
+              { v: "~$4.0B", l: "Value of U.S. aluminum scrap exports in 2024", src: "U.S. Census Bureau / USITC DataWeb, HS 7602 export value, 2024" },
+            ].map((c) => (
+              <div key={c.v} className="bg-background p-6 sm:p-10">
+                <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-4">{c.v}</p>
+                <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">{c.l}</p>
+                <p className="text-[11px] uppercase tracking-wider text-muted-foreground/80">Source: {c.src}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-[11px] text-muted-foreground">
+            USGS recovered-scrap and HS 7602 trade figures are separate datasets and are not directly additive. Exported scrap includes many grades; not all of it is suitable feedstock for Birch Aluminum.
+          </p>
+          <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">
+            The U.S. already has a massive aluminum scrap ecosystem — but significant material value continues to leave the domestic supply chain.
+          </p>
         </div>
       </section>
 
@@ -110,26 +152,11 @@ const AluminumOpportunity = () => (
         <Source>USGS Mineral Commodity Summaries, Aluminum, 2025 (2024 estimates, approx. million metric tons)</Source>
       </Section>
 
-      <Section n={2} eyebrow="Scrap is already here" title="Recycled metal is already America's largest domestic source." takeaway="The raw material for U.S. alloy already exists — above ground." dark>
-        <div className="grid sm:grid-cols-3 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
-          {[
-            { v: "~3.3 Mt", l: "Aluminum recovered from U.S. scrap / year" },
-            { v: "5×", l: "Recycled vs. primary domestic output" },
-            { v: "95%", l: "Less energy than primary aluminum" },
-          ].map((s) => (
-            <div key={s.l} className="bg-primary p-8">
-              <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-3">{s.v}</p>
-              <p className="text-sm uppercase tracking-wider text-primary-foreground/70">{s.l}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-primary-foreground/60">Source: USGS MCS 2025; The Aluminum Association, 2024</p>
-      </Section>
 
       <Section n={3} eyebrow="Scrap leaves the country" title="Millions of tons of U.S. scrap are shipped overseas." takeaway="Exported scrap = exported jobs, margin and supply security.">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">~2 Mt</p>
+            <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">~2M MT</p>
             <p className="mt-3 uppercase text-sm text-muted-foreground tracking-wider">U.S. aluminum scrap exported per year</p>
             <svg viewBox="0 0 400 140" className="w-full mt-8" aria-label="Scrap flow">
               <rect x="0" y="20" width="90" height="100" fill={FG} />
