@@ -153,34 +153,7 @@ const AluminumOpportunity = () => (
       </Section>
 
 
-      <Section n={3} eyebrow="Scrap leaves the country" title="Millions of tons of U.S. scrap are shipped overseas." takeaway="Exported scrap = exported jobs, margin and supply security.">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">~2M MT</p>
-            <p className="mt-3 uppercase text-sm text-muted-foreground tracking-wider">U.S. aluminum scrap exported per year</p>
-            <svg viewBox="0 0 400 140" className="w-full mt-8" aria-label="Scrap flow">
-              <rect x="0" y="20" width="90" height="100" fill={FG} />
-              <text x="45" y="75" textAnchor="middle" fill="hsl(var(--background))" fontSize="13" fontWeight="700">U.S. SCRAP</text>
-              <path d="M90 30 C200 30 220 30 310 30 L310 70 C220 70 200 70 90 70 Z" fill={MUTED} opacity="0.6" />
-              <path d="M90 70 C200 70 220 110 310 110 L310 120 C220 120 200 120 90 120 Z" fill={BRAND} />
-              <text x="320" y="55" fontSize="12" fontWeight="700" fill={FG}>Exported</text>
-              <text x="320" y="118" fontSize="12" fontWeight="700" fill={FG}>Stays for</text>
-              <text x="320" y="132" fontSize="12" fontWeight="700" fill={FG}>U.S. alloy</text>
-            </svg>
-          </div>
-          <div className="h-72">
-            <ResponsiveContainer>
-              <PieChart>
-                <Pie data={exportsData} dataKey="value" nameKey="name" innerRadius="55%" outerRadius="90%" label={({ name, value }) => `${name} ${value}%`} labelLine={false} fontSize={12}>
-                  {exportsData.map((d, i) => <Cell key={d.name} fill={i === 0 ? BRAND : i === 5 ? "hsl(var(--accent))" : MUTED} stroke="hsl(var(--background))" />)}
-                </Pie>
-                <Tooltip formatter={(v: number) => `${v}%`} />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-        <Source>U.S. Census Bureau / USITC DataWeb (HTS 7602), 2023; USGS MCS 2025 — shares approximate</Source>
-      </Section>
+      <ScrapExportSankey />
 
       <Section n={4} eyebrow="Circularity is achievable" title="Other countries recycle far more." takeaway="The U.S. has room to capture much more of its own metal." dark>
         <div className="h-72">
