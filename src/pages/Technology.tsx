@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import siteLayout from "@/assets/tech-site-layout.png.asset.json";
 import separation from "@/assets/tech-separation.png.asset.json";
 import charging from "@/assets/tech-charging.png.asset.json";
-import ingot from "@/assets/tech-ingot-stacking.png.asset.json";
+import ingot from "@/assets/tech-ingot-stacking-v3.png.asset.json";
 import exhaust from "@/assets/tech-exhaust-treatment.png.asset.json";
 
 const scrollTo = (id: string) =>
@@ -184,7 +184,7 @@ const Technology = () => {
             <div className="px-2"><Label>03 / Casting</Label><H2>FROM LIQUID METAL TO FINISHED INGOT — AUTOMATICALLY</H2></div>
             <Zoomable src={ingot.url} alt="Ingot casting and stacking" onOpen={setZoom} />
             <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {[["1.5M LB / YEAR", "Reference production scale"], ["~$1.15M", "Projected automation investment"], ["~2 YEARS", "Projected payback"]].map(([v, l]) => (
+              {[["1.5M LB / YEAR", "Reference production scale"], ["~$1.0M", "Projected automation investment"], ["~1 YEAR", "Projected payback"]].map(([v, l]) => (
                 <div key={l} className="bg-background p-6 sm:p-10">
                   <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3">{v}</p>
                   <p className="text-sm uppercase tracking-wider text-muted-foreground">{l}</p>
