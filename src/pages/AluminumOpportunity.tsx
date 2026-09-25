@@ -156,7 +156,7 @@ const AluminumOpportunity = () => (
       <Section n={3} eyebrow="Scrap leaves the country" title="Millions of tons of U.S. scrap are shipped overseas." takeaway="Exported scrap = exported jobs, margin and supply security.">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">~2 Mt</p>
+            <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">~2M MT</p>
             <p className="mt-3 uppercase text-sm text-muted-foreground tracking-wider">U.S. aluminum scrap exported per year</p>
             <svg viewBox="0 0 400 140" className="w-full mt-8" aria-label="Scrap flow">
               <rect x="0" y="20" width="90" height="100" fill={FG} />
