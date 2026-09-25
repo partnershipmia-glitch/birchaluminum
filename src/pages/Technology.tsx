@@ -191,7 +191,7 @@ const Technology = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-3 text-[11px] text-muted-foreground px-2">Illustrative operating case based on stated labor and automation assumptions. Actual economics depend on staffing, wages, production schedule, equipment scope and final vendor pricing.</p>
+            <p className="mt-3 text-[11px] text-muted-foreground px-2">Projected operating case based on stated labor and automation assumptions. Actual economics depend on staffing, wages, production schedule, equipment scope and final vendor pricing.</p>
           </div>
         </section>
 
