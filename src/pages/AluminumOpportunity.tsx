@@ -33,15 +33,6 @@ const supply = [
   { name: "Net imports", value: 4.4 },
 ];
 
-// 3. Scrap export destinations (Census/USITC DataWeb, 2023, approx share)
-const exportsData = [
-  { name: "Canada", value: 26 },
-  { name: "Mexico", value: 15 },
-  { name: "South Korea", value: 12 },
-  { name: "India", value: 10 },
-  { name: "Malaysia", value: 9 },
-  { name: "Other", value: 28 },
-];
 
 // 4. Can recycling rates
 const recycling = [
