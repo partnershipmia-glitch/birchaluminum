@@ -4,6 +4,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrapExportSankey from "@/components/ScrapExportSankey";
+import CountryComparison from "@/components/CountryComparison";
 
 const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
@@ -34,12 +35,6 @@ const supply = [
 ];
 
 
-// 4. Can recycling rates
-const recycling = [
-  { name: "Brazil", value: 97 },
-  { name: "Europe", value: 73 },
-  { name: "United States", value: 43 },
-];
 
 const flow = [
   { step: "Scrap", sub: "Wheels · cast scrap" },
@@ -147,22 +142,7 @@ const AluminumOpportunity = () => (
 
       <ScrapExportSankey />
 
-      <Section n={4} eyebrow="Circularity is achievable" title="Other countries recycle far more." takeaway="The U.S. has room to capture much more of its own metal." dark>
-        <div className="h-72">
-          <ResponsiveContainer>
-            <BarChart data={recycling} margin={{ top: 30 }}>
-              <XAxis dataKey="name" tick={{ fill: "hsl(var(--primary-foreground))", fontSize: 14, fontWeight: 700 }} axisLine={false} tickLine={false} />
-              <YAxis hide domain={[0, 100]} />
-              <Tooltip formatter={(v: number) => `${v}%`} />
-              <Bar dataKey="value">
-                {recycling.map((d) => <Cell key={d.name} fill={d.name === "United States" ? MUTED : BRAND} />)}
-                <LabelList dataKey="value" position="top" formatter={(v: number) => `${v}%`} fill="hsl(var(--primary-foreground))" fontSize={28} fontWeight={800} />
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-primary-foreground/60">Source: Aluminum can recycling rates — ABAL Brazil 2023; European Aluminium / Metal Packaging Europe 2022; The Aluminum Association 2023</p>
-      </Section>
+      <CountryComparison />
 
       <Section n={5} eyebrow="The missing link" title="The gap is domestic processing capacity." takeaway="Scrap is available. Buyers are nearby. Processing is the bottleneck.">
         <div className="grid grid-cols-3 gap-px bg-border border border-border text-center">
