@@ -7,6 +7,7 @@ import ScrapExportSankey from "@/components/ScrapExportSankey";
 import CountryComparison from "@/components/CountryComparison";
 import ScrapMarketScale from "@/components/ScrapMarketScale";
 import ValueChain from "@/components/ValueChain";
+import FinalOpportunity from "@/components/FinalOpportunity";
 
 const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
@@ -157,21 +158,7 @@ const AluminumOpportunity = () => (
 
       <ValueChain />
 
-      <Section n={7} eyebrow="Value stays in America" title="Birch keeps the value chain inside U.S. manufacturing." takeaway="Every pound processed here is margin, jobs and supply security kept at home.">
-        <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
-          <div className="bg-secondary p-8">
-            <p className="text-minimal text-muted-foreground mb-4">Today</p>
-            <p className="text-xl font-bold">U.S. scrap → Overseas smelter → Imported alloy → U.S. plant</p>
-            <p className="mt-4 text-sm text-muted-foreground">Freight twice · long lead times · tariff exposure</p>
-          </div>
-          <div className="bg-brand text-brand-foreground p-8">
-            <p className="text-minimal mb-4 opacity-70">With Birch</p>
-            <p className="text-xl font-bold">U.S. scrap → Birch, Alabama → U.S. plant</p>
-            <p className="mt-4 text-sm opacity-80">Regional supply · short lead times · domestic content</p>
-          </div>
-        </div>
-        <Source>Birch Aluminum, 2026</Source>
-      </Section>
+      <FinalOpportunity />
     </main>
     <Footer />
   </div>
