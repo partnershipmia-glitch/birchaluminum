@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrapExportSankey from "@/components/ScrapExportSankey";
 import CountryComparison from "@/components/CountryComparison";
+import ScrapMarketScale from "@/components/ScrapMarketScale";
 
 const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
@@ -142,6 +143,7 @@ const AluminumOpportunity = () => (
 
       <ScrapExportSankey />
 
+      <ScrapMarketScale />
       <CountryComparison />
 
       <Section n={5} eyebrow="The missing link" title="The gap is domestic processing capacity." takeaway="Scrap is available. Buyers are nearby. Processing is the bottleneck.">
