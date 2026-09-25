@@ -184,7 +184,7 @@ const Technology = () => {
             <div className="px-2"><Label>03 / Casting</Label><H2>FROM LIQUID METAL TO FINISHED INGOT — AUTOMATICALLY</H2></div>
             <Zoomable src={ingot.url} alt="Ingot casting and stacking" onOpen={setZoom} />
             <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {[["1M LB / WEEK", "Reference production scale"], ["~$1.15M", "Illustrative automation investment"], ["~2 YEARS", "Illustrative payback"]].map(([v, l]) => (
+              {[["1.5M LB / YEAR", "Reference production scale"], ["~$1.15M", "Illustrative automation investment"], ["~2 YEARS", "Illustrative payback"]].map(([v, l]) => (
                 <div key={l} className="bg-background p-6 sm:p-10">
                   <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3">{v}</p>
                   <p className="text-sm uppercase tracking-wider text-muted-foreground">{l}</p>
