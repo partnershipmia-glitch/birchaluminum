@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { Bar, BarChart, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, LabelList } from "recharts";
+import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis, LabelList } from "recharts";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ScrapExportSankey from "@/components/ScrapExportSankey";
 
 const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
