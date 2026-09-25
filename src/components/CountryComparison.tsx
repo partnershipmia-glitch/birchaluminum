@@ -4,29 +4,26 @@ import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
 type Row = {
   country: string;
   can: number | null; // beverage can recycling rate, %
-  recovered: number | null; // scrap recovered/recycled, thousand MT
   exp: number; // HS 7602 exports, $M 2024
   imp: number; // HS 7602 imports, $M 2024
 };
 
 // Trade: UN Comtrade via World Bank WITS, HS 760200, 2024 (USD)
 // Beverage can: Metal Packaging Europe & European Aluminium 2023 report; ABAL (Brazil); The Aluminum Association 2023 (USA)
-// Recovered: USGS MCS 2025 (U.S. secondary production from new + old scrap, 2024e)
 const rows: Row[] = [
-  { country: "USA", can: 43, recovered: 3600, exp: 3982, imp: 1334 },
-  { country: "Canada", can: null, recovered: null, exp: 1272, imp: 227 },
-  { country: "Mexico", can: null, recovered: null, exp: 754, imp: 265 },
-  { country: "Brazil", can: 97, recovered: null, exp: 88, imp: 311 },
-  { country: "Germany", can: 99, recovered: null, exp: 2213, imp: 1869 },
-  { country: "Finland", can: 99, recovered: null, exp: 136, imp: 11 },
-  { country: "Norway", can: 96, recovered: null, exp: 175, imp: 102 },
-  { country: "Belgium", can: 95, recovered: null, exp: 439, imp: 324 },
-  { country: "Italy", can: 94, recovered: null, exp: 400, imp: 1050 },
+  { country: "USA", can: 43, exp: 3982, imp: 1334 },
+  { country: "Canada", can: null, exp: 1272, imp: 227 },
+  { country: "Mexico", can: null, exp: 754, imp: 265 },
+  { country: "Brazil", can: 97, exp: 88, imp: 311 },
+  { country: "Germany", can: 99, exp: 2213, imp: 1869 },
+  { country: "Finland", can: 99, exp: 136, imp: 11 },
+  { country: "Norway", can: 96, exp: 175, imp: 102 },
+  { country: "Belgium", can: 95, exp: 439, imp: 324 },
+  { country: "Italy", can: 94, exp: 400, imp: 1050 },
 ];
 
 const cols: { key: keyof Row; label: string; fmt: (v: number) => string }[] = [
   { key: "can", label: "Beverage Can Recycling Rate", fmt: (v) => `${v}%` },
-  { key: "recovered", label: "Scrap Recovered / Recycled", fmt: (v) => `${(v / 1000).toFixed(1)}M MT` },
   { key: "exp", label: "Scrap Exports ($, HS 7602)", fmt: (v) => (v >= 1000 ? `$${(v / 1000).toFixed(2)}B` : `$${v}M`) },
   { key: "imp", label: "Scrap Imports ($, HS 7602)", fmt: (v) => (v >= 1000 ? `$${(v / 1000).toFixed(2)}B` : `$${v}M`) },
 ];
@@ -123,7 +120,7 @@ const CountryComparison = () => {
               </tbody>
             </table>
             <p className="mt-4 text-[11px] uppercase tracking-wider text-muted-foreground">
-              Sources: Trade — UN Comtrade / World Bank WITS, HS 7602 Aluminum Waste and Scrap, 2024 (USD). Scrap recovered — USGS Mineral Commodity Summaries 2025 (U.S., 2024e). N/A = no directly comparable verified figure.
+              Sources: Trade — UN Comtrade / World Bank WITS, HS 7602 Aluminum Waste and Scrap, 2024 (USD). N/A = no directly comparable verified figure.
             </p>
           </div>
         </div>
