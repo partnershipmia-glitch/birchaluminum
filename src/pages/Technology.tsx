@@ -147,7 +147,7 @@ const Technology = () => {
             <div className="px-2"><Label>01 / Scrap Preparation</Label><H2>FROM MIXED SCRAP TO CONTROLLED FEEDSTOCK</H2></div>
             <Zoomable src={separation.url} alt="Aluminum scrap separation — manual vs AI-powered" onOpen={setZoom} />
             <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {[["2–3×", "Faster processing"], ["+5–15%", "Metal recovery potential"], ["90–98%", "Target feedstock purity*"]].map(([v, l]) => (
+              {[["2–3×", "Faster processing"], ["+5–15%", "Metal recovery potential"], ["96–98%", "Target feedstock purity*"]].map(([v, l]) => (
                 <div key={l} className="bg-background p-6 sm:p-10">
                   <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-3">{v}</p>
                   <p className="text-sm uppercase tracking-wider text-muted-foreground">{l}</p>
