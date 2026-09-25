@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import InvestorOpportunity from "./pages/InvestorOpportunity";
 import MarketResearch from "./pages/MarketResearch";
+import AluminumOpportunity from "./pages/AluminumOpportunity";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/" element={<Index />} />
         <Route path="/investor-opportunity" element={<InvestorOpportunity />} />
         <Route path="/market-research" element={<MarketResearch />} />
+        <Route path="/aluminum-opportunity" element={<AluminumOpportunity />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<NotFound />} />

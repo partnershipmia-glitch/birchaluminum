@@ -7,6 +7,7 @@ import { deckUrl } from "@/lib/links";
 const sectionLinks = [
   { label: "Why Birch", href: "#why-birch" },
   { label: "Vision", href: "#vision" },
+  { label: "Opportunity", href: "/aluminum-opportunity" },
   { label: "Investors", href: "/investor-opportunity" },
 ];
 
