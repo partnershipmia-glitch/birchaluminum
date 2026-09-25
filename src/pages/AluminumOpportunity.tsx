@@ -110,21 +110,6 @@ const AluminumOpportunity = () => (
         <Source>USGS Mineral Commodity Summaries, Aluminum, 2025 (2024 estimates, approx. million metric tons)</Source>
       </Section>
 
-      <Section n={2} eyebrow="Scrap is already here" title="Recycled metal is already America's largest domestic source." takeaway="The raw material for U.S. alloy already exists — above ground." dark>
-        <div className="grid sm:grid-cols-3 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
-          {[
-            { v: "~3.3 Mt", l: "Aluminum recovered from U.S. scrap / year" },
-            { v: "5×", l: "Recycled vs. primary domestic output" },
-            { v: "95%", l: "Less energy than primary aluminum" },
-          ].map((s) => (
-            <div key={s.l} className="bg-primary p-8">
-              <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-3">{s.v}</p>
-              <p className="text-sm uppercase tracking-wider text-primary-foreground/70">{s.l}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-primary-foreground/60">Source: USGS MCS 2025; The Aluminum Association, 2024</p>
-      </Section>
 
       <Section n={3} eyebrow="Scrap leaves the country" title="Millions of tons of U.S. scrap are shipped overseas." takeaway="Exported scrap = exported jobs, margin and supply security.">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
