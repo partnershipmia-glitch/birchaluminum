@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrapExportSankey from "@/components/ScrapExportSankey";
 import CountryComparison from "@/components/CountryComparison";
 import ScrapMarketScale from "@/components/ScrapMarketScale";
+import ValueChain from "@/components/ValueChain";
 
 const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
@@ -37,14 +38,6 @@ const supply = [
 
 
 
-const flow = [
-  { step: "Scrap", sub: "Wheels · cast scrap" },
-  { step: "Sort & qualify", sub: "Chemistry screen" },
-  { step: "Melt", sub: "97% target recovery" },
-  { step: "Alloy", sub: "356 · 380 spec" },
-  { step: "Cast", sub: "Ingot · sow" },
-  { step: "U.S. buyers", sub: "Auto · die casters · Tier 1" },
-];
 
 const AluminumOpportunity = () => (
   <div className="min-h-screen">
@@ -162,23 +155,7 @@ const AluminumOpportunity = () => (
         <Source>Birch Aluminum synthesis of USGS 2025 and Census trade data</Source>
       </Section>
 
-      <Section n={6} eyebrow="What Birch does" title="Domestic scrap in. Specification-grade 356 and 380 out." takeaway="6M lbs/month of U.S.-made secondary alloy." dark>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
-          {flow.map((f, i) => (
-            <div key={f.step} className="bg-primary p-5 relative">
-              <p className="text-brand text-sm font-bold mb-2">{i + 1}</p>
-              <p className="text-lg font-bold">{f.step}</p>
-              <p className="text-xs uppercase text-primary-foreground/60 mt-1">{f.sub}</p>
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-3 gap-6 mt-10">
-          {[{ v: "6M", l: "lbs / month" }, { v: "97%", l: "target recovery" }, { v: "72M", l: "lbs / year" }].map((s) => (
-            <div key={s.l}><p className="text-4xl sm:text-6xl font-bold text-brand">{s.v}</p><p className="text-xs uppercase text-primary-foreground/60">{s.l}</p></div>
-          ))}
-        </div>
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-primary-foreground/60">Source: Birch Aluminum management planning case, 2026</p>
-      </Section>
+      <ValueChain />
 
       <Section n={7} eyebrow="Value stays in America" title="Birch keeps the value chain inside U.S. manufacturing." takeaway="Every pound processed here is margin, jobs and supply security kept at home.">
         <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
