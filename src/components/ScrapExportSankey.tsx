@@ -65,7 +65,7 @@ const ScrapExportSankey = () => {
           <svg viewBox={`0 0 ${W} ${H}`} className="w-full min-w-[640px] h-auto" aria-label="U.S. aluminum scrap exports by destination, 2024">
             <rect x={SRC_X - 16} y={TOP + (GAP * (data.length - 1)) / 2} width={16} height={usable} fill="hsl(var(--brand))" />
             <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">UNITED STATES</text>
-            <text x={SRC_X - 26} y={H / 2 + 10} textAnchor="end" fill="hsl(var(--brand))" fontSize="14" fontWeight="700">~2.05M MT · 2024</text>
+            <text x={SRC_X - 26} y={H / 2 + 10} textAnchor="end" fill="hsl(var(--brand))" fontSize="14" fontWeight="700">~2.05M MT</text>
             {links.map((l) => (
               <g key={l.name}>
                 <path
