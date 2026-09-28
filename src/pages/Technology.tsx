@@ -9,7 +9,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import siteLayout from "@/assets/tech-site-layout.png.asset.json";
-import separation from "@/assets/tech-separation.png.asset.json";
+import separation from "@/assets/tech-separation-v2.png";
 import charging from "@/assets/tech-charging.png.asset.json";
 import ingotUrl from "@/assets/tech-ingot-stacking-v5.png";
 import exhaust from "@/assets/tech-exhaust-treatment.png.asset.json";
