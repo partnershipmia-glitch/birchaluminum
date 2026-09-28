@@ -183,15 +183,7 @@ const Technology = () => {
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>03 / Casting</Label><H2>FROM LIQUID METAL TO FINISHED INGOT — AUTOMATICALLY</H2></div>
             <Zoomable src={ingotUrl} alt="Ingot casting and stacking" onOpen={setZoom} />
-            <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {[["1.5M LB / YEAR", "Reference production scale"], ["~$1.0M", "Projected automation investment"], ["~1 YEAR", "Projected payback"]].map(([v, l]) => (
-                <div key={l} className="bg-background p-6 sm:p-10">
-                  <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3">{v}</p>
-                  <p className="text-sm uppercase tracking-wider text-muted-foreground">{l}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-3 text-[11px] text-muted-foreground px-2">Projected operating case based on stated labor and automation assumptions. Actual economics depend on staffing, wages, production schedule, equipment scope and final vendor pricing.</p>
+          
           </div>
         </section>
 
