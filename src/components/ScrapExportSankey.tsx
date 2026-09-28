@@ -22,6 +22,7 @@ const W = 1000, H = 560, SRC_X = 170, DST_X = 700, GAP = 10, TOP = 20;
 
 const ScrapExportSankey = () => {
   const [mode, setMode] = useState<"t" | "v">("t");
+  const [hovered, setHovered] = useState<number | null>(null);
   const total = TOTAL[mode];
   const usable = H - TOP * 2 - GAP * (data.length - 1);
   const scale = usable / total;
@@ -64,7 +65,7 @@ const ScrapExportSankey = () => {
         <div className="w-full overflow-x-auto">
           <svg viewBox={`0 0 ${W} ${H}`} className="w-full min-w-[640px] h-auto" aria-label="U.S. aluminum scrap exports by destination, 2024">
             <rect x={SRC_X - 16} y={TOP + (GAP * (data.length - 1)) / 2} width={16} height={usable} fill="hsl(var(--brand))" />
-            <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">UNITED STATES</text>
+            <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">United States</text>
             <text x={SRC_X - 26} y={H / 2 + 10} textAnchor="end" fill="hsl(var(--brand))" fontSize="14" fontWeight="700">~2.05M MT</text>
             {links.map((l) => (
               <g key={l.name}>
