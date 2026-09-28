@@ -3,10 +3,21 @@ const stats = [
   {
     value: "Alabama",
     label: "Growing industrial state",
-    description: "Regional production cuts freight, lead times and import dependence for customers.\n40% cheaper utilities.\nLower pay rate.\nNO UNIONS.",
+    bullets: [
+      "Regional production cuts freight, lead times and import dependence for customers.",
+      "40% cheaper utilities.",
+      "Lower pay rate.",
+      "NO UNIONS.",
+    ],
   },
   { value: "Signed LOI", label: "from BUYERS, brokers" },
   { value: "Signed LOI", label: "from scrap suppliers" },
+];
+
+const takeaways = [
+  "Customers begging for local.",
+  "Reliable.",
+  "Competitive supply.",
 ];
 
 const WhyMarket = () => {
@@ -25,20 +36,28 @@ const WhyMarket = () => {
                 {s.value}
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
-              {s.description && (
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{s.description}</p>
+              {s.bullets && (
+                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex gap-2">
+                      <span className="text-brand mt-px">•</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           ))}
         </div>
 
-        <p className="mt-10 text-2xl sm:text-4xl font-bold tracking-tight leading-tight">
-          Customers begging for local.
-          <br />
-          Reliable.
-          <br />
-          <span className="text-brand">Competitive supply.</span>
-        </p>
+        <ul className="mt-10 space-y-2 text-2xl sm:text-4xl font-bold tracking-tight leading-tight">
+          {takeaways.map((t, i) => (
+            <li key={t} className={`flex items-start gap-3 ${i === takeaways.length - 1 ? "text-brand" : ""}`}>
+              <span className={`mt-2 sm:mt-3 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 flex-shrink-0 ${i === takeaways.length - 1 ? "bg-brand" : "bg-foreground"}`} />
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
