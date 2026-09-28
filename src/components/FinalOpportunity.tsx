@@ -79,10 +79,10 @@ const FinalOpportunity = () => (
           ))}
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+        <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
           {metrics.map((m) => (
             <div key={m.l}>
-              <p className="text-4xl sm:text-5xl font-bold text-brand leading-none">{m.v}</p>
+              <p className="break-words text-4xl sm:text-5xl font-bold text-brand leading-none">{m.v}</p>
               <p className="mt-2 text-sm uppercase tracking-wider">{m.l}</p>
               {m.note && <p className="text-[11px] uppercase tracking-wider text-primary-foreground/50 mt-1">{m.note}</p>}
             </div>

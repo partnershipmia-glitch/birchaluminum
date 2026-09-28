@@ -79,14 +79,14 @@ const CountryComparison = () => {
                 );
               })}
             </div>
-            <p className="mt-4 text-[11px] uppercase tracking-wider text-muted-foreground">
+            <p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">
               Source: Metal Packaging Europe & European Aluminium, 2023 data (Germany, Finland, Norway, Belgium, Italy); ABAL, Brazil; The Aluminum Association, 2023 (USA). Beverage cans only — not total aluminum recycling.
             </p>
           </div>
 
           {/* Table */}
-          <div className="lg:col-span-3 overflow-x-auto">
-            <table className="w-full text-sm border border-border">
+          <div className="lg:col-span-3 overflow-x-auto pb-2">
+            <table className="w-full min-w-[620px] text-sm border border-border">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="text-left p-3">
@@ -96,7 +96,7 @@ const CountryComparison = () => {
                   </th>
                   {cols.map((c) => (
                     <th key={c.key} className="text-right p-3 align-bottom">
-                      <button onClick={() => toggle(c.key)} className="inline-flex items-center gap-1 font-bold uppercase text-[10px] tracking-wider text-right leading-tight">
+                       <button onClick={() => toggle(c.key)} className="inline-flex items-center gap-1 font-bold uppercase text-xs tracking-wider text-right leading-tight">
                         {c.label} <Icon k={c.key} />
                       </button>
                     </th>
@@ -119,7 +119,7 @@ const CountryComparison = () => {
                 ))}
               </tbody>
             </table>
-            <p className="mt-4 text-[11px] uppercase tracking-wider text-muted-foreground">
+            <p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">
               Sources: Trade — UN Comtrade / World Bank WITS, HS 7602 Aluminum Waste and Scrap, 2024 (USD). N/A = no directly comparable verified figure.
             </p>
           </div>

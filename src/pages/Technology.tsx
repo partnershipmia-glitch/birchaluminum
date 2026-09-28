@@ -164,7 +164,7 @@ const Technology = () => {
             <div className="px-2"><Label>02 / Melting</Label><H2>THE FURNACE BECOMES A CONTROLLED DATA SYSTEM</H2></div>
             <Zoomable src={charging.url} alt="Furnace operation and charging" onOpen={setZoom} />
             <div className="mt-10 px-2"><Flow steps={["Charge", "Temperature", "Melt Level", "Chemistry", "Skimming", "Pour"]} /></div>
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border border border-border">
+            <div className="mt-8 grid grid-cols-1 min-[440px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border border border-border">
               {[[Brain, "AI Charge Recommendation"], [Thermometer, "Real-Time Temperature"], [Gauge, "Melt-Level Monitoring"], [Droplet, "Automated Skimming"], [Wrench, "Predictive Maintenance"], [BarChart3, "Production Optimization"]].map(([Icon, l]) => {
                 const I = Icon as typeof Brain;
                 return (
@@ -240,7 +240,7 @@ const Technology = () => {
             <H2>ONE PLANT. ONE DATA LOOP.</H2>
             <Flow dark steps={["Scrap Identification", "AI Separation", "Charge Optimization", "Melt Monitoring", "Alloy Control", "Automated Casting", "Robotic Stacking", "Autonomous Handling", "Inventory Data", "Customer Shipment"]} />
             <div className="my-6 flex justify-center text-brand text-3xl font-bold">↕</div>
-            <div className="border border-primary-foreground/25 p-5 text-center font-bold tracking-wider text-sm sm:text-base">
+            <div className="border border-primary-foreground/25 p-5 text-center font-bold tracking-wider text-xs sm:text-base break-words">
               QUALITY + ENERGY + MAINTENANCE + EMISSIONS + PRODUCTION DATA
             </div>
             <div className="my-4 flex justify-center text-brand text-3xl font-bold">↓</div>

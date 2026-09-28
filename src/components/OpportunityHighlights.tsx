@@ -20,10 +20,10 @@ const OpportunityHighlights = () => {
           Key metrics for the first automated alloy facility in Decatur, Alabama.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border mb-10">
+        <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border mb-10">
           {highlights.map((h) => (
-            <div key={h.label} className="bg-background p-6 sm:p-8">
-              <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
+            <div key={h.label} className="min-w-0 bg-background p-6 sm:p-8">
+              <p className="break-words text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
                 {h.value}
               </p>
               <p className="text-[11px] sm:text-xs uppercase tracking-wider text-muted-foreground">

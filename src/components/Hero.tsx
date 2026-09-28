@@ -38,7 +38,7 @@ const Hero = () => {
                 <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
                   {f.value}
                 </p>
-                <p className="text-[11px] sm:text-xs uppercase tracking-wider text-primary-foreground/60 whitespace-pre-line">
+                <p className="text-xs uppercase tracking-wider text-primary-foreground/60 whitespace-pre-line">
                   {f.label}
                 </p>
               </div>

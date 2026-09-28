@@ -70,7 +70,7 @@ const Auth = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-background px-4 py-16">
-      <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 shadow-sm">
+      <div className="w-full max-w-md rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm">
         <h1 className="text-2xl font-bold text-foreground">
           {sessionEmail ? "Account" : mode === "signin" ? "Sign in" : "Create account"}
         </h1>
@@ -118,7 +118,7 @@ const Auth = () => {
               </Button>
             </form>
 
-            <div className="mt-4 flex items-center justify-between text-sm">
+            <div className="mt-4 flex flex-col items-start gap-3 min-[380px]:flex-row min-[380px]:items-center min-[380px]:justify-between text-sm">
               <button
                 type="button"
                 className="text-muted-foreground underline-offset-4 hover:underline"

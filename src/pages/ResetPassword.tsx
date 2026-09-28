@@ -26,7 +26,7 @@ const ResetPassword = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-background px-4 py-16">
-      <div className="w-full max-w-md rounded-xl border border-border bg-card p-8 shadow-sm">
+      <div className="w-full max-w-md rounded-xl border border-border bg-card p-6 sm:p-8 shadow-sm">
         <h1 className="text-2xl font-bold text-foreground">Set a new password</h1>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div className="space-y-2">
