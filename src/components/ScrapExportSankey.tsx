@@ -84,7 +84,7 @@ const ScrapExportSankey = () => {
                 </path>
                 <rect
                   x={DST_X}
-                  y={l.t}
+                  y={l.yTop}
                   width={10}
                   height={l.h}
                   fill="currentColor"
@@ -93,7 +93,7 @@ const ScrapExportSankey = () => {
                 />
                 <text
                   x={DST_X + 20}
-                  y={l.t + l.h / 2 + 6}
+                  y={l.yTop + l.h / 2 + 6}
                   fill="currentColor"
                   fontSize="18"
                   fontWeight="700"
