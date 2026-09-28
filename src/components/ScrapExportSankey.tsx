@@ -103,7 +103,7 @@ const ScrapExportSankey = () => {
                   {l.name}
                   <tspan fill="hsl(var(--brand))" dx="10">{fmt(l)}</tspan>
                   <tspan fill="hsl(var(--brand))" dx="12" fontSize="42" fontWeight="800">{Math.round((l[mode] / total) * 100)}%</tspan>
-                </tspan></text>
+                </text>
               </g>
             ))}
           </svg>
