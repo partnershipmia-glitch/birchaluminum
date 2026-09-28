@@ -102,7 +102,15 @@ const ScrapExportSankey = () => {
                 >
                   {l.name}
                   <tspan fill="hsl(var(--brand))" dx="10">{fmt(l)}</tspan>
-                  <tspan fill="hsl(var(--brand))" dx="12" fontSize="42" fontWeight="800">{Math.round((l[mode] / total) * 100)}%</tspan>
+                  <tspan
+                    fill={hovered === l.i ? "hsl(var(--brand))" : "currentColor"}
+                    dx="12"
+                    fontWeight="800"
+                    opacity={hovered === l.i ? 1 : 0.5}
+                    style={{ fontSize: hovered === l.i ? "42px" : "14px", transition: "font-size 0.2s ease, opacity 0.25s ease, fill 0.25s ease" }}
+                  >
+                    {Math.round((l[mode] / total) * 100)}%
+                  </tspan>
                 </text>
               </g>
             ))}
