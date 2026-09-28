@@ -22,6 +22,7 @@ const W = 1000, H = 560, SRC_X = 170, DST_X = 700, GAP = 10, TOP = 20;
 
 const ScrapExportSankey = () => {
   const [mode, setMode] = useState<"t" | "v">("t");
+  const [hovered, setHovered] = useState<number | null>(null);
   const total = TOTAL[mode];
   const usable = H - TOP * 2 - GAP * (data.length - 1);
   const scale = usable / total;
@@ -30,12 +31,12 @@ const ScrapExportSankey = () => {
   let dstY = TOP;
   const links = data.map((d, i) => {
     const h = d[mode] * scale;
-    const s = srcY, t = dstY;
+    const s = srcY, yTop = dstY;
     srcY += h;
     dstY += h + GAP;
     const mid = (SRC_X + DST_X) / 2;
-    const path = `M${SRC_X},${s} C${mid},${s} ${mid},${t} ${DST_X},${t} L${DST_X},${t + h} C${mid},${t + h} ${mid},${s + h} ${SRC_X},${s + h} Z`;
-    return { ...d, h, t, path, i };
+    const path = `M${SRC_X},${s} C${mid},${s} ${mid},${yTop} ${DST_X},${yTop} L${DST_X},${yTop + h} C${mid},${yTop + h} ${mid},${s + h} ${SRC_X},${s + h} Z`;
+    return { ...d, h, yTop, path, i };
   });
 
   const fmt = (d: { t: number; v: number }) =>
@@ -64,24 +65,44 @@ const ScrapExportSankey = () => {
         <div className="w-full overflow-x-auto">
           <svg viewBox={`0 0 ${W} ${H}`} className="w-full min-w-[640px] h-auto" aria-label="U.S. aluminum scrap exports by destination, 2024">
             <rect x={SRC_X - 16} y={TOP + (GAP * (data.length - 1)) / 2} width={16} height={usable} fill="hsl(var(--brand))" />
-            <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">UNITED STATES</text>
+            <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">United States</text>
             <text x={SRC_X - 26} y={H / 2 + 10} textAnchor="end" fill="hsl(var(--brand))" fontSize="14" fontWeight="700">~2.05M MT</text>
             {links.map((l) => (
-              <g key={l.name}>
+              <g
+                key={l.name}
+                onMouseEnter={() => setHovered(l.i)}
+                onMouseLeave={() => setHovered(null)}
+                style={{ cursor: "pointer" }}
+              >
                 <path
                   d={l.path}
                   fill={l.name === "Other" ? "hsl(var(--metallic))" : "hsl(var(--brand))"}
-                  opacity={l.name === "Other" ? 0.35 : 0.85 - l.i * 0.07}
-                  className="transition-all duration-700 hover:opacity-100"
-                  style={{ transition: "d 0.7s ease" }}
+                  opacity={hovered === null ? (l.name === "Other" ? 0.35 : 0.85 - l.i * 0.07) : hovered === l.i ? 1 : 0.12}
+                  style={{ transition: "opacity 0.25s ease, d 0.7s ease" }}
                 >
                   <title>{`${l.name}: ${fmt(l)}`}</title>
                 </path>
-                <rect x={DST_X} y={l.t} width={10} height={l.h} fill="currentColor" style={{ transition: "all 0.7s ease" }} />
-                <text x={DST_X + 20} y={l.t + l.h / 2 + 6} fill="currentColor" fontSize="18" fontWeight="700" style={{ transition: "all 0.7s ease" }}>
+                <rect
+                  x={DST_X}
+                  y={l.yTop}
+                  width={10}
+                  height={l.h}
+                  fill="currentColor"
+                  opacity={hovered === null || hovered === l.i ? 1 : 0.25}
+                  style={{ transition: "opacity 0.25s ease, all 0.7s ease" }}
+                />
+                <text
+                  x={DST_X + 20}
+                  y={l.yTop + l.h / 2 + 6}
+                  fill="currentColor"
+                  fontSize="18"
+                  fontWeight="700"
+                  opacity={hovered === null || hovered === l.i ? 1 : 0.25}
+                  style={{ transition: "opacity 0.25s ease, all 0.7s ease" }}
+                >
                   {l.name}
                   <tspan fill="hsl(var(--brand))" dx="10">{fmt(l)}</tspan>
-                  <tspan fill="currentColor" opacity="0.5" dx="8" fontSize="14">{Math.round((l[mode] / total) * 100)}%</tspan>
+                  <tspan fill="hsl(var(--brand))" dx="12" fontSize="42" fontWeight="800">{Math.round((l[mode] / total) * 100)}%</tspan>
                 </text>
               </g>
             ))}
