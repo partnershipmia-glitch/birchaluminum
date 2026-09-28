@@ -31,12 +31,12 @@ const ScrapExportSankey = () => {
   let dstY = TOP;
   const links = data.map((d, i) => {
     const h = d[mode] * scale;
-    const s = srcY, t = dstY;
+    const s = srcY, yTop = dstY;
     srcY += h;
     dstY += h + GAP;
     const mid = (SRC_X + DST_X) / 2;
-    const path = `M${SRC_X},${s} C${mid},${s} ${mid},${t} ${DST_X},${t} L${DST_X},${t + h} C${mid},${t + h} ${mid},${s + h} ${SRC_X},${s + h} Z`;
-    return { ...d, h, t, path, i };
+    const path = `M${SRC_X},${s} C${mid},${s} ${mid},${yTop} ${DST_X},${yTop} L${DST_X},${yTop + h} C${mid},${yTop + h} ${mid},${s + h} ${SRC_X},${s + h} Z`;
+    return { ...d, h, yTop, path, i };
   });
 
   const fmt = (d: { t: number; v: number }) =>
