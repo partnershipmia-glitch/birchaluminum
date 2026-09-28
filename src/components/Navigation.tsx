@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 import { deckUrl } from "@/lib/links";
@@ -12,7 +11,6 @@ const sectionLinks = [
 ];
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const onHome = location.pathname === "/";
 
@@ -58,25 +56,24 @@ const Navigation = () => {
           </a>
         </div>
 
-        <button
-          className="md:hidden p-2"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+        <a
+          href={deckUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:hidden inline-flex items-center gap-1.5 bg-brand text-brand-foreground px-3 py-2 text-xs font-bold"
         >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
+          <ArrowRight className="w-3.5 h-3.5" /> View Deck
+        </a>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
-          <div className="container mx-auto px-5 py-5 space-y-4">
+      <div className="md:hidden border-t border-border bg-background">
+          <div className="container mx-auto grid grid-cols-2 divide-x divide-y divide-border border-x border-border px-0">
             {navLinks.map((link) =>
               link.to.startsWith("#") ? (
                 <a
                   key={link.label}
                   href={link.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-minimal text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </a>
@@ -84,31 +81,14 @@ const Navigation = () => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-minimal text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </Link>
               )
             )}
-            <Link
-              to="/market-research"
-              onClick={() => setIsOpen(false)}
-              className="block text-minimal text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Market Research
-            </Link>
-            <a
-              href={deckUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-brand text-brand-foreground px-5 py-3 text-sm font-bold mt-4 hover:opacity-90 transition-opacity"
-            >
-              <ArrowRight className="w-4 h-4" /> View Deck
-            </a>
           </div>
-        </div>
-      )}
+      </div>
     </nav>
   );
 };

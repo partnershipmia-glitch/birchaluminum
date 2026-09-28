@@ -31,11 +31,11 @@ const ScrapMarketScale = () => (
         {exporters.map((e) => {
           const us = e.name === "United States";
           return (
-            <div key={e.name} className="grid grid-cols-[110px_1fr] sm:grid-cols-[160px_1fr] items-center gap-4">
+            <div key={e.name} className="grid grid-cols-[88px_minmax(0,1fr)] sm:grid-cols-[160px_1fr] items-center gap-3 sm:gap-4">
               <span className={`uppercase font-bold ${us ? "text-lg" : "text-sm text-muted-foreground"}`}>{e.name}</span>
-              <div className="flex items-center gap-3">
+              <div className="flex min-w-0 items-center gap-2 sm:gap-3">
                 <div className={`${us ? "h-12 bg-brand" : "h-8 bg-metallic"}`} style={{ width: `${(e.kt / MAX) * 80}%` }} />
-                <span className={`font-bold whitespace-nowrap ${us ? "text-2xl" : ""}`}>{fmt(e.kt)}</span>
+                <span className={`font-bold whitespace-nowrap ${us ? "text-xl sm:text-2xl" : "text-sm sm:text-base"}`}>{fmt(e.kt)}</span>
               </div>
             </div>
           );

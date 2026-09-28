@@ -17,10 +17,10 @@ const Footer = () => {
             <p className="font-medium mb-1">Alex Bereza</p>
             <a
               href="mailto:birchfamilyllcfl@gmail.com"
-              className="flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2"
+              className="flex min-w-0 items-center gap-2 text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors mb-2"
             >
               <Mail className="w-3.5 h-3.5" />
-              birchfamilyllcfl@gmail.com
+              <span className="break-all">birchfamilyllcfl@gmail.com</span>
             </a>
             <a
               href="https://www.linkedin.com/in/alex-bereza-6394b6357/"

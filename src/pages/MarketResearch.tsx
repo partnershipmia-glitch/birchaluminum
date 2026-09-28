@@ -74,10 +74,10 @@ const MarketResearch = () => (
 
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+          <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             {marketStats.map((item) => (
               <div key={item.label} className="bg-background p-5 sm:p-8">
-                <p className="text-3xl sm:text-5xl font-bold text-brand leading-none mb-3">{item.value}</p>
+                <p className="break-words text-3xl sm:text-5xl font-bold text-brand leading-none mb-3">{item.value}</p>
                 <p className="text-xs sm:text-sm uppercase text-muted-foreground whitespace-pre-line">{item.label}</p>
               </div>
             ))}
@@ -117,7 +117,7 @@ const MarketResearch = () => (
         <div className="container mx-auto px-5 sm:px-6">
           <p className="text-minimal text-brand mb-4">Secondary Aluminum Production Case</p>
           <h2 className="text-3xl sm:text-5xl font-bold mb-10">From qualified scrap to specification-grade alloy.</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+          <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {operatingCase.map((item) => (
               <div key={item.label} className="bg-background p-5 sm:p-8">
                 <p className="text-3xl sm:text-5xl font-bold text-brand mb-2">{item.value}</p>
@@ -136,7 +136,7 @@ const MarketResearch = () => (
           <p className="text-primary-foreground/70 mb-10 max-w-3xl">
             The project is designed to validate secondary alloy production before evaluating specialty alloys, customer-specific formats or downstream manufacturing opportunities.
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
+          <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
             {expansion.map((item) => (
               <div key={item.label} className="bg-primary p-5 sm:p-8">
                 <p className="text-3xl sm:text-5xl font-bold text-brand mb-2">{item.value}</p>

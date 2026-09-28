@@ -141,7 +141,7 @@ const AluminumOpportunity = () => (
       <CountryComparison />
 
       <Section n={5} eyebrow="The missing link" title="The gap is domestic processing capacity." takeaway="Scrap is available. Buyers are nearby. Processing is the bottleneck.">
-        <div className="grid grid-cols-3 gap-px bg-border border border-border text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border border border-border text-center">
           {[
             { t: "Scrap supply", s: "Abundant", ok: true },
             { t: "Processing", s: "Missing capacity", ok: false },
