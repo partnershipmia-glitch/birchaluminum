@@ -68,22 +68,42 @@ const ScrapExportSankey = () => {
             <text x={SRC_X - 26} y={H / 2 - 14} textAnchor="end" fill="currentColor" fontSize="22" fontWeight="800">United States</text>
             <text x={SRC_X - 26} y={H / 2 + 10} textAnchor="end" fill="hsl(var(--brand))" fontSize="14" fontWeight="700">~2.05M MT</text>
             {links.map((l) => (
-              <g key={l.name}>
+              <g
+                key={l.name}
+                onMouseEnter={() => setHovered(l.i)}
+                onMouseLeave={() => setHovered(null)}
+                style={{ cursor: "pointer" }}
+              >
                 <path
                   d={l.path}
                   fill={l.name === "Other" ? "hsl(var(--metallic))" : "hsl(var(--brand))"}
-                  opacity={l.name === "Other" ? 0.35 : 0.85 - l.i * 0.07}
-                  className="transition-all duration-700 hover:opacity-100"
-                  style={{ transition: "d 0.7s ease" }}
+                  opacity={hovered === null ? (l.name === "Other" ? 0.35 : 0.85 - l.i * 0.07) : hovered === l.i ? 1 : 0.12}
+                  style={{ transition: "opacity 0.25s ease, d 0.7s ease" }}
                 >
                   <title>{`${l.name}: ${fmt(l)}`}</title>
                 </path>
-                <rect x={DST_X} y={l.t} width={10} height={l.h} fill="currentColor" style={{ transition: "all 0.7s ease" }} />
-                <text x={DST_X + 20} y={l.t + l.h / 2 + 6} fill="currentColor" fontSize="18" fontWeight="700" style={{ transition: "all 0.7s ease" }}>
+                <rect
+                  x={DST_X}
+                  y={l.t}
+                  width={10}
+                  height={l.h}
+                  fill="currentColor"
+                  opacity={hovered === null || hovered === l.i ? 1 : 0.25}
+                  style={{ transition: "opacity 0.25s ease, all 0.7s ease" }}
+                />
+                <text
+                  x={DST_X + 20}
+                  y={l.t + l.h / 2 + 6}
+                  fill="currentColor"
+                  fontSize="18"
+                  fontWeight="700"
+                  opacity={hovered === null || hovered === l.i ? 1 : 0.25}
+                  style={{ transition: "opacity 0.25s ease, all 0.7s ease" }}
+                >
                   {l.name}
                   <tspan fill="hsl(var(--brand))" dx="10">{fmt(l)}</tspan>
-                  <tspan fill="currentColor" opacity="0.5" dx="8" fontSize="14">{Math.round((l[mode] / total) * 100)}%</tspan>
-                </text>
+                  <tspan fill="hsl(var(--brand))" dx="12" fontSize="42" fontWeight="800">{Math.round((l[mode] / total) * 100)}%</tspan>
+                </tspan></text>
               </g>
             ))}
           </svg>
