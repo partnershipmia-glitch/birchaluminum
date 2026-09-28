@@ -3,10 +3,21 @@ const stats = [
   {
     value: "Alabama",
     label: "Growing industrial state",
-    description: "Regional production cuts freight, lead times and import dependence for customers.\n40% cheaper utilities.\nLower pay rate.\nNO UNIONS.",
+    bullets: [
+      "Regional production cuts freight, lead times and import dependence for customers.",
+      "40% cheaper utilities.",
+      "Lower pay rate.",
+      "NO UNIONS.",
+    ],
   },
   { value: "Signed LOI", label: "from BUYERS, brokers" },
   { value: "Signed LOI", label: "from scrap suppliers" },
+];
+
+const takeaways = [
+  "Customers begging for local.",
+  "Reliable.",
+  "Competitive supply.",
 ];
 
 const WhyMarket = () => {
