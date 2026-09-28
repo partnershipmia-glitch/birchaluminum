@@ -8,7 +8,6 @@ const sectionLinks = [
   { label: "Why Birch", href: "/technology" },
   { label: "Vision", href: "#vision" },
   { label: "Opportunity", href: "/aluminum-opportunity" },
-  { label: "Technology", href: "/technology" },
   { label: "Investors", href: "/investor-opportunity" },
 ];
 
