@@ -8,7 +8,6 @@ const cards = [
 const metrics = [
   { v: "$17.5M", l: "Capital Raise", note: "Target" },
   { v: "15 Months", l: "Target to Production", note: "Projected" },
-  { v: "SIGNED", l: "Feedstock & Customer LOIs", note: "Non-binding" },
 ];
 
 const InvestorClosing = () => (
