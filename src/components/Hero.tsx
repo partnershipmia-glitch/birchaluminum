@@ -3,7 +3,7 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 const facts = [
   { value: "50% import tariffs", label: "support local producers" },
   { value: "97% recovery", label: "Metal recovery" },
-  { value: "6 million pounds", label: "throughput\n356, 380 alloys\nTarget products" },
+  { value: "6 million pounds", label: "throughput\nTarget products" },
 ];
 
 const Hero = () => {
