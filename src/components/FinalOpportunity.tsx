@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import { deckUrl } from "@/lib/links";
 
 const today = ["Collection", "Trading / Export"];
 const birch = ["Domestic Sorting", "Domestic Processing", "Domestic Melting", "356 / 380 Alloy", "Finished Ingot"];
@@ -93,14 +91,6 @@ const FinalOpportunity = () => (
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-14">
-          <a
-            href={deckUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-8 py-4 font-bold uppercase tracking-wider hover:opacity-90 transition-opacity"
-          >
-            <ArrowRight className="w-5 h-5" /> View Investor Deck
-          </a>
           <a
             href="mailto:birchfamilyllcfl@gmail.com?subject=Data%20Room%20Access%20Request"
             className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-8 py-4 font-bold uppercase tracking-wider hover:border-brand hover:text-brand transition-colors"
