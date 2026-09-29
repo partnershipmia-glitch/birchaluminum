@@ -4,7 +4,6 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import FacilityReel from "@/components/FacilityReel";
-import { deckUrl } from "@/lib/links";
 
 const marketStats = [
   { value: "Southeast U.S.", label: "Target regional industrial market" },
