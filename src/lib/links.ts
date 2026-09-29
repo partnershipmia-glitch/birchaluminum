@@ -24,15 +24,15 @@ export const callUrl = compose(
 
 export const customerInquiryUrl = (f: {
   company: string;
-  contact: string;
-  email: string;
+  name: string;
+  address: string;
   phone: string;
+  contactTime: string;
   alloy: string;
   form: string;
   monthly: string;
-  notes: string;
 }) =>
   compose(
     "Supply Inquiry - Birch Aluminum",
-    `Hello Birch Aluminum Team,\n\nCompany: ${f.company}\nContact: ${f.contact}\nEmail: ${f.email}\nPhone: ${f.phone}\n\nAlloy: ${f.alloy}\nProduct form: ${f.form}\nMonthly consumption: ${f.monthly}\n\nSpecification / notes:\n${f.notes || "-"}`
+    `Hello Birch Aluminum Team,\n\nCompany: ${f.company}\nName: ${f.name}\nAddress: ${f.address || "-"}\nPhone: ${f.phone || "-"}\nBetter time to contact: ${f.contactTime || "-"}\n\nAlloy: ${f.alloy}\nProduct form: ${f.form}\nMonthly consumption: ${f.monthly}`
   );
