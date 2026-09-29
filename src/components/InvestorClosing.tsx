@@ -14,7 +14,7 @@ const metrics = [
 const InvestorClosing = () => (
   <section className="section-padding bg-primary text-primary-foreground">
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-      <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-4">THE METAL IS ALREADY HERE.</h2>
+      <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-4">THE METAL IS ALREADY.</h2>
       <p className="text-2xl sm:text-4xl font-bold text-brand leading-tight mb-14">
         WE ARE BUILDING THE CAPACITY TO PROCESS MORE OF IT HERE.
       </p>
@@ -22,7 +22,7 @@ const InvestorClosing = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
         {cards.map((c) => (
           <div key={c.t} className="bg-primary p-6">
-            <p className="text-brand font-bold uppercase tracking-wider mb-3">{c.t}</p>
+            <p className="text-brand font-bold tracking-wider mb-3">{c.t}</p>
             <p className="text-primary-foreground/80">{c.d}</p>
           </div>
         ))}
