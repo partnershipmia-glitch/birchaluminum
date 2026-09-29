@@ -23,7 +23,7 @@ const Vision = () => {
   return (
     <section id="vision" className="section-padding bg-secondary">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand mb-4">The Bigger Vision</p>
+        <p className="inline-block bg-foreground text-brand text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 mb-4">The Bigger Vision</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-10">
           One plant is the start.
           <br />
