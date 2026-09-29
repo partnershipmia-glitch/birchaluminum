@@ -42,6 +42,7 @@ const Investors = () => {
         <PhotoBand />
         <FacilityReel />
         <Financials />
+        <InvestorClosing />
       </main>
       <Footer />
     </div>
