@@ -46,6 +46,4 @@ const FinalOpportunity = () => (
         </div>
       </div>
     </section>
-
-
-export default FinalOpportunity;
+);
