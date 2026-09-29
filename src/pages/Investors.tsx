@@ -10,6 +10,7 @@ import FacilityReel from "@/components/FacilityReel";
 import UseOfFunds from "@/components/UseOfFunds";
 import Vision from "@/components/Vision";
 import Financials from "@/components/Financials";
+import InvestorClosing from "@/components/InvestorClosing";
 import Footer from "@/components/Footer";
 
 const title = "Birch Aluminum | Investor Overview — U.S. Secondary Alloy Platform";
