@@ -9,21 +9,21 @@ const stats = [
       "NO UNIONS.",
     ],
   },
-  { value: "Buyers secured", label: "New buyers and brokers, auto part makers, Tier 1 customers", dark: true },
+  { value: "Buyers secured", label: "Buyers and brokers, auto part makers, Tier 1 customers", dark: true },
   { value: "Offtake secured", label: "Scrap suppliers", dark: true },
 ];
 
 const takeaways = [
   "Customers need local, reliable supply.",
   "Tariffs reward the producer who supplies it locally.",
-  "Investing here means owning that supply.",
+  "Investing here means investing in reshoring production.",
 ];
 
 const WhyMarket = () => {
   return (
     <section id="market" className="section-padding bg-background">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="inline-block bg-foreground text-brand text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 mb-4">US market already exists; tariffs support the US market</p>
+        <p className="inline-block bg-foreground text-brand text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 mb-4">US market already exists; tariffs support high margin now</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
           The US Supply Gap Is Already Here.
         </h2>
