@@ -1,5 +1,5 @@
 const stats = [
-  { value: "13 billion pounds/year", label: "U.S. market size" },
+  { lines: ["13 billion", "pounds/year"], label: "U.S. market size", compact: true },
   {
     value: "Alabama",
     label: "Growing industrial state",
@@ -31,9 +31,15 @@ const WhyMarket = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {stats.map((s) => (
-            <div key={s.label} className="bg-background p-6 sm:p-10">
-              <p className={`text-4xl sm:text-5xl font-bold leading-none mb-3 break-words ${s.dark ? "text-foreground" : "text-brand"}`}>
-                {s.value}
+            <div key={s.label} className={`bg-background p-6 sm:p-8 ${s.bullets ? "" : "text-center"}`}>
+              <p className={`font-bold leading-none mb-3 ${s.compact ? "text-3xl sm:text-4xl whitespace-nowrap" : "text-4xl sm:text-5xl"} ${s.dark ? "text-foreground" : "text-brand"}`}>
+                {s.lines
+                  ? s.lines.map((line) => (
+                      <span key={line} className="block">
+                        {line}
+                      </span>
+                    ))
+                  : s.value}
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
               {s.bullets && (
