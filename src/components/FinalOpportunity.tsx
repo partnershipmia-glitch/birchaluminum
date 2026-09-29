@@ -13,22 +13,9 @@ const Step = ({ t, strong, hl }: { t: string; strong?: boolean; hl?: boolean }) 
 );
 const Down = () => <div className="text-center text-brand font-bold leading-none py-1">↓</div>;
 
-const cards = [
-  { t: "Domestic Feedstock", d: "Existing U.S. aluminum scrap market" },
-  { t: "Domestic Demand", d: "Automotive + industrial customers" },
-  { t: "Value Creation", d: "Scrap → specification-grade alloy" },
-  { t: "Scalability", d: "Additional furnace and processing capacity as demand grows" },
-];
-
-const metrics = [
-  { v: "$17.5M", l: "Capital Raise", note: "Target" },
-  { v: "15 Months", l: "Target to Production", note: "Projected" },
-  { v: "356 + 380", l: "Initial Alloy Focus" },
-];
 
 const FinalOpportunity = () => (
-  <>
-    <section className="section-padding bg-secondary border-b border-border">
+  <section className="section-padding bg-secondary border-b border-border">
       <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
         <p className="text-minimal text-brand mb-3">Before / After</p>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-12">THE OPPORTUNITY</h2>
