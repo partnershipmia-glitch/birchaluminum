@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
-import { deckUrl } from "@/lib/links";
 
 const sectionLinks = [
   { label: "Why Birch", href: "/technology" },
@@ -45,6 +44,7 @@ const Navigation = () => {
               </Link>
             )
           )}
+        </div>
       </div>
 
       <div className="md:hidden border-t border-border bg-background">
