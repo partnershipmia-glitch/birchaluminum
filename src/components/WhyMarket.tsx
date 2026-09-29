@@ -4,20 +4,19 @@ const stats = [
     value: "Alabama",
     label: "Growing industrial state",
     bullets: [
-      "Regional production cuts freight, lead times and import dependence for customers.",
       "40% cheaper utilities.",
       "Lower pay rate.",
       "NO UNIONS.",
     ],
   },
-  { value: "Buyers secured", label: "Signed LOI — buyers, brokers", dark: true },
-  { value: "Offtake secured", label: "Signed LOI — scrap suppliers", dark: true },
+  { value: "Buyers secured", label: "Buyers, brokers", dark: true },
+  { value: "Offtake secured", label: "Scrap suppliers", dark: true },
 ];
 
 const takeaways = [
-  "Customers begging for local.",
-  "Reliable.",
-  "Competitive supply.",
+  "Customers need local, reliable supply.",
+  "Tariffs reward the producer who supplies it locally.",
+  "Investing here means owning that supply.",
 ];
 
 const WhyMarket = () => {
@@ -43,7 +42,7 @@ const WhyMarket = () => {
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
               {s.bullets && (
-                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground leading-relaxed">
+                <ul className="mt-3 space-y-1.5 text-sm font-bold text-foreground leading-relaxed">
                   {s.bullets.map((b) => (
                     <li key={b} className="flex gap-2">
                       <span className="text-brand mt-px">•</span>

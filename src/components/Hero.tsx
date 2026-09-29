@@ -2,7 +2,7 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
 const facts = [
   { value: "50% import tariffs", label: "support local producers" },
-  { value: "97% recovery", label: "Highly productive, Tight utility use production line from top world supplier!" },
+  { value: "97% recovery", label: "Metal recovery" },
   { value: "6 million pounds", label: "throughput\n356, 380 alloys\nTarget products" },
 ];
 
@@ -27,8 +27,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
-            I'm building a highly productive secondary aluminum recycling supply chain.
-            Designed to supply U.S. automotive customers.
+            Invest in a vertically integrated U.S. aluminum platform.
+            Built to serve the customers the market can't supply today.
           </p>
 
 
