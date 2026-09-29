@@ -24,7 +24,7 @@ const WhyMarket = () => {
   return (
     <section id="market" className="section-padding bg-background">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand mb-4">US market already exists; tariffs support the US market</p>
+        <p className="inline-block bg-foreground text-brand text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 mb-4">US market already exists; tariffs support the US market</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
           The US Supply Gap Is Already Here.
         </h2>
