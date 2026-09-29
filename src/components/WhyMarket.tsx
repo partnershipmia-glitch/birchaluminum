@@ -40,7 +40,7 @@ const WhyMarket = () => {
                     ))
                   : s.value}
               </p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
+              {s.label && <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>}
               {s.bullets && (
                 <ul className="mt-3 space-y-1.5 text-sm font-bold text-foreground leading-relaxed">
                   {s.bullets.map((b) => (
