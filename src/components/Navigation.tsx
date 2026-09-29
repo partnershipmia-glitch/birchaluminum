@@ -3,9 +3,8 @@ import logoImg from "@/assets/logo.png";
 
 const sectionLinks = [
   { label: "Why Birch", href: "/technology" },
-  { label: "Vision", href: "#vision" },
+  { label: "Investors", href: "/investors" },
   { label: "Opportunity", href: "/aluminum-opportunity" },
-  { label: "Investors", href: "/investor-opportunity" },
 ];
 
 const Navigation = () => {
