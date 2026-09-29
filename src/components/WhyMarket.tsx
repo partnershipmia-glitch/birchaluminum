@@ -2,14 +2,14 @@ const stats = [
   { lines: ["13 billion", "pounds/year"], label: "U.S. market size", compact: true },
   {
     value: "Alabama",
-    label: "Growing industrial state",
+    label: "",
     bullets: [
       "40% cheaper utilities.",
       "Lower pay rate.",
       "NO UNIONS.",
     ],
   },
-  { value: "Buyers secured", label: "Buyers, brokers", dark: true },
+  { value: "Buyers secured", label: "New buyers and brokers, auto part makers, Tier 1 customers", dark: true },
   { value: "Offtake secured", label: "Scrap suppliers", dark: true },
 ];
 
