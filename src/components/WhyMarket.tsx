@@ -10,8 +10,8 @@ const stats = [
       "NO UNIONS.",
     ],
   },
-  { value: "Signed LOI", label: "from BUYERS, brokers" },
-  { value: "Signed LOI", label: "from scrap suppliers" },
+  { value: "Buyers secured", label: "Signed LOI — buyers, brokers", dark: true },
+  { value: "Offtake secured", label: "Signed LOI — scrap suppliers", dark: true },
 ];
 
 const takeaways = [
@@ -32,7 +32,7 @@ const WhyMarket = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {stats.map((s) => (
             <div key={s.label} className="bg-background p-6 sm:p-10">
-              <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3 break-words">
+              <p className={`text-4xl sm:text-5xl font-bold leading-none mb-3 break-words ${s.dark ? "text-foreground" : "text-brand"}`}>
                 {s.value}
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
