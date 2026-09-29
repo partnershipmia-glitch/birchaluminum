@@ -87,13 +87,13 @@ const logistics = [
 const InquirySection = () => {
   const [form, setForm] = useState({
     company: "",
-    contact: "",
-    email: "",
+    name: "",
+    address: "",
     phone: "",
+    contactTime: "",
     alloy: "356",
     form: "Ingot",
     monthly: "",
-    notes: "",
   });
 
   const set = (k: keyof typeof form) => (e: { target: { value: string } }) =>
@@ -125,9 +125,10 @@ const InquirySection = () => {
           className="grid sm:grid-cols-2 gap-px bg-border border border-border max-w-3xl"
         >
           <input required className={inputCls} placeholder="Company" value={form.company} onChange={set("company")} />
-          <input required className={inputCls} placeholder="Contact name" value={form.contact} onChange={set("contact")} />
-          <input required type="email" className={inputCls} placeholder="Email" value={form.email} onChange={set("email")} />
+          <input required className={inputCls} placeholder="Name" value={form.name} onChange={set("name")} />
+          <input className={`${inputCls} sm:col-span-2`} placeholder="Address" value={form.address} onChange={set("address")} />
           <input className={inputCls} placeholder="Phone" value={form.phone} onChange={set("phone")} />
+          <input className={inputCls} placeholder="Better time to contact" value={form.contactTime} onChange={set("contactTime")} />
           <select className={inputCls} value={form.alloy} onChange={set("alloy")} aria-label="Alloy">
             <option value="356">Alloy 356</option>
             <option value="380">Alloy 380</option>
@@ -139,12 +140,6 @@ const InquirySection = () => {
             <option value="Ingot & Sow">Ingot & Sow</option>
           </select>
           <input required className={`${inputCls} sm:col-span-2`} placeholder="Monthly consumption (lb per month)" value={form.monthly} onChange={set("monthly")} />
-          <textarea
-            className={`${inputCls} sm:col-span-2 min-h-28`}
-            placeholder="Specification, chemistry limits, packaging or delivery notes"
-            value={form.notes}
-            onChange={set("notes")}
-          />
           <button
             type="submit"
             className="sm:col-span-2 bg-brand text-primary font-bold uppercase tracking-wider text-sm py-4 hover:opacity-90 transition-opacity"
