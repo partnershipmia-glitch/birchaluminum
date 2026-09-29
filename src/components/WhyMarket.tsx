@@ -1,5 +1,5 @@
 const stats = [
-  { value: "13 billion pound/year", label: "U.S. market size" },
+  { value: "13 billion pounds/year", label: "U.S. market size" },
   {
     value: "Alabama",
     label: "Growing industrial state",
@@ -32,7 +32,7 @@ const WhyMarket = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {stats.map((s) => (
             <div key={s.label} className="bg-background p-6 sm:p-10">
-              <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3">
+              <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-3 break-words">
                 {s.value}
               </p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">{s.label}</p>
