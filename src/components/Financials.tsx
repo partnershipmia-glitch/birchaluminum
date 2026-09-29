@@ -10,7 +10,12 @@ const Financials = () => {
           <span className="text-brand">Designed for disciplined scale.</span>
         </h2>
 
-        <p className="mt-5 text-xs text-muted-foreground">
+        <div className="inline-block border border-border bg-background p-6 sm:p-8">
+          <p className="text-4xl sm:text-5xl font-bold text-brand leading-none mb-2">10 to 25 cents</p>
+          <p className="text-sm uppercase tracking-wider text-muted-foreground">Margin per pound</p>
+        </div>
+
+        <p className="mt-8 text-xs text-muted-foreground">
           This is general project information only and should not be interpreted as an offer, guarantee or promise of investment returns.
         </p>
       </div>
