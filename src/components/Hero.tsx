@@ -31,25 +31,6 @@ const Hero = () => {
             Designed to supply U.S. automotive customers.
           </p>
 
-          <div className="border border-brand/40 bg-brand/10 p-5 sm:p-6 mb-8 max-w-2xl">
-            <p className="text-minimal text-brand mb-2">For future customers</p>
-            <p className="text-base sm:text-lg font-semibold leading-snug mb-1">
-              Ingots &amp; sows — 356 and 380 alloys.
-            </p>
-            <p className="text-sm sm:text-base text-primary-foreground/80 mb-4">
-              Product available end of 2028. Send your inquiry with spec and monthly
-              consumption — for signing an LOI.
-            </p>
-            <a
-              href="mailto:birchfamilyllcfl@gmail.com?subject=LOI%20Inquiry%20%E2%80%94%20356%2F380%20Ingots%20%26%20Sows&body=Alloy%20spec%3A%0AMonthly%20consumption%3A%0ACompany%3A%0AContact%3A"
-              className="inline-block bg-brand text-primary font-semibold text-sm uppercase tracking-wider px-6 py-3 hover:opacity-90 transition-opacity"
-            >
-              Send Inquiry
-            </a>
-          </div>
-
-
-
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
             {facts.map((f) => (
