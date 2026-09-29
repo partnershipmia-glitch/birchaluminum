@@ -24,7 +24,6 @@ const metrics = [
   { v: "$17.5M", l: "Capital Raise", note: "Target" },
   { v: "15 Months", l: "Target to Production", note: "Projected" },
   { v: "356 + 380", l: "Initial Alloy Focus" },
-  { v: "SIGNED", l: "Feedstock & Customer LOIs", note: "Non-binding" },
 ];
 
 const FinalOpportunity = () => (
