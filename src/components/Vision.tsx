@@ -1,12 +1,5 @@
-const chain = [
-  "Procure Qualified Scrap",
-  "Process Secondary Aluminum",
-  "Cast Target Alloy Formats",
-  "Supply U.S. Industrial Buyers",
-  "Evaluate Downstream Opportunities",
-];
-
 const phases = [
+
   {
     phase: "Stage 1",
     title: "Secondary Alloy Production",
@@ -30,18 +23,6 @@ const Vision = () => {
           <span className="text-brand">The network is the business.</span>
         </h2>
 
-        <div className="bg-primary text-primary-foreground p-6 sm:p-10 mb-10">
-          <div className="flex flex-col items-center gap-3">
-            {chain.map((node, i) => (
-              <div key={node} className="w-full flex flex-col items-center gap-3">
-                <div className="w-full max-w-md text-center border border-primary-foreground/20 px-4 py-3 text-sm sm:text-base font-bold uppercase tracking-wider">
-                  {node}
-                </div>
-                {i < chain.length - 1 && <span className="text-brand text-xl leading-none">↓</span>}
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
           {phases.map((p) => (
