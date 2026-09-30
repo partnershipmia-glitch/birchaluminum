@@ -49,7 +49,7 @@ const forms = [
   },
   {
     name: "Sow",
-    body: "Approx. 1,000 lb (455 kg) sows for remelt operations with high consumption. Delivered loose or custom-banded.",
+    body: "Approx. 2,000 lb (907 kg) sows for remelt operations with high consumption. Delivered loose or custom-banded.",
   },
 ];
 
