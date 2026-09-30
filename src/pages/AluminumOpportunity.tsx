@@ -93,18 +93,17 @@ const AluminumOpportunity = () => (
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">A Large Domestic Resource Is Leaving the U.S.</h2>
           <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
             {[
-              { n: "3.6", u: "Million Metric Tons", l: "Aluminum recovered from purchased scrap in the U.S.", src: "USGS Mineral Commodity Summaries 2025 — secondary production from new + old scrap, 2024e (recovered-scrap statistic)" },
-              { n: "2.05", u: "Million Metric Tons", l: "Aluminum waste and scrap exported from the U.S. in 2024", src: "U.S. Census Bureau / USITC DataWeb, HS 7602 exports, 2024 (international trade statistic)" },
-
-              { n: "$4.0", u: "Billion", l: "Value of U.S. aluminum scrap exports in 2024", src: "U.S. Census Bureau / USITC DataWeb, HS 7602 export value, 2024" },
+              { n: "3.6", u: "Million Metric Tons", l: "Aluminum scrap recovered in the U.S." },
+              { n: "2.05", u: "Million Metric Tons", l: "Aluminum waste and scrap exported from the U.S." },
+              { n: "$4.0", u: "Billion", l: "Value of U.S. aluminum scrap exports" },
             ].map((c) => (
               <div key={c.l} className="bg-background p-6 sm:p-10 text-center flex flex-col items-center">
                 <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-1">{c.n}</p>
                 <p className="text-lg sm:text-xl font-bold text-brand mb-4">{c.u}</p>
-                <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4">{c.l}</p>
-                <p className="text-[11px] uppercase tracking-wider text-muted-foreground/80">Source: {c.src}</p>
+                <p className="text-sm uppercase tracking-wider text-muted-foreground">{c.l}</p>
               </div>
             ))}
+
 
           </div>
         </div>
