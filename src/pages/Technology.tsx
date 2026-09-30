@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
-  Brain, Thermometer, Gauge, Droplet, Wrench, BarChart3, Check, ArrowRight,
+  Brain, Thermometer, Gauge, Droplet, Wrench, BarChart3, Check,
 } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import TopBar from "@/components/TopBar";
