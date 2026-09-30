@@ -145,15 +145,6 @@ const Technology = () => {
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>01 / Scrap Preparation</Label><H2>FROM MIXED SCRAP TO CONTROLLED FEEDSTOCK</H2></div>
             <Zoomable src={separation.url} alt="Aluminum scrap separation — AI-powered sorting and separation" onOpen={setZoom} />
-            <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {[["3×", "Faster processing"], ["97%", "Metal recovery"], ["98%", "Target throughput purity*"]].map(([v, l]) => (
-                <div key={l} className="bg-background p-6 sm:p-10">
-                  <p className="text-5xl sm:text-6xl font-bold text-brand leading-none mb-3">{v}</p>
-                  <p className="text-sm uppercase tracking-wider text-muted-foreground">{l}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-3 text-[11px] text-muted-foreground px-2">*Performance varies by feedstock, equipment configuration and operating conditions. Final values subject to OEM validation.</p>
           </div>
         </section>
 
