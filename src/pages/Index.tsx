@@ -193,7 +193,7 @@ const Index = () => {
           <div className="container mx-auto px-5 sm:px-6">
             <p className="text-minimal text-brand mb-4">Products</p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
-              Ingot & Sow. <span className="text-brand">356 and 380 alloys.</span>
+              Ingot & Sow. <span className="text-brand">356 and 380 alloys.</span> Ready for shipping at the end of 2028.
             </h2>
 
             <div className="grid sm:grid-cols-2 gap-px bg-border border border-border mb-10">
