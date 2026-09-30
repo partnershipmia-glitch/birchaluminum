@@ -66,9 +66,10 @@ const AluminumOpportunity = () => (
             {["U.S. Aluminum Scrap", "Sort + Process", "Melt + Control Chemistry", "356 / 380 Aluminum", "U.S. Manufacturing"].map((s, i, arr) => (
               <div key={s} className="contents">
                 <div
-                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-4 text-center text-sm font-bold uppercase tracking-wider ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
+                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-3 sm:p-4 text-center text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug break-words min-w-0 ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
                   style={{ animationDelay: `${i * 350}ms` }}
                 >
+
                   {s}
                 </div>
                 {i < arr.length - 1 && (
