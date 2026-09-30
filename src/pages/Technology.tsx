@@ -172,7 +172,7 @@ const Technology = () => {
         <section id="casting" className="section-padding bg-background border-b border-border scroll-mt-20">
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>03 / Casting</Label><H2>FROM LIQUID METAL TO FINISHED INGOT — AUTOMATICALLY</H2></div>
-            <Zoomable src={ingotUrl} alt="Ingot casting and stacking" onOpen={setZoom} />
+            <Zoomable src={ingotUrl.url} alt="Automated ingot production process" onOpen={setZoom} />
           
           </div>
         </section>
