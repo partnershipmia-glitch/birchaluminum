@@ -10,11 +10,6 @@ const title = "Birch Aluminum | Secondary Aluminum Ingot & Sow — 356 / 380 All
 const description =
   "Birch Aluminum supplies specification-grade secondary aluminum ingot and sow in 356 and 380 alloys to U.S. die casters and foundries. Chemistry-controlled, certified per heat. Product ready for shipping end of 2028.";
 
-const heroFacts = [
-  { value: "356 / 380", label: "Specification alloys" },
-  { value: "Ingot & Sow", label: "Product forms" },
-  { value: "End of 2028", label: "Product ready for shipping" },
-];
 
 const alloys = [
   {
