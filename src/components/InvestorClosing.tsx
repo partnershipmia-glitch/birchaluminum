@@ -2,7 +2,7 @@ const cards = [
   { t: "Domestic Feedstock", d: "Existing U.S. aluminum scrap market" },
   { t: "Domestic Demand", d: "Automotive + industrial customers" },
   { t: "Value Creation", d: "Scrap → specification-grade alloy" },
-  { t: "Scalability", d: "Additional furnace and processing capacity as demand grows" },
+  { t: "Scalability", d: "Adding die casting machines and keeping more margin from our metal" },
 ];
 
 const metrics = [
