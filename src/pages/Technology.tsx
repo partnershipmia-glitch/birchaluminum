@@ -8,7 +8,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import siteLayout from "@/assets/tech-site-layout.png.asset.json";
-import separation from "@/assets/tech-separation-v3.png.asset.json";
+import separationUrl from "@/assets/tech-separation-schematic.jpg";
 import chargingUrl from "@/assets/tech-furnace-control.jpg";
 import ingotUrl from "@/assets/tech-ingot-casting.png.asset.json";
 import exhaustUrl from "@/assets/tech-emissions-control.jpg";
@@ -144,7 +144,7 @@ const Technology = () => {
         <section id="separation" className="section-padding bg-background border-b border-border scroll-mt-20">
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>01 / Scrap Preparation</Label><H2>FROM MIXED SCRAP TO CONTROLLED FEEDSTOCK</H2></div>
-            <Zoomable src={separation.url} alt="Aluminum scrap separation — AI-powered sorting and separation" onOpen={setZoom} />
+            <Zoomable src={separationUrl} alt="Intelligent scrap separation schematic" onOpen={setZoom} />
           </div>
         </section>
 
