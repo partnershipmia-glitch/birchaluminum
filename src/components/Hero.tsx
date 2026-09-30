@@ -2,7 +2,7 @@ import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
 const facts = [
   { value: "50% import tariffs", label: "support local producers" },
-  { value: "97% recovery", label: "Metal recovery" },
+  { value: "5 year", label: "Payback period" },
   { value: "6 million pounds", label: "throughput\nTarget products" },
 ];
 
@@ -23,7 +23,7 @@ const Hero = () => {
           <h1 className="text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
             Invest in a Vertically Integrated
             <br className="hidden sm:block" />{" "}
-            <span className="text-brand">U.S. Aluminum Platform.</span>
+            <span className="text-brand">AI powered Aluminum Platform.</span>
           </h1>
 
 
