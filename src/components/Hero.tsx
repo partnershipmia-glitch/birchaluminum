@@ -26,10 +26,6 @@ const Hero = () => {
             <span className="text-brand">U.S. Aluminum Platform.</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 max-w-2xl leading-relaxed mb-8">
-            Invest in a vertically integrated U.S. aluminum platform.
-            Built to serve the customers the market can't supply today.
-          </p>
 
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
