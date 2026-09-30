@@ -13,9 +13,6 @@ const BRAND = "hsl(var(--brand))";
 const MUTED = "hsl(var(--metallic))";
 const FG = "hsl(var(--foreground))";
 
-const Source = ({ children }: { children: React.ReactNode }) => (
-  <p className="mt-4 text-[11px] uppercase tracking-wider text-muted-foreground">Source: {children}</p>
-);
 
 const Section = ({
   n, eyebrow, title, takeaway, dark, children,
