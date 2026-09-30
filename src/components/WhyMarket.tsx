@@ -9,8 +9,9 @@ const stats = [
       "NO UNIONS.",
     ],
   },
-  { value: "Buyers secured", label: "Buyers and brokers, auto part makers, Tier 1 customers", dark: true },
-  { value: "Offtake secured", label: "Scrap suppliers", dark: true },
+  { value: "Suppliers secured", label: "Scrap yards and brokers", dark: true },
+  { value: "Offtake secured", label: "Auto part makers, brokers", dark: true },
+
 ];
 
 const takeaways = [
