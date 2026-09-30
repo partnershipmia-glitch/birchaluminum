@@ -23,7 +23,7 @@ const Hero = () => {
           <h1 className="text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
             Invest in a Vertically Integrated
             <br className="hidden sm:block" />{" "}
-            <span className="text-brand">AI powered Aluminum Platform.</span>
+            <span className="text-brand">AI powered Aluminum production Platform.</span>
           </h1>
 
 
