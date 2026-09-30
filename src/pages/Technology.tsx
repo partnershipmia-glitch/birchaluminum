@@ -78,7 +78,7 @@ const Technology = () => {
           <div className="container mx-auto px-5 sm:px-6 max-w-7xl">
             <p className="text-minimal text-brand mb-5">Technology & Automation</p>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-6">
-              SECONDARY ALUMINUM.<br /><span className="text-brand">BUILT FOR THE NEXT GENERATION.</span>
+              SECONDARY ALUMINUM.<br /><span className="text-brand">BUILT TO BE COMPETITIVE IN THE WORLD MARKET.</span>
             </h1>
             <p className="text-xl sm:text-2xl font-bold mb-10">AI-assisted. Automated. Designed for scale.</p>
             <div className="flex flex-wrap items-center gap-2 mb-8">
