@@ -48,9 +48,6 @@ const ScrapMarketScale = () => (
       <RatioCards />
 
       <NorthAmericaFlows />
-      <p className="mt-2 text-[11px] uppercase tracking-wider text-muted-foreground">
-        Source: UN Comtrade / World Bank WITS; USITC — HS 7602 bilateral exports by tonnage, 2024. Line width proportional to tonnage. USA → Global includes Canada and Mexico.
-      </p>
 
     </div>
   </section>

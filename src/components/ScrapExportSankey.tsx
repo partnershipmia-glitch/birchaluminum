@@ -117,23 +117,6 @@ const ScrapExportSankey = () => {
           </svg>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-px bg-primary-foreground/15 border border-primary-foreground/15 mt-8">
-          <div className="bg-primary p-8">
-            <p className="text-5xl sm:text-7xl font-bold text-brand leading-none">~2.05 MILLION MT</p>
-            <p className="mt-3 uppercase tracking-wider text-sm text-primary-foreground/70">exported</p>
-          </div>
-          <div className="bg-primary p-8">
-            <p className="text-5xl sm:text-7xl font-bold text-brand leading-none">~$4 BILLION</p>
-            <p className="mt-3 uppercase tracking-wider text-sm text-primary-foreground/70">export value</p>
-          </div>
-        </div>
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-primary-foreground/60">
-          Source: UN Comtrade / World Bank WITS · HS 7602 — Aluminum Waste and Scrap · 2024
-        </p>
-
-        <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">
-          Millions of tons of aluminum scrap already move through the U.S. supply chain every year. The opportunity is to capture more processing and manufacturing value domestically.
-        </p>
       </div>
     </section>
   );
