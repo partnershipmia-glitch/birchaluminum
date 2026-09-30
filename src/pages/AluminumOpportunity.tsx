@@ -19,13 +19,15 @@ const Source = ({ children }: { children: React.ReactNode }) => (
 
 const Section = ({
   n, eyebrow, title, takeaway, dark, children,
-}: { n: number; eyebrow: string; title: string; takeaway: string; dark?: boolean; children: React.ReactNode }) => (
+}: { n: number; eyebrow: string; title: string; takeaway?: string; dark?: boolean; children: React.ReactNode }) => (
+
   <section className={`section-padding border-b border-border ${dark ? "bg-primary text-primary-foreground" : "bg-background"}`}>
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
       <p className="text-minimal text-brand mb-3">{String(n).padStart(2, "0")} · {eyebrow}</p>
       <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">{title}</h2>
       {children}
-      <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">{takeaway}</p>
+      {takeaway && <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">{takeaway}</p>}
+
     </div>
   </section>
 );
@@ -109,7 +111,7 @@ const AluminumOpportunity = () => (
         </div>
       </section>
 
-      <Section n={1} eyebrow="America needs aluminum" title="Half of U.S. aluminum supply comes from abroad." takeaway="The U.S. depends on imports for 50% of its aluminum.">
+      <Section n={1} eyebrow="America needs aluminum" title="Half of U.S. aluminum supply comes from abroad.">
         <div className="grid lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-1">
             <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">50%</p>
@@ -129,7 +131,6 @@ const AluminumOpportunity = () => (
             </ResponsiveContainer>
           </div>
         </div>
-        <Source>USGS Mineral Commodity Summaries, Aluminum, 2025 (2024 estimates, approx. million metric tons)</Source>
       </Section>
 
 
