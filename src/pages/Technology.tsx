@@ -9,7 +9,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import siteLayout from "@/assets/tech-site-layout.png.asset.json";
 import separation from "@/assets/tech-separation-v3.png.asset.json";
-import charging from "@/assets/tech-charging-v3.png.asset.json";
+import chargingUrl from "@/assets/tech-furnace-control.jpg";
 import ingotUrl from "@/assets/tech-ingot-casting.png.asset.json";
 import exhaustUrl from "@/assets/tech-emissions-control.jpg";
 
@@ -152,7 +152,7 @@ const Technology = () => {
         <section id="melting" className="section-padding bg-background border-b border-border scroll-mt-20">
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>02 / Melting</Label><H2>THE FURNACE BECOMES A CONTROLLED DATA SYSTEM</H2></div>
-            <Zoomable src={charging.url} alt="Furnace operation and charging" onOpen={setZoom} />
+            <Zoomable src={chargingUrl} alt="Furnace operation and charging" onOpen={setZoom} />
             <div className="mt-10 px-2"><Flow steps={["Charge", "Temperature", "Melt Level", "Chemistry", "Skimming", "Pour"]} /></div>
             <div className="mt-8 grid grid-cols-1 min-[440px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px bg-border border border-border">
               {[[Brain, "AI Charge Recommendation"], [Thermometer, "Real-Time Temperature"], [Gauge, "Melt-Level Monitoring"], [Droplet, "Automated Skimming"], [Wrench, "Predictive Maintenance"], [BarChart3, "Production Optimization"]].map(([Icon, l]) => {
