@@ -19,7 +19,8 @@ const Source = ({ children }: { children: React.ReactNode }) => (
 
 const Section = ({
   n, eyebrow, title, takeaway, dark, children,
-}: { n: number; eyebrow: string; title: string; takeaway: string; dark?: boolean; children: React.ReactNode }) => (
+}: { n: number; eyebrow: string; title: string; takeaway?: string; dark?: boolean; children: React.ReactNode }) => (
+
   <section className={`section-padding border-b border-border ${dark ? "bg-primary text-primary-foreground" : "bg-background"}`}>
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
       <p className="text-minimal text-brand mb-3">{String(n).padStart(2, "0")} · {eyebrow}</p>
