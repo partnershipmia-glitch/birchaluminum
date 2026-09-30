@@ -8,7 +8,7 @@ import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import siteLayout from "@/assets/tech-site-layout.png.asset.json";
-import separationUrl from "@/assets/tech-separation-schematic.jpg";
+import separationUrl from "@/assets/tech-separation-schematic.png";
 import chargingUrl from "@/assets/tech-furnace-control.jpg";
 import ingotUrl from "@/assets/tech-ingot-casting.png.asset.json";
 import exhaustUrl from "@/assets/tech-emissions-control.jpg";
