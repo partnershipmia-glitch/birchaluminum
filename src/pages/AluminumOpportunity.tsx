@@ -102,12 +102,6 @@ const AluminumOpportunity = () => (
               </div>
             ))}
           </div>
-          <p className="mt-4 text-[11px] text-muted-foreground">
-            USGS recovered-scrap and HS 7602 trade figures are separate datasets and are not directly additive. Exported scrap includes many grades; not all of it is suitable feedstock for Birch Aluminum.
-          </p>
-          <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">
-            The U.S. already has a massive aluminum scrap ecosystem — but significant material value continues to leave the domestic supply chain.
-          </p>
         </div>
       </section>
 

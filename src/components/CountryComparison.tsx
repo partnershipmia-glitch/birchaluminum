@@ -125,9 +125,6 @@ const CountryComparison = () => {
           </div>
         </div>
 
-        <p className="mt-12 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">
-          High aluminum recovery rates are achievable when collection, sorting and domestic recycling infrastructure work together.
-        </p>
       </div>
     </section>
   );
