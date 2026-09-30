@@ -62,11 +62,12 @@ const AluminumOpportunity = () => (
           <p className="text-lg sm:text-xl text-primary-foreground/75 max-w-3xl mb-12">
             Birch Aluminum is building domestic capacity to convert recycled aluminum scrap into specification-grade alloys for U.S. manufacturing.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-9 items-center gap-2 md:gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-2 md:gap-2">
             {["U.S. Aluminum Scrap", "Sort + Process", "Melt + Control Chemistry", "356 / 380 Aluminum", "U.S. Manufacturing"].map((s, i, arr) => (
               <div key={s} className="contents">
                 <div
-                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-3 sm:p-4 text-center text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug break-words min-w-0 ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
+                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-3 sm:p-4 text-center text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
+
                   style={{ animationDelay: `${i * 350}ms` }}
                 >
 
