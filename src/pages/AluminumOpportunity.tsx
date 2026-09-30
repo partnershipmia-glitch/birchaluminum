@@ -152,8 +152,8 @@ const AluminumOpportunity = () => (
             </div>
           ))}
         </div>
-        <Source>Birch Aluminum synthesis of USGS 2025 and Census trade data</Source>
       </Section>
+
 
       <ValueChain />
 
