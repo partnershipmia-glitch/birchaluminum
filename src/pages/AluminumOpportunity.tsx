@@ -110,7 +110,7 @@ const AluminumOpportunity = () => (
         </div>
       </section>
 
-      <Section n={1} eyebrow="America needs aluminum" title="Under half of U.S. aluminum supply comes from abroad." takeaway="The U.S. depends on imports for under 50% of its aluminum.">
+      <Section n={1} eyebrow="America needs aluminum" title="Half of U.S. aluminum supply comes from abroad." takeaway="The U.S. depends on imports for 50% of its aluminum.">
         <div className="grid lg:grid-cols-3 gap-8 items-center">
           <div className="lg:col-span-1">
             <p className="text-7xl sm:text-8xl font-bold text-brand leading-none">50%</p>
