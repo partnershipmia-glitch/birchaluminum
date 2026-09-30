@@ -190,7 +190,7 @@ const Technology = () => {
         {/* 6 HANDLING */}
         <section id="handling" className="section-padding bg-secondary border-b border-border scroll-mt-20">
           <div className="container mx-auto px-5 sm:px-6 max-w-7xl">
-            <H2>THE PRODUCT KEEPS MOVING — WITHOUT WAITING FOR AN OPERATOR</H2>
+            <H2>THE ALUMINUM KEEPS MOVING — UNDER AI CONTROL AND PLANT MANAGER SUPERVISION ON SITE</H2>
             <Flow steps={["Casting Line", "Robotic Stacking", "Automatic Weighing", "Strapping + Labeling", "Autonomous Forklift / AGV", "Warehouse", "Truck Loading"]} />
             <ul className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {["Automatic pallet movement", "Automatic weighing & tracking", "Warehouse routing", "Truck staging & loading"].map((b) => (
