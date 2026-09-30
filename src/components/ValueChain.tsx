@@ -59,10 +59,6 @@ const ValueChain = () => (
         <span className="text-brand">Manufactured metal value</span>
       </div>
 
-      <h3 className="mt-14 text-3xl sm:text-5xl font-bold">Birch Moves Aluminum Up the Value Chain.</h3>
-      <p className="mt-6 text-lg sm:text-xl font-semibold text-primary-foreground/80 border-l-4 border-brand pl-4 max-w-4xl">
-        The business model is not scrap collection — it is converting qualified recycled feedstock into specification-controlled aluminum products for industrial customers.
-      </p>
     </div>
   </section>
 );

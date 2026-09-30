@@ -217,12 +217,6 @@ const Technology = () => {
                 ))}
               </ul>
             </div>
-            <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {["BETTER DATA", "BETTER CONTROL", "BETTER COMPLIANCE READINESS"].map((t) => (
-                <p key={t} className="bg-background p-6 text-xl sm:text-2xl font-bold text-center">{t}</p>
-              ))}
-            </div>
-            <p className="mt-3 text-[11px] text-muted-foreground px-2">Air-permit timelines are determined by the permitting authority. Technology does not guarantee EPA or state permit approval.</p>
           </div>
         </section>
 
@@ -252,29 +246,9 @@ const Technology = () => {
                 </div>
               ))}
             </div>
-            <p className="mt-14 text-3xl sm:text-5xl font-bold">AUTOMATION IS NOT THE PRODUCT.</p>
-            <p className="mt-3 text-3xl sm:text-5xl font-bold text-brand">LOW-COST, CONSISTENT ALUMINUM IS THE PRODUCT.</p>
           </div>
         </section>
 
-        {/* 10 FINAL */}
-        <section className="min-h-screen flex items-center bg-primary text-primary-foreground section-padding">
-          <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-            <div className="space-y-2 text-lg sm:text-xl font-bold tracking-wider text-primary-foreground/70 mb-8">
-              <p>THE TECHNOLOGY EXISTS.</p><p>THE FEEDSTOCK EXISTS.</p><p>THE MARKET EXISTS.</p>
-            </div>
-            <h2 className="text-5xl sm:text-7xl font-bold leading-[1] mb-10">BIRCH BRINGS THEM <span className="text-brand">TOGETHER.</span></h2>
-            <p className="text-sm sm:text-base font-bold tracking-wider mb-12">U.S. SCRAP → AUTOMATED PROCESSING → SPECIFICATION-GRADE ALUMINUM → U.S. MANUFACTURING</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/aluminum-opportunity" className="inline-flex items-center justify-center gap-2 bg-brand text-brand-foreground px-6 py-4 font-bold hover:opacity-90 transition-opacity">
-                <ArrowRight className="w-4 h-4" /> EXPLORE THE MARKET OPPORTUNITY
-              </Link>
-              <Link to="/investor-opportunity" className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 px-6 py-4 font-bold hover:bg-primary-foreground hover:text-primary transition-colors">
-                <ArrowRight className="w-4 h-4" /> VIEW THE BIRCH PROJECT
-              </Link>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
 

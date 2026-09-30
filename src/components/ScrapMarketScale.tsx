@@ -52,9 +52,6 @@ const ScrapMarketScale = () => (
         Source: UN Comtrade / World Bank WITS; USITC — HS 7602 bilateral exports by tonnage, 2024. Line width proportional to tonnage. USA → Global includes Canada and Mexico.
       </p>
 
-      <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">
-        This is not a feedstock market that needs to be created. A large physical scrap market already exists.
-      </p>
     </div>
   </section>
 );
