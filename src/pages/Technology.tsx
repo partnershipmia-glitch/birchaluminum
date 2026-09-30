@@ -144,7 +144,7 @@ const Technology = () => {
         <section id="separation" className="section-padding bg-background border-b border-border scroll-mt-20">
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>01 / Scrap Preparation</Label><H2>FROM MIXED SCRAP TO CONTROLLED FEEDSTOCK</H2></div>
-            <Zoomable src={separation} alt="Aluminum scrap separation — manual vs AI-powered" onOpen={setZoom} />
+            <Zoomable src={separation.url} alt="Aluminum scrap separation — AI-powered sorting and separation" onOpen={setZoom} />
             <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
               {[["3×", "Faster processing"], ["97%", "Metal recovery"], ["98%", "Target throughput purity*"]].map(([v, l]) => (
                 <div key={l} className="bg-background p-6 sm:p-10">
