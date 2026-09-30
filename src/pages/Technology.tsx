@@ -11,7 +11,7 @@ import siteLayout from "@/assets/tech-site-layout.png.asset.json";
 import separation from "@/assets/tech-separation-v3.png.asset.json";
 import charging from "@/assets/tech-charging-v2.png.asset.json";
 import ingotUrl from "@/assets/tech-ingot-casting.png.asset.json";
-import exhaust from "@/assets/tech-exhaust-treatment.png.asset.json";
+import exhaustUrl from "@/assets/tech-emissions-control.jpg";
 
 const scrollTo = (id: string) =>
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -195,7 +195,7 @@ const Technology = () => {
         <section id="emissions" className="section-padding bg-background border-b border-border scroll-mt-20">
           <div className="container mx-auto px-3 sm:px-6 max-w-[1600px]">
             <div className="px-2"><Label>04 / Emissions Control</Label><H2>CLEANER OPERATIONS. CONTINUOUS MONITORING.</H2></div>
-            <Zoomable src={exhaust.url} alt="Backhouse / off-gas system" onOpen={setZoom} />
+            <Zoomable src={exhaustUrl} alt="Intelligent emissions control system" onOpen={setZoom} />
             <div className="mt-10 grid lg:grid-cols-2 gap-8 px-2">
               <div className="bg-primary text-primary-foreground p-6 sm:p-8">
                 <p className="text-minimal text-brand mb-5">Off-gas path</p>
