@@ -119,9 +119,6 @@ const CountryComparison = () => {
                 ))}
               </tbody>
             </table>
-            <p className="mt-4 text-xs uppercase tracking-wider text-muted-foreground">
-              Sources: Trade — UN Comtrade / World Bank WITS, HS 7602 Aluminum Waste and Scrap, 2024 (USD). N/A = no directly comparable verified figure.
-            </p>
           </div>
         </div>
 
