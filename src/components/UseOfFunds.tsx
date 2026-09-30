@@ -5,14 +5,15 @@ const headline = [
 ];
 
 const diligenceItems = [
-  "Facility and site requirements",
-  "Equipment quotations and installation scope",
+  "Facility and site development",
+  "Production equipment and installation",
   "Permitting and environmental controls",
-  "Working-capital and inventory assumptions",
-  "Feedstock qualification and supplier discussions",
-  "Customer demand, specifications and awards",
-  "Startup liquidity and contingency planning",
+  "Leasing forklifts",
+  "Working-capital and inventory purchase",
+  "Utilities connection",
+  "Contingency",
 ];
+
 
 const UseOfFunds = () => {
   return (
