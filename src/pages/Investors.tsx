@@ -9,7 +9,6 @@ import PhotoBand from "@/components/PhotoBand";
 import FacilityReel from "@/components/FacilityReel";
 import UseOfFunds from "@/components/UseOfFunds";
 import Vision from "@/components/Vision";
-import Financials from "@/components/Financials";
 import InvestorClosing from "@/components/InvestorClosing";
 import Footer from "@/components/Footer";
 
@@ -41,7 +40,6 @@ const Investors = () => {
         <UseOfFunds />
         <PhotoBand />
         <FacilityReel />
-        <Financials />
         <InvestorClosing />
       </main>
       <Footer />
