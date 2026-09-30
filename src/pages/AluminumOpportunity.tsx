@@ -26,7 +26,8 @@ const Section = ({
       <p className="text-minimal text-brand mb-3">{String(n).padStart(2, "0")} · {eyebrow}</p>
       <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">{title}</h2>
       {children}
-      <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">{takeaway}</p>
+      {takeaway && <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">{takeaway}</p>}
+
     </div>
   </section>
 );
