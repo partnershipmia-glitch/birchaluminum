@@ -9,9 +9,6 @@ const stats = [
       "NO UNIONS.",
     ],
   },
-  { value: "Suppliers secured", label: "Scrap yards and brokers", dark: true },
-  { value: "Offtake secured", label: "Auto part makers, brokers", dark: true },
-
 ];
 
 const takeaways = [
