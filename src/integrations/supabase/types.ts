@@ -14,16 +14,339 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      comment_reports: {
+        Row: {
+          comment_id: string
+          created_at: string
+          id: string
+          reason: string | null
+          user_id: string
+        }
+        Insert: {
+          comment_id: string
+          created_at?: string
+          id?: string
+          reason?: string | null
+          user_id: string
+        }
+        Update: {
+          comment_id?: string
+          created_at?: string
+          id?: string
+          reason?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comment_reports_comment_id_fkey"
+            columns: ["comment_id"]
+            isOneToOne: false
+            referencedRelation: "comments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      comments: {
+        Row: {
+          article_id: string
+          author_name: string
+          body: string
+          created_at: string
+          hidden: boolean
+          id: string
+          parent_id: string | null
+          user_id: string
+        }
+        Insert: {
+          article_id: string
+          author_name: string
+          body: string
+          created_at?: string
+          hidden?: boolean
+          id?: string
+          parent_id?: string | null
+          user_id: string
+        }
+        Update: {
+          article_id?: string
+          author_name?: string
+          body?: string
+          created_at?: string
+          hidden?: boolean
+          id?: string
+          parent_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comments_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "news_articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "comments_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "comments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      commodities: {
+        Row: {
+          active: boolean
+          basis: string
+          category: string
+          code: string
+          created_at: string
+          id: string
+          name: string
+          sort: number
+          source: string
+          unit: string
+        }
+        Insert: {
+          active?: boolean
+          basis: string
+          category: string
+          code: string
+          created_at?: string
+          id?: string
+          name: string
+          sort?: number
+          source: string
+          unit: string
+        }
+        Update: {
+          active?: boolean
+          basis?: string
+          category?: string
+          code?: string
+          created_at?: string
+          id?: string
+          name?: string
+          sort?: number
+          source?: string
+          unit?: string
+        }
+        Relationships: []
+      }
+      facilities: {
+        Row: {
+          capacity: string | null
+          city: string | null
+          company: string
+          completion: string | null
+          created_at: string
+          id: string
+          kind: string
+          lat: number
+          linkedin: string | null
+          lng: number
+          name: string
+          products: string | null
+          state: string
+          status: string
+          website: string | null
+        }
+        Insert: {
+          capacity?: string | null
+          city?: string | null
+          company: string
+          completion?: string | null
+          created_at?: string
+          id?: string
+          kind: string
+          lat: number
+          linkedin?: string | null
+          lng: number
+          name: string
+          products?: string | null
+          state: string
+          status: string
+          website?: string | null
+        }
+        Update: {
+          capacity?: string | null
+          city?: string | null
+          company?: string
+          completion?: string | null
+          created_at?: string
+          id?: string
+          kind?: string
+          lat?: number
+          linkedin?: string | null
+          lng?: number
+          name?: string
+          products?: string | null
+          state?: string
+          status?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
+      job_state: {
+        Row: {
+          job: string
+          last_run: string | null
+          locked_until: string | null
+          paused_reason: string | null
+        }
+        Insert: {
+          job: string
+          last_run?: string | null
+          locked_until?: string | null
+          paused_reason?: string | null
+        }
+        Update: {
+          job?: string
+          last_run?: string | null
+          locked_until?: string | null
+          paused_reason?: string | null
+        }
+        Relationships: []
+      }
+      news_articles: {
+        Row: {
+          category: string | null
+          created_at: string
+          id: string
+          published_at: string
+          source_id: string | null
+          source_name: string
+          summarized: boolean
+          summary: string | null
+          title: string
+          url: string
+        }
+        Insert: {
+          category?: string | null
+          created_at?: string
+          id?: string
+          published_at?: string
+          source_id?: string | null
+          source_name: string
+          summarized?: boolean
+          summary?: string | null
+          title: string
+          url: string
+        }
+        Update: {
+          category?: string | null
+          created_at?: string
+          id?: string
+          published_at?: string
+          source_id?: string | null
+          source_name?: string
+          summarized?: boolean
+          summary?: string | null
+          title?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "news_articles_source_id_fkey"
+            columns: ["source_id"]
+            isOneToOne: false
+            referencedRelation: "news_sources"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      news_sources: {
+        Row: {
+          active: boolean
+          feed_url: string | null
+          id: string
+          name: string
+          site_url: string
+        }
+        Insert: {
+          active?: boolean
+          feed_url?: string | null
+          id?: string
+          name: string
+          site_url: string
+        }
+        Update: {
+          active?: boolean
+          feed_url?: string | null
+          id?: string
+          name?: string
+          site_url?: string
+        }
+        Relationships: []
+      }
+      price_points: {
+        Row: {
+          commodity_id: string
+          created_at: string
+          id: string
+          note: string | null
+          price: number
+          recorded_at: string
+        }
+        Insert: {
+          commodity_id: string
+          created_at?: string
+          id?: string
+          note?: string | null
+          price: number
+          recorded_at?: string
+        }
+        Update: {
+          commodity_id?: string
+          created_at?: string
+          id?: string
+          note?: string | null
+          price?: number
+          recorded_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "price_points_commodity_id_fkey"
+            columns: ["commodity_id"]
+            isOneToOne: false
+            referencedRelation: "commodities"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_roles: {
+        Row: {
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin" | "moderator" | "user"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +473,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin", "moderator", "user"],
+    },
   },
 } as const

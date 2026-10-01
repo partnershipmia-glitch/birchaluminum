@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790868779612,
+      "tag": "0000_industry_monitor",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790868814615,
+      "tag": "0001_industry_monitor_seed",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790869008719,
+      "tag": "0002_schedule_fetch_news",
+      "breakpoints": true
+    }
+  ]
+}

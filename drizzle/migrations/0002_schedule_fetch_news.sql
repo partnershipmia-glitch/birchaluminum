@@ -1,0 +1,2 @@
+create extension if not exists pg_cron; create extension if not exists pg_net;
+select cron.schedule('fetch-news-6h', '0 */6 * * *', $$ select net.http_post(url:='https://gjelpbkkmhlythlrkchc.supabase.co/functions/v1/fetch-news', headers:='{"Content-Type":"application/json","apikey":"sb_publishable_nmccOp7SlQ3-pDATQxddQw_PmaIpeUB"}'::jsonb, body:='{}'::jsonb) $$);
