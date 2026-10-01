@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useQuery } from "@tanstack/react-query";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { supabase } from "@/integrations/supabase/client";
 import PriceTicker from "@/components/monitor/PriceTicker";
 import FacilityMap from "@/components/monitor/FacilityMap";
 import NewsFeed, { CATEGORIES } from "@/components/monitor/NewsFeed";
@@ -15,10 +13,6 @@ import { useSessionUser, displayName, signInWithGoogle } from "@/components/moni
 const IndustryMonitor = () => {
   const [category, setCategory] = useState("All");
   const { user, isAdmin } = useSessionUser();
-  const { data: sources = [] } = useQuery({
-    queryKey: ["news_sources"],
-    queryFn: async () => (await supabase.from("news_sources").select("id,name,site_url").eq("active", true)).data ?? [],
-  });
 
   return (
     <div className="min-h-screen bg-secondary">
@@ -45,7 +39,7 @@ const IndustryMonitor = () => {
         <FacilityMap />
 
         <div className="grid gap-6 lg:grid-cols-[200px_1fr_340px]">
-          <aside className="space-y-6">
+          <aside>
             <section className="border border-border bg-background">
               <h2 className="border-b border-border p-4 text-sm font-bold uppercase tracking-wider">Filters</h2>
               <div className="flex flex-wrap gap-1 p-3 lg:flex-col">
@@ -53,14 +47,6 @@ const IndustryMonitor = () => {
                   <button key={c} onClick={() => setCategory(c)} className={`px-3 py-2 text-left text-xs font-bold uppercase tracking-wider ${category === c ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>{c}</button>
                 ))}
               </div>
-            </section>
-            <section className="border border-border bg-background">
-              <h2 className="border-b border-border p-4 text-sm font-bold uppercase tracking-wider">Sources</h2>
-              <ul className="space-y-2 p-4 text-xs">
-                {sources.filter((s) => !s.site_url.includes("news.google.com")).map((s) => (
-                  <li key={s.id}><a href={s.site_url} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">{s.name} ↗</a></li>
-                ))}
-              </ul>
             </section>
           </aside>
           <NewsFeed category={category} />
