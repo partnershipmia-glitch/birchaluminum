@@ -87,14 +87,14 @@ const MarketResearch = () => (
       <section className="section-padding bg-secondary border-y border-border">
         <div className="container mx-auto px-5 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-16">
           <div>
-            <p className="text-minimal text-brand mb-4">Nearby Customer Ecosystem</p>
+            <p className="text-minimal text-brand-dark mb-4">Nearby Customer Ecosystem</p>
             <h2 className="text-3xl sm:text-5xl font-bold mb-8">Built near demand.</h2>
             <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
               {customers.map((customer) => <p key={customer} className="bg-background p-4 font-semibold">{customer}</p>)}
             </div>
           </div>
           <div>
-            <p className="text-minimal text-brand mb-4">Regional Advantage</p>
+            <p className="text-minimal text-brand-dark mb-4">Regional Advantage</p>
             <div className="space-y-px bg-border border border-border">
               {[
                 { icon: MapPin, title: "Alabama location", text: "Close to a broad Southeast automotive and industrial manufacturing corridor." },
@@ -114,7 +114,7 @@ const MarketResearch = () => (
 
       <section className="section-padding bg-background">
         <div className="container mx-auto px-5 sm:px-6">
-          <p className="text-minimal text-brand mb-4">Secondary Aluminum Production Case</p>
+          <p className="text-minimal text-brand-dark mb-4">Secondary Aluminum Production Case</p>
           <h2 className="text-3xl sm:text-5xl font-bold mb-10">From qualified scrap to specification-grade alloy.</h2>
           <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
             {operatingCase.map((item) => (

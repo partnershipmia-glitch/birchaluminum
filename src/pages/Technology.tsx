@@ -39,7 +39,7 @@ const Zoomable = ({ src, alt, onOpen }: { src: string; alt: string; onOpen: (s: 
 );
 
 const Label = ({ children }: { children: React.ReactNode }) => (
-  <p className="text-minimal text-brand mb-3">{children}</p>
+  <p className="text-minimal text-brand-dark mb-3">{children}</p>
 );
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-8 max-w-5xl">{children}</h2>
