@@ -179,7 +179,7 @@ const Index = () => {
               <p className="text-minimal text-brand mb-6">Birch Aluminum · Decatur, Alabama</p>
 
               <h1 className="text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
-                Secondary Aluminum
+                Aluminum
                 <br className="hidden sm:block" />{" "}
                 <span className="text-brand">Ingot & Sow.</span>
               </h1>
