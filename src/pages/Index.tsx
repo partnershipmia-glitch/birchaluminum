@@ -18,7 +18,7 @@ const alloys = [
     rowHeader: "Element",
     rows: [
       ["Si", "6.5 – 7.5"],
-      ["Fe", "0.18 max"],
+      ["Fe", "0.15 max"],
       ["Cu", "0.25 max"],
       ["Mn", "0.35 max"],
       ["Mg", "0.25 – 0.45"],
