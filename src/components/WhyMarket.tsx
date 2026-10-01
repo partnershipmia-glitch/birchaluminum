@@ -9,9 +9,6 @@ const stats = [
       "NO UNIONS.",
     ],
   },
-  { value: "Suppliers secured", label: "Scrap yards and brokers", dark: true },
-  { value: "Offtake secured", label: "Auto part makers, brokers", dark: true },
-
 ];
 
 const takeaways = [
@@ -33,7 +30,7 @@ const WhyMarket = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
           {stats.map((s) => (
             <div key={s.label} className={`bg-background p-6 sm:p-8 ${s.bullets ? "" : "text-center"}`}>
-              <p className={`font-bold leading-none mb-3 ${s.compact ? "text-3xl sm:text-4xl whitespace-nowrap" : "text-4xl sm:text-5xl"} ${s.dark ? "text-foreground" : "text-brand"}`}>
+              <p className={`font-bold leading-none mb-3 ${s.compact ? "text-3xl sm:text-4xl whitespace-nowrap" : "text-4xl sm:text-5xl"} text-brand`}>
                 {s.lines
                   ? s.lines.map((line) => (
                       <span key={line} className="block">
