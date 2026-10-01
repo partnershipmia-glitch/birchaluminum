@@ -45,7 +45,7 @@ const alloys = [
 const forms = [
   {
     name: "Ingot",
-    body: "Trapezoidal ingots, approx. 22 lb (10 kg) each. Delivered stacked and strapped in bundles.",
+    body: "22 lb (10 kg) each. Stacked. Strapped in bundles.",
   },
   {
     name: "Sow",
