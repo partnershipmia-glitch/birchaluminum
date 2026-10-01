@@ -15,7 +15,7 @@ const InvestorClosing = () => (
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
       <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-4">ONE PLANT IS THE START.</h2>
       <p className="text-2xl sm:text-4xl font-bold text-brand leading-tight mb-14">
-        VERTICALLY INTEGRATION IS THE BUSINESS.
+        VERTICAL INTEGRATION IS THE BUSINESS.
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
