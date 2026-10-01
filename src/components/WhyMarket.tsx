@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 const stats = [
   { lines: ["13 billion", "pounds/year"], label: "U.S. market size", compact: true },
   {
