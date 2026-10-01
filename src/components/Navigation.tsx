@@ -2,9 +2,9 @@ import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 
 const sectionLinks = [
-  { label: "Why Birch", href: "/technology" },
-  { label: "Investors", href: "/investors" },
   { label: "Opportunity", href: "/aluminum-opportunity" },
+  { label: "Why Birch", href: "/technology" },
+  { label: "Invest in industrial asset", href: "/investors", highlight: true },
 ];
 
 const Navigation = () => {
