@@ -4,6 +4,7 @@ import logoImg from "@/assets/logo.png";
 const sectionLinks = [
   { label: "Opportunity", href: "/aluminum-opportunity" },
   { label: "Why Birch", href: "/technology" },
+  { label: "Industry Monitor", href: "/industry-monitor" },
   { label: "For Investors", href: "/investors", highlight: true },
 ];
 

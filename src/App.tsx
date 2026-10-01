@@ -12,6 +12,8 @@ import Technology from "./pages/Technology";
 import NotFound from "./pages/NotFound";
 import Auth from "./pages/Auth";
 import ResetPassword from "./pages/ResetPassword";
+import IndustryMonitor from "./pages/IndustryMonitor";
+import MonitorAdmin from "./pages/MonitorAdmin";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,8 @@ const App = () => (
         <Route path="/market-research" element={<MarketResearch />} />
         <Route path="/aluminum-opportunity" element={<AluminumOpportunity />} />
         <Route path="/technology" element={<Technology />} />
+        <Route path="/industry-monitor" element={<IndustryMonitor />} />
+        <Route path="/industry-monitor/admin" element={<MonitorAdmin />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<NotFound />} />
