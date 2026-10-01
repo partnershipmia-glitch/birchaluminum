@@ -17,7 +17,7 @@ const Down = () => <div className="text-center text-brand font-bold leading-none
 const FinalOpportunity = () => (
   <section className="section-padding bg-secondary border-b border-border">
       <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-        <p className="text-minimal text-brand mb-3">Before / After</p>
+        <p className="text-minimal text-brand-dark mb-3">Before / After</p>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-12">THE OPPORTUNITY</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
@@ -37,7 +37,7 @@ const FinalOpportunity = () => (
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold uppercase tracking-wider text-brand mb-5">Birch Model</h3>
+            <h3 className="text-xl font-bold uppercase tracking-wider text-brand-dark mb-5">Birch Model</h3>
             <Step t="U.S. Scrap" strong />
             {birch.map((s) => (<div key={s}><Down /><Step t={s} /></div>))}
             <Down />

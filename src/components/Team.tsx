@@ -32,7 +32,7 @@ const Team = () => {
   return (
     <section id="team" className="section-padding bg-secondary">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand mb-4">Founder Story</p>
+        <p className="text-minimal text-brand-dark mb-4">Founder Story</p>
 
         <div className="grid lg:grid-cols-[380px_1fr] gap-8 lg:gap-14 items-start">
           <div className="aspect-[4/5] bg-background border border-border overflow-hidden">

@@ -20,7 +20,7 @@ const Section = ({
 
   <section className={`section-padding border-b border-border ${dark ? "bg-primary text-primary-foreground" : "bg-background"}`}>
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-      <p className="text-minimal text-brand mb-3">{String(n).padStart(2, "0")} · {eyebrow}</p>
+      <p className={`text-minimal mb-3 ${dark ? "text-brand" : "text-brand-dark"}`}>{String(n).padStart(2, "0")} · {eyebrow}</p>
       <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">{title}</h2>
       {children}
       {takeaway && <p className="mt-10 text-xl sm:text-2xl font-bold border-l-4 border-brand pl-4">{takeaway}</p>}
@@ -88,7 +88,7 @@ const AluminumOpportunity = () => (
 
       <section className="section-padding bg-background border-b border-border">
         <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-          <p className="text-minimal text-brand mb-3">The Market Problem</p>
+          <p className="text-minimal text-brand-dark mb-3">The Market Problem</p>
           <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">A Large Domestic Resource Is Leaving the U.S.</h2>
           <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
             {[

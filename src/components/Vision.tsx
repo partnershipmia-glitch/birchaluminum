@@ -27,7 +27,7 @@ const Vision = () => {
         <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">
           {phases.map((p) => (
             <div key={p.phase} className="bg-background p-6 sm:p-8">
-              <p className="text-minimal text-brand mb-3">{p.phase}</p>
+              <p className="text-minimal text-brand-dark mb-3">{p.phase}</p>
               <h3 className="text-lg sm:text-xl font-bold mb-3">{p.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.body}</p>
             </div>
