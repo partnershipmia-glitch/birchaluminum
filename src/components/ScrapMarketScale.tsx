@@ -19,7 +19,7 @@ const w = (kt: number) => Math.max(4, (kt / flows.usaWorld) * 90);
 const ScrapMarketScale = () => (
   <section className="section-padding bg-background border-b border-border">
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-      <p className="text-minimal text-brand-dark mb-3">The Scale of the U.S. Scrap Market</p>
+      <p className="text-minimal text-foreground !font-bold mb-3">The Scale of the U.S. Scrap Market</p>
       <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-10 max-w-4xl">
         The United States Is One of the World's Largest Aluminum Scrap Markets.
       </h2>

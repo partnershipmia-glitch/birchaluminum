@@ -25,7 +25,6 @@ export default {
         },
         brand: {
           DEFAULT: "hsl(var(--brand))",
-          dark: "hsl(var(--brand-dark))",
           foreground: "hsl(var(--brand-foreground))",
         },
         secondary: {

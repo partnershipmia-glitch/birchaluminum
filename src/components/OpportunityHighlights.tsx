@@ -12,7 +12,7 @@ const OpportunityHighlights = () => {
   return (
     <section id="opportunity" className="section-padding bg-secondary border-y border-border">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand-dark mb-4">Investment Opportunity</p>
+        <p className="text-minimal text-foreground !font-bold mb-4">Investment Opportunity</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
           Stage 1 capital plan and project economics.
         </h2>

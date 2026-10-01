@@ -52,7 +52,7 @@ const CountryComparison = () => {
   return (
     <section className="section-padding bg-background border-b border-border">
       <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-        <p className="text-minimal text-brand-dark mb-3">Global Benchmarks</p>
+        <p className="text-minimal text-foreground !font-bold mb-3">Global Benchmarks</p>
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">HOW DOES THE U.S. COMPARE?</h2>
         <p className="text-lg sm:text-xl text-muted-foreground font-semibold max-w-3xl mb-12">
           Different markets show how much aluminum can remain inside a circular manufacturing system.
