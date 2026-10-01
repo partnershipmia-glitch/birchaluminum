@@ -1,10 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import logoImg from "@/assets/logo.png";
 
+const monitorLink = { label: "Industry Monitor", href: "/industry-monitor" };
+
 const sectionLinks = [
   { label: "Opportunity", href: "/aluminum-opportunity" },
   { label: "Why Birch", href: "/technology" },
-  { label: "Industry Monitor", href: "/industry-monitor" },
   { label: "For Investors", href: "/investors", highlight: true },
 ];
 
@@ -12,10 +13,15 @@ const Navigation = () => {
   const location = useLocation();
   const onHome = location.pathname === "/";
 
+  const toPath = (href: string) =>
+    href.startsWith("/") ? href : onHome ? href : `/${href}`;
+
   const navLinks = sectionLinks.map((l) => ({
     ...l,
-    to: l.href.startsWith("/") ? l.href : onHome ? l.href : `/${l.href}`,
+    to: toPath(l.href),
   }));
+
+  const monitor = { ...monitorLink, to: toPath(monitorLink.href) };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
