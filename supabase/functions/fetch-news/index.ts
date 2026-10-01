@@ -1,6 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
-import { authenticateCronRequest } from "../_shared/cron-auth.ts";
 
 const CATEGORIES = ["Aluminum", "Scrap & Recycling", "Rare Earths", "Automotive", "Technology", "Regulation", "M&A"];
 const MAX_NEW_PER_SOURCE = 8;
@@ -43,13 +42,13 @@ ${items.map((i) => `${i.id} | ${i.source} | ${i.title}`).join("\n")}`;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
-  const denied = authenticateCronRequest(req);
-  if (denied) return denied;
 
   const db = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
   const now = new Date();
   const { data: st } = await db.from("job_state").select("*").eq("job", "fetch-news").maybeSingle();
   if (st?.locked_until && new Date(st.locked_until) > now) return new Response("locked", { headers: corsHeaders });
+  // Public endpoint: at most one run every ~5.5 hours regardless of caller.
+  if (st?.last_run && now.getTime() - new Date(st.last_run).getTime() < 5.5 * 3600000) return new Response("recent", { headers: corsHeaders });
   await db.from("job_state").upsert({ job: "fetch-news", locked_until: new Date(now.getTime() + 5 * 60000).toISOString() });
 
   let inserted = 0, summarized = 0, pause: string | null = st?.paused_reason ?? null;
