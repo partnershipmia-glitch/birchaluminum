@@ -37,7 +37,11 @@ const Navigation = () => {
               <Link
                 key={link.label}
                 to={link.to}
-                className="text-minimal text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-minimal transition-colors ${
+                  link.highlight
+                    ? "text-brand font-bold hover:opacity-80"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
               </Link>
@@ -61,7 +65,11 @@ const Navigation = () => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
+                  className={`flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase transition-colors ${
+                    link.highlight
+                      ? "text-brand hover:opacity-80"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {link.label}
                 </Link>
