@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 const stats = [
   { lines: ["13 billion", "pounds/year"], label: "U.S. market size", compact: true },
   {
@@ -54,14 +56,39 @@ const WhyMarket = () => {
           ))}
         </div>
 
-        <ul className="mt-10 space-y-2 text-2xl sm:text-4xl font-bold tracking-tight leading-tight">
+        <div className="mt-10 space-y-4">
           {takeaways.map((t, i) => (
-            <li key={t} className={`flex items-start gap-3 ${i === takeaways.length - 1 ? "text-brand" : ""}`}>
-              <span className={`mt-2 sm:mt-3 h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 flex-shrink-0 ${i === takeaways.length - 1 ? "bg-brand" : "bg-foreground"}`} />
-              <span>{t}</span>
-            </li>
+            <div
+              key={t}
+              className={`group relative flex items-center gap-6 border p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 ${
+                i === takeaways.length - 1
+                  ? "border-brand bg-brand"
+                  : "border-border bg-background hover:border-brand"
+              }`}
+            >
+              <span
+                className={`absolute left-0 top-0 h-full w-1 transition-all duration-300 group-hover:w-2 ${
+                  i === takeaways.length - 1 ? "bg-foreground" : "bg-border group-hover:bg-brand"
+                }`}
+              />
+              <span
+                className={`shrink-0 text-4xl sm:text-5xl font-black leading-none transition-colors duration-300 ${
+                  i === takeaways.length - 1 ? "text-foreground" : "text-muted-foreground/40 group-hover:text-brand"
+                }`}
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className={`flex-grow text-xl sm:text-3xl font-bold leading-tight ${i === takeaways.length - 1 ? "text-foreground" : "text-foreground"}`}>
+                {t}
+              </p>
+              <ArrowRight
+                className={`shrink-0 h-6 w-6 transition-opacity duration-500 ${
+                  i === takeaways.length - 1 ? "text-foreground" : "text-brand opacity-0 group-hover:opacity-100"
+                }`}
+              />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
