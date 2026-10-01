@@ -37,9 +37,9 @@ const Navigation = () => {
               <Link
                 key={link.label}
                 to={link.to}
-                className={`text-minimal transition-colors ${
+                className={`text-minimal font-bold transition-colors ${
                   link.highlight
-                    ? "text-brand font-bold hover:opacity-80"
+                    ? "text-foreground hover:opacity-80"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -67,7 +67,7 @@ const Navigation = () => {
                   to={link.to}
                   className={`flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase transition-colors ${
                     link.highlight
-                      ? "text-brand hover:opacity-80"
+                      ? "text-foreground font-bold hover:opacity-80"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
