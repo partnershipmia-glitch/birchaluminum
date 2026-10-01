@@ -105,7 +105,7 @@ const InquirySection = () => {
   return (
     <section id="inquiry" className="section-padding bg-secondary">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand-dark mb-4">Supply Inquiry</p>
+        <p className="text-minimal text-foreground !font-bold mb-4">Supply Inquiry</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-4">
           Send your inquiry with your specification
           <br className="hidden sm:block" /> and monthly consumption.
@@ -191,7 +191,7 @@ const Index = () => {
         {/* Products */}
         <section id="products" className="section-padding bg-background">
           <div className="container mx-auto px-5 sm:px-6">
-            <p className="text-minimal text-brand-dark mb-4">Products</p>
+            <p className="text-minimal text-foreground !font-bold mb-4">Products</p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
               Ingot & Sow. <span className="text-brand">356 and 380 alloys.</span> Ready for shipping at the end of 2028.
             </h2>
@@ -222,7 +222,7 @@ const Index = () => {
                     <tbody>
                       {a.rows.map(([el, val]) => (
                         <tr key={el} className="border-b border-border/60">
-                          <td className="py-2 pr-4 font-bold text-brand-dark">{el}</td>
+                          <td className="py-2 pr-4 font-bold text-foreground !font-bold">{el}</td>
                           <td className="py-2 text-muted-foreground">{val}</td>
                         </tr>
                       ))}
@@ -240,7 +240,7 @@ const Index = () => {
         {/* Quality */}
         <section id="quality" className="section-padding bg-secondary">
           <div className="container mx-auto px-5 sm:px-6">
-            <p className="text-minimal text-brand-dark mb-4">Quality Control</p>
+            <p className="text-minimal text-foreground !font-bold mb-4">Quality Control</p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
               Certified per heat. <span className="text-brand">Traceable end to end.</span>
             </h2>
@@ -262,7 +262,7 @@ const Index = () => {
         {/* Logistics */}
         <section className="section-padding bg-background">
           <div className="container mx-auto px-5 sm:px-6">
-            <p className="text-minimal text-brand-dark mb-4">Supply & Logistics</p>
+            <p className="text-minimal text-foreground !font-bold mb-4">Supply & Logistics</p>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
               Produced in Alabama. <span className="text-brand">Delivered to your dock.</span>
             </h2>

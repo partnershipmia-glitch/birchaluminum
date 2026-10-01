@@ -6,7 +6,7 @@ const FacilityReel = () => {
     <section className="bg-background border-t border-border">
       <div className="container mx-auto px-5 sm:px-6 py-10 sm:py-14">
         <div className="max-w-3xl mx-auto text-center mb-8">
-          <p className="text-minimal text-brand-dark mb-3">Founder story</p>
+          <p className="text-minimal text-foreground !font-bold mb-3">Founder story</p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             See the operation, not just the numbers
           </h2>

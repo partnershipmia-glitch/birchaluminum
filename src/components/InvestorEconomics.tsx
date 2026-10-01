@@ -8,7 +8,7 @@ const InvestorEconomics = () => {
   return (
     <section className="section-padding bg-background">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-brand-dark mb-4">Investor Planning Case</p>
+        <p className="text-minimal text-foreground !font-bold mb-4">Investor Planning Case</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-10">
           Industrial logic first. Detailed economics through diligence.
         </h2>
