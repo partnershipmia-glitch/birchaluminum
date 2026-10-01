@@ -67,7 +67,17 @@ const Navigation = () => {
 
       <div className="md:hidden border-t border-border bg-background">
           <div className="container mx-auto grid grid-cols-2 divide-x divide-y divide-border border-x border-border px-0">
-            {navLinks.map((link) =>
+            {[
+              { link: monitor, render: (l: typeof monitor) => (
+                <Link
+                  key={l.label}
+                  to={l.to}
+                  className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {l.label}
+                </Link>
+              ) },
+            ].map(({ link, render }) => render(link))}
               link.to.startsWith("#") ? (
                 <a
                   key={link.label}
