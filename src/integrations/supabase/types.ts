@@ -135,7 +135,10 @@ export type Database = {
       }
       facilities: {
         Row: {
+          activity_status: string | null
+          annual_capacity_lb: number | null
           capacity: string | null
+          capacity_source_url: string | null
           city: string | null
           company: string
           completion: string | null
@@ -152,7 +155,10 @@ export type Database = {
           website: string | null
         }
         Insert: {
+          activity_status?: string | null
+          annual_capacity_lb?: number | null
           capacity?: string | null
+          capacity_source_url?: string | null
           city?: string | null
           company: string
           completion?: string | null
@@ -169,7 +175,10 @@ export type Database = {
           website?: string | null
         }
         Update: {
+          activity_status?: string | null
+          annual_capacity_lb?: number | null
           capacity?: string | null
+          capacity_source_url?: string | null
           city?: string | null
           company?: string
           completion?: string | null
