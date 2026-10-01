@@ -1,0 +1,5 @@
+- [x] Add compact touchpad zoom/pan and visible state boundaries to the Industry Monitor map
+- [x] Separate smelter and recycler operating-capacity summaries
+- [x] Add normalized public capacities and source links to facility records
+- [x] Complete national facility research and add verified qualifying sites
+- [x] Verify map interactions and mobile layout
