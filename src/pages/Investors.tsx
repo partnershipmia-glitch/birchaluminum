@@ -4,6 +4,8 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 
 import WhyMarket from "@/components/WhyMarket";
+import ProductionMetrics from "@/components/ProductionMetrics";
+
 
 import PhotoBand from "@/components/PhotoBand";
 import FacilityReel from "@/components/FacilityReel";
@@ -36,7 +38,9 @@ const Investors = () => {
       <main>
         <Hero />
         <WhyMarket />
+        <ProductionMetrics />
         <Vision />
+
         <UseOfFunds />
         <PhotoBand />
         <FacilityReel />
