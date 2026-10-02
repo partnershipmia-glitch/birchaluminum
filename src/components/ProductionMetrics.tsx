@@ -1,7 +1,7 @@
 const metrics = [
   { value: "6 million pounds", label: "per month" },
   { value: "72 million pounds per year", label: "production throughput" },
-  { value: "Targeted EBITDA", label: "1 million per month" },
+  { value: "1 million per month", label: "Targeted EBITDA" },
 ];
 
 const ProductionMetrics = () => {
