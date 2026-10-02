@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logoImg from "@/assets/logo.png";
 
 const monitorLink = { label: "Industry Monitor", href: "/industry-monitor" };
@@ -11,6 +13,7 @@ const sectionLinks = [
 
 const Navigation = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
   const onHome = location.pathname === "/";
 
   const toPath = (href: string) =>
@@ -36,6 +39,22 @@ const Navigation = () => {
           >
             {monitor.label}
           </Link>
+        </div>
+
+        <div className="flex md:hidden items-center gap-2">
+          <a href="/#inquiry" className="bg-brand text-primary font-bold uppercase tracking-wider text-[11px] px-3 py-2">
+            Request Info
+          </a>
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen((o) => !o)}
+            className="p-2 text-foreground"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
@@ -65,39 +84,31 @@ const Navigation = () => {
         </div>
       </div>
 
-      <div className="md:hidden border-t border-border bg-background">
-          <div className="container mx-auto grid grid-cols-2 divide-x divide-y divide-border border-x border-border px-0">
-            <Link
-              to={monitor.to}
-              className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
+      {open && (
+        <div id="mobile-menu" className="md:hidden border-t border-border bg-background">
+          <div className="container mx-auto px-5 py-2 flex flex-col">
+            {[monitor, ...navLinks].map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                onClick={() => setOpen(false)}
+                className={`py-3.5 border-b border-border text-sm uppercase tracking-wider ${
+                  location.pathname === link.to ? "text-foreground font-bold" : "text-muted-foreground font-semibold"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="/#inquiry"
+              onClick={() => setOpen(false)}
+              className="my-4 bg-brand text-primary text-center font-bold uppercase tracking-wider text-sm py-3.5"
             >
-              {monitor.label}
-            </Link>
-            {navLinks.map((link) =>
-              link.to.startsWith("#") ? (
-                <a
-                  key={link.label}
-                  href={link.to}
-                  className="flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.label}
-                  to={link.to}
-                  className={`flex min-h-11 items-center justify-center px-2 py-3 text-center text-[11px] font-semibold uppercase transition-colors ${
-                    link.highlight
-                      ? "text-foreground !font-bold hover:opacity-80"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+              Request Info
+            </a>
           </div>
-      </div>
+        </div>
+      )}
     </nav>
   );
 };
