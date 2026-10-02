@@ -1,10 +1,5 @@
 import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
-const facts = [
-  { value: "50% import tariffs", label: "support local producers" },
-  { value: "5 year", label: "Payback period" },
-  { value: "6 million pounds", label: "throughput\nTarget products" },
-];
 
 const Hero = () => {
   return (
