@@ -21,9 +21,9 @@ const Hero = () => {
           <p className="text-minimal text-brand mb-6">Birch Aluminum · Decatur, Alabama</p>
 
           <h1 className="text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
-            Invest in a Vertically Integrated
+            Invest in a U.S.
             <br className="hidden sm:block" />{" "}
-            <span className="text-brand">AI powered Aluminum production Platform.</span>
+            <span className="text-brand">Secondary Aluminum Alloy Platform</span>
           </h1>
 
 

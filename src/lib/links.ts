@@ -22,17 +22,8 @@ export const callUrl = compose(
   "Hello Birch Aluminum Team,\n\nI would like to schedule an investor call.\n\nName:\nCompany:\nPhone:\nPreferred date/time:"
 );
 
-export const customerInquiryUrl = (f: {
-  company: string;
-  name: string;
-  address: string;
-  phone: string;
-  contactTime: string;
-  alloy: string;
-  form: string;
-  monthly: string;
-}) =>
+export const commercialInquiryUrl = (f: Record<string, string>) =>
   compose(
-    "Supply Inquiry - Birch Aluminum",
-    `Hello Birch Aluminum Team,\n\nCompany: ${f.company}\nName: ${f.name}\nAddress: ${f.address || "-"}\nPhone: ${f.phone || "-"}\nBetter time to contact: ${f.contactTime || "-"}\n\nAlloy: ${f.alloy}\nProduct form: ${f.form}\nMonthly consumption: ${f.monthly}`
+    `${f.type} - ${f.company} - Birch Aluminum`,
+    `Hello Birch Aluminum Team,\n\nInquiry type: ${f.type}\nCompany: ${f.company}\nContact: ${f.name}\nEmail: ${f.email}\nPhone: ${f.phone || "-"}\nWebsite: ${f.website || "-"}\n\nMaterial / product: ${f.material}\nMonthly volume (lb/month): ${f.volume || "-"}\nDelivery / shipping region: ${f.region || "-"}\nBest time to contact: ${f.contactTime || "-"}\n\nDetails / specification:\n${f.message}`
   );
