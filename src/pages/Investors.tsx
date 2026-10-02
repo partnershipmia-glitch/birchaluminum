@@ -38,7 +38,9 @@ const Investors = () => {
       <main>
         <Hero />
         <WhyMarket />
+        <ProductionMetrics />
         <Vision />
+
         <UseOfFunds />
         <PhotoBand />
         <FacilityReel />
