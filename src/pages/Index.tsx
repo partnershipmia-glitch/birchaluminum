@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { z } from "zod";
 import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { customerInquiryUrl } from "@/lib/links";
+import { commercialInquiryUrl } from "@/lib/links";
 import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
 const title = "Birch Aluminum | Secondary Aluminum Ingot & Sow — 356 / 380 Alloys";
@@ -105,6 +107,16 @@ const schema = z.object({
   message: z.string().trim().min(1, "Please add details or specification").max(2000),
 });
 
+const labelCls = "bg-background px-3 pt-3 text-[11px] uppercase tracking-wider text-muted-foreground font-semibold block";
+
+const Field = ({ label, children, wide }: { label: string; children: React.ReactNode; wide?: boolean }) => (
+    <label className={`bg-background flex flex-col ${wide ? "sm:col-span-2" : ""}`}>
+      <span className={labelCls}>{label}</span>
+      {children}
+    </label>
+  );
+
+
 const InquirySection = ({ initialType }: { initialType: string }) => {
   const [form, setForm] = useState({
     company: "", name: "", email: "", phone: "", website: "",
@@ -135,15 +147,6 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
 
   const inputCls =
     "w-full bg-background border-0 px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-inset focus:ring-brand transition";
-  const labelCls = "bg-background px-3 pt-3 text-[11px] uppercase tracking-wider text-muted-foreground font-semibold block";
-
-  const Field = ({ label, children, wide }: { label: string; children: React.ReactNode; wide?: boolean }) => (
-    <label className={`bg-background flex flex-col ${wide ? "sm:col-span-2" : ""}`}>
-      <span className={labelCls}>{label}</span>
-      {children}
-    </label>
-  );
-
   return (
     <section id="inquiry" className="section-padding bg-secondary scroll-mt-20">
       <div className="container mx-auto px-5 sm:px-6">
@@ -213,6 +216,18 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
 };
 
 const Index = () => {
+  const { search, hash } = useLocation();
+  const [initialType, setInitialType] = useState<string>(
+    new URLSearchParams(search).get("type") === "scrap" ? TYPES[1] : TYPES[0]
+  );
+  useEffect(() => {
+    setInitialType(new URLSearchParams(search).get("type") === "scrap" ? TYPES[1] : TYPES[0]);
+    if (hash === "#inquiry") setTimeout(() => document.getElementById("inquiry")?.scrollIntoView({ behavior: "smooth" }), 50);
+  }, [search, hash]);
+  const go = (t: string) => {
+    setInitialType(t);
+    document.getElementById("inquiry")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -248,6 +263,16 @@ const Index = () => {
                 <br className="hidden sm:block" />{" "}
                 <span className="text-brand">Ingot & Sow.</span>
               </h1>
+              <div className="flex flex-col sm:flex-row gap-3 mt-8">
+                <button onClick={() => go(TYPES[0])} className="bg-brand text-primary font-bold uppercase tracking-wider text-sm px-6 py-4 hover:opacity-90 transition-opacity text-left">
+                  Request Supply Terms / Specifications
+                  <span className="block text-[11px] normal-case tracking-normal font-medium opacity-80">For aluminum buyers</span>
+                </button>
+                <button onClick={() => go(TYPES[1])} className="border border-primary-foreground/40 text-primary-foreground font-bold uppercase tracking-wider text-sm px-6 py-4 hover:border-brand hover:text-brand transition-colors text-left">
+                  Submit Scrap Proposal
+                  <span className="block text-[11px] normal-case tracking-normal font-medium opacity-70">For scrap suppliers</span>
+                </button>
+              </div>
 
             </div>
           </div>
@@ -343,7 +368,7 @@ const Index = () => {
           </div>
         </section>
 
-        <InquirySection />
+        <InquirySection initialType={initialType} />
       </main>
       <Footer />
     </div>
