@@ -7,7 +7,7 @@ const PriceTicker = () => {
 
   const items = commodities.map((c) => {
     const l = latest.get(c.id);
-    if (!l) return { c, text: "awaiting entry", diff: 0, pct: 0, when: null as string | null, has: false };
+    if (!l) return null;
     const diff = l.prev ? l.last.price - l.prev.price : 0;
     const pct = l.prev && l.prev.price ? (diff / l.prev.price) * 100 : 0;
     return { c, text: fmtPrice(l.last.price, c.unit), diff, pct, when: l.last.recorded_at, has: true };
@@ -42,7 +42,7 @@ const PriceTicker = () => {
         {row("b")}
       </div>
       <p className="border-t border-primary-foreground/15 px-5 py-1.5 text-[10px] uppercase tracking-wider text-primary-foreground/50">
-        Prices are entered manually by the Birch Aluminum desk — not a live exchange feed. Hover to pause.
+        Indicative prices from public U.S. market data — delayed, not a live exchange feed. Hover to pause.
       </p>
     </div>
   );
