@@ -11,7 +11,7 @@ const PriceTicker = () => {
     const diff = l.prev ? l.last.price - l.prev.price : 0;
     const pct = l.prev && l.prev.price ? (diff / l.prev.price) * 100 : 0;
     return { c, text: fmtPrice(l.last.price, c.unit), diff, pct, when: l.last.recorded_at, has: true };
-  });
+  }).filter((x): x is NonNullable<typeof x> => x !== null);
 
   const row = (key: string) => (
     <div key={key} className="flex shrink-0 items-center" aria-hidden={key === "b"}>
