@@ -23,22 +23,11 @@ const Hero = () => {
 
 
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-primary-foreground/15 border border-primary-foreground/15">
-            {facts.map((f) => (
-              <div key={f.label} className="bg-primary p-4 sm:p-6">
-                <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-none mb-2">
-                  {f.value}
-                </p>
-                <p className="text-xs uppercase tracking-wider text-primary-foreground/60 whitespace-pre-line">
-                  {f.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default Hero;
