@@ -79,69 +79,134 @@ const logistics = [
   { label: "Terms", value: "Confirmed per order" },
 ];
 
-const InquirySection = () => {
+const TYPES = [
+  "Future aluminum supply",
+  "Sell aluminum scrap",
+  "Investor / strategic partner",
+  "Equipment / technology partner",
+  "Other",
+] as const;
+
+const BUYER_MATERIALS = ["A356 ingot", "A356 sow", "A380 ingot", "A380 sow", "Secondary aluminum ingot", "Secondary aluminum sow", "Custom chemistry", "Other"];
+const SCRAP_MATERIALS = ["Aluminum wheels", "Cast aluminum scrap", "Clean aluminum scrap", "Extrusion (6063)", "Old sheet", "UBC / cans", "Zorba", "Other"];
+const GENERAL_MATERIALS = ["Not applicable", ...BUYER_MATERIALS.slice(0, 6), "Aluminum scrap", "Other"];
+
+const schema = z.object({
+  company: z.string().trim().min(1, "Company is required").max(120),
+  name: z.string().trim().min(1, "Contact name is required").max(100),
+  email: z.string().trim().email("Enter a valid email").max(255),
+  phone: z.string().trim().max(40),
+  website: z.string().trim().max(200),
+  type: z.string(),
+  material: z.string(),
+  volume: z.string().trim().max(60),
+  region: z.string().trim().max(120),
+  contactTime: z.string().trim().max(80),
+  message: z.string().trim().min(1, "Please add details or specification").max(2000),
+});
+
+const InquirySection = ({ initialType }: { initialType: string }) => {
   const [form, setForm] = useState({
-    company: "",
-    name: "",
-    address: "",
-    phone: "",
-    contactTime: "",
-    alloy: "356",
-    form: "Ingot",
-    monthly: "",
+    company: "", name: "", email: "", phone: "", website: "",
+    type: initialType, material: "", volume: "", region: "", contactTime: "", message: "",
   });
+  const [error, setError] = useState("");
+  const [sent, setSent] = useState(false);
+
+  useEffect(() => setForm((f) => ({ ...f, type: initialType, material: "" })), [initialType]);
+
+  const isBuyer = form.type === TYPES[0];
+  const isScrap = form.type === TYPES[1];
+  const materials = isBuyer ? BUYER_MATERIALS : isScrap ? SCRAP_MATERIALS : GENERAL_MATERIALS;
+  const material = form.material || materials[0];
 
   const set = (k: keyof typeof form) => (e: { target: { value: string } }) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
+    setForm((f) => ({ ...f, [k]: e.target.value, ...(k === "type" ? { material: "" } : {}) }));
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.open(customerInquiryUrl(form), "_blank", "noopener");
+    const r = schema.safeParse({ ...form, material });
+    if (!r.success) return setError(r.error.issues[0].message);
+    if ((isBuyer || isScrap) && !form.volume.trim()) return setError("Monthly volume is required");
+    setError("");
+    window.open(commercialInquiryUrl(r.data as Record<string, string>), "_blank", "noopener");
+    setSent(true);
   };
 
   const inputCls =
-    "w-full bg-background border border-border px-3 py-2.5 text-sm outline-none focus:border-brand transition-colors";
+    "w-full bg-background border-0 px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-inset focus:ring-brand transition";
+  const labelCls = "bg-background px-3 pt-3 text-[11px] uppercase tracking-wider text-muted-foreground font-semibold block";
+
+  const Field = ({ label, children, wide }: { label: string; children: React.ReactNode; wide?: boolean }) => (
+    <label className={`bg-background flex flex-col ${wide ? "sm:col-span-2" : ""}`}>
+      <span className={labelCls}>{label}</span>
+      {children}
+    </label>
+  );
 
   return (
-    <section id="inquiry" className="section-padding bg-secondary">
+    <section id="inquiry" className="section-padding bg-secondary scroll-mt-20">
       <div className="container mx-auto px-5 sm:px-6">
-        <p className="text-minimal text-foreground !font-bold mb-4">Supply Inquiry</p>
+        <p className="text-minimal text-foreground !font-bold mb-4">Commercial Inquiry</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-4">
-          Send your inquiry with your specification
-          <br className="hidden sm:block" /> and monthly consumption.
+          Buyers, scrap suppliers <span className="text-brand">and partners.</span>
         </h2>
         <p className="text-muted-foreground max-w-2xl leading-relaxed mb-10">
-          Include the alloy, product form and expected monthly volume. We will
-          confirm chemistry, packaging, terms and delivery schedule.
+          Choose your inquiry type. For special orders, include the target chemistry; for scrap, describe
+          material, condition and available volume.
         </p>
 
-        <form
-          onSubmit={submit}
-          className="grid sm:grid-cols-2 gap-px bg-border border border-border max-w-3xl"
-        >
-          <input required className={inputCls} placeholder="Company" value={form.company} onChange={set("company")} />
-          <input required className={inputCls} placeholder="Name" value={form.name} onChange={set("name")} />
-          <input className={`${inputCls} sm:col-span-2`} placeholder="Address" value={form.address} onChange={set("address")} />
-          <input className={inputCls} placeholder="Phone" value={form.phone} onChange={set("phone")} />
-          <input className={inputCls} placeholder="Better time to contact" value={form.contactTime} onChange={set("contactTime")} />
-          <select className={inputCls} value={form.alloy} onChange={set("alloy")} aria-label="Alloy">
-            <option value="356">Alloy 356</option>
-            <option value="380">Alloy 380</option>
-            <option value="Other">Other / custom chemistry</option>
-          </select>
-          <select className={inputCls} value={form.form} onChange={set("form")} aria-label="Product form">
-            <option value="Ingot">Ingot</option>
-            <option value="Sow">Sow</option>
-            <option value="Ingot & Sow">Ingot & Sow</option>
-          </select>
-          <input required className={`${inputCls} sm:col-span-2`} placeholder="Monthly consumption (lb per month)" value={form.monthly} onChange={set("monthly")} />
-          <button
-            type="submit"
-            className="sm:col-span-2 bg-brand text-primary font-bold uppercase tracking-wider text-sm py-4 hover:opacity-90 transition-opacity"
-          >
-            Send Inquiry
-          </button>
-        </form>
+        {sent ? (
+          <div className="max-w-3xl border border-border bg-background p-8 sm:p-10">
+            <span className="block h-2.5 w-10 bg-brand mb-5" />
+            <p className="text-xl sm:text-2xl font-bold mb-3">
+              Thank you. Birch Aluminum will review your inquiry and follow up if there is a qualified fit.
+            </p>
+            <p className="text-sm text-muted-foreground mb-6">
+              Your email draft opened in a new tab — please press Send there to deliver it.
+            </p>
+            <button onClick={() => setSent(false)} className="text-sm font-bold underline underline-offset-4">
+              Send another inquiry
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={submit} noValidate className="grid sm:grid-cols-2 gap-px bg-border border border-border max-w-3xl">
+            <Field label="Inquiry type *" wide>
+              <select className={inputCls} value={form.type} onChange={set("type")}>
+                {TYPES.map((t) => <option key={t}>{t}</option>)}
+              </select>
+            </Field>
+            <Field label="Company name *"><input className={inputCls} value={form.company} onChange={set("company")} maxLength={120} /></Field>
+            <Field label="Contact name *"><input className={inputCls} value={form.name} onChange={set("name")} maxLength={100} /></Field>
+            <Field label="Email *"><input type="email" className={inputCls} value={form.email} onChange={set("email")} maxLength={255} /></Field>
+            <Field label="Phone"><input className={inputCls} value={form.phone} onChange={set("phone")} maxLength={40} /></Field>
+            <Field label="Company website"><input className={inputCls} value={form.website} onChange={set("website")} maxLength={200} placeholder="https://" /></Field>
+            <Field label={isScrap ? "Scrap category *" : "Material or product interest *"}>
+              <select className={inputCls} value={material} onChange={set("material")}>
+                {materials.map((m) => <option key={m}>{m}</option>)}
+              </select>
+            </Field>
+            <Field label={`Monthly volume, lb/month${isBuyer || isScrap ? " *" : ""}`}>
+              <input className={inputCls} value={form.volume} onChange={set("volume")} maxLength={60} />
+            </Field>
+            <Field label={isScrap ? "Shipping location" : "Delivery region / location"}>
+              <input className={inputCls} value={form.region} onChange={set("region")} maxLength={120} />
+            </Field>
+            <Field label={isBuyer ? "Specification / chemistry and requirements *" : isScrap ? "Material description, condition, current buyers *" : "Message *"} wide>
+              <textarea rows={5} className={`${inputCls} resize-y`} value={form.message} onChange={set("message")} maxLength={2000} />
+            </Field>
+            <Field label="Best time to contact" wide>
+              <input className={inputCls} value={form.contactTime} onChange={set("contactTime")} maxLength={80} />
+            </Field>
+            <div className="sm:col-span-2 bg-background px-3 py-3 text-xs text-muted-foreground">
+              Birch Aluminum uses submitted information only to evaluate qualified commercial, supplier, and investor inquiries.
+              {error && <p className="mt-2 text-sm text-foreground font-bold">⚠ {error}</p>}
+            </div>
+            <button type="submit" className="sm:col-span-2 bg-brand text-primary font-bold uppercase tracking-wider text-sm py-4 hover:opacity-90 transition-opacity">
+              Send Inquiry
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );
