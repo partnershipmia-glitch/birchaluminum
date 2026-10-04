@@ -1,5 +1,5 @@
 const metrics = [
-  { value: "6 million", rest: "pounds\nthroughput\nper month" },
+  { value: "6 million", rest: "pounds\naluminum throughput\nper month" },
   { value: "72 million", rest: "pounds per year\nproduction throughput" },
   { value: "$1 million", rest: "per month\nTargeted EBITDA" },
 ];
