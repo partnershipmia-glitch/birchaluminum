@@ -8,7 +8,6 @@ import ProductionMetrics from "@/components/ProductionMetrics";
 
 
 import PhotoBand from "@/components/PhotoBand";
-import FacilityReel from "@/components/FacilityReel";
 import UseOfFunds from "@/components/UseOfFunds";
 import Vision from "@/components/Vision";
 import InvestorClosing from "@/components/InvestorClosing";
@@ -43,8 +42,8 @@ const Investors = () => {
 
         <UseOfFunds />
         <PhotoBand />
-        <FacilityReel />
         <InvestorClosing />
+
       </main>
       <Footer />
     </div>
