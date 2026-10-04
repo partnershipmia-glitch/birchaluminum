@@ -25,9 +25,9 @@ const UseOfFunds = () => {
         </h2>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
-          <div className="space-y-px bg-primary-foreground/15 border border-primary-foreground/15">
+          <div className="space-y-8">
             {headline.map((h) => (
-              <div key={h.label} className="bg-primary p-6 sm:p-8">
+              <div key={h.label}>
                 <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-2">
                   {h.value}
                 </p>
