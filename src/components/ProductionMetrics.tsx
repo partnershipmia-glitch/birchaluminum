@@ -1,5 +1,5 @@
 const metrics = [
-  { value: "6 million", rest: "pounds\naluminum throughput\nper month" },
+  { value: "6 million", rest: "pounds\nthroughput per month" },
   { value: "72 million", rest: "pounds per year\nproduction throughput" },
   { value: "$1 million", rest: "per month\nTargeted EBITDA" },
 ];
@@ -14,7 +14,7 @@ const ProductionMetrics = () => {
               <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-tight">
                 {m.value}
               </p>
-              <p className="text-2xl sm:text-3xl text-white/70 leading-tight whitespace-pre-line">
+              <p className="mt-1 text-sm sm:text-base text-white/70 leading-snug whitespace-pre-line">
                 {m.rest}
               </p>
             </div>
