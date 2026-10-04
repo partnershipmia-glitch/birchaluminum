@@ -14,7 +14,7 @@ const ProductionMetrics = () => {
               <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand leading-tight">
                 {m.value}
               </p>
-              <p className="text-2xl sm:text-3xl md:text-4xl text-white/70 leading-tight whitespace-pre-line">
+              <p className="text-2xl sm:text-3xl text-white/70 leading-tight whitespace-pre-line">
                 {m.rest}
               </p>
             </div>
