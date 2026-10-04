@@ -239,6 +239,30 @@ const Technology = () => {
           </div>
         </section>
 
+        {/* 10 MY STORY */}
+        <section className="section-padding bg-primary text-primary-foreground">
+          <div className="container mx-auto px-5 sm:px-6 max-w-7xl">
+            <p className="text-minimal text-brand mb-5">My story</p>
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight max-w-5xl leading-[1.05] mb-8">
+              SEE THE OPERATION, NOT JUST THE NUMBERS.
+            </h2>
+            <p className="text-lg text-primary-foreground/80 max-w-3xl mb-10">
+              Real footage from the aluminum recovery process — scrap in, furnace,
+              tapped metal, finished ingots. Published on our public Instagram so you
+              can verify it yourself.
+            </p>
+            <a
+              href="https://www.instagram.com/reel/Dcef-OFJIRD/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-primary-foreground/40 px-8 py-4 font-bold uppercase tracking-wider hover:border-brand hover:text-brand transition-colors"
+            >
+              Watch the video
+            </a>
+          </div>
+        </section>
+
+
       </main>
       <Footer />
 
