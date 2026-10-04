@@ -25,26 +25,7 @@ const UseOfFunds = () => {
               </div>
             ))}
           </div>
-
-          <div>
-            <p className="text-minimal text-brand mb-4">Use-of-Funds Review Areas</p>
-            <div className="border border-primary-foreground/15">
-              {diligenceItems.map((label) => (
-                <div key={label} className="p-3 sm:p-4 border-b last:border-b-0 border-primary-foreground/15">
-                  <p className="text-sm sm:text-base text-primary-foreground/75">{label}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-5 text-sm text-primary-foreground/70">
-              Specific capital amounts, schedule assumptions, equipment specifications and financing terms
-              are not published on the public website and should be reviewed in approved investor materials.
-            </p>
-          </div>
         </div>
-
-        <p className="mt-5 text-xs text-primary-foreground/55 max-w-4xl">
-          Management planning estimates remain subject to diligence, final quotations, site requirements, contracts and financing terms.
-        </p>
       </div>
     </section>
   );
