@@ -1,13 +1,13 @@
-import sows from "@/assets/photo-stacked-ingots.jpg";
-import warehouse from "@/assets/photo-ingot-inventory.jpg";
-import casting from "@/assets/photo-casting-line.jpg";
-import workers from "@/assets/photo-inventory-weighing.jpg";
+import furnaceA from "@/assets/band-furnace.jpg.asset.json";
+import sowsA from "@/assets/band-sows.webp.asset.json";
+import yardA from "@/assets/band-yard.webp.asset.json";
+import castingA from "@/assets/band-casting.webp.asset.json";
 
 const shots = [
-  { src: sows, label: "Stacked & Strapped Ingots" },
-  { src: casting, label: "Casting Line" },
-  { src: workers, label: "Inventory Weighing, Count" },
-  { src: warehouse, label: "Ingot Inventory" },
+  { src: furnaceA.url, label: "Melting Furnace" },
+  { src: castingA.url, label: "Casting Line" },
+  { src: sowsA.url, label: "Aluminum Sows" },
+  { src: yardA.url, label: "Stacked & Strapped Ingots" },
 ];
 
 const PhotoBand = () => {
