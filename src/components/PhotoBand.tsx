@@ -1,7 +1,7 @@
-import furnaceA from "@/assets/band-furnace.jpg.asset.json";
-import sowsA from "@/assets/band-sows.webp.asset.json";
-import yardA from "@/assets/band-yard.webp.asset.json";
-import castingA from "@/assets/band-casting.webp.asset.json";
+import furnaceA from "@/assets/band2-furnace.jpg.asset.json";
+import sowsA from "@/assets/band2-sows.webp.asset.json";
+import yardA from "@/assets/band2-yard.webp.asset.json";
+import castingA from "@/assets/band2-casting.webp.asset.json";
 
 const shots = [
   { src: furnaceA.url, label: "Melting Furnace" },
