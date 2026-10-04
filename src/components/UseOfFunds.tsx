@@ -4,16 +4,6 @@ const headline = [
   { value: "Stage 2", label: "Start die casting line to keep more margin from our product. End of 2029" },
 ];
 
-const diligenceItems = [
-  "Facility and site development",
-  "Production equipment and installation",
-  "Permitting and environmental controls",
-  "Leasing forklifts",
-  "Working-capital and inventory purchase",
-  "Utilities connection",
-  "Contingency",
-];
-
 
 const UseOfFunds = () => {
   return (
