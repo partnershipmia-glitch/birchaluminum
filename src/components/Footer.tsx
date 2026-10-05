@@ -7,9 +7,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <p className="text-xl font-bold tracking-tight mb-2">BIRCH ALUMINUM</p>
-            <p className="text-sm text-primary-foreground/60">
+            <p className="text-sm text-primary-foreground/60 mb-6">
               Secondary Aluminum Production
             </p>
+            <a
+              href="https://www.instagram.com/reel/Dcef-OFJIRD/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-primary-foreground/40 px-6 py-3 text-sm font-bold uppercase tracking-wider text-primary-foreground hover:border-brand hover:text-brand transition-colors"
+            >
+              Watch the video
+            </a>
           </div>
 
           <div>
