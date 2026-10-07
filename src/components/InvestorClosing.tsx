@@ -5,11 +5,6 @@ const cards = [
   { t: "Scalability", d: "Adding die casting machines and keeping more margin from our metal" },
 ];
 
-const metrics = [
-  { v: "$17.5M", l: "Capital Raise", note: "Target" },
-  { v: "15 Months", l: "Target to Production", note: "Projected" },
-];
-
 const InvestorClosing = () => (
   <section className="section-padding bg-primary text-primary-foreground">
     <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
@@ -21,19 +16,6 @@ const InvestorClosing = () => (
           </div>
         ))}
       </div>
-
-      <div className="grid grid-cols-1 min-[440px]:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-        {metrics.map((m) => (
-          <div key={m.l}>
-            <p className="break-words text-4xl sm:text-5xl font-bold text-brand leading-none">{m.v}</p>
-            <p className="mt-2 text-sm uppercase tracking-wider">{m.l}</p>
-            {m.note && <p className="text-[11px] uppercase tracking-wider text-primary-foreground/50 mt-1">{m.note}</p>}
-          </div>
-        ))}
-      </div>
-      <p className="mt-6 text-[11px] uppercase tracking-wider text-primary-foreground/50">
-        Birch Aluminum management data. Targets and projections are forward-looking and not guaranteed.
-      </p>
 
       <div className="flex flex-col sm:flex-row gap-4 mt-14">
         <a
