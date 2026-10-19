@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 
 const title = "Birch Aluminum | Investor Overview — U.S. Secondary Alloy Platform";
 const description =
-  "Birch Aluminum is developing a U.S. secondary aluminum recycling and alloy manufacturing project in the Decatur, Alabama region for investors and strategic partners.";
+  "Birch Aluminum is developing a U.S. secondary aluminum recycling and alloy manufacturing project in the Alabama region for investors and strategic partners.";
 
 const Investors = () => {
   return (

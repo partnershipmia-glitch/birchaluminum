@@ -13,7 +13,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-5 sm:px-6 relative">
         <div className="max-w-5xl">
-          <p className="text-minimal text-brand mb-6">Birch Aluminum · Decatur, Alabama</p>
+          <p className="text-minimal text-brand mb-6">Birch Aluminum · Alabama</p>
 
           <h1 className="text-[2rem] leading-[1.08] sm:text-5xl lg:text-7xl font-bold tracking-tight mb-6">
             Invest in a U.S.

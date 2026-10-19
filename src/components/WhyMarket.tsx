@@ -45,6 +45,11 @@ const WhyMarket = () => {
                 </div>
               ))}
             </div>
+            <p className="mt-6 border-t border-brand/20 pt-4 text-sm leading-relaxed text-white">
+              <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand">Opportunity Zone location</span>
+              <br />
+              The proposed Alabama manufacturing property is located in a designated Opportunity Zone, potentially offering significant federal tax advantages to qualifying investors. Any tax advantages depend on the investment structure, investor eligibility, holding period, and compliance with Qualified Opportunity Fund requirements.
+            </p>
             <span className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 bg-brand/10 transition-transform duration-1000 ease-in-out group-hover:translate-x-[400%] motion-reduce:hidden" aria-hidden />
           </div>
         </div>

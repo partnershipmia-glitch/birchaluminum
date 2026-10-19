@@ -1,7 +1,7 @@
 
 const headline = [
   { value: "Stage 1", label: "Secondary alloy production platform" },
-  { value: "Stage 2", label: "Start die casting line to keep more margin from our product. End of 2029" },
+  { value: "Stage 2", label: "Expanded melting and casting to 6 million lb/month. Die casting as a downstream expansion." },
 ];
 
 

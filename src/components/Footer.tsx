@@ -53,7 +53,7 @@ const Footer = () => {
           <div>
             <p className="text-minimal text-primary-foreground/60 mb-4">Company</p>
             <p className="text-sm text-primary-foreground/70">Birch Aluminum</p>
-            <p className="text-sm text-primary-foreground/70">Decatur, Alabama</p>
+            <p className="text-sm text-primary-foreground/70">Alabama, USA</p>
           </div>
         </div>
 
