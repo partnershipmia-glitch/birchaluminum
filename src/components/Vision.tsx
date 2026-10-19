@@ -7,8 +7,8 @@ const phases = [
   },
   {
     phase: "Stage 2",
-    title: "Expanded Melting & Casting",
-    body: "Scale to 6 million finished lb/month with expanded melting and casting, integrated scrap preparation, and A356 and other higher-margin alloys. Die casting follows as a downstream expansion.",
+    title: "Increase Throughput & Die Casting",
+    body: "Increase throughput. Expand to die casting.",
   },
 ];
 
@@ -18,8 +18,13 @@ const Vision = () => {
       <div className="container mx-auto px-5 sm:px-6">
         <p className="inline-block bg-foreground text-brand text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] px-3 py-1.5 mb-4">The Bigger Vision</p>
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-10">
-          Vertical integration gives Birch greater control over feedstock, alloy quality, production planning, and margin.
+          Vertical integration is:
         </h2>
+        <ul className="mb-10 -mt-4 space-y-2 text-xl sm:text-2xl font-bold">
+          {["Control feedstock", "Alloy quality", "Production planning", "Higher margin"].map((t) => (
+            <li key={t} className="flex items-center gap-3"><span className="h-2 w-2 bg-foreground" aria-hidden />{t}</li>
+          ))}
+        </ul>
 
 
         <div className="grid sm:grid-cols-2 gap-px bg-border border border-border">

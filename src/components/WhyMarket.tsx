@@ -26,8 +26,8 @@ const WhyMarket = () => {
           <div className="group relative overflow-hidden border border-brand/25 bg-primary p-6 transition-colors duration-300 hover:border-brand sm:p-8">
             <span className="absolute right-4 top-4 font-mono text-[10px] font-bold text-white">01 / MARKET</span>
             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white">U.S. market size</p>
-            <p className="mt-4 text-5xl font-black leading-none sm:text-6xl">13B</p>
-            <p className="mt-2 text-lg font-black uppercase">pounds / year</p>
+            <p className="mt-4 text-5xl font-black leading-none sm:text-6xl">$11B</p>
+            <p className="mt-2 text-lg font-black uppercase">U.S. market / year</p>
             <div className="mt-8 h-1 overflow-hidden bg-brand/15" aria-hidden>
               <span className="block h-full w-2/3 bg-brand transition-[width] duration-700 ease-out group-hover:w-full motion-reduce:transition-none" />
             </div>
@@ -37,8 +37,8 @@ const WhyMarket = () => {
             <span className="absolute right-4 top-4 font-mono text-[10px] font-bold text-white">02 / REGION</span>
             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white">Operational advantage</p>
             <h3 className="mt-3 text-3xl font-black uppercase sm:text-4xl">Alabama</h3>
-            <div className="mt-6 grid gap-px bg-brand/25 sm:grid-cols-3">
-              {["40% cheaper utilities.", "Lower pay rate.", "NO UNIONS."].map((item, index) => (
+            <div className="mt-6 grid gap-px bg-brand/25 sm:grid-cols-2 lg:grid-cols-4">
+              {["40% cheaper utilities.", "30% lower pay rate.", "NO UNIONS.", "Opportunity Zone."].map((item, index) => (
                 <div key={item} className="relative bg-primary p-4 transition-colors duration-300 group-hover:bg-brand/10">
                   <span className="font-mono text-[10px] font-bold text-white">0{index + 1}</span>
                   <p className="mt-2 text-sm font-black uppercase leading-tight sm:text-base">{item}</p>
