@@ -7,8 +7,8 @@ const phases = [
   },
   {
     phase: "Stage 2",
-    title: "Die Casting Line",
-    body: "Start die casting line to keep more margin from our product. End of 2029.",
+    title: "Expanded Melting & Casting",
+    body: "Scale to 6 million finished lb/month with expanded melting and casting, integrated scrap preparation, and A356 and other higher-margin alloys. Die casting follows as a downstream expansion.",
   },
 ];
 
