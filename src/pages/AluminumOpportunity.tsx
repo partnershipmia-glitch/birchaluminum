@@ -158,7 +158,7 @@ const AluminumOpportunity = () => (
             <p className="text-7xl sm:text-9xl font-bold text-brand leading-none">0.23%</p>
             <div>
               <p className="text-2xl sm:text-4xl font-bold leading-tight text-foreground mb-5">
-                If we start with our targeted production capacity of 1.5 million lb per month, we can take 0.23% of the total market.
+                We start with 1.5 million lb per month, that is 0.23% of the total market.
               </p>
               <p className="text-sm uppercase tracking-wider text-muted-foreground">
                 18 million lb per year against 3.6 million metric tons (7.9 billion lb) of aluminum scrap recovered in the U.S.
