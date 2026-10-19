@@ -1,6 +1,6 @@
 
 const headline = [
-  { value: "Stage 1", label: "Secondary alloy production platform" },
+  { value: "Stage 1", label: "Lean production platform to get revenue and prove profitability" },
   { value: "Stage 2", label: "Increase throughput. Expand to die casting." },
 ];
 
@@ -18,10 +18,10 @@ const UseOfFunds = () => {
           <div className="space-y-8">
             {headline.map((h) => (
               <div key={h.label}>
-                <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-2">
+                <p className="text-4xl sm:text-6xl font-bold text-brand leading-none mb-4">
                   {h.value}
                 </p>
-                <p className="text-minimal text-primary-foreground/60">{h.label}</p>
+                <p className="text-minimal text-primary-foreground/60 text-balance max-w-2xl">{h.label}</p>
               </div>
             ))}
           </div>
