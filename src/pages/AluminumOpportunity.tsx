@@ -130,6 +130,40 @@ const AluminumOpportunity = () => (
         </div>
       </Section>
 
+      <section className="section-padding bg-background border-b border-border">
+        <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+          <p className="text-minimal text-foreground !font-bold mb-4">Our starting share</p>
+          <h2 className="text-2xl sm:text-4xl font-bold leading-tight text-foreground mb-12 max-w-4xl">
+            We start with 1.5 million lb per month, that is 0.23% of the total market.
+          </h2>
+
+          <div className="relative">
+            <div className="flex justify-between text-xs sm:text-sm uppercase tracking-wider mb-2">
+              <span className="text-foreground !font-bold">U.S. recovered aluminum scrap</span>
+              <span className="text-muted-foreground">7.9 billion lb / year</span>
+            </div>
+            <div className="relative h-16 sm:h-20 bg-primary overflow-hidden">
+              <div className="absolute inset-y-0 left-0 bg-brand animate-pulse" style={{ width: "0.23%", minWidth: "4px" }} />
+            </div>
+
+            {/* zoom connector */}
+            <svg className="w-full h-16 sm:h-20" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden>
+              <path d="M0 0 L0.4 0 L100 20 L0 20 Z" fill="hsl(var(--brand) / 0.15)" />
+              <line x1="0.4" y1="0" x2="100" y2="20" stroke="hsl(var(--foreground) / 0.4)" strokeWidth="0.15" vectorEffect="non-scaling-stroke" strokeDasharray="4 4" />
+            </svg>
+
+            <div className="grid grid-cols-[repeat(25,minmax(0,1fr))] sm:grid-cols-[repeat(50,minmax(0,1fr))] gap-[2px] border border-border p-2 bg-background">
+              {Array.from({ length: 100 }).map((_, i) => (
+                <div key={i} className={`aspect-square ${i < 23 ? "bg-brand" : "bg-muted"} transition-transform hover:scale-125`} />
+              ))}
+            </div>
+            <div className="flex justify-between text-xs sm:text-sm uppercase tracking-wider mt-3">
+              <span className="text-foreground !font-bold">Birch: 18 million lb / year</span>
+              <span className="text-muted-foreground">Zoom: first 1% of the market</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ScrapExportSankey />
 
@@ -150,23 +184,6 @@ const AluminumOpportunity = () => (
           ))}
         </div>
       </Section>
-
-      <section className="section-padding bg-background border-b border-border">
-        <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
-          <p className="text-minimal text-foreground !font-bold mb-6">Our starting share</p>
-          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center">
-            <p className="text-7xl sm:text-9xl font-bold text-brand leading-none">0.23%</p>
-            <div>
-              <p className="text-2xl sm:text-4xl font-bold leading-tight text-foreground mb-5">
-                We start with 1.5 million lb per month, that is 0.23% of the total market.
-              </p>
-              <p className="text-sm uppercase tracking-wider text-muted-foreground">
-                18 million lb per year against 3.6 million metric tons (7.9 billion lb) of aluminum scrap recovered in the U.S.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <ValueChain />
 
