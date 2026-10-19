@@ -27,7 +27,7 @@ const WhyMarket = () => {
             <span className="absolute right-4 top-4 font-mono text-[10px] font-bold text-white">01 / MARKET</span>
             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white">U.S. market size</p>
             <p className="mt-4 text-5xl font-black leading-none sm:text-6xl">$11B</p>
-            <p className="mt-2 text-lg font-black uppercase">billion / year</p>
+            <p className="mt-2 text-lg font-black uppercase">U.S. market / year</p>
             <div className="mt-8 h-1 overflow-hidden bg-brand/15" aria-hidden>
               <span className="block h-full w-2/3 bg-brand transition-[width] duration-700 ease-out group-hover:w-full motion-reduce:transition-none" />
             </div>
