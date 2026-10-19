@@ -31,7 +31,17 @@ const WhyMarket = () => {
             <div className="mt-8 h-1 overflow-hidden bg-brand/15" aria-hidden>
               <span className="block h-full w-2/3 bg-brand transition-[width] duration-700 ease-out group-hover:w-full motion-reduce:transition-none" />
             </div>
+
+            <div className="mt-8 border-t border-brand/20 pt-6">
+              <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white">Target Alloy market</p>
+              <p className="mt-4 text-5xl font-black leading-none sm:text-6xl">$753M</p>
+              <p className="mt-2 text-lg font-black uppercase">≈3.5% our take</p>
+              <div className="mt-6 h-1 overflow-hidden bg-brand/15" aria-hidden>
+                <span className="block h-full bg-brand" style={{ width: "3.5%", minWidth: "6px" }} />
+              </div>
+            </div>
           </div>
+
 
           <div className="group relative overflow-hidden border border-brand/25 bg-primary p-6 transition-colors duration-300 hover:border-brand sm:p-8 md:col-span-2">
             <span className="absolute right-4 top-4 font-mono text-[10px] font-bold text-white">02 / REGION</span>
