@@ -2,8 +2,8 @@ const phases = [
 
   {
     phase: "Stage 1",
-    title: "Secondary Alloy Production",
-    body: "Develop and validate a U.S. secondary aluminum alloy platform with disciplined scrap qualification, chemistry control and customer diligence.",
+    title: "Lean Production Platform",
+    body: "Get revenue and prove profitability.",
   },
   {
     phase: "Stage 2",

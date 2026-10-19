@@ -1,6 +1,6 @@
 
 const headline = [
-  { value: "Stage 1", label: "Secondary alloy production platform" },
+  { value: "Stage 1", label: "Lean production platform to get revenue and prove profitability" },
   { value: "Stage 2", label: "Increase throughput. Expand to die casting." },
 ];
 
