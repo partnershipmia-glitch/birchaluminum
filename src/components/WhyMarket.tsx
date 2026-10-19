@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const takeaways = [
   "Customers need local, reliable supply.",
-  "Tariffs support US production.",
+  "50% tariffs support US production.",
   "Investing in reshoring production.",
 ];
 
