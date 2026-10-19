@@ -132,11 +132,6 @@ const Technology = () => {
                 </button>
               ))}
             </div>
-            <div className="mt-10 grid sm:grid-cols-3 gap-px bg-border border border-border">
-              {["280' × 100' PRODUCTION BUILDING", "45' CLEAR HEIGHT", "ONE CONTINUOUS MATERIAL FLOW"].map((t) => (
-                <p key={t} className="bg-background p-6 text-xl sm:text-2xl font-bold">{t}</p>
-              ))}
-            </div>
           </div>
         </section>
 
