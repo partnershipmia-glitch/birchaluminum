@@ -57,32 +57,8 @@ const AluminumOpportunity = () => (
         <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
           <p className="text-minimal text-brand mb-5">The Aluminum Opportunity</p>
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] mb-4">AMERICA HAS THE ALUMINUM.</h1>
-          <p className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-brand mb-8">IT NEEDS THE CAPACITY TO PROCESS IT.</p>
-          <p className="text-lg sm:text-xl text-primary-foreground/75 max-w-3xl mb-12">
-            Birch Aluminum is building domestic capacity to convert recycled aluminum scrap into specification-grade alloys for U.S. manufacturing.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] items-center gap-2 md:gap-2">
-            {["U.S. Aluminum Scrap", "Sort + Process", "Melt + Control Chemistry", "356 / 380 Aluminum ingots", "U.S. Manufacturing"].map((s, i, arr) => (
-              <div key={s} className="contents">
-                <div
-                  className={`animate-fade-in-up opacity-0 [animation-fill-mode:forwards] border p-3 sm:p-4 text-center text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug ${i === 3 ? "bg-brand text-brand-foreground border-brand" : "border-primary-foreground/25"}`}
+          <p className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-brand">IT NEEDS THE CAPACITY TO PROCESS IT.</p>
 
-                  style={{ animationDelay: `${i * 350}ms` }}
-                >
-
-                  {s}
-                </div>
-                {i < arr.length - 1 && (
-                  <div
-                    className="animate-fade-in-up opacity-0 [animation-fill-mode:forwards] text-brand text-2xl font-bold text-center md:rotate-0 rotate-90"
-                    style={{ animationDelay: `${i * 350 + 175}ms` }}
-                  >
-                    →
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
