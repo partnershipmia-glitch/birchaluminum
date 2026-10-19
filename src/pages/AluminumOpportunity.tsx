@@ -151,8 +151,25 @@ const AluminumOpportunity = () => (
         </div>
       </Section>
 
+      <section className="section-padding bg-background border-b border-border">
+        <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+          <p className="text-minimal text-foreground !font-bold mb-6">Our starting share</p>
+          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-16 items-center">
+            <p className="text-7xl sm:text-9xl font-bold text-brand leading-none">0.23%</p>
+            <div>
+              <p className="text-2xl sm:text-4xl font-bold leading-tight text-foreground mb-5">
+                If we start with our targeted production capacity of 1.5 million lb per month, we can take 0.23% of the total market.
+              </p>
+              <p className="text-sm uppercase tracking-wider text-muted-foreground">
+                18 million lb per year against 3.6 million metric tons (7.9 billion lb) of aluminum scrap recovered in the U.S.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ValueChain />
+
 
       <FinalOpportunity />
     </main>
