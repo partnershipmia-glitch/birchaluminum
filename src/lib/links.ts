@@ -22,6 +22,12 @@ export const callUrl = compose(
   "Hello Birch Aluminum Team,\n\nI would like to schedule an investor call.\n\nName:\nCompany:\nPhone:\nPreferred date/time:"
 );
 
+// Reuse the validated draft for buyers who do not use Gmail.
+export const defaultEmailInquiryUrl = (gmailUrl: string) => {
+  const params = new URL(gmailUrl).searchParams;
+  return `mailto:BirchFamilyLLCFL@gmail.com?subject=${encodeURIComponent(params.get("su") || "")}&body=${encodeURIComponent(params.get("body") || "")}`;
+};
+
 export const commercialInquiryUrl = (f: Record<string, string>) =>
   compose(
     `${f.type} - ${f.company} - Birch Aluminum`,

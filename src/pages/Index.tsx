@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { commercialInquiryUrl } from "@/lib/links";
+import { commercialInquiryUrl, defaultEmailInquiryUrl } from "@/lib/links";
 import sowsBg from "@/assets/sows-warehouse.png.asset.json";
 
 const title = "Birch Aluminum | Secondary Aluminum Ingot & Sow — 356 / 380 Alloys";
@@ -123,7 +123,7 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
     type: initialType, material: "", volume: "", region: "", contactTime: "", message: "",
   });
   const [error, setError] = useState("");
-  const [sent, setSent] = useState(false);
+  const [preparedDraft, setPreparedDraft] = useState<string | null>(null);
 
   useEffect(() => setForm((f) => ({ ...f, type: initialType, material: "" })), [initialType]);
 
@@ -141,8 +141,9 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
     if (!r.success) return setError(r.error.issues[0].message);
     if ((isBuyer || isScrap) && !form.volume.trim()) return setError("Monthly volume is required");
     setError("");
-    window.open(commercialInquiryUrl(r.data as Record<string, string>), "_blank", "noopener");
-    setSent(true);
+    const draft = commercialInquiryUrl(r.data as Record<string, string>);
+    setPreparedDraft(draft);
+    window.open(draft, "_blank", "noopener,noreferrer");
   };
 
   const inputCls =
@@ -159,17 +160,30 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
           material, condition and available volume.
         </p>
 
-        {sent ? (
-          <div className="max-w-3xl border border-border bg-background p-8 sm:p-10">
+        {preparedDraft ? (
+          <div role="status" aria-live="polite" className="max-w-3xl border border-border bg-background p-8 sm:p-10">
             <span className="block h-2.5 w-10 bg-brand mb-5" />
             <p className="text-xl sm:text-2xl font-bold mb-3">
-              Thank you. Birch Aluminum will review your inquiry and follow up if there is a qualified fit.
+              Inquiry prepared — not sent yet.
             </p>
             <p className="text-sm text-muted-foreground mb-6">
-              Your email draft opened in a new tab — please press Send there to deliver it.
+              Review the draft and press Send in your email app to deliver it to Birch Aluminum.
+              If the Gmail tab did not open or you do not use Gmail, choose an option below.
             </p>
-            <button onClick={() => setSent(false)} className="text-sm font-bold underline underline-offset-4">
-              Send another inquiry
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <a href={preparedDraft} target="_blank" rel="noopener noreferrer" className="text-sm font-bold underline underline-offset-4">
+                Open draft in Gmail
+              </a>
+              <a href={defaultEmailInquiryUrl(preparedDraft)} className="text-sm font-bold underline underline-offset-4">
+                Use my default email app
+              </a>
+            </div>
+            <p className="text-sm text-muted-foreground mb-6 break-words">
+              No email app configured? Email your requirements directly to BirchFamilyLLCFL@gmail.com.
+              This form does not confirm production availability, pricing, or a supply commitment.
+            </p>
+            <button onClick={() => setPreparedDraft(null)} className="text-sm font-bold underline underline-offset-4">
+              Edit inquiry details
             </button>
           </div>
         ) : (
@@ -203,10 +217,11 @@ const InquirySection = ({ initialType }: { initialType: string }) => {
             </Field>
             <div className="sm:col-span-2 bg-background px-3 py-3 text-xs text-muted-foreground">
               Birch Aluminum uses submitted information only to evaluate qualified commercial, supplier, and investor inquiries.
+              <p className="mt-2">Opens an email draft; nothing is sent automatically. Review and send it in your email app.</p>
               {error && <p className="mt-2 text-sm text-foreground font-bold">⚠ {error}</p>}
             </div>
             <button type="submit" className="sm:col-span-2 bg-brand text-primary font-bold uppercase tracking-wider text-sm py-4 hover:opacity-90 transition-opacity">
-              Send Inquiry
+              Prepare Inquiry Email
             </button>
           </form>
         )}
